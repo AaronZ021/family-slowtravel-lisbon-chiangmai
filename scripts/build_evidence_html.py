@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES_CSV = ROOT / "data" / "sources" / "sources.csv"
 CROSSWALK_CSV = ROOT / "reports" / "evidence_crosswalk.csv"
+ASSESSMENT_CSV = ROOT / "reports" / "layered_dimension_assessment.csv"
 DOCS_INDEX = ROOT / "docs" / "index.html"
 REPORT_HTML = ROOT / "reports" / "evidence_crosswalk.html"
 
@@ -213,7 +214,73 @@ def crosswalk_rows(rows, sources):
     return "\n".join(rendered)
 
 
-def build_html(crosswalk, source_rows):
+def assessment_cell(row, city, sources):
+    assessment = row[f"{city}_assessment"]
+    basis = row[f"{city}_evidence_basis"]
+    sufficiency = row[f"{city}_sufficiency"]
+    confidence = row[f"{city}_confidence"]
+    gaps = row[f"{city}_gaps"]
+    source_ids = row[f"{city}_source_ids"]
+    badges = " ".join(source_badges(source_ids, sources))
+    return f"""
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>{esc(assessment)}</p>
+        <div class="cell-label">证据基础</div>
+        <p>{esc(basis)}</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：{esc(sufficiency)}</span>
+          <span class="meta-pill">置信度：{esc(confidence)}</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>{esc(gaps)}</p>
+        <div class="badges">{badges}</div>
+      </div>
+    """
+
+
+def assessment_sections(rows, sources):
+    by_layer = {}
+    for row in rows:
+        by_layer.setdefault(row["layer"], []).append(row)
+    sections = []
+    for layer, layer_rows in by_layer.items():
+        body = []
+        for row in layer_rows:
+            body.append(
+                f"""
+                <tr>
+                  <td class="dimension"><strong>{esc(row['dimension'])}</strong></td>
+                  <td>{assessment_cell(row, 'lisbon', sources)}</td>
+                  <td>{assessment_cell(row, 'chiang_mai', sources)}</td>
+                </tr>
+                """
+            )
+        sections.append(
+            f"""
+            <section class="layer-section">
+              <h2>{esc(layer)}</h2>
+              <div class="table-wrap" aria-label="{esc(layer)}证据评估表">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>维度</th>
+                      <th>里斯本</th>
+                      <th>清迈</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {''.join(body)}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            """
+        )
+    return "\n".join(sections)
+
+
+def build_html(assessments, crosswalk, source_rows):
     sources = {row["source_id"]: row for row in source_rows}
     return f"""<!doctype html>
 <html lang="zh-Hans">
@@ -275,7 +342,7 @@ def build_html(crosswalk, source_rows):
     }}
     table {{
       border-collapse: collapse;
-      min-width: 1260px;
+      min-width: 1180px;
       width: 100%;
     }}
     th, td {{
@@ -293,7 +360,7 @@ def build_html(crosswalk, source_rows):
       z-index: 1;
     }}
     td.dimension {{
-      width: 180px;
+      width: 170px;
       background: #fbfcfa;
     }}
     td.dimension span {{
@@ -325,6 +392,33 @@ def build_html(crosswalk, source_rows):
       outline: 2px solid var(--accent);
       outline-offset: 1px;
     }}
+    .cell-block p {{
+      margin: 0 0 10px;
+    }}
+    .cell-label {{
+      margin: 0 0 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+    }}
+    .meta-row {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 10px;
+    }}
+    .meta-pill {{
+      display: inline-flex;
+      min-height: 26px;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #f1f4ed;
+      border: 1px solid var(--line);
+      color: #394138;
+      font-size: 12px;
+      font-weight: 650;
+    }}
     .source-badge.missing {{
       background: #f5e7d5;
       color: var(--warn);
@@ -337,6 +431,9 @@ def build_html(crosswalk, source_rows):
     h2 {{
       margin: 34px 0 14px;
       font-size: 24px;
+    }}
+    .layer-section {{
+      margin-top: 30px;
     }}
     .sources {{
       display: grid;
@@ -391,29 +488,14 @@ def build_html(crosswalk, source_rows):
 </head>
 <body>
   <header>
-    <h1>里斯本 vs 清迈：家庭慢旅行证据横向对照</h1>
-      <p>本页只展示证据，不给城市推荐、不使用红黄绿判断。每个证据 ID 对应 <code>data/sources/sources.csv</code> 中的一条来源记录；点击 ID 会先跳到本页的来源详情卡片，再从卡片中的标题或 URL 打开原始来源。</p>
+    <h1>里斯本 vs 清迈：家庭慢旅行分层证据评估</h1>
+    <p>本页不做城市总评，只在每个维度、每个城市的小格子里说明：现有证据能支撑什么判断、证据基础是什么、充分性如何、缺口在哪里。每个证据 ID 对应 <code>data/sources/sources.csv</code> 中的一条来源记录；点击 ID 会先跳到本页来源详情卡片，再从卡片中的标题或 URL 打开原始来源。</p>
   </header>
   <main>
     <section class="note">
-      <strong>读法：</strong>同一行横向比较同一生活功能。证据限制和下一步核验用于说明哪些内容还没有被当前资料证明。
+      <strong>读法：</strong>第 1 层是来源登记，放在页面底部；主表按第 2 层硬约束、第 3 层生活可运行性、第 4 层社区/轶事反馈分开。这里的“维度评估”不是城市级推荐，只是说明该维度当前证据能支撑到什么程度。
     </section>
-    <section class="table-wrap" aria-label="证据横向对照表">
-      <table>
-        <thead>
-          <tr>
-            <th>维度</th>
-            <th>里斯本证据</th>
-            <th>清迈证据</th>
-            <th>证据限制</th>
-            <th>下一步人工核验</th>
-          </tr>
-        </thead>
-        <tbody>
-          {crosswalk_rows(crosswalk, sources)}
-        </tbody>
-      </table>
-    </section>
+    {assessment_sections(assessments, sources)}
     <h2>来源索引</h2>
     <section class="sources">
       {source_details(source_rows)}
@@ -430,7 +512,8 @@ def build_html(crosswalk, source_rows):
 def main():
     source_rows = read_csv(SOURCES_CSV)
     crosswalk = read_csv(CROSSWALK_CSV)
-    html_text = build_html(crosswalk, source_rows)
+    assessments = read_csv(ASSESSMENT_CSV)
+    html_text = build_html(assessments, crosswalk, source_rows)
     DOCS_INDEX.write_text(html_text, encoding="utf-8")
     REPORT_HTML.write_text(html_text, encoding="utf-8")
     print(f"wrote {DOCS_INDEX}")

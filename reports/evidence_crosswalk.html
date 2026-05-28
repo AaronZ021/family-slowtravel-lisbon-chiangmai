@@ -58,7 +58,7 @@
     }
     table {
       border-collapse: collapse;
-      min-width: 1260px;
+      min-width: 1180px;
       width: 100%;
     }
     th, td {
@@ -76,7 +76,7 @@
       z-index: 1;
     }
     td.dimension {
-      width: 180px;
+      width: 170px;
       background: #fbfcfa;
     }
     td.dimension span {
@@ -108,6 +108,33 @@
       outline: 2px solid var(--accent);
       outline-offset: 1px;
     }
+    .cell-block p {
+      margin: 0 0 10px;
+    }
+    .cell-label {
+      margin: 0 0 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 10px;
+    }
+    .meta-pill {
+      display: inline-flex;
+      min-height: 26px;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #f1f4ed;
+      border: 1px solid var(--line);
+      color: #394138;
+      font-size: 12px;
+      font-weight: 650;
+    }
     .source-badge.missing {
       background: #f5e7d5;
       color: var(--warn);
@@ -120,6 +147,9 @@
     h2 {
       margin: 34px 0 14px;
       font-size: 24px;
+    }
+    .layer-section {
+      margin-top: 30px;
     }
     .sources {
       display: grid;
@@ -174,199 +204,512 @@
 </head>
 <body>
   <header>
-    <h1>里斯本 vs 清迈：家庭慢旅行证据横向对照</h1>
-      <p>本页只展示证据，不给城市推荐、不使用红黄绿判断。每个证据 ID 对应 <code>data/sources/sources.csv</code> 中的一条来源记录；点击 ID 会先跳到本页的来源详情卡片，再从卡片中的标题或 URL 打开原始来源。</p>
+    <h1>里斯本 vs 清迈：家庭慢旅行分层证据评估</h1>
+    <p>本页不做城市总评，只在每个维度、每个城市的小格子里说明：现有证据能支撑什么判断、证据基础是什么、充分性如何、缺口在哪里。每个证据 ID 对应 <code>data/sources/sources.csv</code> 中的一条来源记录；点击 ID 会先跳到本页来源详情卡片，再从卡片中的标题或 URL 打开原始来源。</p>
   </header>
   <main>
     <section class="note">
-      <strong>读法：</strong>同一行横向比较同一生活功能。证据限制和下一步核验用于说明哪些内容还没有被当前资料证明。
+      <strong>读法：</strong>第 1 层是来源登记，放在页面底部；主表按第 2 层硬约束、第 3 层生活可运行性、第 4 层社区/轶事反馈分开。这里的“维度评估”不是城市级推荐，只是说明该维度当前证据能支撑到什么程度。
     </section>
-    <section class="table-wrap" aria-label="证据横向对照表">
-      <table>
-        <thead>
-          <tr>
-            <th>维度</th>
-            <th>里斯本证据</th>
-            <th>清迈证据</th>
-            <th>证据限制</th>
-            <th>下一步人工核验</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-            <tr>
-              <td class="dimension"><strong>签证/合法停留</strong><span>停留规则</span></td>
-              <td>葡萄牙/申根为短停路径；90 天按任意 180 天内整个申根区累计，不是葡萄牙单国计算。<div class="badges"><a class="source-badge" href="#src-LIS_VISA_01" title="Portugal short stay Schengen visa | 官方来源 | 2026-05-27">LIS_VISA_01</a> <a class="source-badge" href="#src-EU_VISA_01" title="EU Schengen visa policy | 官方来源 | 2026-05-27">EU_VISA_01</a></div></td>
-              <td>泰国路径需要通过 Thai e-Visa/领馆逐人核验；保守模型是旅游签证加延期，或符合条件时使用 DTV；2026 年免签政策有待生效的调整信号。<div class="badges"><a class="source-badge" href="#src-TH_VISA_01" title="Thailand official e-Visa portal | 官方来源 | 2026-05-27">TH_VISA_01</a> <a class="source-badge" href="#src-TH_VISA_02" title="Royal Thai Consulate Vancouver tourist visa | 官方来源 | 2026-05-27">TH_VISA_02</a> <a class="source-badge" href="#src-TH_VISA_03" title="TAT visa exemption revision pending | 官方来源 | 2026-05-27">TH_VISA_03</a> <a class="source-badge" href="#src-TH_DTV_01" title="DTV official embassy page | 官方来源 | 2026-05-27">TH_DTV_01</a></div></td>
-              <td>尚未按每位家庭成员的护照逐一验证。</td>
-              <td>按每本护照和过往旅行记录运行官方资格核验。</td>
-            </tr>
+    
+            <section class="layer-section">
+              <h2>第2层：硬约束</h2>
+              <div class="table-wrap" aria-label="第2层：硬约束证据评估表">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>维度</th>
+                      <th>里斯本</th>
+                      <th>清迈</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                <tr>
+                  <td class="dimension"><strong>签证/合法停留</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：三个月停留的关键约束是申根 90/180 天和逐人签证路径；如果任一家庭成员过去 180 天内已有申根停留，风险会变化。</p>
+        <div class="cell-label">证据基础</div>
+        <p>官方葡萄牙短期申根签证页面和欧盟申根 90/180 规则直接覆盖核心问题。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑维度判断，但需要逐人核验</span>
+          <span class="meta-pill">置信度：高</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>未核验每位家庭成员护照、加拿大居留身份、过去 180 天旅行史、VFS 预约和材料。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_VISA_01" title="Portugal short stay Schengen visa | 官方来源 | 2026-05-27">LIS_VISA_01</a> <a class="source-badge" href="#src-EU_VISA_01" title="EU Schengen visa policy | 官方来源 | 2026-05-27">EU_VISA_01</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>只能做出条件性维度判断：三个月可能通过旅游签加延期或 DTV 解决，但 2026 免签政策存在变动信号，不能直接按旧规则规划。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Thai e-Visa、温哥华泰国领馆旅游签、TAT 政策变动说明和 DTV 官方使馆页共同覆盖合法停留路径。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；规则需实时确认</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>未逐人跑 e-Visa eligibility；未确认中国护照加拿大居民儿童材料、延期规则和 DTV 家属材料。</p>
+        <div class="badges"><a class="source-badge" href="#src-TH_VISA_01" title="Thailand official e-Visa portal | 官方来源 | 2026-05-27">TH_VISA_01</a> <a class="source-badge" href="#src-TH_VISA_02" title="Royal Thai Consulate Vancouver tourist visa | 官方来源 | 2026-05-27">TH_VISA_02</a> <a class="source-badge" href="#src-TH_VISA_03" title="TAT visa exemption revision pending | 官方来源 | 2026-05-27">TH_VISA_03</a> <a class="source-badge" href="#src-TH_DTV_01" title="DTV official embassy page | 官方来源 | 2026-05-27">TH_DTV_01</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>官方安全</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：官方安全风险不是主要红线，主要是大城市财物盗窃和旅游区/交通防范。</p>
+        <div class="cell-label">证据基础</div>
+        <p>加拿大和美国官方旅行建议一致显示葡萄牙总体风险较低，并点名里斯本扒窃/公共交通风险。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑维度判断</span>
+          <span class="meta-pill">置信度：高</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺少 UK FCDO 葡萄牙页完整记录；缺少具体社区夜间安全核验。</p>
+        <div class="badges"><a class="source-badge" href="#src-CAN_PT_01" title="Canada Portugal travel advice | 官方来源 | 2026-05-27">CAN_PT_01</a> <a class="source-badge" href="#src-US_PT_01" title="US Portugal travel advisory | 官方来源 | 2026-05-27">US_PT_01</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：清迈本身不在主要冲突警告区域，但国家级 advisory 更高，且空气污染被官方点名为家庭相关风险。</p>
+        <div class="cell-label">证据基础</div>
+        <p>加拿大、美国、英国官方旅行建议覆盖国家级风险；加拿大页面明确提到清迈空气污染和儿童减少户外活动。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑维度判断</span>
+          <span class="meta-pill">置信度：高</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>官方安全建议不能替代具体社区、道路和医疗响应时间核验。</p>
+        <div class="badges"><a class="source-badge" href="#src-CAN_TH_01" title="Canada Thailand travel advice | 官方来源 | 2026-05-27">CAN_TH_01</a> <a class="source-badge" href="#src-US_TH_01" title="US Thailand travel advisory | 官方来源 | 2026-05-27">US_TH_01</a> <a class="source-badge" href="#src-UK_TH_01" title="UK FCDO Thailand safety | 官方来源 | 2026-05-27">UK_TH_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>气候/空气</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：目标月份总体可运行，主要摩擦是 11 月和冬季雨天、冬季住房湿冷，而不是空气红线。</p>
+        <div class="cell-label">证据基础</div>
+        <p>WeatherSpark 提供目标月份温度/雨日；里斯本市政和 IQAir 提供空气监测存在性。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑初步判断</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>WeatherSpark 为平台模型；缺少官方历史站点下载和逐月 PM2.5 历史分布。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_CLIM_01" title="WeatherSpark Lisbon climate | 平台来源 | 2026-05-27">LIS_CLIM_01</a> <a class="source-badge" href="#src-LIS_AIR_01" title="Lisbon city air monitoring | 官方来源 | 2026-05-27">LIS_AIR_01</a> <a class="source-badge" href="#src-LIS_AIR_02" title="IQAir Lisbon AQI | 平台来源 | 2026-05-27">LIS_AIR_02</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出较可靠维度判断：3-4 月烟季和高温对儿童户外生活构成硬摩擦；11-1 月明显更可用。</p>
+        <div class="cell-label">证据基础</div>
+        <p>WeatherSpark 月度气候、IQAir 2026 烟季报道、加拿大官方空气提示和泰国新闻互相支撑。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑维度判断</span>
+          <span class="meta-pill">置信度：高</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>还缺按目标年份/月份的历史 PM2.5 分布和具体出发前空气趋势。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_CLIM_01" title="WeatherSpark Chiang Mai climate | 平台来源 | 2026-05-27">CM_CLIM_01</a> <a class="source-badge" href="#src-CM_AIR_01" title="IQAir Chiang Mai burning season March 2026 | 平台来源 | 2026-05-27">CM_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a> <a class="source-badge" href="#src-CM_AIR_03" title="Nation Thailand Chiang Mai pollution | 新闻报道 | 2026-05-27">CM_AIR_03</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>儿科医疗路径</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：儿科路径存在，但实际可用性需要电话确认；不能仅凭网页判断英文服务和等待时间。</p>
+        <div class="cell-label">证据基础</div>
+        <p>公立儿童医院、私立医院、24 小时急诊页面和英文儿科门诊信号覆盖严重/轻中度儿童病路径。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；路径存在但运营细节不足</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>未确认儿科急诊是否 24 小时、英文医生排班、保险直付、等待时间。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_HEALTH_01" title="Hospital Dona Estefania | 官方来源 | 2026-05-27">LIS_HEALTH_01</a> <a class="source-badge" href="#src-LIS_HEALTH_02" title="Hospital CUF Descobertas | 官方来源 | 2026-05-27">LIS_HEALTH_02</a> <a class="source-badge" href="#src-LIS_HEALTH_03" title="Hospital da Luz Lisbon urgent care | 官方来源 | 2026-05-27">LIS_HEALTH_03</a> <a class="source-badge" href="#src-LIS_HEALTH_04" title="UMC Lisbon pediatrics English help | 平台来源 | 2026-05-27">LIS_HEALTH_04</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：私立儿科和 24 小时急诊路径较清楚，足以支持三个月家庭停留的医疗基线评估。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Bangkok Hospital Chiang Mai 儿科中心和 24 小时急诊信息明确，另有 Chiangmai Hospital 儿科门诊和社区推荐补充。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑维度判断</span>
+          <span class="meta-pill">置信度：高</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>仍需确认保险直付、具体医生英文、从最终房源高峰车程。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_HEALTH_01" title="Bangkok Hospital Chiang Mai Pediatric Center | 官方来源 | 2026-05-27">CM_HEALTH_01</a> <a class="source-badge" href="#src-CM_HEALTH_02" title="Bangkok Hospital Chiang Mai FAQ | 官方来源 | 2026-05-27">CM_HEALTH_02</a> <a class="source-badge" href="#src-CM_HEALTH_03" title="Chiangmai Hospital Pediatric Clinic | 官方来源 | 2026-05-27">CM_HEALTH_03</a> <a class="source-badge" href="#src-CM_HEALTH_04" title="Reddit Chiang Mai pediatrician | 社区轶事 | 2026-05-27">CM_HEALTH_04</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>住房基线</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：家庭中短租供应存在，但是否低摩擦取决于预算和逐套条件；当前证据不能替代预订核验。</p>
+        <div class="cell-label">证据基础</div>
+        <p>10 个平台/服务式公寓/Vrbo 样本证明 2BR 或家庭型中短租供应存在，并暴露价格、区域、噪音、楼层等变量。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；可判断供应存在，不能判断最终可订质量</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>未实时核验 75-90 晚总价、押金、儿童安全、供暖/除湿、电梯、噪音。</p>
+        <div class="badges"><a class="source-badge" href="#src-LISH_01" title="Flatio T2 Campo de Ourique | 平台来源 | 2026-05-27">LISH_01</a> <a class="source-badge" href="#src-LISH_02" title="Flatio 2BR Chic Bright Campo de Ourique | 平台来源 | 2026-05-27">LISH_02</a> <a class="source-badge" href="#src-LISH_03" title="Flatio Encanto do Tejo T2 | 平台来源 | 2026-05-27">LISH_03</a> <a class="source-badge" href="#src-LISH_04" title="Flatio Parque das Nacoes apartment | 平台来源 | 2026-05-27">LISH_04</a> <a class="source-badge" href="#src-LISH_05" title="Lisbon Serviced Apartments Benformoso 2BR | 平台来源 | 2026-05-27">LISH_05</a> <a class="source-badge" href="#src-LISH_06" title="Lisbon Serviced Apartments Principe Real 2BR | 平台来源 | 2026-05-27">LISH_06</a> <a class="source-badge" href="#src-LISH_07" title="Vrbo Prime Lisbon Living 2BR | 平台来源 | 2026-05-27">LISH_07</a> <a class="source-badge" href="#src-LISH_08" title="Vrbo Campo de Ourique rentals | 平台来源 | 2026-05-27">LISH_08</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a> <a class="source-badge" href="#src-LISH_10" title="Flatio Campolide 2BR | 平台来源 | 2026-05-27">LISH_10</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：家庭月租/服务式公寓供应存在且选择面较广，但空气净化、交通位置和噪音决定可运行性。</p>
+        <div class="cell-label">证据基础</div>
+        <p>10 个本地租房、服务式公寓、平台和社区样本证明 Nimman、Riverside、Old City edge、Hang Dong 等区域存在供应。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；可判断供应存在，不能判断最终可订质量</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>未确认 90 晚合同、空气净化器、空调、蚊虫/霉味、儿童安全、Grab 到医疗/活动车程。</p>
+        <div class="badges"><a class="source-badge" href="#src-CMH_01" title="Yantarasri Nimman serviced apartment | 平台来源 | 2026-05-27">CMH_01</a> <a class="source-badge" href="#src-CMH_02" title="Anantara Chiang Mai two bedroom suite | 平台来源 | 2026-05-27">CMH_02</a> <a class="source-badge" href="#src-CMH_03" title="Hillside Condominium 2 2BR | 平台来源 | 2026-05-27">CMH_03</a> <a class="source-badge" href="#src-CMH_04" title="Studio365 two bedroom apartment | 平台来源 | 2026-05-27">CMH_04</a> <a class="source-badge" href="#src-CMH_05" title="Thailand Property Hang Dong 2BR condos | 平台来源 | 2026-05-27">CMH_05</a> <a class="source-badge" href="#src-CMH_06" title="Lanna Property Moda Condo 2BR | 平台来源 | 2026-05-27">CMH_06</a> <a class="source-badge" href="#src-CMH_07" title="CNX Cribs long-term rentals | 平台来源 | 2026-05-27">CMH_07</a> <a class="source-badge" href="#src-CMH_08" title="Booking Nimman Maya 2BR family suite | 平台来源 | 2026-05-27">CMH_08</a> <a class="source-badge" href="#src-CMH_09" title="FazWaz The Unique at Nimman 2BR | 平台来源 | 2026-05-27">CMH_09</a> <a class="source-badge" href="#src-CMH_10" title="Reddit Chiang Mai serviced apartments | 社区轶事 | 2026-05-27">CMH_10</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                  </tbody>
+                </table>
+              </div>
+            </section>
             
 
-            <tr>
-              <td class="dimension"><strong>签证/合法停留</strong><span>远程工作</span></td>
-              <td>本轮证据没有证明短期申根路径可作为远程工作许可。<div class="badges"><a class="source-badge" href="#src-LIS_VISA_01" title="Portugal short stay Schengen visa | 官方来源 | 2026-05-27">LIS_VISA_01</a> <a class="source-badge" href="#src-EU_VISA_01" title="EU Schengen visa policy | 官方来源 | 2026-05-27">EU_VISA_01</a></div></td>
-              <td>DTV 官方使馆页列出 workcation、配偶和受抚养子女类别；旅游签/免签不应被当作工作授权。<div class="badges"><a class="source-badge" href="#src-TH_DTV_01" title="DTV official embassy page | 官方来源 | 2026-05-27">TH_DTV_01</a> <a class="source-badge" href="#src-TH_VISA_01" title="Thailand official e-Visa portal | 官方来源 | 2026-05-27">TH_VISA_01</a></div></td>
-              <td>未取得移民律师意见。</td>
-              <td>如果成人会远程工作，需询问使领馆或移民律师。</td>
-            </tr>
+            <section class="layer-section">
+              <h2>第3层：生活可运行性</h2>
+              <div class="table-wrap" aria-label="第3层：生活可运行性证据评估表">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>维度</th>
+                      <th>里斯本</th>
+                      <th>清迈</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                <tr>
+                  <td class="dimension"><strong>儿童每日户外活动</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：在 Estrela、Campo de Ourique、Parque das Nacoes 等区域，存在可重复户外锚点；但强弱高度依赖房源到公园的具体路线。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Jardim da Estrela、Campo de Ourique/Jardim da Parada 信号、Parque das Nacoes 河滨和游乐场、Belem 开放空间共同提供日常户外锚点。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；区域级可判断，地址级不足</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺 Google Maps 照片审计、厕所/遮阴/围栏、1 公里步行路线和坡度核验。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_CHILD_04" title="Jardim da Estrela Visit Lisboa | 官方来源 | 2026-05-27">LIS_CHILD_04</a> <a class="source-badge" href="#src-LIS_CHILD_05" title="Lisbon playgrounds Lets Go Baby | 博客/指南 | 2026-05-27">LIS_CHILD_05</a> <a class="source-badge" href="#src-LIS_CHILD_08" title="Reddit kids play outside Portugal | 社区轶事 | 2026-05-27">LIS_CHILD_08</a> <a class="source-badge" href="#src-LIS_CHILD_09" title="Reddit Lisbon active 2.5 year old | 社区轶事 | 2026-05-27">LIS_CHILD_09</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出条件性维度判断：Hang Dong 户外亲子场景较强，Old City 有公园锚点，Nimman 更依赖室内/商场/住房公共区；烟季会削弱所有户外证据。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Nong Buak Hard Park、Nic&#x27;s、YuuBaan、Din Cafe、Triplets 等提供户外或半户外儿童活动证据。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；季节和交通限制明显</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺逐点营业、遮阴、厕所、空气状况、从房源到活动点车程核验。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_CHILD_01" title="Nics Restaurant Playground | 平台来源 | 2026-05-27">CM_CHILD_01</a> <a class="source-badge" href="#src-CM_CHILD_02" title="YuuBaan Studio activities | 平台来源 | 2026-05-27">CM_CHILD_02</a> <a class="source-badge" href="#src-CM_CHILD_03" title="Din Cafe Hang Dong family guide | 博客/指南 | 2026-05-27">CM_CHILD_03</a> <a class="source-badge" href="#src-CM_CHILD_06" title="Triplets Eat and Play | 平台来源 | 2026-05-27">CM_CHILD_06</a> <a class="source-badge" href="#src-CM_CHILD_08" title="Nong Buak Hard public park playground | 地图来源 | 2026-05-27">CM_CHILD_08</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>室内 fallback</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：室内 fallback 存在，但样本量和分布不足以证明坏天气日可以长期低摩擦运行。</p>
+        <div class="cell-label">证据基础</div>
+        <p>SandCastle、Wooki、Teddy and Friends、Oceanario 家庭项目、Petit Cabanon 信号提供室内活动和亲子项目证据。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；需补足运营核验</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺营业状态、年龄限制、重复使用成本、厕所、父母座位、各候选区距离。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_CHILD_01" title="SandCastle indoor playground cafe | 平台来源 | 2026-05-27">LIS_CHILD_01</a> <a class="source-badge" href="#src-LIS_CHILD_02" title="Wooki sensory playgroups | 平台来源 | 2026-05-27">LIS_CHILD_02</a> <a class="source-badge" href="#src-LIS_CHILD_03" title="Petit Cabanon parent child cafe | 博客/指南 | 2026-05-27">LIS_CHILD_03</a> <a class="source-badge" href="#src-LIS_CHILD_06" title="Teddy and Friends playground | 平台来源 | 2026-05-27">LIS_CHILD_06</a> <a class="source-badge" href="#src-LIS_CHILD_07" title="Oceanario family programs | 官方来源 | 2026-05-27">LIS_CHILD_07</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：室内儿童咖啡/游乐生态比户外更能支撑热天或烟天，但空气净化没有被充分证明。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Lenmaii、CNXlocal 儿童咖啡/游乐汇总、50 Fly toddler time 等证据显示室内 fallback 供给存在。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；空气净化和运营细节不足</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺每个场所空调/空气净化、年龄、预约、费用、从候选区车程。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_CHILD_04" title="Lenmaii Playground Cafe | 评价来源 | 2026-05-27">CM_CHILD_04</a> <a class="source-badge" href="#src-CM_CHILD_07" title="CNXlocal kid friendly cafes parks playgrounds | 博客/指南 | 2026-05-27">CM_CHILD_07</a> <a class="source-badge" href="#src-CM_CHILD_11" title="50 Fly toddler time | 平台来源 | 2026-05-27">CM_CHILD_11</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>结构化活动/社交节奏</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：有亲子 playgroup 和 parent meetup 信号，但不能证明短住家庭可稳定加入。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Wooki sensory playgroups、Lisbon Parents and Kids Meetup、家长网络目录提供活动和社交入口证据。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>未联系组织者确认 2.5 岁/4.5 岁、英语、短期加入、频率和费用。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_CHILD_02" title="Wooki sensory playgroups | 平台来源 | 2026-05-27">LIS_CHILD_02</a> <a class="source-badge" href="#src-LIS_CHILD_10" title="Lisbon Parents and Kids Meetup | 平台来源 | 2026-05-27">LIS_CHILD_10</a> <a class="source-badge" href="#src-LIS_COMM_01" title="Lisbon Parents and Kids Meetup | 平台来源 | 2026-05-27">LIS_COMM_01</a> <a class="source-badge" href="#src-LIS_COMM_02" title="Lisbon for Parents | 博客/指南 | 2026-05-27">LIS_COMM_02</a> <a class="source-badge" href="#src-LIS_COMM_03" title="Lisbon parenting networks | 博客/指南 | 2026-05-27">LIS_COMM_03</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：homeschool/worldschool 和亲子活动社区信号存在，但不同年龄适配不均，短住接纳未知。</p>
+        <div class="cell-label">证据基础</div>
+        <p>TruePath/Chiangmai Family Club、Kinder Home、FLOM、家庭社区博客和 Reddit 个案提供结构化活动与社区线索。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>部分活动偏大龄；未确认短住家庭、2.5 岁适配、实际频率和语言。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_CHILD_05" title="FLOM Art Studio | 平台来源 | 2026-05-27">CM_CHILD_05</a> <a class="source-badge" href="#src-CM_CHILD_09" title="Chiang Mai Kids Club TruePath | 平台来源 | 2026-05-27">CM_CHILD_09</a> <a class="source-badge" href="#src-CM_CHILD_10" title="Kinder Home Chiang Mai Kids event | 平台来源 | 2026-05-27">CM_CHILD_10</a> <a class="source-badge" href="#src-CM_COMM_01" title="Facebook groups for families moving to Chiang Mai | 博客/指南 | 2026-05-27">CM_COMM_01</a> <a class="source-badge" href="#src-CM_COMM_02" title="Chiang Mai Family Guide media kit | 博客/指南 | 2026-05-27">CM_COMM_02</a> <a class="source-badge" href="#src-CM_COMM_03" title="CNXlocal about | 博客/指南 | 2026-05-27">CM_COMM_03</a> <a class="source-badge" href="#src-CM_CHILD_12" title="Reddit single mom expat Chiang Mai | 社区轶事 | 2026-05-27">CM_CHILD_12</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>无车交通/日常移动</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：无车生活基础成立，但婴儿车路线和儿童座椅会造成实际摩擦。</p>
+        <div class="cell-label">证据基础</div>
+        <p>市政交通页面和地铁信息证明公共交通网络完整；Bolt/Uber 页面和社区反馈显示儿童座椅与婴儿车限制。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑初步判断</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺从最终房源到超市、药房、公园、医院的 stroller 路线测试。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_MOB_01" title="Lisbon public transportation | 官方来源 | 2026-05-27">LIS_MOB_01</a> <a class="source-badge" href="#src-LIS_MOB_02" title="Lisbon Metro children stroller | 官方来源 | 2026-05-27">LIS_MOB_02</a> <a class="source-badge" href="#src-LIS_MOB_03" title="Bolt travelling with children | 平台来源 | 2026-05-27">LIS_MOB_03</a> <a class="source-badge" href="#src-LIS_MOB_04" title="Uber car seats | 平台来源 | 2026-05-27">LIS_MOB_04</a> <a class="source-badge" href="#src-LIS_MOB_05" title="Reddit Lisbon toddler car seat | 社区轶事 | 2026-05-27">LIS_MOB_05</a> <a class="source-badge" href="#src-LIS_COMM_05" title="Reddit Toddler vs Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_05</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出维度判断：无车生活不如里斯本稳，清迈更依赖 Grab/songthaew/私车；郊区家庭区尤其需要交通方案。</p>
+        <div class="cell-label">证据基础</div>
+        <p>交通指南和社区反馈一致指向 songthaew、Grab/私人交通和无完整公共交通。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：可支撑初步判断</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺 Grab 儿童座椅真实可用性、具体房源到活动/医院的高峰车程。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_02" title="How to use songthaew with family | 博客/指南 | 2026-05-27">CM_MOB_02</a> <a class="source-badge" href="#src-CM_MOB_03" title="Reddit single mom no public transit | 社区轶事 | 2026-05-27">CM_MOB_03</a> <a class="source-badge" href="#src-CM_MOB_04" title="Reddit The Base Height family | 社区轶事 | 2026-05-27">CM_MOB_04</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>日常物流</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>只能做出初步维度判断：候选区有城市服务基础，但当前证据没有穷举 1 公里内超市、药房、洗衣。</p>
+        <div class="cell-label">证据基础</div>
+        <p>住房样本和交通网络说明日常服务可通过地址级地图核验；候选区不是纯度假区。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：证据不足以做地址级判断</span>
+          <span class="meta-pill">置信度：低-中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺每套房源 1 公里内 grocery/pharmacy/laundry/儿童活动点清单。</p>
+        <div class="badges"><span class="range"><a class="source-badge" href="#src-LISH_01" title="Flatio T2 Campo de Ourique | 平台来源 | 2026-05-27">LISH_01</a> <a class="source-badge" href="#src-LISH_02" title="Flatio 2BR Chic Bright Campo de Ourique | 平台来源 | 2026-05-27">LISH_02</a> <a class="source-badge" href="#src-LISH_03" title="Flatio Encanto do Tejo T2 | 平台来源 | 2026-05-27">LISH_03</a> <a class="source-badge" href="#src-LISH_04" title="Flatio Parque das Nacoes apartment | 平台来源 | 2026-05-27">LISH_04</a> <a class="source-badge" href="#src-LISH_05" title="Lisbon Serviced Apartments Benformoso 2BR | 平台来源 | 2026-05-27">LISH_05</a> <a class="source-badge" href="#src-LISH_06" title="Lisbon Serviced Apartments Principe Real 2BR | 平台来源 | 2026-05-27">LISH_06</a> <a class="source-badge" href="#src-LISH_07" title="Vrbo Prime Lisbon Living 2BR | 平台来源 | 2026-05-27">LISH_07</a> <a class="source-badge" href="#src-LISH_08" title="Vrbo Campo de Ourique rentals | 平台来源 | 2026-05-27">LISH_08</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a> <a class="source-badge" href="#src-LISH_10" title="Flatio Campolide 2BR | 平台来源 | 2026-05-27">LISH_10</a></span> <a class="source-badge" href="#src-LIS_MOB_01" title="Lisbon public transportation | 官方来源 | 2026-05-27">LIS_MOB_01</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>只能做出初步维度判断：Nimman/Old City 服务更集中，Hang Dong/San Sai 更依赖车；当前证据不足以判断具体生活半径。</p>
+        <div class="cell-label">证据基础</div>
+        <p>住房样本和社区区域讨论提供日常服务分布线索。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：证据不足以做地址级判断</span>
+          <span class="meta-pill">置信度：低-中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺每套房源 1 公里服务清单和 Grab 实测。</p>
+        <div class="badges"><span class="range"><a class="source-badge" href="#src-CMH_01" title="Yantarasri Nimman serviced apartment | 平台来源 | 2026-05-27">CMH_01</a> <a class="source-badge" href="#src-CMH_02" title="Anantara Chiang Mai two bedroom suite | 平台来源 | 2026-05-27">CMH_02</a> <a class="source-badge" href="#src-CMH_03" title="Hillside Condominium 2 2BR | 平台来源 | 2026-05-27">CMH_03</a> <a class="source-badge" href="#src-CMH_04" title="Studio365 two bedroom apartment | 平台来源 | 2026-05-27">CMH_04</a> <a class="source-badge" href="#src-CMH_05" title="Thailand Property Hang Dong 2BR condos | 平台来源 | 2026-05-27">CMH_05</a> <a class="source-badge" href="#src-CMH_06" title="Lanna Property Moda Condo 2BR | 平台来源 | 2026-05-27">CMH_06</a> <a class="source-badge" href="#src-CMH_07" title="CNX Cribs long-term rentals | 平台来源 | 2026-05-27">CMH_07</a> <a class="source-badge" href="#src-CMH_08" title="Booking Nimman Maya 2BR family suite | 平台来源 | 2026-05-27">CMH_08</a> <a class="source-badge" href="#src-CMH_09" title="FazWaz The Unique at Nimman 2BR | 平台来源 | 2026-05-27">CMH_09</a> <a class="source-badge" href="#src-CMH_10" title="Reddit Chiang Mai serviced apartments | 社区轶事 | 2026-05-27">CMH_10</a></span> <a class="source-badge" href="#src-CM_MOB_04" title="Reddit The Base Height family | 社区轶事 | 2026-05-27">CM_MOB_04</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>文化/自然日常化</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：文化和城市公园/河滨可以嵌入日常，但周度自然需要额外交通规划。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Oceanario 家庭项目、Jardim da Estrela、公共交通/河滨等证据支持日常文化和开放空间。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺海边/森林/周末自然选项的车程、厕所、遮阴和重复成本表。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_CHILD_07" title="Oceanario family programs | 官方来源 | 2026-05-27">LIS_CHILD_07</a> <a class="source-badge" href="#src-LIS_MOB_01" title="Lisbon public transportation | 官方来源 | 2026-05-27">LIS_MOB_01</a> <a class="source-badge" href="#src-LIS_CHILD_04" title="Jardim da Estrela Visit Lisboa | 官方来源 | 2026-05-27">LIS_CHILD_04</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：自然和文化上限较高，但很多活动不是步行日常，需要车和空气窗口。</p>
+        <div class="cell-label">证据基础</div>
+        <p>亲子咖啡/活动社区、YuuBaan、TruePath、CNXlocal 等证据显示文化/自然/亲子活动生态。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>缺 Mae Rim/Hang Dong 周边自然点的车程、季节、厕所、遮阴和儿童安全核验。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_CHILD_01" title="Nics Restaurant Playground | 平台来源 | 2026-05-27">CM_CHILD_01</a> <a class="source-badge" href="#src-CM_CHILD_02" title="YuuBaan Studio activities | 平台来源 | 2026-05-27">CM_CHILD_02</a> <a class="source-badge" href="#src-CM_CHILD_09" title="Chiang Mai Kids Club TruePath | 平台来源 | 2026-05-27">CM_CHILD_09</a> <a class="source-badge" href="#src-CM_COMM_03" title="CNXlocal about | 博客/指南 | 2026-05-27">CM_COMM_03</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                  </tbody>
+                </table>
+              </div>
+            </section>
             
 
-            <tr>
-              <td class="dimension"><strong>官方安全</strong><span>总体旅行建议</span></td>
-              <td>加拿大建议普通安全防范；美国为 Level 1。<div class="badges"><a class="source-badge" href="#src-CAN_PT_01" title="Canada Portugal travel advice | 官方来源 | 2026-05-27">CAN_PT_01</a> <a class="source-badge" href="#src-US_PT_01" title="US Portugal travel advisory | 官方来源 | 2026-05-27">US_PT_01</a></div></td>
-              <td>加拿大建议高度谨慎；美国为 Level 2；英国警告主要集中在边境/南部地区，不是清迈城区。<div class="badges"><a class="source-badge" href="#src-CAN_TH_01" title="Canada Thailand travel advice | 官方来源 | 2026-05-27">CAN_TH_01</a> <a class="source-badge" href="#src-US_TH_01" title="US Thailand travel advisory | 官方来源 | 2026-05-27">US_TH_01</a> <a class="source-badge" href="#src-UK_TH_01" title="UK FCDO Thailand safety | 官方来源 | 2026-05-27">UK_TH_01</a></div></td>
-              <td>旅行建议多为国家级，不等于具体社区风险。</td>
-              <td>预订前重新核对官方旅行建议。</td>
-            </tr>
+            <section class="layer-section">
+              <h2>第4层：社区/轶事反馈</h2>
+              <div class="table-wrap" aria-label="第4层：社区/轶事反馈证据评估表">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>维度</th>
+                      <th>里斯本</th>
+                      <th>清迈</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                <tr>
+                  <td class="dimension"><strong>家长社区与融入</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：外籍家长/亲子社群入口存在，但短住家庭能否融入尚未证明。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Meetup、parenting-network 页面和 Reddit 家庭讨论提供社区入口和家庭区域线索。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑</span>
+          <span class="meta-pill">置信度：低-中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>私密群组未访问；未确认近期活动频率和短住家庭接纳度。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_COMM_01" title="Lisbon Parents and Kids Meetup | 平台来源 | 2026-05-27">LIS_COMM_01</a> <a class="source-badge" href="#src-LIS_COMM_02" title="Lisbon for Parents | 博客/指南 | 2026-05-27">LIS_COMM_02</a> <a class="source-badge" href="#src-LIS_COMM_03" title="Lisbon parenting networks | 博客/指南 | 2026-05-27">LIS_COMM_03</a> <a class="source-badge" href="#src-LIS_COMM_04" title="Reddit Best area with kids Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_04</a> <a class="source-badge" href="#src-LIS_COMM_05" title="Reddit Toddler vs Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_05</a> <a class="source-badge" href="#src-LIS_COMM_06" title="Reddit Lisbon November family | 社区轶事 | 2026-05-27">LIS_COMM_06</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出初步维度判断：外籍家庭、worldschool/homeschool 和亲子社区信号较多，但仍不能直接当作稳定社交保障。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Facebook 群组目录、Chiang Mai Family Guide、CNXlocal、Reddit 家庭个案和区域讨论提供社区线索。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑</span>
+          <span class="meta-pill">置信度：低-中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>私密群组未访问；个案不能泛化；未确认同龄孩子活动频率。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_COMM_01" title="Facebook groups for families moving to Chiang Mai | 博客/指南 | 2026-05-27">CM_COMM_01</a> <a class="source-badge" href="#src-CM_COMM_02" title="Chiang Mai Family Guide media kit | 博客/指南 | 2026-05-27">CM_COMM_02</a> <a class="source-badge" href="#src-CM_COMM_03" title="CNXlocal about | 博客/指南 | 2026-05-27">CM_COMM_03</a> <a class="source-badge" href="#src-CM_COMM_04" title="Reddit 2026 burning season megathread | 社区轶事 | 2026-05-27">CM_COMM_04</a> <a class="source-badge" href="#src-CM_COMM_05" title="Reddit staying near Loi Kroh with kids | 社区轶事 | 2026-05-27">CM_COMM_05</a> <a class="source-badge" href="#src-CM_COMM_06" title="Reddit booking condo 2-3 months possible | 社区轶事 | 2026-05-27">CM_COMM_06</a> <a class="source-badge" href="#src-CM_COMM_07" title="Reddit Hang Dong vs Nimman | 社区轶事 | 2026-05-27">CM_COMM_07</a> <a class="source-badge" href="#src-CM_CHILD_12" title="Reddit single mom expat Chiang Mai | 社区轶事 | 2026-05-27">CM_CHILD_12</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                <tr>
+                  <td class="dimension"><strong>重复抱怨/风险主题</strong></td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出主题级判断：社区反复出现的摩擦是 stroller/坡路/石子路、住房成本、儿童座椅和旅游核心区不适配。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Reddit 家庭和 stroller 讨论、住房样本风险备注、平台儿童座椅政策形成重复风险主题。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；主题存在，强度需更多样本</span>
+          <span class="meta-pill">置信度：低-中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>社区来源偏旅行者/外籍视角；缺 Google Maps 和房源评论系统抽样。</p>
+        <div class="badges"><a class="source-badge" href="#src-LIS_COMM_04" title="Reddit Best area with kids Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_04</a> <a class="source-badge" href="#src-LIS_COMM_05" title="Reddit Toddler vs Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_05</a> <a class="source-badge" href="#src-LIS_MOB_03" title="Bolt travelling with children | 平台来源 | 2026-05-27">LIS_MOB_03</a> <a class="source-badge" href="#src-LIS_MOB_04" title="Uber car seats | 平台来源 | 2026-05-27">LIS_MOB_04</a> <a class="source-badge" href="#src-LIS_MOB_05" title="Reddit Lisbon toddler car seat | 社区轶事 | 2026-05-27">LIS_MOB_05</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a></div>
+      </div>
+    </td>
+                  <td>
+      <div class="cell-block">
+        <div class="cell-label">维度评估</div>
+        <p>可以做出主题级判断：社区反复出现的摩擦是烟季、无完整公共交通、区域取舍和短租/住房不确定。</p>
+        <div class="cell-label">证据基础</div>
+        <p>Reddit 烟季、住房、Hang Dong vs Nimman、Loi Kroh 等讨论与官方/平台空气证据相互印证。</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：部分支撑；空气主题支撑强，其他主题仍偏轶事</span>
+          <span class="meta-pill">置信度：中</span>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>社区来源不可代表整体；缺系统化 Google Maps/房源评论抽样。</p>
+        <div class="badges"><a class="source-badge" href="#src-CM_COMM_04" title="Reddit 2026 burning season megathread | 社区轶事 | 2026-05-27">CM_COMM_04</a> <a class="source-badge" href="#src-CM_COMM_05" title="Reddit staying near Loi Kroh with kids | 社区轶事 | 2026-05-27">CM_COMM_05</a> <a class="source-badge" href="#src-CM_COMM_06" title="Reddit booking condo 2-3 months possible | 社区轶事 | 2026-05-27">CM_COMM_06</a> <a class="source-badge" href="#src-CM_COMM_07" title="Reddit Hang Dong vs Nimman | 社区轶事 | 2026-05-27">CM_COMM_07</a> <a class="source-badge" href="#src-CM_AIR_01" title="IQAir Chiang Mai burning season March 2026 | 平台来源 | 2026-05-27">CM_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a> <a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_03" title="Reddit single mom no public transit | 社区轶事 | 2026-05-27">CM_MOB_03</a></div>
+      </div>
+    </td>
+                </tr>
+                
+                  </tbody>
+                </table>
+              </div>
+            </section>
             
-
-            <tr>
-              <td class="dimension"><strong>官方安全</strong><span>城市相关问题</span></td>
-              <td>加拿大提示里斯本旅游区和公共交通有扒窃、偷包风险。<div class="badges"><a class="source-badge" href="#src-CAN_PT_01" title="Canada Portugal travel advice | 官方来源 | 2026-05-27">CAN_PT_01</a></div></td>
-              <td>加拿大提示清迈干季空气污染可能达到不安全水平，并建议污染高时儿童减少户外活动。<div class="badges"><a class="source-badge" href="#src-CAN_TH_01" title="Canada Thailand travel advice | 官方来源 | 2026-05-27">CAN_TH_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a></div></td>
-              <td>两城安全证据性质不同：里斯本偏财物/治安，清迈偏空气污染。</td>
-              <td>临近出发前检查当地安全提醒和 AQI。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>气候</strong><span>目标月份窗口</span></td>
-              <td>目标月份整体为温和到偏凉；来源笔记中的月均最高温：1 月 58F、2 月 60F、3 月 65F、4 月 67F、10 月 72F、11 月 64F。<div class="badges"><a class="source-badge" href="#src-LIS_CLIM_01" title="WeatherSpark Lisbon climate | 平台来源 | 2026-05-27">LIS_CLIM_01</a></div></td>
-              <td>目标月份从凉爽干季到酷热季差异大；来源笔记中的月均最高温：1 月 85F、2 月 90F、3 月 95F、4 月 97F、10 月 88F、11 月 86F。<div class="badges"><a class="source-badge" href="#src-CM_CLIM_01" title="WeatherSpark Chiang Mai climate | 平台来源 | 2026-05-27">CM_CLIM_01</a></div></td>
-              <td>WeatherSpark 为平台建模数据，不是官方气象站原始下载。</td>
-              <td>用官方气象或历史站点数据复核。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>气候</strong><span>降雨与户外摩擦</span></td>
-              <td>来源笔记中的雨日：1 月 7.3、2 月 5.8、3 月 5.3、4 月 6.1、10 月 7.4、11 月 8.4。<div class="badges"><a class="source-badge" href="#src-LIS_CLIM_01" title="WeatherSpark Lisbon climate | 平台来源 | 2026-05-27">LIS_CLIM_01</a></div></td>
-              <td>来源笔记中的雨日：1 月 0.5、2 月 0.8、3 月 2.2、4 月 7.0、10 月 10.0、11 月 3.4。<div class="badges"><a class="source-badge" href="#src-CM_CLIM_01" title="WeatherSpark Chiang Mai climate | 平台来源 | 2026-05-27">CM_CLIM_01</a></div></td>
-              <td>雨日估计不能预测某一年具体天气。</td>
-              <td>确认具体季节，并检查住房室内空间是否足够。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>空气质量</strong><span>监测证据</span></td>
-              <td>里斯本有市政空气监测信息，覆盖 PM2.5、PM10、NO2、O3 等污染物；IQAir 也有公开 AQI/PM2.5 页面。<div class="badges"><a class="source-badge" href="#src-LIS_AIR_01" title="Lisbon city air monitoring | 官方来源 | 2026-05-27">LIS_AIR_01</a> <a class="source-badge" href="#src-LIS_AIR_02" title="IQAir Lisbon AQI | 平台来源 | 2026-05-27">LIS_AIR_02</a></div></td>
-              <td>IQAir 2026 年资料称清迈在燃烧季进入高污染城市行列；加拿大官方旅行建议特别提到清迈干季污染和儿童减少户外活动；泰国新闻也佐证 2026 年严重污染事件。<div class="badges"><a class="source-badge" href="#src-CM_AIR_01" title="IQAir Chiang Mai burning season March 2026 | 平台来源 | 2026-05-27">CM_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a> <a class="source-badge" href="#src-CM_AIR_03" title="Nation Thailand Chiang Mai pollution | 新闻报道 | 2026-05-27">CM_AIR_03</a></div></td>
-              <td>IQAir/新闻不是完整历史数据集；两城监测口径不同。</td>
-              <td>按月份拉取历史 PM2.5 后再定日期。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>医疗</strong><span>儿科急诊/常规路径</span></td>
-              <td>Hospital Dona Estefania 是儿科参考医院；CUF Descobertas 有儿童/青少年中心；Hospital da Luz 有 24 小时急诊页面；UMC Lisbon 有儿科门诊和英文协助信号。<div class="badges"><a class="source-badge" href="#src-LIS_HEALTH_01" title="Hospital Dona Estefania | 官方来源 | 2026-05-27">LIS_HEALTH_01</a> <a class="source-badge" href="#src-LIS_HEALTH_02" title="Hospital CUF Descobertas | 官方来源 | 2026-05-27">LIS_HEALTH_02</a> <a class="source-badge" href="#src-LIS_HEALTH_03" title="Hospital da Luz Lisbon urgent care | 官方来源 | 2026-05-27">LIS_HEALTH_03</a> <a class="source-badge" href="#src-LIS_HEALTH_04" title="UMC Lisbon pediatrics English help | 平台来源 | 2026-05-27">LIS_HEALTH_04</a></div></td>
-              <td>Bangkok Hospital Chiang Mai 页面说明有儿科中心和 24 小时儿科急诊；FAQ 说明急诊中心 24 小时开放；Chiangmai Hospital 有儿科门诊页面；Reddit 提供儿科医生推荐的轶事信号。<div class="badges"><a class="source-badge" href="#src-CM_HEALTH_01" title="Bangkok Hospital Chiang Mai Pediatric Center | 官方来源 | 2026-05-27">CM_HEALTH_01</a> <a class="source-badge" href="#src-CM_HEALTH_02" title="Bangkok Hospital Chiang Mai FAQ | 官方来源 | 2026-05-27">CM_HEALTH_02</a> <a class="source-badge" href="#src-CM_HEALTH_03" title="Chiangmai Hospital Pediatric Clinic | 官方来源 | 2026-05-27">CM_HEALTH_03</a> <a class="source-badge" href="#src-CM_HEALTH_04" title="Reddit Chiang Mai pediatrician | 社区轶事 | 2026-05-27">CM_HEALTH_04</a></div></td>
-              <td>医院网站无法确认实际等待时间、保险直付或每个班次英文医生可用性。</td>
-              <td>用儿童发烧/呼吸症状场景致电医院确认流程。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>住房</strong><span>样本数量与渠道</span></td>
-              <td>10 个样本/代理来自 Flatio、Lisbon Serviced Apartments、Vrbo；区域包括 Campo de Ourique、Parque das Nacoes、中心区和 Campolide。<div class="badges"><a class="source-badge" href="#src-LISH_01" title="Flatio T2 Campo de Ourique | 平台来源 | 2026-05-27">LISH_01</a> <a class="source-badge" href="#src-LISH_02" title="Flatio 2BR Chic Bright Campo de Ourique | 平台来源 | 2026-05-27">LISH_02</a> <a class="source-badge" href="#src-LISH_03" title="Flatio Encanto do Tejo T2 | 平台来源 | 2026-05-27">LISH_03</a> <a class="source-badge" href="#src-LISH_04" title="Flatio Parque das Nacoes apartment | 平台来源 | 2026-05-27">LISH_04</a> <a class="source-badge" href="#src-LISH_05" title="Lisbon Serviced Apartments Benformoso 2BR | 平台来源 | 2026-05-27">LISH_05</a> <a class="source-badge" href="#src-LISH_06" title="Lisbon Serviced Apartments Principe Real 2BR | 平台来源 | 2026-05-27">LISH_06</a> <a class="source-badge" href="#src-LISH_07" title="Vrbo Prime Lisbon Living 2BR | 平台来源 | 2026-05-27">LISH_07</a> <a class="source-badge" href="#src-LISH_08" title="Vrbo Campo de Ourique rentals | 平台来源 | 2026-05-27">LISH_08</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a> <a class="source-badge" href="#src-LISH_10" title="Flatio Campolide 2BR | 平台来源 | 2026-05-27">LISH_10</a></div></td>
-              <td>10 个样本/代理来自 ThaiApartment、Anantara、Studio365、Thailand Property、Lanna Property、CNX Cribs、Booking、FazWaz、Reddit；区域包括 Nimman、Riverside、Old City edge、Hang Dong。<div class="badges"><a class="source-badge" href="#src-CMH_01" title="Yantarasri Nimman serviced apartment | 平台来源 | 2026-05-27">CMH_01</a> <a class="source-badge" href="#src-CMH_02" title="Anantara Chiang Mai two bedroom suite | 平台来源 | 2026-05-27">CMH_02</a> <a class="source-badge" href="#src-CMH_03" title="Hillside Condominium 2 2BR | 平台来源 | 2026-05-27">CMH_03</a> <a class="source-badge" href="#src-CMH_04" title="Studio365 two bedroom apartment | 平台来源 | 2026-05-27">CMH_04</a> <a class="source-badge" href="#src-CMH_05" title="Thailand Property Hang Dong 2BR condos | 平台来源 | 2026-05-27">CMH_05</a> <a class="source-badge" href="#src-CMH_06" title="Lanna Property Moda Condo 2BR | 平台来源 | 2026-05-27">CMH_06</a> <a class="source-badge" href="#src-CMH_07" title="CNX Cribs long-term rentals | 平台来源 | 2026-05-27">CMH_07</a> <a class="source-badge" href="#src-CMH_08" title="Booking Nimman Maya 2BR family suite | 平台来源 | 2026-05-27">CMH_08</a> <a class="source-badge" href="#src-CMH_09" title="FazWaz The Unique at Nimman 2BR | 平台来源 | 2026-05-27">CMH_09</a> <a class="source-badge" href="#src-CMH_10" title="Reddit Chiang Mai serviced apartments | 社区轶事 | 2026-05-27">CMH_10</a></div></td>
-              <td>仅人工采样；未批量抓取 Airbnb/Booking；价格和可订性会动态变化。</td>
-              <td>联系房源确认 75-90 晚、儿童入住、洗衣、厨房、噪音和取消政策。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>住房</strong><span>家庭适配变量</span></td>
-              <td>证据跟踪了 2 居/可用睡眠空间、厨房、洗衣机、空调/供暖、Wi-Fi、家庭适配性、噪音和出入风险。<div class="badges"><span class="range"><a class="source-badge" href="#src-LISH_01" title="Flatio T2 Campo de Ourique | 平台来源 | 2026-05-27">LISH_01</a> <a class="source-badge" href="#src-LISH_02" title="Flatio 2BR Chic Bright Campo de Ourique | 平台来源 | 2026-05-27">LISH_02</a> <a class="source-badge" href="#src-LISH_03" title="Flatio Encanto do Tejo T2 | 平台来源 | 2026-05-27">LISH_03</a> <a class="source-badge" href="#src-LISH_04" title="Flatio Parque das Nacoes apartment | 平台来源 | 2026-05-27">LISH_04</a> <a class="source-badge" href="#src-LISH_05" title="Lisbon Serviced Apartments Benformoso 2BR | 平台来源 | 2026-05-27">LISH_05</a> <a class="source-badge" href="#src-LISH_06" title="Lisbon Serviced Apartments Principe Real 2BR | 平台来源 | 2026-05-27">LISH_06</a> <a class="source-badge" href="#src-LISH_07" title="Vrbo Prime Lisbon Living 2BR | 平台来源 | 2026-05-27">LISH_07</a> <a class="source-badge" href="#src-LISH_08" title="Vrbo Campo de Ourique rentals | 平台来源 | 2026-05-27">LISH_08</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a> <a class="source-badge" href="#src-LISH_10" title="Flatio Campolide 2BR | 平台来源 | 2026-05-27">LISH_10</a></span></div></td>
-              <td>证据跟踪了 2 居/公寓/套房供应、厨房/简易厨房、洗衣、空调、泳池/公共区可能性、空气净化需求、位置和交通风险。<div class="badges"><span class="range"><a class="source-badge" href="#src-CMH_01" title="Yantarasri Nimman serviced apartment | 平台来源 | 2026-05-27">CMH_01</a> <a class="source-badge" href="#src-CMH_02" title="Anantara Chiang Mai two bedroom suite | 平台来源 | 2026-05-27">CMH_02</a> <a class="source-badge" href="#src-CMH_03" title="Hillside Condominium 2 2BR | 平台来源 | 2026-05-27">CMH_03</a> <a class="source-badge" href="#src-CMH_04" title="Studio365 two bedroom apartment | 平台来源 | 2026-05-27">CMH_04</a> <a class="source-badge" href="#src-CMH_05" title="Thailand Property Hang Dong 2BR condos | 平台来源 | 2026-05-27">CMH_05</a> <a class="source-badge" href="#src-CMH_06" title="Lanna Property Moda Condo 2BR | 平台来源 | 2026-05-27">CMH_06</a> <a class="source-badge" href="#src-CMH_07" title="CNX Cribs long-term rentals | 平台来源 | 2026-05-27">CMH_07</a> <a class="source-badge" href="#src-CMH_08" title="Booking Nimman Maya 2BR family suite | 平台来源 | 2026-05-27">CMH_08</a> <a class="source-badge" href="#src-CMH_09" title="FazWaz The Unique at Nimman 2BR | 平台来源 | 2026-05-27">CMH_09</a> <a class="source-badge" href="#src-CMH_10" title="Reddit Chiang Mai serviced apartments | 社区轶事 | 2026-05-27">CMH_10</a></span></div></td>
-              <td>不是每套房源都确认了所有字段；部分只是供应代理页面。</td>
-              <td>预订前使用房源级核验清单逐项确认。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>儿童活动</strong><span>每日户外锚点</span></td>
-              <td>证据包括 Jardim da Estrela、Jardim da Parada/Campo de Ourique 信号、Parque das Nacoes 河滨/游乐场、Belem/Restelo 开放空间和文化设施。<div class="badges"><a class="source-badge" href="#src-LIS_CHILD_04" title="Jardim da Estrela Visit Lisboa | 官方来源 | 2026-05-27">LIS_CHILD_04</a> <a class="source-badge" href="#src-LIS_CHILD_05" title="Lisbon playgrounds Lets Go Baby | 博客/指南 | 2026-05-27">LIS_CHILD_05</a> <a class="source-badge" href="#src-LIS_CHILD_08" title="Reddit kids play outside Portugal | 社区轶事 | 2026-05-27">LIS_CHILD_08</a> <a class="source-badge" href="#src-LIS_CHILD_09" title="Reddit Lisbon active 2.5 year old | 社区轶事 | 2026-05-27">LIS_CHILD_09</a></div></td>
-              <td>证据包括 Nong Buak Hard 公园、Hang Dong 的亲子户外咖啡/游乐场，如 Nic&#x27;s、YuuBaan、Din Cafe、Triplets；Nimman 证据更多依赖住房、商场和咖啡生态。<div class="badges"><a class="source-badge" href="#src-CM_CHILD_01" title="Nics Restaurant Playground | 平台来源 | 2026-05-27">CM_CHILD_01</a> <a class="source-badge" href="#src-CM_CHILD_02" title="YuuBaan Studio activities | 平台来源 | 2026-05-27">CM_CHILD_02</a> <a class="source-badge" href="#src-CM_CHILD_03" title="Din Cafe Hang Dong family guide | 博客/指南 | 2026-05-27">CM_CHILD_03</a> <a class="source-badge" href="#src-CM_CHILD_06" title="Triplets Eat and Play | 平台来源 | 2026-05-27">CM_CHILD_06</a> <a class="source-badge" href="#src-CM_CHILD_08" title="Nong Buak Hard public park playground | 地图来源 | 2026-05-27">CM_CHILD_08</a></div></td>
-              <td>尚未系统核验 Google Maps 照片、厕所和遮阴。</td>
-              <td>对每个最终候选区绘制 5 个每日/短车程户外选项。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>儿童活动</strong><span>室内 fallback</span></td>
-              <td>证据包括 SandCastle、Wooki、Teddy and Friends、Oceanario 家庭项目、Petit Cabanon 信号。<div class="badges"><a class="source-badge" href="#src-LIS_CHILD_01" title="SandCastle indoor playground cafe | 平台来源 | 2026-05-27">LIS_CHILD_01</a> <a class="source-badge" href="#src-LIS_CHILD_02" title="Wooki sensory playgroups | 平台来源 | 2026-05-27">LIS_CHILD_02</a> <a class="source-badge" href="#src-LIS_CHILD_03" title="Petit Cabanon parent child cafe | 博客/指南 | 2026-05-27">LIS_CHILD_03</a> <a class="source-badge" href="#src-LIS_CHILD_06" title="Teddy and Friends playground | 平台来源 | 2026-05-27">LIS_CHILD_06</a> <a class="source-badge" href="#src-LIS_CHILD_07" title="Oceanario family programs | 官方来源 | 2026-05-27">LIS_CHILD_07</a></div></td>
-              <td>证据包括 Lenmaii Playground Cafe、CNXlocal 儿童咖啡/游乐场汇总、50 Fly toddler time，以及商场/儿童咖啡候选。<div class="badges"><a class="source-badge" href="#src-CM_CHILD_04" title="Lenmaii Playground Cafe | 评价来源 | 2026-05-27">CM_CHILD_04</a> <a class="source-badge" href="#src-CM_CHILD_07" title="CNXlocal kid friendly cafes parks playgrounds | 博客/指南 | 2026-05-27">CM_CHILD_07</a> <a class="source-badge" href="#src-CM_CHILD_11" title="50 Fly toddler time | 平台来源 | 2026-05-27">CM_CHILD_11</a></div></td>
-              <td>当前营业状态、年龄规则和空气净化没有全部确认。</td>
-              <td>逐一确认年龄、预约、空调/空气净化、厕所和父母座位。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>儿童活动</strong><span>结构化活动/社交</span></td>
-              <td>证据包括 Wooki 感官 playgroup、Lisbon Parents and Kids Meetup，以及家长网络目录。<div class="badges"><a class="source-badge" href="#src-LIS_CHILD_02" title="Wooki sensory playgroups | 平台来源 | 2026-05-27">LIS_CHILD_02</a> <a class="source-badge" href="#src-LIS_CHILD_10" title="Lisbon Parents and Kids Meetup | 平台来源 | 2026-05-27">LIS_CHILD_10</a> <a class="source-badge" href="#src-LIS_COMM_01" title="Lisbon Parents and Kids Meetup | 平台来源 | 2026-05-27">LIS_COMM_01</a> <a class="source-badge" href="#src-LIS_COMM_02" title="Lisbon for Parents | 博客/指南 | 2026-05-27">LIS_COMM_02</a> <a class="source-badge" href="#src-LIS_COMM_03" title="Lisbon parenting networks | 博客/指南 | 2026-05-27">LIS_COMM_03</a></div></td>
-              <td>证据包括 TruePath/Chiangmai Family Club、Kinder Home、FLOM、家庭社区博客和 Reddit 个案。<div class="badges"><a class="source-badge" href="#src-CM_CHILD_05" title="FLOM Art Studio | 平台来源 | 2026-05-27">CM_CHILD_05</a> <a class="source-badge" href="#src-CM_CHILD_09" title="Chiang Mai Kids Club TruePath | 平台来源 | 2026-05-27">CM_CHILD_09</a> <a class="source-badge" href="#src-CM_CHILD_10" title="Kinder Home Chiang Mai Kids event | 平台来源 | 2026-05-27">CM_CHILD_10</a> <a class="source-badge" href="#src-CM_COMM_01" title="Facebook groups for families moving to Chiang Mai | 博客/指南 | 2026-05-27">CM_COMM_01</a> <a class="source-badge" href="#src-CM_COMM_02" title="Chiang Mai Family Guide media kit | 博客/指南 | 2026-05-27">CM_COMM_02</a> <a class="source-badge" href="#src-CM_COMM_03" title="CNXlocal about | 博客/指南 | 2026-05-27">CM_COMM_03</a> <a class="source-badge" href="#src-CM_CHILD_12" title="Reddit single mom expat Chiang Mai | 社区轶事 | 2026-05-27">CM_CHILD_12</a></div></td>
-              <td>短住家庭是否可加入、实际活动频率尚未确认。</td>
-              <td>带着 2.5 岁和 4.5 岁、三个月停留背景直接询问组织者。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>交通</strong><span>公共交通与无车生活</span></td>
-              <td>里斯本市政页面列出公交、电车、地铁、火车、渡轮、出租车；地铁页面包含儿童/婴儿车相关使用信息。<div class="badges"><a class="source-badge" href="#src-LIS_MOB_01" title="Lisbon public transportation | 官方来源 | 2026-05-27">LIS_MOB_01</a> <a class="source-badge" href="#src-LIS_MOB_02" title="Lisbon Metro children stroller | 官方来源 | 2026-05-27">LIS_MOB_02</a></div></td>
-              <td>清迈交通证据集中在 songthaew、Grab/私人交通；社区轶事称没有完整公共交通；本轮未识别可支撑家庭日常的轨道/地铁系统。<div class="badges"><a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_02" title="How to use songthaew with family | 博客/指南 | 2026-05-27">CM_MOB_02</a> <a class="source-badge" href="#src-CM_MOB_03" title="Reddit single mom no public transit | 社区轶事 | 2026-05-27">CM_MOB_03</a></div></td>
-              <td>尚未从具体地址测试路线。</td>
-              <td>从最终房源测试到超市、公园、医院和室内游乐点的路线。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>交通</strong><span>婴儿车与儿童座椅</span></td>
-              <td>Bolt/Uber 页面显示儿童座椅责任/可用性有限；Reddit 社区信号提到婴儿车、石子路和坡路摩擦。<div class="badges"><a class="source-badge" href="#src-LIS_MOB_03" title="Bolt travelling with children | 平台来源 | 2026-05-27">LIS_MOB_03</a> <a class="source-badge" href="#src-LIS_MOB_04" title="Uber car seats | 平台来源 | 2026-05-27">LIS_MOB_04</a> <a class="source-badge" href="#src-LIS_MOB_05" title="Reddit Lisbon toddler car seat | 社区轶事 | 2026-05-27">LIS_MOB_05</a> <a class="source-badge" href="#src-LIS_COMM_05" title="Reddit Toddler vs Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_05</a></div></td>
-              <td>家庭交通指南和 Reddit 信号显示依赖 songthaew、Grab 或私人交通；儿童座椅可得性仍未确认。<div class="badges"><a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_02" title="How to use songthaew with family | 博客/指南 | 2026-05-27">CM_MOB_02</a> <a class="source-badge" href="#src-CM_MOB_03" title="Reddit single mom no public transit | 社区轶事 | 2026-05-27">CM_MOB_03</a></div></td>
-              <td>平台政策和社区评论不能保证实时儿童座椅供应。</td>
-              <td>决定是否携带两个旅行儿童座椅。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>日常物流</strong><span>超市/药房/洗衣代理</span></td>
-              <td>住房和社区来源显示候选区有城市服务可核验；如果房源选得好，交通网络可支持日常物流。<div class="badges"><span class="range"><a class="source-badge" href="#src-LISH_01" title="Flatio T2 Campo de Ourique | 平台来源 | 2026-05-27">LISH_01</a> <a class="source-badge" href="#src-LISH_02" title="Flatio 2BR Chic Bright Campo de Ourique | 平台来源 | 2026-05-27">LISH_02</a> <a class="source-badge" href="#src-LISH_03" title="Flatio Encanto do Tejo T2 | 平台来源 | 2026-05-27">LISH_03</a> <a class="source-badge" href="#src-LISH_04" title="Flatio Parque das Nacoes apartment | 平台来源 | 2026-05-27">LISH_04</a> <a class="source-badge" href="#src-LISH_05" title="Lisbon Serviced Apartments Benformoso 2BR | 平台来源 | 2026-05-27">LISH_05</a> <a class="source-badge" href="#src-LISH_06" title="Lisbon Serviced Apartments Principe Real 2BR | 平台来源 | 2026-05-27">LISH_06</a> <a class="source-badge" href="#src-LISH_07" title="Vrbo Prime Lisbon Living 2BR | 平台来源 | 2026-05-27">LISH_07</a> <a class="source-badge" href="#src-LISH_08" title="Vrbo Campo de Ourique rentals | 平台来源 | 2026-05-27">LISH_08</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a> <a class="source-badge" href="#src-LISH_10" title="Flatio Campolide 2BR | 平台来源 | 2026-05-27">LISH_10</a></span> <a class="source-badge" href="#src-LIS_MOB_01" title="Lisbon public transportation | 官方来源 | 2026-05-27">LIS_MOB_01</a></div></td>
-              <td>住房和社区来源显示 Nimman/Old City 服务更集中；Hang Dong/San Sai 更依赖车或 Grab。<div class="badges"><span class="range"><a class="source-badge" href="#src-CMH_01" title="Yantarasri Nimman serviced apartment | 平台来源 | 2026-05-27">CMH_01</a> <a class="source-badge" href="#src-CMH_02" title="Anantara Chiang Mai two bedroom suite | 平台来源 | 2026-05-27">CMH_02</a> <a class="source-badge" href="#src-CMH_03" title="Hillside Condominium 2 2BR | 平台来源 | 2026-05-27">CMH_03</a> <a class="source-badge" href="#src-CMH_04" title="Studio365 two bedroom apartment | 平台来源 | 2026-05-27">CMH_04</a> <a class="source-badge" href="#src-CMH_05" title="Thailand Property Hang Dong 2BR condos | 平台来源 | 2026-05-27">CMH_05</a> <a class="source-badge" href="#src-CMH_06" title="Lanna Property Moda Condo 2BR | 平台来源 | 2026-05-27">CMH_06</a> <a class="source-badge" href="#src-CMH_07" title="CNX Cribs long-term rentals | 平台来源 | 2026-05-27">CMH_07</a> <a class="source-badge" href="#src-CMH_08" title="Booking Nimman Maya 2BR family suite | 平台来源 | 2026-05-27">CMH_08</a> <a class="source-badge" href="#src-CMH_09" title="FazWaz The Unique at Nimman 2BR | 平台来源 | 2026-05-27">CMH_09</a> <a class="source-badge" href="#src-CMH_10" title="Reddit Chiang Mai serviced apartments | 社区轶事 | 2026-05-27">CMH_10</a></span> <a class="source-badge" href="#src-CM_MOB_04" title="Reddit The Base Height family | 社区轶事 | 2026-05-27">CM_MOB_04</a></div></td>
-              <td>尚未穷举 1 公里内超市、药房和洗衣点。</td>
-              <td>围绕每个最终房源建立地址级生活地图。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>文化/自然</strong><span>日常文化与可重复自然</span></td>
-              <td>证据指向市场、公共交通、Oceanario 家庭项目、公园、河滨和海边/周末选项。<div class="badges"><a class="source-badge" href="#src-LIS_CHILD_07" title="Oceanario family programs | 官方来源 | 2026-05-27">LIS_CHILD_07</a> <a class="source-badge" href="#src-LIS_MOB_01" title="Lisbon public transportation | 官方来源 | 2026-05-27">LIS_MOB_01</a> <a class="source-badge" href="#src-LIS_CHILD_04" title="Jardim da Estrela Visit Lisboa | 官方来源 | 2026-05-27">LIS_CHILD_04</a></div></td>
-              <td>证据指向亲子咖啡、homeschool/activity 社区、泰北文化环境、Hang Dong/Mae Rim 周边花园/农场/自然短途潜力。<div class="badges"><a class="source-badge" href="#src-CM_CHILD_01" title="Nics Restaurant Playground | 平台来源 | 2026-05-27">CM_CHILD_01</a> <a class="source-badge" href="#src-CM_CHILD_02" title="YuuBaan Studio activities | 平台来源 | 2026-05-27">CM_CHILD_02</a> <a class="source-badge" href="#src-CM_CHILD_09" title="Chiang Mai Kids Club TruePath | 平台来源 | 2026-05-27">CM_CHILD_09</a> <a class="source-badge" href="#src-CM_COMM_03" title="CNXlocal about | 博客/指南 | 2026-05-27">CM_COMM_03</a></div></td>
-              <td>自然短途证据尚未转换为车程/频率表。</td>
-              <td>绘制每周自然选项，标注厕所、遮阴、费用和交通。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>社区</strong><span>家长/家庭信号</span></td>
-              <td>证据包括 Meetup 群组、家长网络页面、Reddit 关于家庭区域、婴儿车和幼儿后勤的讨论。<div class="badges"><a class="source-badge" href="#src-LIS_COMM_01" title="Lisbon Parents and Kids Meetup | 平台来源 | 2026-05-27">LIS_COMM_01</a> <a class="source-badge" href="#src-LIS_COMM_02" title="Lisbon for Parents | 博客/指南 | 2026-05-27">LIS_COMM_02</a> <a class="source-badge" href="#src-LIS_COMM_03" title="Lisbon parenting networks | 博客/指南 | 2026-05-27">LIS_COMM_03</a> <a class="source-badge" href="#src-LIS_COMM_04" title="Reddit Best area with kids Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_04</a> <a class="source-badge" href="#src-LIS_COMM_05" title="Reddit Toddler vs Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_05</a> <a class="source-badge" href="#src-LIS_COMM_06" title="Reddit Lisbon November family | 社区轶事 | 2026-05-27">LIS_COMM_06</a></div></td>
-              <td>证据包括 Facebook 群组目录/博客信号、Chiang Mai Family Guide、CNXlocal、Reddit 关于家庭/空气/住房/区域的讨论。<div class="badges"><a class="source-badge" href="#src-CM_COMM_01" title="Facebook groups for families moving to Chiang Mai | 博客/指南 | 2026-05-27">CM_COMM_01</a> <a class="source-badge" href="#src-CM_COMM_02" title="Chiang Mai Family Guide media kit | 博客/指南 | 2026-05-27">CM_COMM_02</a> <a class="source-badge" href="#src-CM_COMM_03" title="CNXlocal about | 博客/指南 | 2026-05-27">CM_COMM_03</a> <a class="source-badge" href="#src-CM_COMM_04" title="Reddit 2026 burning season megathread | 社区轶事 | 2026-05-27">CM_COMM_04</a> <a class="source-badge" href="#src-CM_COMM_05" title="Reddit staying near Loi Kroh with kids | 社区轶事 | 2026-05-27">CM_COMM_05</a> <a class="source-badge" href="#src-CM_COMM_06" title="Reddit booking condo 2-3 months possible | 社区轶事 | 2026-05-27">CM_COMM_06</a> <a class="source-badge" href="#src-CM_COMM_07" title="Reddit Hang Dong vs Nimman | 社区轶事 | 2026-05-27">CM_COMM_07</a></div></td>
-              <td>未访问私密 Facebook 帖子；轶事来源不能作为定论。</td>
-              <td>合规加入/观察群组，并提出具体问题。</td>
-            </tr>
-            
-
-            <tr>
-              <td class="dimension"><strong>失败模式</strong><span>已记录风险</span></td>
-              <td>申根超期风险、高住房成本、坡路/婴儿车摩擦、冬季雨天 fallback、儿童座椅不确定。<div class="badges"><a class="source-badge" href="#src-EU_VISA_01" title="EU Schengen visa policy | 官方来源 | 2026-05-27">EU_VISA_01</a> <span class="range"><a class="source-badge" href="#src-LISH_01" title="Flatio T2 Campo de Ourique | 平台来源 | 2026-05-27">LISH_01</a> <a class="source-badge" href="#src-LISH_02" title="Flatio 2BR Chic Bright Campo de Ourique | 平台来源 | 2026-05-27">LISH_02</a> <a class="source-badge" href="#src-LISH_03" title="Flatio Encanto do Tejo T2 | 平台来源 | 2026-05-27">LISH_03</a> <a class="source-badge" href="#src-LISH_04" title="Flatio Parque das Nacoes apartment | 平台来源 | 2026-05-27">LISH_04</a> <a class="source-badge" href="#src-LISH_05" title="Lisbon Serviced Apartments Benformoso 2BR | 平台来源 | 2026-05-27">LISH_05</a> <a class="source-badge" href="#src-LISH_06" title="Lisbon Serviced Apartments Principe Real 2BR | 平台来源 | 2026-05-27">LISH_06</a> <a class="source-badge" href="#src-LISH_07" title="Vrbo Prime Lisbon Living 2BR | 平台来源 | 2026-05-27">LISH_07</a> <a class="source-badge" href="#src-LISH_08" title="Vrbo Campo de Ourique rentals | 平台来源 | 2026-05-27">LISH_08</a> <a class="source-badge" href="#src-LISH_09" title="Vrbo Borja111 family apartment | 评价来源 | 2026-05-27">LISH_09</a> <a class="source-badge" href="#src-LISH_10" title="Flatio Campolide 2BR | 平台来源 | 2026-05-27">LISH_10</a></span> <a class="source-badge" href="#src-LIS_CLIM_01" title="WeatherSpark Lisbon climate | 平台来源 | 2026-05-27">LIS_CLIM_01</a> <a class="source-badge" href="#src-LIS_MOB_03" title="Bolt travelling with children | 平台来源 | 2026-05-27">LIS_MOB_03</a> <a class="source-badge" href="#src-LIS_MOB_04" title="Uber car seats | 平台来源 | 2026-05-27">LIS_MOB_04</a> <a class="source-badge" href="#src-LIS_MOB_05" title="Reddit Lisbon toddler car seat | 社区轶事 | 2026-05-27">LIS_MOB_05</a></div></td>
-              <td>烟季 PM2.5、签证规则波动、炎热、无完整公共交通、儿童座椅不确定、郊区车依赖。<div class="badges"><a class="source-badge" href="#src-CM_AIR_01" title="IQAir Chiang Mai burning season March 2026 | 平台来源 | 2026-05-27">CM_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a> <a class="source-badge" href="#src-CM_AIR_03" title="Nation Thailand Chiang Mai pollution | 新闻报道 | 2026-05-27">CM_AIR_03</a> <a class="source-badge" href="#src-TH_VISA_03" title="TAT visa exemption revision pending | 官方来源 | 2026-05-27">TH_VISA_03</a> <a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_02" title="How to use songthaew with family | 博客/指南 | 2026-05-27">CM_MOB_02</a> <a class="source-badge" href="#src-CM_MOB_03" title="Reddit single mom no public transit | 社区轶事 | 2026-05-27">CM_MOB_03</a></div></td>
-              <td>失败模式是由证据综合出的风险记录，不是预测。</td>
-              <td>用最终日期、预算、孩子健康情况和精确地址复核。</td>
-            </tr>
-            
-        </tbody>
-      </table>
-    </section>
     <h2>来源索引</h2>
     <section class="sources">
       
