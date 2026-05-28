@@ -1,0 +1,72 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:27:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2590185736,
+  "lat": 18.8451539,
+  "lon": 99.0434552,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2590211689,
+  "lat": 18.8517005,
+  "lon": 99.0446885,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4538974693,
+  "lat": 18.8496899,
+  "lon": 99.0445532,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Nan Coffee House"
+  }
+},
+{
+  "type": "node",
+  "id": 7042842385,
+  "lat": 18.8449594,
+  "lon": 99.0434321,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "name": "Muanchon",
+    "opening_hours": "Mo-Su 06:00-18:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1491148005,
+  "center": {
+    "lat": 18.8459131,
+    "lon": 99.0474995
+  },
+  "tags": {
+    "leisure": "park"
+  }
+}
+
+  ]
+}

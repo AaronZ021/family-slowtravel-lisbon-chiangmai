@@ -1,0 +1,1010 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:26:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 477853299,
+  "lat": 38.6975196,
+  "lon": -9.2036756,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:floor": "0",
+    "addr:housenumber": "110",
+    "addr:postcode": "1300-085",
+    "addr:street": "Rua de Belém",
+    "amenity": "cafe",
+    "brand": "Starbucks",
+    "brand:wikidata": "Q37158",
+    "brand:wikipedia": "pt:Starbucks",
+    "changing_table": "yes",
+    "check_date": "2025-05-17",
+    "contact:email": "starbucks@starbucks.pt",
+    "contact:facebook": "StarbucksPortugal",
+    "contact:instagram": "starbucksptg",
+    "contact:phone": "+351 211 147 602",
+    "contact:tiktok": "starbucksportugal",
+    "contact:twitter": "starbucksPTG",
+    "cuisine": "coffee_shop",
+    "entrance:step_count": "0",
+    "entrance:width": "122cm",
+    "internet_access": "wlan",
+    "level": "0",
+    "name": "Starbucks",
+    "note": "Corredores estreitos, especialmente o da casa de banho",
+    "official_name": "Starbucks Coffee",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "ref": "1893-122524",
+    "source:contact": "website",
+    "source:opening_hours": "survey",
+    "takeaway": "yes",
+    "toilets": "yes",
+    "toilets:fee": "no",
+    "toilets:level": "0",
+    "toilets:wheelchair": "no",
+    "toilets:wheelchair:support_brackets": "2",
+    "toilets:wheelchair:width": "75",
+    "website": "https://www.starbucks.pt/",
+    "wheelchair": "yes",
+    "wheelchair:turning_circle": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 950508832,
+  "lat": 38.7024372,
+  "lon": -9.2062211,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 954710515,
+  "lat": 38.6955321,
+  "lon": -9.2152348,
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:postcode": "1400-342",
+    "addr:street": "Avenida da Torre de Belém",
+    "branch": "Restelo",
+    "brand": "Pingo Doce",
+    "brand:wikidata": "Q1575057",
+    "brand:wikipedia": "pt:Pingo Doce",
+    "contact:facebook": "pingodoce",
+    "contact:instagram": "pingodoce",
+    "contact:linkedin": "https://www.linkedin.com/company/pingo-doce",
+    "contact:phone": "+351 938 875 438",
+    "contact:tiktok": "pingodoce",
+    "contact:youtube": "pingodocept",
+    "name": "Pingo Doce",
+    "opening_hours": "Mo-Su 08:00-21:00; easter 08:00-14:00",
+    "ref": "438",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.pingodoce.pt/lojas/restelo/"
+  }
+},
+{
+  "type": "node",
+  "id": 1213461384,
+  "lat": 38.6972539,
+  "lon": -9.2030676,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "89",
+    "addr:postcode": "1300-083",
+    "addr:street": "Rua de Belém",
+    "amenity": "pharmacy",
+    "contact:email": "farmaciadosjeronimos@gmail.com",
+    "contact:fax": "+351 213 030 298",
+    "contact:phone": "+351 213 011 454",
+    "contact:website": "http://www.farmaciabarral.com/farmacia-dos-jeronimos",
+    "dispensing": "yes",
+    "entrance:step_count": "0",
+    "entrance:width": "102cm",
+    "healthcare": "pharmacy",
+    "name": "Farmácia dos Jerónimos",
+    "note": "Responsável Técnico - Pedro Daniel Morais Aragonez",
+    "opening_hours": "Mo-Fr 08:00-21:00; Sa,Su 10:00-20:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1213461417,
+  "lat": 38.6984991,
+  "lon": -9.2184776,
+  "tags": {
+    "addr:city": "Belém",
+    "addr:housenumber": "11-C",
+    "addr:postcode": "1400-139",
+    "addr:street": "Rua Duarte Pacheco Pereira",
+    "amenity": "pharmacy",
+    "contact:phone": "+351 213 031 650",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia do Restelo",
+    "opening_hours": "Mo-Sun 9-14 15-19"
+  }
+},
+{
+  "type": "node",
+  "id": 1240465058,
+  "lat": 38.6962343,
+  "lon": -9.2195701,
+  "tags": {
+    "addr:city": "Santa Maria de Belém",
+    "addr:housenumber": "50;52",
+    "addr:postcode": "1400-290",
+    "addr:street": "Rua de Pedrouços",
+    "amenity": "pharmacy",
+    "contact:phone": "+351 213 010 280",
+    "contact:website": "www.facebook.com/Farmácia-Sociedade-Higilux-1640964636184095",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Sociedade Higilux",
+    "official_name": "Farmácia Sociedade Higilux, Lda."
+  }
+},
+{
+  "type": "node",
+  "id": 1302863147,
+  "lat": 38.6952351,
+  "lon": -9.2152776,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Café Império"
+  }
+},
+{
+  "type": "node",
+  "id": 1302870987,
+  "lat": 38.6983756,
+  "lon": -9.2186180,
+  "tags": {
+    "addr:city": "Belem",
+    "addr:housenumber": "9B",
+    "addr:postcode": "1400-139",
+    "addr:street": "Rua Duarte Pacheco Pereira",
+    "amenity": "cafe",
+    "cuisine": "takeaway;portuguese",
+    "name": "Madalen AS",
+    "opening_hours": "Mon-Fri 10:00-19:00 // Sat 10:00-13:00",
+    "outdoor_seating": "yes",
+    "phone": "+351213011670"
+  }
+},
+{
+  "type": "node",
+  "id": 1302870989,
+  "lat": 38.6981305,
+  "lon": -9.2189838,
+  "tags": {
+    "addr:housenumber": "7F",
+    "addr:postcode": "1400-139",
+    "addr:street": "Rua Duarte Pacheco Pereira",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;ice_cream",
+    "name": "Café gelados Chile"
+  }
+},
+{
+  "type": "node",
+  "id": 1302870990,
+  "lat": 38.6985484,
+  "lon": -9.2184023,
+  "tags": {
+    "addr:city": "Belem",
+    "addr:housenumber": "11B",
+    "addr:postcode": "1400-139",
+    "addr:street": "Rua Duarte Pacheco Pereira",
+    "alt_name": "O Careca",
+    "amenity": "cafe",
+    "cuisine": "cake;coffee_shop;portuguese",
+    "name": "Pastelaria Restelo (Careca)",
+    "opening_hours": "Mon-Sun 8:00-20:00 (closed wednesday)",
+    "outdoor_seating": "yes",
+    "phone": "+351 213 010 987",
+    "website": "https://pastelariaocareca.pt/"
+  }
+},
+{
+  "type": "node",
+  "id": 1302881356,
+  "lat": 38.6931618,
+  "lon": -9.2135462,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Vella Café",
+    "outdoor_seating": "yes",
+    "phone": "+351213032778"
+  }
+},
+{
+  "type": "node",
+  "id": 1302888592,
+  "lat": 38.6939185,
+  "lon": -9.2179776,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1600399977,
+  "lat": 38.6931832,
+  "lon": -9.2107106,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-05-02",
+    "name": "Mensagem",
+    "source": "knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 1719291892,
+  "lat": 38.6951616,
+  "lon": -9.2137276,
+  "tags": {
+    "addr:city": "Lisboa (Belém)",
+    "addr:housenumber": "148 B",
+    "addr:postcode": "1400-031",
+    "addr:street": "Rua Bartolomeu Dias",
+    "amenity": "cafe",
+    "check_date": "2025-03-12",
+    "cuisine": "coffee;cocktail;wine",
+    "email": "geral@casuallounge.com",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Casual Lounge Caffe",
+    "opening_hours": "Tu-Fr 12:00-02:00;Sa 15:00-02:00;Su 15:00-00:00",
+    "phone": "213 019 024",
+    "website": "https://www.casuallounge.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 1846915409,
+  "lat": 38.6956940,
+  "lon": -9.2126281,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1962025506,
+  "lat": 38.6950760,
+  "lon": -9.2125806,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 2473034291,
+  "lat": 38.6998139,
+  "lon": -9.2248204,
+  "tags": {
+    "name": "Jorge",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2473034384,
+  "lat": 38.6997876,
+  "lon": -9.2250773,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2473034398,
+  "lat": 38.6997600,
+  "lon": -9.2245797,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Vasco da Gama"
+  }
+},
+{
+  "type": "node",
+  "id": 3897929818,
+  "lat": 38.6919435,
+  "lon": -9.2139781,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-05-02",
+    "name": "Nacional",
+    "name:pt": "Nacional"
+  }
+},
+{
+  "type": "node",
+  "id": 4161794849,
+  "lat": 38.6986235,
+  "lon": -9.2258887,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 4409556428,
+  "lat": 38.6948289,
+  "lon": -9.2040467,
+  "tags": {
+    "name": "Tangerina",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4470320314,
+  "lat": 38.6955153,
+  "lon": -9.2118377,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "94",
+    "addr:postcode": "1400-038",
+    "addr:street": "Rua Bartolomeu Dias",
+    "amenity": "cafe",
+    "check_date": "2026-02-08",
+    "contact:instagram": "Obolodamarta",
+    "cuisine": "cake;deli",
+    "level": "0",
+    "name": "O Bolo da Marta",
+    "opening_hours": "Mo-Sa 11:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4783523494,
+  "lat": 38.6951141,
+  "lon": -9.2144664,
+  "tags": {
+    "addr:housenumber": "172B",
+    "addr:street": "Rua Bartolomeu Dias",
+    "amenity": "pharmacy",
+    "contact:phone": "+351 218 685 264",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Torre de Belém"
+  }
+},
+{
+  "type": "node",
+  "id": 5359058352,
+  "lat": 38.7057419,
+  "lon": -9.2090209,
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 5743626284,
+  "lat": 38.6978821,
+  "lon": -9.2043908,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-05-04",
+    "fixme": "Check tag: it's more like a bar with cafe and some food (sandwitchs and salads)",
+    "name": "BANANACAFE"
+  }
+},
+{
+  "type": "node",
+  "id": 6214544881,
+  "lat": 38.6969988,
+  "lon": -9.2088836,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1400-206",
+    "addr:street": "Praça do Império",
+    "amenity": "cafe",
+    "name": "Cafetaria Navy Museum",
+    "name:pt": "Cafetaria do Museu de Marinha",
+    "opening_hours": "Mo-Su 10:00-17:00",
+    "phone": "+351 21 097 7387",
+    "website": "https://www.facebook.com/cafetariamuseumarinha"
+  }
+},
+{
+  "type": "node",
+  "id": 9820865298,
+  "lat": 38.6938088,
+  "lon": -9.2117400,
+  "tags": {
+    "addr:city": "Lisboa (Belém)",
+    "addr:street": "Avenida de Brasília",
+    "amenity": "cafe",
+    "check_date": "2026-02-08",
+    "indoor_seating": "no",
+    "name": "Cafe do Mar",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11834056139,
+  "lat": 38.7014667,
+  "lon": -9.2072504,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "2A;2B;2C;2D",
+    "addr:postcode": "1400-314",
+    "addr:street": "Avenida do Restelo",
+    "branch": "Lisboa - Belenenses",
+    "brand": "Lidl",
+    "brand:wikidata": "Q151954",
+    "brand:wikipedia": "pt:Lidl",
+    "contact:facebook": "lidlportugal",
+    "contact:instagram": "lidlportugal",
+    "contact:linkedin": "https://www.linkedin.com/company/lidl-portugal",
+    "contact:phone": "+351 210 207 000",
+    "contact:tiktok": "lidl.portugal",
+    "contact:youtube": "https://www.youtube.com/user/LidlPortugal",
+    "name": "Lidl",
+    "opening_hours": "Mo-Su 08:00-21:30",
+    "ref": "PT00529",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.lidl.pt/s/pt-PT/pesquisa-de-loja/lisboa/avenida-do-restelo-2a-2b-2c-2d/"
+  }
+},
+{
+  "type": "node",
+  "id": 11878771926,
+  "lat": 38.6984681,
+  "lon": -9.2185170,
+  "tags": {
+    "addr:city": "Belem",
+    "addr:housenumber": "11A",
+    "addr:postcode": "1400-139",
+    "addr:street": "Rua Duarte Pacheco Pereira",
+    "cuisine": "portuguese",
+    "name": "Nogal do Restelo",
+    "opening_hours": "Mon-Fri 9:00-18:00 // Sat 9:15-14:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11885044768,
+  "lat": 38.6992422,
+  "lon": -9.2053953,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "16",
+    "addr:postcode": "1400-211",
+    "addr:street": "Rua dos Jerónimos",
+    "addr:unit": "B",
+    "name": "Pomar de Belém",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:nfc_mobile_payments": "yes",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11885081473,
+  "lat": 38.7001906,
+  "lon": -9.2058046,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "32",
+    "addr:postcode": "1400-212",
+    "addr:street": "Rua dos Jerónimos",
+    "addr:unit": "A-B",
+    "amenity": "pharmacy",
+    "description": "Na Farmácia Estádio Restelo encontrará à sua disposição um vasto leque de produtos e serviços para a sua saúde e bem-estar num espaço único a pensar em si.",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Estádio Restelo",
+    "opening_hours": "Mo-Sa 09:00-21:00",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+351 21 3638193",
+    "website": "https://www.farmaciasportuguesas.pt/catalogo/ficha-farmacia?code=17558",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11894276247,
+  "lat": 38.6982661,
+  "lon": -9.2187881,
+  "tags": {
+    "addr:city": "Belem",
+    "addr:housenumber": "22",
+    "addr:postcode": "1400-139",
+    "addr:street": "Rua Tristão da Cunha",
+    "name": "Lavandaria Engomadoria",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11901260957,
+  "lat": 38.6991028,
+  "lon": -9.2053374,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "14",
+    "addr:postcode": "1400-206",
+    "addr:street": "Rua dos Jerónimos",
+    "addr:unit": "D",
+    "amenity": "cafe",
+    "check_date": "2026-02-08",
+    "name": "11:11",
+    "old_name": "C & B coffee",
+    "outdoor_seating": "yes",
+    "toilets": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12326985280,
+  "lat": 38.6982236,
+  "lon": -9.2183972,
+  "tags": {
+    "addr:city": "Belém",
+    "addr:housenumber": "28D",
+    "addr:postcode": "1400-140",
+    "addr:street": "Rua Duarte Pacheco Pereira",
+    "name": "Frutaria Restelo",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 13019127013,
+  "lat": 38.7023506,
+  "lon": -9.2060186,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "20",
+    "addr:postcode": "1400-007",
+    "addr:street": "Rua das Pedreiras",
+    "addr:unit": "Loja 1, Bloco 2",
+    "branch": "Pedreiras - Lisboa",
+    "brand": "My Auchan",
+    "brand:wikidata": "Q115800307",
+    "brand:wikipedia": "pt:Auchan",
+    "contact:email": "apoiocliente@auchan.pt",
+    "contact:facebook": "AuchanPortugal",
+    "contact:instagram": "auchan_pt",
+    "contact:phone": "+351 210 403 270",
+    "contact:tiktok": "auchan_pt",
+    "contact:youtube": "https://www.youtube.com/channel/UC6FSI7tYO9ISV11U2PHBBYQ",
+    "name": "My Auchan",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "ref": "B90",
+    "shop": "convenience",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.auchan.pt/pt/loja?StoreID=B90"
+  }
+},
+{
+  "type": "way",
+  "id": 19647687,
+  "center": {
+    "lat": 38.6962836,
+    "lon": -9.2031942
+  },
+  "tags": {
+    "addr:street": "Rua Vieira Portuense",
+    "description": "Construído nos anos oitenta do século XX, projeto do arquiteto António Saraiva, em homenagem ao grande navegador português Vasco da Gama que, em 1498, descobriu o Caminho Marítimo para a Índia. Situa-se na Rua Vieira Portuense, num dos mais antigos",
+    "leisure": "park",
+    "name": "Jardim Vasco da Gama",
+    "name:de": "Vasco-da-Gama-Garten",
+    "name:en": "Vasco da Gama Garden",
+    "name:pt": "Jardim Vasco da Gama",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "website": "https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/jardim-vasco-da-gama",
+    "wikidata": "Q10306190",
+    "wikimedia_commons": "Category:Jardim Vasco da Gama",
+    "wikipedia": "pt:Jardim Vasco da Gama"
+  }
+},
+{
+  "type": "way",
+  "id": 93673974,
+  "center": {
+    "lat": 38.6963708,
+    "lon": -9.2034099
+  },
+  "tags": {
+    "access": "yes",
+    "description": "Avenida da Índia",
+    "leisure": "playground",
+    "name": "Parque Infantil do Jardim Vasco da Gama",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "7e39cc01-4add-4472-959b-fa8cdc8e61ce"
+  }
+},
+{
+  "type": "way",
+  "id": 115235575,
+  "center": {
+    "lat": 38.7074037,
+    "lon": -9.2176964
+  },
+  "tags": {
+    "addr:postcode": "1449-005",
+    "addr:street": "Estrada Forte do Alto Duque",
+    "amenity": "hospital",
+    "contact:email": "chlo@chlo.min-saude.pt",
+    "contact:phone": "+351 210 433 000",
+    "contact:website": "http://www.chlo.min-saude.pt",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital São Francisco Xavier",
+    "opening_hours": "24/7",
+    "owner": "Centro Hospitalar de Lisboa Ocidental, EPE.",
+    "ownership": "national",
+    "wikidata": "Q10298547",
+    "wikimedia_commons": "Category:Hospital de São Francisco Xavier",
+    "wikipedia": "pt:Hospital de São Francisco Xavier"
+  }
+},
+{
+  "type": "way",
+  "id": 155331041,
+  "center": {
+    "lat": 38.6933631,
+    "lon": -9.2222526
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "Fundação Dona Anna de Sommer Champalimaud e Doutor Carlos Montez Champalimaud"
+  }
+},
+{
+  "type": "way",
+  "id": 309096559,
+  "center": {
+    "lat": 38.7057893,
+    "lon": -9.2093392
+  },
+  "tags": {
+    "addr:street": "Encosta do Restelo",
+    "alt_name": "Jardim Fernanda de Castro",
+    "description": "Jardim cuja toponímia é uma homenagem à escritora, casada com António Ferro, uma das fundadoras da atual Sociedade Portuguesa de Autores e presidente da Associação Nacional de Parques Infantis. Área: 0,6 ha Horário: 24 horas",
+    "leisure": "park",
+    "name": "Jardim Fernanda de Castro",
+    "operator": "Câmara Municipal de Lisboa",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "34ccfcdc-9f24-4ca6-b711-ae44f514496c",
+    "start_date": "1999-07-30"
+  }
+},
+{
+  "type": "way",
+  "id": 403827294,
+  "center": {
+    "lat": 38.7001479,
+    "lon": -9.2175511
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 664145144,
+  "center": {
+    "lat": 38.6948412,
+    "lon": -9.2156171
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 684894768,
+  "center": {
+    "lat": 38.6981052,
+    "lon": -9.2249689
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 722569799,
+  "center": {
+    "lat": 38.7057346,
+    "lon": -9.2090163
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "way",
+  "id": 1011831136,
+  "center": {
+    "lat": 38.6928104,
+    "lon": -9.2158216
+  },
+  "tags": {
+    "alt_name": "Jardim da Torre de Belém",
+    "description": "Toponímia: Arquiteto Paisagista 1924 - 2012. Início: Jardim da Torre de Belém. Este jardim, localizado junto ao Tejo, está implantado no local onde funcionou até meados do séc. XX a \"Fábrica do Gás de Belém\"",
+    "leisure": "park",
+    "name": "Jardim António Viana Barreto",
+    "note": "Topónimo atribuído pelo edital 155/2021, de 18 de agosto, publicado em Boletim Municipal n.º 1440, de 23 de setembro de 2021.",
+    "old_name": "Jardim da Torre de Belém",
+    "operator": "Câmara Municipal de Lisboa",
+    "operator:type": "government",
+    "operator:wikidata": "Q30255955",
+    "source": "dadosabertos.cm-lisboa.pt;https://bmpesquisa.cm-lisboa.pt/pls/OKUL/app_bm.download_my_file?p_file=3815",
+    "source:pkey": "4616cec3-038f-4615-a9d2-bdd261d2a568",
+    "start_date": "2021-09-23",
+    "wikidata": "Q6698351",
+    "wikimedia_commons": "Category:Jardim da Torre de Belém",
+    "wikipedia": "pt:Jardim da Torre de Belém"
+  }
+},
+{
+  "type": "way",
+  "id": 1011835163,
+  "center": {
+    "lat": 38.7048327,
+    "lon": -9.2084594
+  },
+  "tags": {
+    "addr:street": "Rua Rui Pereira",
+    "description": "Horário: 3.ª feira das 14h00 às 18h00 4.ª feira a Domingo das 10h00 às 18h00",
+    "leisure": "park",
+    "name": "Jardim do Museu de Etnologia",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "2e13d000-1f23-4cf4-9922-fe1413d0cad8"
+  }
+},
+{
+  "type": "way",
+  "id": 1011835167,
+  "center": {
+    "lat": 38.7009901,
+    "lon": -9.2183006
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Praça de Goa",
+    "name:etymology:wikidata": "Q1171"
+  }
+},
+{
+  "type": "way",
+  "id": 1011835168,
+  "center": {
+    "lat": 38.6988166,
+    "lon": -9.2158779
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Praça de Damão"
+  }
+},
+{
+  "type": "way",
+  "id": 1011835169,
+  "center": {
+    "lat": 38.6984159,
+    "lon": -9.2128452
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Praça de Dio",
+    "name:etymology:wikidata": "Q631849"
+  }
+},
+{
+  "type": "way",
+  "id": 1011835172,
+  "center": {
+    "lat": 38.6991098,
+    "lon": -9.2096964
+  },
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1400-239",
+    "addr:street": "Praça de Malaca",
+    "leisure": "park",
+    "name": "Praça de Malaca",
+    "name:etymology:wikidata": "Q61089"
+  }
+},
+{
+  "type": "way",
+  "id": 1064852750,
+  "center": {
+    "lat": 38.6951907,
+    "lon": -9.2196099
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1064852861,
+  "center": {
+    "lat": 38.6974642,
+    "lon": -9.2191561
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1064852862,
+  "center": {
+    "lat": 38.6974593,
+    "lon": -9.2191615
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "name": "Parque Infantil da Rua Duarte Pacheco Pereira"
+  }
+},
+{
+  "type": "way",
+  "id": 1064852895,
+  "center": {
+    "lat": 38.6958027,
+    "lon": -9.2164429
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1066174957,
+  "center": {
+    "lat": 38.6984544,
+    "lon": -9.2179935
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1066174964,
+  "center": {
+    "lat": 38.6977667,
+    "lon": -9.2195656
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1310895730,
+  "center": {
+    "lat": 38.6992024,
+    "lon": -9.2242948
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "relation",
+  "id": 8797676,
+  "center": {
+    "lat": 38.6997649,
+    "lon": -9.2021712
+  },
+  "tags": {
+    "addr:street": "Calçada do Galvão",
+    "alt_name": "Jardim do Ultramar",
+    "barrier": "wall",
+    "charge": "5 EUR",
+    "description": "Criado em 1912, no local onde hoje se localiza a antiga cerca do Palácio de Belém. Presentemente sob administração do Instituto de Investigação Científica Tropical, foi construído com o objetivo de promover o estudo sistemático da flora das anti",
+    "fee": "yes",
+    "garden:type": "botanical",
+    "leisure": "park",
+    "name": "Jardim Botânico Tropical",
+    "name:de": "Tropischer Botanischer Garten",
+    "name:en": "Tropical Botanical Garden",
+    "name:it": "Giardino botanico tropicale",
+    "name:pt": "Jardim Botânico Tropical",
+    "old_name": "Jardim-Museu Agrícola Tropical",
+    "opening_hours": "Apr-Sep Mo-Su 09:00-17:00; Oct-Mar Mo-Su 09:00-20:00; PH; Jan 01,Dec 25 off",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "408e5c2d-7181-4d2b-9bde-20f81ca3c566",
+    "surface": "grass",
+    "type": "multipolygon",
+    "website": "https://www.museus.ulisboa.pt/pt-pt/jardim-botanico-tropical",
+    "wikidata": "Q2249320",
+    "wikipedia": "pt:Jardim Botânico Tropical"
+  }
+},
+{
+  "type": "relation",
+  "id": 9227991,
+  "center": {
+    "lat": 38.6960645,
+    "lon": -9.2060199
+  },
+  "tags": {
+    "addr:street": "Praça do Império",
+    "alt_name": "Praça do Império",
+    "architect": "Cottinelli Telmo",
+    "architect:wikidata": "Q1709752",
+    "description": "Jardim construído por altura da \"Exposição do Mundo Português\" (1940), evento comemorativo dos 800 anos da Independência de Portugal e dos 300 anos da Restauração da Independência, da autoria do arquiteto Cottineli Telmo. É também desta época",
+    "leisure": "park",
+    "name": "Jardim da Praça do Império",
+    "name:de": "Platz des Império",
+    "name:en": "Império Square",
+    "name:ko": "제국광장의 정원",
+    "operator": "Câmara Municipal de Lisboa",
+    "operator:type": "government",
+    "operator:wikidata": "Q30255955",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "c30a926b-d248-4d7e-a924-70a3520aa6bc",
+    "type": "multipolygon",
+    "wikidata": "Q1483993",
+    "wikipedia": "pt:Jardim da Praça do Império"
+  }
+},
+{
+  "type": "relation",
+  "id": 15987229,
+  "center": {
+    "lat": 38.7009965,
+    "lon": -9.2136399
+  },
+  "tags": {
+    "addr:street": "Jardim Ducla Soares",
+    "description": "Situa-se na denominada Colina de São Jerónimo, integrado numa zona histórica que inclui os monumentos nacionais mais representativos do período das Descobertas: Ermida de São Jerónimo, Torre de Belém e Mosteiro dos Jerónimos. Em meados da década",
+    "leisure": "park",
+    "name": "Jardim Ducla Soares",
+    "operator": "Câmara Municipal de Lisboa",
+    "operator:type": "government",
+    "operator:wikidata": "Q30255955",
+    "operator:wikipedia": "pt:Câmara Municipal de Lisboa",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "start_date": "1987-09-07",
+    "type": "multipolygon",
+    "wikidata": "Q10305633",
+    "wikipedia": "pt:Jardim Ducla Soares"
+  }
+}
+
+  ]
+}
