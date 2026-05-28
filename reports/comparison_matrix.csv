@@ -1,19 +1,43 @@
 dimension,sub_dimension,lisbon_status,lisbon_confidence,lisbon_key_sources,chiang_mai_status,chiang_mai_confidence,chiang_mai_key_sources,notes,next_verification
-Visa/legal stay,90-day model,Yellow,High,"LIS_VISA_01;EU_VISA_01",Yellow,Medium,"TH_VISA_01;TH_VISA_02;TH_VISA_03;TH_DTV_01","Both workable only after passport-specific verification; Thailand policy more volatile in 2026","Run official eligibility per family member"
-Official safety,general advisory,Green,High,"CAN_PT_01;US_PT_01",Yellow,High,"CAN_TH_01;US_TH_01;UK_TH_01","Lisbon lower advisory; Thailand caution not Chiang Mai-specific but air/traffic matter","Check advisories near booking date"
-Climate suitability,target months,Green-Yellow,Medium,LIS_CLIM_01,Seasonal Yellow-Red,High,CM_CLIM_01,"Lisbon broad season fit; Chiang Mai best Nov-Jan; March-April problematic","Choose exact 3-month window"
-Air quality,child outdoor risk,Green,Medium,"LIS_AIR_01;LIS_AIR_02",Red in Mar-Apr; Yellow otherwise,High,"CM_AIR_01;CM_AIR_02;CM_AIR_03","Air is decisive red flag for Chiang Mai smoke season","Check PM2.5 history and current forecasts"
-Housing feasibility,3-month family rental,Yellow,Medium,LISH_01-LISH_10,Green-Yellow,Medium,CMH_01-CMH_10,"Lisbon higher cost; Chiang Mai easier supply but air/transport-dependent","Contact 10 listings per city"
-Pediatric healthcare,urgent and routine path,Green-Yellow,Medium,"LIS_HEALTH_01;LIS_HEALTH_02;LIS_HEALTH_03;LIS_HEALTH_04",Green,High,"CM_HEALTH_01;CM_HEALTH_02;CM_HEALTH_03","Chiang Mai private pediatric path clearer; Lisbon has strong but more mixed public/private path","Call hospitals for English and insurance"
-Daily outdoor child activity,repeatable play,Green-Yellow,Medium,"LIS_CHILD_04;LIS_CHILD_05;LIS_CHILD_08;LIS_CHILD_09",Yellow-Green by area and season,Medium,"CM_CHILD_01;CM_CHILD_02;CM_CHILD_08","Lisbon strongest in Parque das Nacoes/Estrela; Chiang Mai strongest Hang Dong but car-dependent","Map 1km daily routes"
-Nature/open-ended play,weekly nature,Green,Medium,"LIS_CHILD_07;LIS_MOB_01",Green outside smoke season,Medium,"CM_CHILD_02;CM_CHILD_09","Chiang Mai nature is stronger but less low-friction; Lisbon nature more urban/coastal","Verify transport burden"
-Indoor fallback,bad weather heat smoke,Yellow,Medium,"LIS_CHILD_01;LIS_CHILD_02;LIS_CHILD_06;LIS_CHILD_07",Green-Yellow,Medium,"CM_CHILD_04;CM_CHILD_07;CM_CHILD_11","Chiang Mai has kids cafe ecosystem but smoke-season air purification unknown","Confirm air purification and age limits"
-Structured child activities,weekly rhythm,Yellow,Medium,"LIS_CHILD_02;LIS_CHILD_10;LIS_COMM_01",Yellow,Medium,"CM_CHILD_09;CM_CHILD_10;CM_CHILD_05","Both possible; short-term acceptance unknown","Message providers"
-Parent relief / childcare,optional relief,Gray-Low,Low,"LIS_CHILD_01;LIS_COMM_01",Yellow-Low,Low,"CM_CHILD_09;CM_CHILD_12","Not reliable enough to depend on; SandCastle 4+ and Chiang Mai community signals help","Ask about drop-off and vetting"
-Walkability / mobility,no car daily life,Green-Yellow,Medium,"LIS_MOB_01;LIS_MOB_02;LIS_MOB_05",Yellow-Red,Medium,"CM_MOB_01;CM_MOB_02;CM_MOB_03","Lisbon no-car stronger; Chiang Mai area-dependent and car-seat uncertain","Test routes and ride-hailing"
-Daily logistics,grocery pharmacy laundry,Green-Yellow,Medium,"LISH_01-LISH_10;LIS_MOB_01",Yellow-Green by area,Medium,"CMH_01-CMH_10;CM_MOB_04","Both feasible if housing is chosen correctly","Map 1km services per listing"
-Culture experience,everyday culture,Green,Medium,"LIS_CHILD_07;LIS_MOB_01",Green,Medium,"CM_CHILD_09;CM_COMM_03","Lisbon European urban culture; Chiang Mai stronger cultural contrast","Avoid sightseeing-only schedule"
-Nature experience,low-friction nature,Green-Yellow,Medium,"LIS_CHILD_07;LIS_MOB_01",Green-Yellow seasonal,Medium,"CM_CHILD_02;CM_CHILD_09;CM_AIR_02","Chiang Mai nature higher upside but smoke/transport-sensitive","Verify target season"
-Community support,parent expat signals,Green-Yellow,Medium,"LIS_COMM_01;LIS_COMM_02;LIS_COMM_03",Green-Yellow,Medium,"CM_COMM_01;CM_COMM_02;CM_COMM_03;CM_CHILD_12","Both have community signals; short-stay integration unknown","Join groups and ask targeted questions"
-Main failure modes,most likely breakdown,Yellow,Medium,"EU_VISA_01;LISH_01-LISH_10;LIS_MOB_05",Red seasonal,High,"CM_AIR_01;CM_AIR_02;CM_MOB_01","Lisbon fails by cost/logistics; Chiang Mai fails by air/transport if wrong season","Choose season before city"
-Overall first-base suitability,cautious recommendation,Green-Yellow,Medium,"EU_VISA_01;CAN_PT_01;LIS_CLIM_01;LIS_CHILD_04",Yellow-Green only Nov-Jan; Red Mar-Apr,High,"CM_AIR_01;CM_AIR_02;CM_HEALTH_01;CM_CHILD_01","Lisbon more stable as first base if budget and visa work; Chiang Mai better value but season-critical","Verify legal stay and exact months"
+Visa / Legal Stay,90-day路径,Yellow,high,S-LIS-001;S-LIS-002;S-LIS-004,Yellow,medium,S-CMI-001;S-CMI-002;S-CMI-003,里斯本走申根短期签恰好 90 天上限零容错；清迈需 TR60+续30 或 DTV (Soft Power),配偶/孩子护照国别（共同未知）
+Visa / Legal Stay,延期/续签可能,Yellow,high,S-LIS-002,Yellow,medium,S-CMI-002;S-CMI-003,里斯本不可超 90 天；清迈续签 30 天费 1900 THB 或走 DTV 5 年多签,DTV 中国护照从加拿大申请接受度
+Visa / Legal Stay,远程工作合法性,Yellow,medium,S-LIS-006;S-LIS-007,Yellow,medium,S-CMI-003,本家庭不需远程工作但 DTV 可走 Soft Power（学厨/泰拳/泰语）路径,N/A
+Official Safety,综合警告级别,Green,high,S-LIS-008;S-LIS-009,Yellow,high,S-CMI-007,加拿大对葡萄牙"正常防范"；对泰国"高度谨慎",N/A
+Official Safety,候选城市具体,Green,high,S-LIS-008,Green,high,S-CMI-007,里斯本与清迈都不在加方警告区,N/A
+Official Safety,特定风险,Yellow,high,S-LIS-008;S-LIS-077,Yellow,medium,S-CMI-048;S-CMI-049,里斯本：扒手（28/15/25路电车）；清迈：街边野狗 7-30 万只 + 狂犬,各候选区野狗密度
+Climate Suitability,1 月,Yellow,high,S-LIS-010,Green,high,S-CMI-011,里斯本：14.9/8.8°C 10 雨天；清迈：30/15°C 几乎无雨,N/A
+Climate Suitability,2 月,Yellow,medium,S-LIS-010,Yellow,high,S-CMI-008;S-CMI-011,里斯本：温和但仍多雨；清迈：烧林季启动,N/A
+Climate Suitability,3 月,Green,high,S-LIS-010,Red,high,S-CMI-008;S-CMI-009,里斯本：18.6°C 改善期；清迈：烧林季高峰 + PM2.5 极端,N/A
+Climate Suitability,4 月,Green,high,S-LIS-010,Red,high,S-CMI-008;S-CMI-011,里斯本：20°C 稳定期；清迈：4 月平均 36.7°C 高峰 + 烧林季尾,N/A
+Climate Suitability,10 月,Yellow,high,S-LIS-010,Yellow,medium,S-CMI-011;S-CMI-013,里斯本：22.6°C 但雨剧增；清迈：雨季尾+登革热,N/A
+Climate Suitability,11 月,Yellow,high,S-LIS-010,Green,high,S-CMI-011,里斯本：全年降雨最多月之一；清迈：30/19°C 50mm 雨,N/A
+Air Quality,年均水平,Green,medium,S-LIS-013;S-LIS-014,Red,high,S-CMI-008;S-CMI-009,里斯本年均 PM2.5 ~6 µg/m³；清迈 2024 年均 26.4 µg/m³（WHO 5.2 倍）,N/A
+Air Quality,烧林季峰值,N/A,N/A,N/A,Red,high,S-CMI-008;S-CMI-009;S-CMI-010,清迈 2026-03-30 AQI 233 / PM2.5 188 µg/m³（全球第一）；可冲 300-700+,各候选区站点差异
+Housing Feasibility,2 卧月租可得性,Green,medium,S-LIS-026;S-LIS-028;S-LIS-042,Green,high,S-CMI-020;S-CMI-021;S-CMI-023,里斯本 €1600-2200；清迈 15-28k THB（~430-800 USD）核心区,实际预订需在到达前 6-8 周
+Housing Feasibility,冬季舒适度,Yellow,medium,S-LIS-046;S-LIS-047;S-LIS-081,Green,high,S-CMI-020;S-CMI-021,里斯本无中央暖气+霉菌；清迈冬季干爽舒适,选房标准（双玻璃/除湿）
+Housing Feasibility,烧林季抗污染装备,N/A,N/A,N/A,Yellow,medium,S-CMI-020;S-CMI-021,清迈大量房源缺空气净化器；仅部分 Nimman 高端 listing 提及,房源具体设备
+Pediatric Healthcare,24h 儿科急诊,Green,high,S-LIS-015;S-LIS-017;S-LIS-018;S-LIS-019,Green,high,S-CMI-015;S-CMI-016;S-CMI-018,里斯本：Dona Estefânia + CUF + Lusíadas + Hospital da Luz；清迈：Bangkok Hospital CM + Ram + Sriphat,N/A
+Pediatric Healthcare,英文服务,Green,high,S-LIS-017;S-LIS-022;S-LIS-023,Green,high,S-CMI-015;S-CMI-017,两地均有明确英文+多语支持的私立医院,加拿大旅游医疗保险直付协议
+Pediatric Healthcare,候选区距离,Green,high,S-LIS-017,Green,medium,S-CMI-015,Parque das Nações 紧邻 CUF；Nimman 距 Bangkok Hospital CM 5-10 分钟,各区到顶级公立急诊驾车时间
+Daily Outdoor Activity,候选数量（每区前 3 强）,Green,medium,S-LIS-026;S-LIS-027;S-LIS-049;S-LIS-051,Green,medium,S-CMI-023;S-CMI-028;S-CMI-030,每区均 ≥3 个高质量户外候选,N/A
+Daily Outdoor Activity,可重复性（受季节影响）,Yellow,medium,S-LIS-010;S-LIS-049,Yellow,high,S-CMI-008;S-CMI-011,里斯本：雨季打折；清迈：烧林季 3-4 月几乎为零,N/A
+Nature / Open-Ended Play,城市内可达,Green,high,S-LIS-049;S-LIS-056,Green,medium,S-CMI-023;S-CMI-028;S-CMI-030,里斯本 Monsanto 森林 + Estrela；清迈 CMU + Huai Kaeo + Huay Tung Tao,N/A
+Nature / Open-Ended Play,周边短途,Green,medium,S-LIS-035;S-LIS-072,Green,medium,S-CMI-029;S-CMI-031;S-CMI-051,里斯本：Cascais 海滩 40 分钟火车；清迈：Doi Inthanon/Doi Suthep/大象保护区,登山/瀑布对 2.5 岁儿童具体可行性
+Indoor Fallback,候选数量,Green,high,S-LIS-052;S-LIS-053;S-LIS-054;S-LIS-083,Green,high,S-CMI-026;S-CMI-027,两地均 ≥ 8 候选；清迈尤多 mall 室内乐园,N/A
+Indoor Fallback,烧林季空气净化兼容,N/A,N/A,N/A,Yellow,medium,S-CMI-026,清迈仅部分场所显式 air-purified（Reyn.ne /Wooden Ville）；其余仅 mall AC 滤效不足,场所 PM2.5 实测/HEPA 等级
+Structured Child Activities,短期接纳度,Yellow,medium,S-LIS-083,Green,medium,S-CMI-032;S-CMI-050,里斯本：陶瓷 / Pastel de Nata / 烹饪等接受 drop-in；清迈：Beaver Club worldschooling hub 明确接受短期,具体周班课时间表
+Parent Relief / Childcare,可靠性,Yellow,low,Lisbon_evidence_thin,Yellow,low,S-CMI-033,两地都不可作为硬依赖；清迈世界学社群略强,需到达后实际试用
+Walkability / Mobility,候选区步行,Yellow,medium,S-LIS-026;S-LIS-027;S-LIS-044;S-LIS-080,Yellow,medium,S-CMI-036;S-CMI-037,里斯本中心区坡+卵石+老楼无电梯；清迈人行道不平 Nimman 较好,N/A
+Walkability / Mobility,公交/打车便利度,Green,high,S-LIS-051;S-LIS-052,Green,high,S-CMI-035;S-CMI-038,里斯本 Metro+Carris+Uber/Bolt 成熟；清迈 Grab + songthaew 普及,N/A
+Walkability / Mobility,儿童安全座椅,Yellow,medium,S-LIS-052,Red,high,S-CMI-039,里斯本：Uber/Bolt 可预订有座椅车辆有限；清迈：Grab/出租车基本无 car seat，泰国法律弱执行,自带便携座椅
+Walkability / Mobility,婴儿车友好度,Yellow,high,S-LIS-044;S-LIS-045;S-LIS-080,Yellow,medium,S-CMI-036;S-CMI-037,里斯本：中心区坡+卵石；清迈：人行道破损 + 摩托车占道,N/A
+Daily Logistics,杂货/超市,Green,high,S-LIS-053;S-LIS-054,Green,high,S-CMI-040;S-CMI-041,里斯本 Pingo Doce/Continente；清迈 Rimping/Tops/Big C/Makro,N/A
+Daily Logistics,药店,Green,high,S-LIS-053,Green,high,S-CMI-040;S-CMI-042,两地药店密集；清迈 7-Eleven 也卖基础药/婴儿用品,N/A
+Daily Logistics,洗衣,Green,medium,S-LIS-053,Green,medium,S-CMI-040,两地自助洗衣或外送洗衣容易获得,N/A
+Culture Experience,日常融入,Green,high,S-LIS-053;S-LIS-054,Green,high,S-CMI-042;S-CMI-043,里斯本：欧式日常 + 多样餐饮；清迈：佛教节庆+寺庙+夜市,N/A
+Culture Experience,儿童友好文化活动,Yellow,medium,S-LIS-052;S-LIS-053;S-LIS-083,Green,medium,S-CMI-032;S-CMI-050,清迈烹饪/手工/泰拳/大象保护区更适合幼儿亲手体验,N/A
+Nature Experience,可达性,Green,high,S-LIS-035;S-LIS-049;S-LIS-056,Green,medium,S-CMI-028;S-CMI-029;S-CMI-031,里斯本：Monsanto 森林+Cascais 海滩；清迈：山+瀑布+植物园+大象（季节性限制）,N/A
+Community Support,expat 家庭社群,Green,medium,S-LIS-058;S-LIS-059;S-LIS-060;S-LIS-061,Green,high,S-CMI-033,里斯本 Lisbon for Parents + Lisbon Parents & Kids；清迈 Beaver Club + worldschooling hub,Reddit 信号缺失(平台限制)
+Main Failure Modes,跨季节断点,Yellow,high,S-LIS-010;S-LIS-046,Red,high,S-CMI-008,里斯本：冬季雨/冷/霉；清迈：3-4 月烧林+酷热"几乎不可居住",N/A
+Main Failure Modes,健康风险,Yellow,high,S-LIS-024;S-LIS-025,Yellow,high,S-CMI-008;S-CMI-013;S-CMI-049,里斯本：地震（低概率高破坏）；清迈：PM2.5+登革热+狂犬,N/A
+Overall First-Base Suitability,与本家庭目标月份匹配,Green (3-4月) / Yellow (1/10/11月),high,综合,Green (1/11月) / Red (3-4月) / Yellow (2/10月),high,综合,两地"互补"：3-4 月去里斯本；1/11 月清迈优；2/10 月谨慎,N/A

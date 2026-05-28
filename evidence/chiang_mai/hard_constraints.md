@@ -1,119 +1,144 @@
-# 清迈硬约束证据
+# 清迈 · 硬约束 Evidence
 
-## 签证 / 合法停留
+> 范围：签证 / 安全 / 气候与空气 / 医疗基线 / 住房基线
+> 家庭：2 大人 + 4.5 岁 + 2.5 岁；中国护照（加拿大居民）；目标 90 天；目标月份 1/2/3/4/10/11
 
-```yaml
-visa:
-  stay_model: "保守模型是旅游签证 TR 60 天 + 在泰国境内申请 30 天延期；另有 DTV 可覆盖远程工作和家属但门槛更高。"
-  max_stay_days: "TR 模型通常可做到约 90 天，但必须确认每位护照适用性和延期规则。"
-  extension_possible: "旅游签延期 30 天需在泰国移民局申请；不能假设自动批准。"
-  applies_to_chinese_passport: "必须用 Thai e-Visa/领馆逐人核验；2026 免签政策处于调整期。"
-  applies_to_canadian_passport: "可能有免签路径，但 2026 年 5 月 TAT 已提示 60 天免签调整待公告，不能作为三个月计划核心。"
-  family_complexity: "若护照不同，免签、旅游签、DTV 家属路径可能不同。"
-  remote_work_risk: "旅游签/免签不应作为稳定远程工作合规依据；DTV 官方页面显示 workcation 和 spouse/dependent children 类别，但申请材料需逐领区确认。"
-  official_sources: [TH_VISA_01, TH_VISA_02, TH_VISA_03, TH_DTV_01]
-  confidence: Medium
-  red_flags:
-    - "泰国 2026 免签天数存在政策变动信号；不能用旧攻略确定。"
-    - "三个月模型依赖延期时，必须留出移民局办理时间和拒绝/材料补充预案。"
-  next_verification:
-    - "在 Thai e-Visa 官网按每个家庭成员护照、加拿大居住地和计划天数跑一次 eligibility。"
-    - "联系泰国温哥华/渥太华领馆确认中国护照加拿大居民的 TR 材料、儿童材料和延期路径。"
-```
+## 摘要（核心发现）
+- **🟥 烧林季（2-4 月，3 月为高峰）是最强红线**：2026 年 3 月 30 日清迈 AQI 达 233、PM2.5 188 µg/m³，全球第一 [S-CMI-009]；CNX Local 报告 AQI 可冲至 300-700+ [S-CMI-010]；儿童为 WHO 明确指出的高敏人群 [S-CMI-008]。
+- **🟧 签证路径有动荡**：2024-03-01 起中泰互免 30 天有效 [S-CMI-001]；但 2026-05-19 泰内阁决议取消对 90+ 国的 60 天免签 [S-CMI-002]，对中国具体影响仍需官方公告确认。30 天可在境内续 30 天（1,900 THB）= 最长 60 天 [S-CMI-002]，不够 90 天 → 需 DTV 或 TR/60。
+- **🟧 DTV 对中国护照有"必须在就业国申请"约束** [S-CMI-004]：从加拿大申请可能被拒，需第三国（Vientiane/Singapore/HK）走"physical presence"路线 [S-CMI-005]。
+- **🟩 清迈在加拿大旅行建议中属低风险旅游区**（与南部分离主义地区/泰柬边境对比）[S-CMI-007]。
+- **🟧 登革热（雨季）、狂犬病（街边野狗 7 万 +）为持续中等风险** [S-CMI-012][S-CMI-013][S-CMI-048]。
 
-## 官方安全建议
+---
 
-```yaml
-safety:
-  canada_advisory_level: "Exercise a high degree of caution"
-  us_advisory_summary: "Level 2 - Exercise increased caution; southern provinces and Cambodia border warnings are not Chiang Mai-specific."
-  uk_advisory_summary: "FCDO 对部分边境/南部地区有 avoid travel / all but essential travel 警告；非清迈核心风险。"
-  region_specific_warnings: "清迈不在主要冲突区域，但加拿大页面明确提示 Bangkok 和 Chiang Mai 等城市空气污染可达有害水平，北部农业燃烧影响空气。"
-  relevance_to_city: "安全红线更多来自空气、交通和道路，而非治安。"
-  relevance_to_family_with_children: "儿童在高 PM2.5 日应减少户外活动，住房需配空气净化器，行程避开 3-4 月。"
-  confidence: High
-  red_flags:
-    - "如果目标月份覆盖 3 月或 4 月，空气污染可能直接破坏儿童户外生活。"
-  sources: [CAN_TH_01, US_TH_01, UK_TH_01, CM_AIR_02]
-```
+## 1. 签证路径
 
-## 气候 / 空气
+### 事实 (Fact)
+- **中泰互免协议**自 2024-03-01 生效：普通护照持有者 **30 天内免签**，180 天内累计不超过 90 天；不可用于居住/就业/学习/媒体活动 [S-CMI-001]。
+- **境内续签**：免签身份可在清迈 immigration 续 1 次 30 天，费 1,900 THB → 最长 60 天 [S-CMI-002]。
+- **2026-05-19 内阁决议**：取消 60 天免签计划（对部分国家）。中国为双边协议项，文章未明确说明协议是否受影响，但维基条目记录"30-day exemption remains as bilateral" [S-CMI-002]。
+- **DTV (Destination Thailand Visa)**：5 年多次入境，每次最长 180 天；金融门槛 500,000 THB（约 14,000 USD）持有 3 个月以上；20 岁以上；可带配偶 + 未满 20 岁子女（dependents 需单独申请）；申请费 10,000 THB [S-CMI-003]。
+- **DTV 中国申请要求**：可在中国 9 个泰使领馆（北京/上海/广州/成都/厦门/西安/青岛/昆明/南宁）任一处申请，**必须从"就业所在国"申请** [S-CMI-004]。
+- **DTV 在境外（第三国）申请**：部分使馆按 physical presence 接受，例如 Vientiane (Laos)、Singapore、Hong Kong、Macau（HK/Macau 需当地居留证）[S-CMI-005]。
 
-```yaml
-climate_air:
-  best_months: ["November", "December", "January"]
-  workable_months: ["October", "February"]
-  avoid_months: ["March", "April"]
-  average_high_temp_by_target_month_f:
-    January: 85
-    February: 90
-    March: 95
-    April: 97
-    October: 88
-    November: 86
-  rainy_days_by_target_month:
-    January: 0.5
-    February: 0.8
-    March: 2.2
-    April: 7.0
-    October: 10.0
-    November: 3.4
-  humidity_concern: "雨季和热季高；10 月仍有雨季尾巴，4 月极热。"
-  air_quality_risk: "高季节性风险；IQAir 和加拿大官方均指向清迈烟季/农业燃烧。"
-  child_outdoor_life_impact: "11-1 月较强；2 月开始不确定；3-4 月可能需要全天候室内 fallback。"
-  indoor_fallback_importance: "很高，尤其烟季和热季。"
-  confidence: High
-  red_flags:
-    - "3 月、4 月不建议作为一家四口三个月慢旅行核心月份。"
-    - "若必须 2-4 月，需空气净化住房、N95/儿童口罩、室内活动预算和撤离到南部/海边预案。"
-  sources: [CM_CLIM_01, CM_AIR_01, CM_AIR_02, CM_AIR_03]
-```
+### 解释 (Interpretation)
+- 90 天目标 **不能**靠纯免签 + 1 次续签覆盖（最多 60 天）。可行路径：
+  1. **DTV** — 但需要 ≥ 500k THB 持有 3 个月 + 远程工作/Thai soft-power 活动证明 + 文件认证。家庭背景没有"必需远程工作"，但 DTV 仍可走"Thai Soft Power"（如学 Muay Thai、烹饪、Thai 语等）。
+  2. **TR（旅游签 60 天）+ 30 天续签** = 90 天，从渥太华泰使馆申请最稳妥。
+  3. **免签 30 天 + 续签 30 天 + 离境再入境（visa run）** 在新政策不确定下风险较高。
+- 中国护照 + 加居身份从渥太华申请：使馆官网未明确接受非加籍申请人 [S-CMI-006]，但常规实践是允许"合法居留 + 完整文件"。
 
-## 医疗可达性
+### Unknown / Next Verification
+- 2026-05-19 内阁决议**对中国双边协议是否产生实际影响**（红黄绿灰 = Gray）。
+- 渥太华泰使馆**对中国护照 + Canadian PR 申请 TR/DTV 的最新接受度**（需电话/邮件直接确认）。
+- 配偶/孩子护照情况（用户备注 to_verify）—— 影响 DTV dependents 路径。
 
-```yaml
-healthcare:
-  pediatric_options:
-    - name: "Bangkok Hospital Chiang Mai Pediatric Center"
-      type: "私立医院儿科中心"
-      official_url: "https://www.bangkokhospital.com/en/chiangmai/center-clinic/child-wellness/pediatric-center-bcm/chivawattana-card-bcm"
-      24h_emergency: true
-      pediatric_service: true
-      english_service_evidence: "英文官网面向国际患者；仍需确认具体医生。"
-      foreigner_access_evidence: "私立医院系统，外国人可访问概率高。"
-      confidence: High
-      source_ids: [CM_HEALTH_01, CM_HEALTH_02]
-    - name: "Chiangmai Hospital Pediatric Clinic"
-      type: "医院儿科门诊"
-      official_url: "https://www.chiangmai-hospital.com/en/our-services/outpatient-department/pediatric-clinic"
-      pediatric_service: true
-      confidence: Medium
-      source_ids: [CM_HEALTH_03]
-    - name: "Expat-recommended pediatricians"
-      type: "社区推荐路径"
-      english_service_evidence: "Reddit 讨论称多家医院有英语工作人员和推荐儿科医生。"
-      confidence: Low
-      source_ids: [CM_HEALTH_04]
-  emergency_pathway: "严重症状：1669 或 Bangkok Hospital Chiang Mai emergency；轻中度儿童病：Bangkok Hospital 儿科中心 / Chiangmai Hospital pediatric clinic。"
-  routine_child_illness_pathway: "入住后先注册私立医院，保存儿科中心和急诊电话，确认保险/付款。"
-  biggest_unknowns:
-    - "儿科专科等待时间、保险直付、各候选区域到医院的实际高峰车程。"
-  red_flags:
-    - "医疗本身不是清迈红线；烟季导致呼吸道问题的概率才是关键风险。"
-  confidence: High
-```
+### Traffic light: 🟧 Yellow · Confidence: med
+Sources: [S-CMI-001][S-CMI-002][S-CMI-003][S-CMI-004][S-CMI-005][S-CMI-006]
 
-## 住房基线
+---
 
-事实：清迈有月租公寓、服务式公寓、2BR condo 和酒店式套房样本，价格和供应明显比里斯本友好；Nimman、Old City edge、Riverside、Hang Dong 均有可行样本。[CMH_01-CMH_10]
+## 2. 安全（治安 + 突发事件）
 
-解释：清迈住房优势不等于低风险。对本家庭更关键的是：是否在烟季有空气净化器、是否靠近可重复儿童活动、是否避开飞机噪音/夜生活/主路、是否有泳池或安全公共区、是否有可靠洗衣。
+### 事实
+- 加拿大对泰国整体建议为 **"Exercise a high degree of caution"** —— 原因是曼谷及其他地区的偶发政治紧张和示威 [S-CMI-007]。
+- **避免地区**：泰柬边境 50 公里内；南部 Narathiwat/Pattani/Yala/Songkhla 部分地区（分离主义袭击）[S-CMI-007]。
+- **清迈本身**：与曼谷、Phuket、Krabi 同列**低风险旅游区，无明显限制** [S-CMI-007]。
+- 街边野狗：清迈估算 **7 万只甚至 30 万只**流浪狗 [S-CMI-048]；可能传播狂犬、钩端螺旋体 [S-CMI-049]；建议长期居留者接种暴露前狂犬疫苗 [S-CMI-049]。
 
-未知：短租 75-90 晚合同、押金、儿童安全、净化器、实际噪音、蚊虫/霉味、Grab 到医院和儿童场所的高峰车程。
+### 解释
+- 清迈本身治安和家庭风险 **不在加拿大警告区域**，与拉美/南亚部分城市相比相对安全。
+- **儿童 + 流浪狗**是清迈特有的 yellow flag，特别是 Hang Dong / San Sai / Mae Rim 等城郊半乡村区域，街道有野狗群活动。
 
-红线：如果目标月覆盖 3-4 月，住房必须具备空气净化和高质量空调，否则不宜依赖清迈。
+### Unknown / Next Verification
+- 各候选社区野狗密度差异（数据缺）。
 
-证据强度：Medium  
-来源限制：平台价格动态；未大规模抓取 Airbnb/Booking。  
-新鲜度：2026-05-27 访问。  
-需要人工核验：发消息确认 90 晚、空气净化器、儿童、泳池、洗衣、噪音和取消政策。
+### Traffic light: 🟩 Green（治安）/ 🟧 Yellow（狂犬犬只暴露）· Confidence: high (治安) / med (狂犬)
+Sources: [S-CMI-007][S-CMI-048][S-CMI-049]
+
+---
+
+## 3. 气候 与 空气（按月）
+
+### 事实 — 气候逐月（climate-data） [S-CMI-011]
+
+| 月份 | 平均高/低 (°C) | 降雨 (mm) | 湿度 |
+|---|---|---|---|
+| 1 月 | 30 / 15 | 10 | 64% |
+| 2 月 | 33 / 16 | 10 | 52% |
+| 3 月 | 35.4 / 19.6 | 20 | 47% |
+| 4 月 | 36.7 / 22.9 | 55 | 52% |
+| 10 月 | 31.8 / 22.2 | 120 | 76% |
+| 11 月 | 30.9 / 19.3 | 50 | 71% |
+
+> 最佳月份：12 月 / 1 月（凉爽 + 低降水）[S-CMI-011]
+
+### 事实 — 烧林季空气数据
+- **2024 年清迈 PM2.5 年均 26.4 µg/m³** = WHO 年度 5 µg/m³ 标准的 5.2 倍 [S-CMI-008]。
+- **2026 年 3 月 30 日**：清迈 AQI 233、PM2.5 188 µg/m³，**全球污染城市第 1** [S-CMI-009]。
+- **2026 年 3 月 4 日** AQI > 150（unhealthy），全球第 3 [S-CMI-008]。
+- 烧林季 AQI "can hit 300, 400, even 700+"（> 300 为 Hazardous）[S-CMI-010]。
+- 烧林季时间：**约 2 月至 4 月，3 月高峰**；Songkran（4 月中）后基本结束 [S-CMI-008][S-CMI-010]。
+- IQAir 健康影响声明：**"may increase the risk of respiratory issues … particularly for children, the elderly, and people with underlying health conditions"** [S-CMI-008]。
+- 4 月平均高温 36.7°C（极高），低温也升至 22.9°C[S-CMI-011]。
+- 10 月降水 120 mm（雨季尾），登革热风险上升 [S-CMI-011][S-CMI-013]。
+
+### 解释
+- **目标月份 1/11 = 🟩 绿灯**：低温、低雨、空气尚可。
+- **2 月 = 🟧 黄灯**：烧林季常已启动但未到高峰。
+- **3-4 月 = 🟥 红灯（对 2.5-4.5 岁儿童）**：PM2.5 持续 hazardous + 4 月酷热（36-38°C）。家庭策略上，3-4 月应**完全避开 OR 离境到海岛**。
+- **10 月 = 🟧 黄灯**：仍有雨与登革热风险，但空气好。
+
+### Unknown / Next Verification
+- 1 月烧林尚未启动是否可保证 PM2.5 < 35（WHO daily）—— 暂无逐月历史月均数据，IQAir 历史 PM 2.5 dashboard 提供但需在烟季前后核验。
+- 各候选区域（Nimman vs Hang Dong vs Mae Rim）PM2.5 差异（站点数据尚需查询）。
+
+### Traffic light: 月份分段（见上）· Confidence: high
+Sources: [S-CMI-008][S-CMI-009][S-CMI-010][S-CMI-011]
+
+---
+
+## 4. 医疗基线（更详见 healthcare_pathway.md）
+
+### 事实
+- **Bangkok Hospital Chiang Mai** — JCI 认证，24/7 急诊 + Mobile ICU + 直升机 + 多语言（24 种）24/7；24/7 儿科急诊单元独立设立 [S-CMI-015][S-CMI-016][S-CMI-017]。
+- **Chiang Mai Ram Hospital** — JCI 认证，children's hospital 板块 + 儿科次专科（儿童呼吸、发育）[S-CMI-018]。
+- **Sriphat Medical Center**（CMU 附属）— 中等价位，质量高 [S-CMI-017]。
+- **Lanna Hospital** — 价位最低的私立 [S-CMI-017]。
+
+### Traffic light: 🟩 Green · Confidence: high
+Sources: [S-CMI-015][S-CMI-016][S-CMI-017][S-CMI-018]
+
+---
+
+## 5. 住房基线（更详见 housing_samples.md）
+
+### 事实 — 月租范围
+- **Nimman / Santitham**：1BR 10-23k THB；2BR 15-28k THB；豪宅级别 35k-68k THB [S-CMI-020][S-CMI-021][S-CMI-025]。
+- **Old City inside moat**：apartments 约 6.5-18k THB [S-CMI-020][S-CMI-022]。
+- **Hang Dong**：家庭别墅 35,000-80,000 THB/月（包含 international school 学区溢价）[S-CMI-024]；中位 condo/house 12-30k [S-CMI-023]。
+- **San Sai**：家庭整体预算 55-90k THB/月（含房租 + 餐饮 + 上学），房租比 Hang Dong 低 25-40k [S-CMI-024]。
+- **Mae Rim**：~20k THB 可租到带空间的房子 [S-CMI-022]。
+
+### 红线主题（评论 / 文献复现）
+- 大量房源缺少**空气净化器**（仅部分 Nimman 高端 listing 显式提及）—— 烧林季关键短板 [S-CMI-020][S-CMI-021]。
+- 中央空调 / 封闭性不一 —— 一些较老 condo 漏风。
+
+### Traffic light: 🟩 Green（可达性高）· 🟧 Yellow（烧林季空气过滤资产稀缺）· Confidence: med
+Sources: [S-CMI-020][S-CMI-021][S-CMI-022][S-CMI-023][S-CMI-024][S-CMI-025]
+
+---
+
+## 综合 Traffic Light 矩阵
+
+| 维度 | 1月 | 2月 | 3月 | 4月 | 10月 | 11月 |
+|---|---|---|---|---|---|---|
+| 签证可行性 | 🟧 | 🟧 | 🟧 | 🟧 | 🟧 | 🟧 |
+| 治安 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 |
+| 气候 | 🟩 | 🟩 | 🟧 | 🟥 | 🟧 | 🟩 |
+| 空气 | 🟩→🟧 | 🟥 | 🟥 | 🟧 | 🟩 | 🟩 |
+| 登革热 | 🟩 | 🟩 | 🟩 | 🟩 | 🟧 | 🟩 |
+| 医疗 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 |
+
+**最佳家庭月份组合：11月、1月**（次选 12 月）；3-4 月**强烈建议不进入清迈或安排到海岛/越南**。

@@ -1,10 +1,36 @@
 timestamp,source,city,area,layer,dimension,query_or_endpoint,status_code,success,rate_limited,retry_count,cache_hit,response_file,notes
-2026-05-27T23:47:30-07:00,nominatim,lisbon,Campo de Ourique,candidate_area,geocoding,"Campo de Ourique, Lisbon, Portugal",200,true,false,0,false,data/cache/google_geocoding/Campo_de_Ourique__Lisbon__Portugal.json,cached
-2026-05-27T23:47:31-07:00,nominatim,lisbon,Estrela,candidate_area,geocoding,"Jardim da Estrela, Lisbon, Portugal",200,true,false,0,false,data/cache/google_geocoding/Jardim_da_Estrela__Lisbon__Portugal.json,cached
-2026-05-27T23:47:32-07:00,nominatim,lisbon,Parque das Nacoes,candidate_area,geocoding,"Parque das Nacoes, Lisbon, Portugal",200,true,false,0,false,data/cache/google_geocoding/Parque_das_Nacoes__Lisbon__Portugal.json,cached
-2026-05-27T23:47:33-07:00,nominatim,lisbon,Belem Restelo,candidate_area,geocoding,"Belem Restelo Lisbon Portugal",200,true,false,0,false,data/cache/google_geocoding/Belem_Restelo_Lisbon_Portugal.json,cached
-2026-05-27T23:47:34-07:00,nominatim,chiang_mai,Nimman,candidate_area,geocoding,"Nimman Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/Nimman_Chiang_Mai_Thailand.json,cached
-2026-05-27T23:47:35-07:00,nominatim,chiang_mai,Old City outer edge,candidate_area,geocoding,"Nong Buak Haad Park Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/Nong_Buak_Haad_Park_Chiang_Mai_Thailand.json,cached
-2026-05-27T23:47:36-07:00,nominatim,chiang_mai,Hang Dong,candidate_area,geocoding,"Hang Dong Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/Hang_Dong_Chiang_Mai_Thailand.json,cached
-2026-05-27T23:47:37-07:00,nominatim,chiang_mai,San Sai,candidate_area,geocoding,"San Sai District Office Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/San_Sai_District_Office_Chiang_Mai_Thailand.json,first San Sai query ambiguous; replaced with district office
-2026-05-27T23:48:00-07:00,web_search,both,all,multiple,multiple,"curated official/platform/community queries",200,true,false,0,false,data/cache/html_pages/source_snapshots.md,web tool summaries cached as notes not raw html
+2026-05-28T01:05:00Z,webfetch,chiang_mai,,hard_constraints,safety,https://travel.gc.ca/destinations/thailand,200,true,false,0,false,,Canada travel advisory
+2026-05-28T01:05:30Z,webfetch,chiang_mai,,hard_constraints,visa,https://en.wikipedia.org/wiki/Visa_policy_of_Thailand,200,true,false,0,false,,Thailand visa policy
+2026-05-28T01:06:00Z,webfetch,chiang_mai,,hard_constraints,air,https://www.iqair.com/newsroom/...3-4-2026,200,true,false,0,false,,IQAir March 2026
+2026-05-28T01:06:30Z,webfetch,chiang_mai,,hard_constraints,air,https://cnxlocal.com/chiang-mai-burning-season-essential-guide,200,true,false,0,false,,burning season guide
+2026-05-28T01:15:00Z,webfetch,chiang_mai,,healthcare,pediatric,https://www.expatden.com/thailand/hospitals-in-chiang-mai/,200,true,false,0,false,,hospital ranking
+2026-05-28T01:15:30Z,webfetch,chiang_mai,,hard_constraints,visa,https://www.expatden.com/thailand/destination-thailand-visa-dtv/,200,true,false,0,false,,DTV details
+2026-05-28T01:16:00Z,webfetch,chiang_mai,,life_op,neighborhood,https://cnxlocal.com/best-neighborhoods-chiang-mai-expat-families/,200,true,false,0,false,,neighborhoods
+2026-05-28T01:16:30Z,webfetch,chiang_mai,,activity,indoor,https://cnxlocal.com/chiang-mai-air-purified-playgrounds-cafes/,200,true,false,0,false,,air purified venues
+2026-05-28T01:30:00Z,webfetch,chiang_mai,,community,reddit,https://www.reddit.com/r/ChiangMai/comments/1bt9pcz/should_families_with_young_kids_avoid_chiang_mai/,blocked,false,false,0,false,,Reddit blocked
+2026-05-28T00:25:00Z,WebFetch,lisbon,,hard_constraints,safety,https://travel.gc.ca/destinations/portugal,200,true,false,0,false,,canada-advisory
+2026-05-28T00:25:01Z,WebFetch,lisbon,,hard_constraints,safety,https://www.gov.uk/foreign-travel-advice/portugal/safety-and-security,200,true,false,0,false,,uk-fcdo
+2026-05-28T00:25:02Z,WebFetch,lisbon,,hard_constraints,visa,https://toronto.consuladoportugal.mne.gov.pt/en/consular-matters/visa/schengen-visa-en,200,true,false,0,false,,visa-toronto
+2026-05-28T00:25:03Z,WebFetch,lisbon,,hard_constraints,visa,https://home-affairs.ec.europa.eu/policies/schengen/border-crossing/short-stay-calculator_en,200,true,false,0,false,,90-180
+2026-05-28T00:25:04Z,WebFetch,lisbon,,hard_constraints,air,https://www.iqair.com/portugal/lisbon,200,true,false,0,false,,iqair-lisbon
+2026-05-28T00:25:05Z,WebFetch,lisbon,,hard_constraints,climate,https://www.climatestotravel.com/climate/portugal/lisbon,200,true,false,0,false,,climate-lisbon
+2026-05-28T00:25:06Z,WebFetch,lisbon,parque-das-nacoes,life_operability,housing,https://www.flatio.com/i/apartments-for-rent-lisbon-parque-das-nacoes,200,true,false,0,false,,flatio-pdn-empty
+2026-05-28T00:25:07Z,WebFetch,lisbon,campo-de-ourique,life_operability,housing,https://www.theblueground.com/furnished-apartments-lisbon-pt/a/campo-de-ourique/f/bedrooms_2,200,true,false,0,false,,blueground-coque
+2026-05-28T00:25:08Z,WebFetch,lisbon,,life_operability,housing,https://investropa.com/blogs/news/lisbon-rents,200,true,false,0,false,,rents-investropa
+2026-05-28T00:25:09Z,WebFetch,lisbon,parque-das-nacoes,hard_constraints,healthcare,https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-descobertas-lisboa,200,true,false,0,false,,cuf-descobertas
+2026-05-28T00:25:10Z,WebFetch,lisbon,,hard_constraints,healthcare,https://www.lusiadas.pt/en/hospitals-clinics/hospital-lusiadas-lisboa/specialties/pediatrics,200,true,false,0,false,,lusiadas-ped
+2026-05-28T00:25:11Z,WebFetch,lisbon,,hard_constraints,healthcare,https://www.hospitaldaluz.pt/lisboa/en/services/urgent-care-24-hours,200,true,false,0,false,,luz-24h
+2026-05-28T01:42:00Z,webfetch,chiang_mai,,hard_constraints,visa,https://ottawa.thaiembassy.org/en/content-category/obtaining-a-visa-in-canada,200,partial,false,0,false,,Embassy page lacks detail
+2026-05-28T01:42:30Z,webfetch,chiang_mai,,community,worldschool,https://www.chiangmaikidsclub.com/worldschooling-hub-chiangmai,200,true,false,0,false,,Beaver Club details
+2026-05-28T01:43:00Z,webfetch,chiang_mai,,hard_constraints,visa,https://dtv.in.th/country/china,200,true,false,0,false,,DTV China requirements
+2026-05-28T01:43:30Z,webfetch,chiang_mai,,hard_constraints,visa,https://petchnumnoi.com/blog/how-to-apply-dtv-visa-outside-home-country/,200,true,false,0,false,,DTV abroad
+2026-05-28T01:44:00Z,webfetch,chiang_mai,,hard_constraints,climate,https://www.climatestotravel.com/climate/thailand/chiang-mai,200,true,false,0,false,,monthly climate
+2026-05-28T01:44:30Z,webfetch,chiang_mai,,mobility,car_seat,https://kidsroamtheglobe.com/get-around-with-a-child-in-thailand/,200,true,false,0,false,,bring own car seat
+2026-05-28T01:45:00Z,webfetch,chiang_mai,,healthcare,emergency,https://www.bangkokhospital.com/en/chiangmai/center-clinic/trauma/emergency-trauma-center-bcm/overview,200,true,false,0,false,,BCM emergency 24/7
+2026-05-28T01:45:30Z,webfetch,chiang_mai,,activity,indoor,https://www.chiangmaikids.com/blog/best-soft-play-centers-in-chiang-mai/,200,true,false,0,false,,soft play centers
+2026-05-28T01:46:00Z,webfetch,chiang_mai,,hard_constraints,air,https://www.iqair.com/th-en/thailand/chiang-mai,200,partial,false,0,false,,no monthly trend
+2026-05-28T01:46:30Z,webfetch,chiang_mai,,mobility,songthaew,https://www.chiangmaitraveller.com/chiang-mai-public-transport-songthaew/,200,true,false,0,false,,songthaew no seatbelts
+2026-05-28T01:47:00Z,webfetch,chiang_mai,,housing,airbnb,https://www.airbnb.com/rooms/967011508472148029,403,false,false,0,false,,blocked
+2026-05-28T01:47:30Z,webfetch,chiang_mai,,housing,airbnb,https://www.airbnb.com/rooms/928488105547968049,403,false,false,0,false,,blocked
+2026-05-28T01:48:00Z,webfetch,chiang_mai,,housing,flatio,https://www.flatio.com/i/apartments-for-rent-chiang-mai,200,partial,false,0,false,,landing page no listings
+2026-05-28T01:48:30Z,webfetch,chiang_mai,,activity,indoor,https://chiangmaifamilyguide.com/best-indoor-playgrounds-in-chiang-mai/,404,false,false,0,false,,404

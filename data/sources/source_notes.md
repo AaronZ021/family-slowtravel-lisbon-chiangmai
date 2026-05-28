@@ -1,6 +1,10 @@
-# Source Notes
+# 源使用说明
 
-- 官方硬约束优先级最高：签证、安全、医疗急诊和官方空气提示不得由博客替代。
-- Reddit、博客、目录、聚合评价仅作为生活摩擦和重复主题信号。
-- Airbnb、Booking、Vrbo、Flatio 均未大规模抓取；住房样本来自公开页面/搜索结果的人工采样，价格和可订性必须在决策前重新核验。
-- Facebook 私密群组未进入；只记录公开可见的群组名或第三方目录描述。
+- 每条事实 → `sources.csv` 中必须有 `source_id`
+- 引用源 ID 在证据 markdown 中以 `[S-LIS-001]` / `[S-CMI-001]` 形式标注
+- 源 ID 命名规则：
+  - `S-LIS-NNN` = 里斯本相关源
+  - `S-CMI-NNN` = 清迈相关源
+  - `S-GEN-NNN` = 一般 / 跨城适用源（如 Schengen 通则）
+- 不准伪造源或挂不存在的 URL
+- 不可访问时 → `data/logs/inaccessible_sources.csv`

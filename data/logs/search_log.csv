@@ -1,10 +1,82 @@
-timestamp,city,layer,dimension,query,source,results_used,notes
-2026-05-27T23:48:00-07:00,lisbon,hard_constraints,visa,"Portugal short stay Schengen visa Chinese passport resident in Canada official",web_search,2,Used gov.pt and EU visa policy
-2026-05-27T23:48:00-07:00,chiang_mai,hard_constraints,visa,"Thailand tourist visa Chinese passport Canada official 60 days extension",web_search,3,Used Thai eVisa and Vancouver consulate plus TAT volatility
-2026-05-27T23:51:00-07:00,both,hard_constraints,safety,"Canada US UK travel advice Portugal Thailand",web_search,6,Used Canada and US pages; UK Thailand only
-2026-05-27T23:55:00-07:00,both,hard_constraints,climate_air,"WeatherSpark Lisbon Chiang Mai IQAir PM2.5 burning season",web_search,5,Used WeatherSpark and IQAir plus Canada air warning
-2026-05-28T00:00:00-07:00,both,hard_constraints,healthcare,"Lisbon Chiang Mai pediatric urgent care private hospital English",web_search,8,Hospital official pages plus limited community
-2026-05-28T00:05:00-07:00,both,life_operability,housing,"Flatio Booking Vrbo Chiang Mai Lisbon 2 bedroom monthly family kitchen washing machine",web_search,20,Manual sampling only; no scraping
-2026-05-28T00:12:00-07:00,both,life_operability,child_activity,"Lisbon Chiang Mai playground indoor play kids cafe playgroup toddler",web_search,30,Venue/blog/community sampling
-2026-05-28T00:18:00-07:00,both,life_operability,mobility,"Lisbon Chiang Mai public transport stroller car seat Grab Bolt Uber children",web_search,12,Used official transport and platform child-seat pages
-2026-05-28T00:22:00-07:00,both,community_feedback,parent_community,"Reddit expat parents family slow travel Lisbon Chiang Mai",web_search,20,Used public snippets and accessible result metadata
+timestamp,city,layer,dimension,query,source_engine,results_count,notes
+2026-05-28T00:10:00Z,lisbon,hard_constraints,visa,"Chinese passport Canada resident Schengen visa Portugal short stay tourist application 2026",google,10,visa-baseline
+2026-05-28T00:10:01Z,lisbon,hard_constraints,visa,"VFS Global Portugal Schengen visa Canada Toronto Vancouver requirements",google,9,vfs-canada
+2026-05-28T00:10:02Z,lisbon,hard_constraints,visa,"Schengen 90/180 rule official European Commission",google,10,90-180-rule
+2026-05-28T00:10:03Z,lisbon,hard_constraints,visa,"Portugal D7 D8 visa remote work digital nomad eligibility 2026",google,10,long-stay-options
+2026-05-28T00:10:04Z,lisbon,hard_constraints,safety,"Canada travel advice Portugal safety advisory site:travel.gc.ca",google,10,canada-advisory
+2026-05-28T00:10:05Z,lisbon,hard_constraints,safety,"UK FCDO Portugal travel advice safety",google,7,uk-fcdo
+2026-05-28T00:10:06Z,lisbon,hard_constraints,climate,"Lisbon climate January February March April October November average temperature rainfall",google,10,climate-monthly
+2026-05-28T00:10:07Z,lisbon,hard_constraints,air,"Lisbon air quality PM2.5 IQAir annual monthly",google,10,air-quality
+2026-05-28T00:10:08Z,lisbon,hard_constraints,healthcare,"Hospital Dona Estefânia Lisbon pediatric emergency English speaking foreigners",google,9,public-pediatric
+2026-05-28T00:10:09Z,lisbon,hard_constraints,healthcare,"CUF Descobertas Hospital da Luz Lisbon pediatrics English service private",google,10,private-pediatric
+2026-05-28T00:10:10Z,lisbon,hard_constraints,healthcare,"Lusíadas hospital Lisbon pediatric emergency 24h tourist",google,10,lusiadas-pediatric
+2026-05-28T00:10:11Z,lisbon,hard_constraints,healthcare,"Portugal SNS healthcare foreign tourists how to pay pediatric emergency",google,10,sns-foreigners
+2026-05-28T00:10:12Z,lisbon,community_feedback,safety,"Lisbon tram 28 pickpocket family with stroller experience reddit",google,3,tram28-safety
+2026-05-28T00:10:13Z,lisbon,hard_constraints,seismic,"Portugal earthquake risk Lisbon 2026 seismic preparedness",google,10,earthquake
+2026-05-28T01:00:00Z,chiang_mai,hard_constraints,visa,"Thailand visa exemption Chinese passport 2026 60 days extension permanent",websearch,10,bilateral 30-day exemption confirmed
+2026-05-28T01:00:30Z,chiang_mai,hard_constraints,visa,"Thailand DTV destination Thailand visa family dependents 2026",websearch,10,DTV dependents allowed
+2026-05-28T01:01:00Z,chiang_mai,hard_constraints,climate_air,"Chiang Mai burning season 2026 PM2.5 children health air quality March",websearch,10,March 2026 AQI 233 PM2.5 188
+2026-05-28T01:01:30Z,chiang_mai,hard_constraints,safety,"Canada travel advisory Thailand 2026",websearch,10,high degree caution; tourist areas low risk
+2026-05-28T01:02:00Z,chiang_mai,hard_constraints,health_risk,"Chiang Mai dengue fever 2026 outbreak family children",websearch,10,dengue rainy season risk
+2026-05-28T01:02:30Z,chiang_mai,healthcare,pediatric,"Bangkok Hospital Chiang Mai pediatric emergency English foreigners review",websearch,10,JCI accredited; 24/7 ER pediatric
+2026-05-28T01:03:00Z,chiang_mai,mobility,car_seat,"Chiang Mai car seat Grab taxi children safety problem expat",websearch,10,no car seats in Grab; bring own
+2026-05-28T01:03:30Z,chiang_mai,community,worldschooling,"Chiang Mai worldschooling families community Reddit 2025 expat",websearch,0,no results
+2026-05-28T01:10:00Z,chiang_mai,community,reddit,"reddit ChiangMai burning season family kids leave PM2.5",websearch,0,no direct reddit hits
+2026-05-28T01:10:30Z,chiang_mai,housing,nimman,"Nimman Santitham apartment family monthly rent air purifier review 2025",websearch,10,D Vieng Santitham 12-22k THB; Luxe de Nimman has purifier
+2026-05-28T01:11:00Z,chiang_mai,life_op,neighborhoods,"Chiang Mai Hang Dong family living international school expat blog",websearch,10,Hang Dong school density; family budget 80-130k THB
+2026-05-28T01:11:30Z,chiang_mai,hard_constraints,climate,"Chiang Mai climate weather month by month April hot season rainy",websearch,10,April peak heat 36C
+2026-05-28T01:12:00Z,chiang_mai,mobility,songthaew,"Chiang Mai songthaew red truck family stroller children practical",websearch,10,songthaew 20-30 THB; no seatbelts
+2026-05-28T01:12:30Z,chiang_mai,life_op,grocery,"Chiang Mai Rimping Tops supermarket grocery family expat where shop",websearch,10,Rimping Kad Farang
+2026-05-28T01:13:00Z,chiang_mai,activity,indoor,"Chiang Mai kids playground indoor playspace toddler preschool air conditioned",websearch,10,Block & Play, After School, Bouncetopia
+2026-05-28T01:13:30Z,chiang_mai,activity,nature,"Chiang Mai Mae Rim botanic garden Queen Sirikit kid friendly review",websearch,10,kid-friendly trails, not stroller
+2026-05-28T01:20:00Z,chiang_mai,housing,airbnb,"airbnb.com Chiang Mai Nimman 2 bedroom monthly family pool",websearch,10,several listings found
+2026-05-28T01:20:30Z,chiang_mai,housing,booking,"booking.com Chiang Mai apartment 2 bedroom monthly long stay family",websearch,10,serviced apt avg 23 USD/night
+2026-05-28T01:21:00Z,chiang_mai,community,reddit,"reddit chiangmai families burning season expat best places escape",websearch,0,empty
+2026-05-28T01:21:30Z,chiang_mai,activity,nature,"Chiang Mai Huay Tung Tao Lake family kids review",websearch,10,family-friendly lake 20min
+2026-05-28T01:25:00Z,chiang_mai,community,reddit,"site:reddit.com Chiang Mai kids family good for raising children",websearch,0,no links
+2026-05-28T01:25:30Z,chiang_mai,mobility,walking,"Chiang Mai sidewalks stroller walkability difficult expat blog",websearch,10,sidewalks uneven; Nimman better
+2026-05-28T01:26:00Z,chiang_mai,life_op,baby_supplies,"Chiang Mai pharmacy 7-eleven baby diapers formula availability expat",websearch,10,diapers/formula widely available
+2026-05-28T00:30:00Z,lisbon,life_operability,housing,"Campo de Ourique Lisbon family neighborhood living kids playground market",google,10,neighborhood
+2026-05-28T00:30:01Z,lisbon,life_operability,housing,"Parque das Nações Lisbon family neighborhood living with kids review",google,10,neighborhood
+2026-05-28T00:30:02Z,lisbon,life_operability,housing,"Estrela Lapa Lisbon family neighborhood with kids living guide",google,10,neighborhood
+2026-05-28T00:30:03Z,lisbon,life_operability,housing,"Belém Restelo Lisbon family neighborhood living kids review",google,10,neighborhood
+2026-05-28T00:30:04Z,lisbon,life_operability,housing,"Lisbon long term rental 2 bedroom apartment monthly price 2026 Campo de Ourique",google,10,rent-price
+2026-05-28T00:30:05Z,lisbon,life_operability,housing,"Flatio Lisbon monthly rental family 2 bedroom Parque das Nações",google,10,flatio
+2026-05-28T00:30:06Z,lisbon,life_operability,housing,"Airbnb Lisbon monthly stay family 3 months apartment review with kids",google,10,airbnb
+2026-05-28T00:30:07Z,lisbon,life_operability,housing,"Lisbon apartment no elevator hills stroller complaint review",google,9,housing-pain
+2026-05-28T00:30:08Z,lisbon,life_operability,child_activity,"Lisbon best playgrounds for toddlers under 5 list 2026 Monsanto Gulbenkian",google,10,playgrounds
+2026-05-28T00:30:09Z,lisbon,life_operability,child_activity,"Lisbon rainy day indoor activities kids toddler aquarium Pavilhão Conhecimento",google,10,indoor
+2026-05-28T00:30:10Z,lisbon,community_feedback,social,"Lisbon expat moms group facebook family meetup playgroup community",google,10,expat-groups
+2026-05-28T00:30:11Z,lisbon,life_operability,child_activity,"Lisbon drop-in kids activity class short term family English",google,10,classes
+2026-05-28T00:30:12Z,lisbon,life_operability,mobility,"Lisbon public transport Metro Carris bus stroller accessibility",google,9,mobility
+2026-05-28T00:30:13Z,lisbon,life_operability,mobility,"Lisbon Uber Bolt taxi car seat children law Portugal",google,8,carseat
+2026-05-28T00:30:14Z,lisbon,life_operability,grocery,"Lisbon supermarket Pingo Doce Continente farmacia laundry self-service neighborhood",google,10,grocery
+2026-05-28T00:30:15Z,lisbon,community_feedback,reddit,"reddit r/Lisbon family with toddler 3 months staying advice expats",google,0,no-results
+2026-05-28T00:30:16Z,lisbon,community_feedback,reddit,"site:reddit.com Lisbon family kids living expat experience",google,0,no-results
+2026-05-28T00:30:17Z,lisbon,community_feedback,reddit,"site:reddit.com Lisbon winter rain cold apartment heating",google,0,no-results
+2026-05-28T00:30:18Z,lisbon,community_feedback,reddit,"site:reddit.com Lisbon stroller cobblestone hills baby",google,0,no-results
+2026-05-28T00:30:19Z,lisbon,community_feedback,worldschooling,"worldschooling Lisbon Portugal blog family slow travel 3 months",google,9,worldschooling
+2026-05-28T00:30:20Z,lisbon,community_feedback,vlog,"YouTube Lisbon family vlog living with kids walking tour 2025",google,10,youtube
+2026-05-28T00:30:21Z,lisbon,life_operability,housing,"Lisbon apartment heating winter cold mold complaint expat",google,7,winter-housing
+2026-05-28T00:30:22Z,lisbon,life_operability,housing,"Lisbon Alvalade Areeiro family neighborhood kids quiet residential",google,8,optional-areas
+2026-05-28T00:30:23Z,lisbon,life_operability,housing,"Cascais Estoril family with kids living Portugal review beach",google,10,cascais
+2026-05-28T00:30:24Z,lisbon,life_operability,housing,"idealista Lisbon Parque das Nações T2 furnished long term",google,10,idealista-pdn
+2026-05-28T00:30:25Z,lisbon,life_operability,housing,"idealista Lisbon Estrela T2 furnished",google,10,idealista-estrela
+2026-05-28T00:30:26Z,lisbon,life_operability,housing,"idealista Lisbon Belém T2 furnished",google,10,idealista-belem
+2026-05-28T00:30:27Z,lisbon,life_operability,child_activity,"Lisbon Jardim da Estrela playground review family",google,10,estrela-playground
+2026-05-28T00:30:28Z,lisbon,life_operability,child_activity,"Lisbon Monsanto Parque dos Indios children playground review",google,10,monsanto-playground
+2026-05-28T00:30:29Z,lisbon,community_feedback,reddit,"site:reddit.com r/Portugal moving to Lisbon with toddler healthcare",google,0,no-results
+2026-05-28T00:30:30Z,lisbon,community_feedback,reddit,"reddit Lisbon best family neighborhood with young kids",google,0,no-results
+2026-05-28T00:30:31Z,lisbon,life_operability,housing,"reddit lived in Lisbon winter cold damp apartment heating tips",google,2,winter-housing-tips
+2026-05-28T00:30:32Z,lisbon,life_operability,child_activity,"Lisbon Sandcastle indoor playground review parents coworking",google,10,sandcastle
+2026-05-28T00:30:33Z,lisbon,life_operability,child_activity,"Lisbon Gulbenkian garden family kids playground Lisbon Oceanarium reviews",google,10,gulbenkian-oceanario
+2026-05-28T00:30:34Z,lisbon,life_operability,mobility,"Lisbon Cascais train line family kids weekend trip beach",google,10,cascais-train
+2026-05-28T00:30:35Z,lisbon,hard_constraints,healthcare,"Lisbon English speaking pediatrician clinic walk-in private",google,10,english-clinics
+2026-05-28T01:35:00Z,chiang_mai,community,facebook,"Chiang Mai expats with kids facebook group worldschooling",websearch,10,Beaver Club, multiple FB groups
+2026-05-28T01:35:30Z,chiang_mai,hard_constraints,visa,"Royal Thai Embassy Ottawa visa Chinese national resident Canada",websearch,10,no specific info
+2026-05-28T01:36:00Z,chiang_mai,hard_constraints,air,"Chiang Mai PM2.5 monthly average 2024 2025",websearch,10,2024 annual avg 26.4 µg/m³
+2026-05-28T01:36:30Z,chiang_mai,hard_constraints,air,"Chiang Mai January PM2.5 air quality good month family",websearch,10,January-Nov are best
+2026-05-28T01:40:00Z,chiang_mai,activity,nature,"Chiang Mai Doi Suthep Doi Inthanon family hike kids stroller",websearch,10,Royal Pagodas Loop stroller friendly
+2026-05-28T01:40:30Z,chiang_mai,activity,elephant,"Chiang Mai elephant sanctuary family ethical Mae Sa kids",websearch,10,Kanta best for young kids
+2026-05-28T01:41:00Z,chiang_mai,activity,structured,"Chiang Mai cooking class family kids art swimming activities short term",websearch,10,Smile Organic Farm; water parks
+2026-05-28T01:41:30Z,chiang_mai,hard_constraints,visa,"thaiembassy mfa.go.th DTV Chinese citizen apply outside home country",websearch,10,must apply from country of employment

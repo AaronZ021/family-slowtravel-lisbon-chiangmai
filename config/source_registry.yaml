@@ -2,24 +2,48 @@ source_types:
   official:
     description: Government, embassy, immigration, public health, official tourism, municipal websites.
     trust_level: high
+    examples:
+      - Portuguese Ministry of Foreign Affairs
+      - VFS Global Portugal
+      - Royal Thai Embassy
+      - Canadian Travel Advice
+      - UK FCDO
+      - US State Department
+      - National public health agencies
+
   platform:
     description: Airbnb, Booking, Flatio, Vrbo, Google Maps, OpenStreetMap, Numbeo, Meteostat, OpenAQ, IQAir, WAQI.
     trust_level: medium
+
   map:
     description: Google Maps, Apple Maps, OpenStreetMap, Overpass.
     trust_level: medium
+
   review:
     description: Google Maps reviews, Airbnb reviews, Booking reviews, Flatio reviews, TripAdvisor reviews.
     trust_level: medium_low
+
   community:
-    description: Reddit, Facebook groups, expat forums, parenting forums, worldschooling forums.
+    description: Reddit, Facebook public groups, expat forums, parenting forums, worldschooling forums.
     trust_level: anecdotal
+
   blog:
     description: Family travel blogs, local parenting blogs, worldschooling blogs.
     trust_level: anecdotal
+
   video:
     description: YouTube videos, family vlogs, neighborhood walking videos.
     trust_level: visual_anecdotal
+
   news:
     description: Reputable news articles.
     trust_level: medium
+
+rules:
+  - Every factual claim in the final report must refer to a source ID.
+  - Do not use a claim unless its source is logged in sources.csv.
+  - Do not treat community comments as definitive facts.
+  - Do not copy full copyrighted articles or full threads — use short excerpts or summaries only.
+  - Prefer official sources for hard constraints (visa, healthcare regulation, safety advisory).
+  - Prefer triangulation across source types for lifestyle / life-operability claims.
+  - If a source is inaccessible (paywall, login, CAPTCHA, robots block), record it in inaccessible_sources.csv and stop attempting.

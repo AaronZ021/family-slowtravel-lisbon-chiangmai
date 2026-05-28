@@ -1,50 +1,62 @@
 apis:
   google_places:
     enabled: false
-    max_requests_per_minute: 30
-    backoff_on_429_seconds: [10, 30, 60, 300]
-    cache_ttl_days: 30
-    notes: "未使用 Google Places API；只做公开页面和搜索结果人工采样。"
+    notes: "No API key configured in this environment. Use Google Maps web manual sampling via WebFetch/WebSearch."
+
   google_geocoding:
     enabled: false
-    max_requests_per_minute: 20
-    cache_ttl_days: 90
-    notes: "未使用 Google Geocoding API；候选区域用 Nominatim 小量查询缓存。"
+    notes: "No API key. Use approximate coordinates from public sources / map URLs."
+
   overpass_osm:
     enabled: false
-    max_requests_per_minute: 2
-    max_area_radius_km: 5
-    timeout_seconds: 60
-    cache_ttl_days: 30
-    notes: "本轮未运行 Overpass；用 Nominatim 坐标、公开地图/平台信号替代。"
+    notes: "Treat as optional. If used, max 2 req/min, small bounded queries only."
+
   reddit_api:
     enabled: false
-    max_requests_per_minute: 30
-    cache_ttl_days: 30
-    notes: "未配置 OAuth；仅用搜索可见的公开 Reddit 结果摘要。"
+    notes: "No OAuth. Use WebSearch with site:reddit.com and WebFetch for individual public threads."
+
   meteostat:
     enabled: false
-    max_requests_per_minute: 5
-    cache_ttl_days: 180
-    notes: "未调用 API；使用 WeatherSpark 和官方/平台空气质量来源。"
+    notes: "Use WeatherSpark / timeanddate / Wikipedia climate tables via WebFetch instead."
+
   openaq:
     enabled: false
-    max_requests_per_minute: 10
-    cache_ttl_days: 30
+    notes: "Use IQAir/WAQI/AirVisual public pages and reputable news via WebFetch."
+
   iqair:
     enabled: false
-    notes: "仅人工读取公开页面，不调用 API。"
+    notes: "Use public web pages via WebFetch."
+
   waqi:
     enabled: false
-    notes: "仅作为后续核验来源。"
+    notes: "Use public web pages via WebFetch."
+
 request_budget:
   per_city:
-    google_places_max: 120
-    overpass_max: 30
-    geocoding_max: 30
-    climate_max: 20
-    air_quality_max: 30
-    reddit_max: 50
-    html_page_fetch_max: 100
+    websearch_max: 80
+    webfetch_max: 60
   whole_project:
-    total_network_requests_max: 800
+    total_network_requests_max: 400
+
+retry_policy:
+  http_429:
+    use_retry_after_header: true
+    fallback_backoff_seconds: [10, 30, 60, 300]
+    max_retries: 4
+  http_5xx:
+    backoff_seconds: [5, 15, 45]
+    max_retries: 3
+  http_403_or_captcha_or_login_wall:
+    retry: false
+    action: mark_inaccessible
+  timeout:
+    action: reduce_query_scope_and_retry_once
+
+degradation_map:
+  google_places: google_maps_web_sampling_or_osm
+  overpass: google_maps_web_sampling
+  reddit_api: google_search_site_reddit + manual_url_collection
+  meteostat: weatherspark_or_timeanddate_or_wikipedia
+  openaq: iqair_or_waqi_public_pages
+  airbnb_inaccessible: manual_browser_sampling_summary
+  facebook_inaccessible: record_group_name_and_public_description_only

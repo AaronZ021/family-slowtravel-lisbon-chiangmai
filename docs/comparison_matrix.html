@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>对比矩阵 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="evidence_side_by_side.html">证据横向对照</a>
+      <a href="final_comparison_report.html">最终对比报告</a>
+      <a href="red_flags.html">红旗清单</a>
+      <a href="unknowns_and_next_verifications.html">未知与下一步</a>
+      <a href="comparison_matrix.html" class="active">对比矩阵</a>
+      <a href="evidence_lisbon.html">里斯本证据</a>
+      <a href="evidence_chiang_mai.html">清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 class="page-title">对比矩阵</h1>
+<p class="page-sub">18 个维度红黄绿灰 + 置信度 + 关键源 ID。Status 仅作快速比较，详细事实见证据横向对照表。</p>
+<table>
+<thead><tr>
+<th>dimension</th>
+<th>sub_dimension</th>
+<th>lisbon_status</th>
+<th>lisbon_confidence</th>
+<th>lisbon_key_sources</th>
+<th>chiang_mai_status</th>
+<th>chiang_mai_confidence</th>
+<th>chiang_mai_key_sources</th>
+<th>notes</th>
+<th>next_verification</th>
+</tr></thead><tbody>
+<tr>
+<td>Visa / Legal Stay</td>
+<td>90-day路径</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-001;S-LIS-002;S-LIS-004</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-001;S-CMI-002;S-CMI-003</td>
+<td>里斯本走申根短期签恰好 90 天上限零容错；清迈需 TR60+续30 或 DTV (Soft Power)</td>
+<td>配偶/孩子护照国别（共同未知）</td>
+</tr>
+<tr>
+<td>Visa / Legal Stay</td>
+<td>延期/续签可能</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-002</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-002;S-CMI-003</td>
+<td>里斯本不可超 90 天；清迈续签 30 天费 1900 THB 或走 DTV 5 年多签</td>
+<td>DTV 中国护照从加拿大申请接受度</td>
+</tr>
+<tr>
+<td>Visa / Legal Stay</td>
+<td>远程工作合法性</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-006;S-LIS-007</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-003</td>
+<td>本家庭不需远程工作但 DTV 可走 Soft Power（学厨/泰拳/泰语）路径</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Official Safety</td>
+<td>综合警告级别</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-008;S-LIS-009</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-CMI-007</td>
+<td>加拿大对葡萄牙&quot;正常防范&quot;；对泰国&quot;高度谨慎&quot;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Official Safety</td>
+<td>候选城市具体</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-008</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-007</td>
+<td>里斯本与清迈都不在加方警告区</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Official Safety</td>
+<td>特定风险</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-008;S-LIS-077</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-048;S-CMI-049</td>
+<td>里斯本：扒手（28/15/25路电车）；清迈：街边野狗 7-30 万只 + 狂犬</td>
+<td>各候选区野狗密度</td>
+</tr>
+<tr>
+<td>Climate Suitability</td>
+<td>1 月</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-010</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-011</td>
+<td>里斯本：14.9/8.8°C 10 雨天；清迈：30/15°C 几乎无雨</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Climate Suitability</td>
+<td>2 月</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-010</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-011</td>
+<td>里斯本：温和但仍多雨；清迈：烧林季启动</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Climate Suitability</td>
+<td>3 月</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-010</td>
+<td>Red</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-009</td>
+<td>里斯本：18.6°C 改善期；清迈：烧林季高峰 + PM2.5 极端</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Climate Suitability</td>
+<td>4 月</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-010</td>
+<td>Red</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-011</td>
+<td>里斯本：20°C 稳定期；清迈：4 月平均 36.7°C 高峰 + 烧林季尾</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Climate Suitability</td>
+<td>10 月</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-010</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-011;S-CMI-013</td>
+<td>里斯本：22.6°C 但雨剧增；清迈：雨季尾+登革热</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Climate Suitability</td>
+<td>11 月</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-010</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-011</td>
+<td>里斯本：全年降雨最多月之一；清迈：30/19°C 50mm 雨</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Air Quality</td>
+<td>年均水平</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-LIS-013;S-LIS-014</td>
+<td>Red</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-009</td>
+<td>里斯本年均 PM2.5 ~6 µg/m³；清迈 2024 年均 26.4 µg/m³（WHO 5.2 倍）</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Air Quality</td>
+<td>烧林季峰值</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Red</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-009;S-CMI-010</td>
+<td>清迈 2026-03-30 AQI 233 / PM2.5 188 µg/m³（全球第一）；可冲 300-700+</td>
+<td>各候选区站点差异</td>
+</tr>
+<tr>
+<td>Housing Feasibility</td>
+<td>2 卧月租可得性</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-LIS-026;S-LIS-028;S-LIS-042</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-020;S-CMI-021;S-CMI-023</td>
+<td>里斯本 €1600-2200；清迈 15-28k THB（~430-800 USD）核心区</td>
+<td>实际预订需在到达前 6-8 周</td>
+</tr>
+<tr>
+<td>Housing Feasibility</td>
+<td>冬季舒适度</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-046;S-LIS-047;S-LIS-081</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-020;S-CMI-021</td>
+<td>里斯本无中央暖气+霉菌；清迈冬季干爽舒适</td>
+<td>选房标准（双玻璃/除湿）</td>
+</tr>
+<tr>
+<td>Housing Feasibility</td>
+<td>烧林季抗污染装备</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-020;S-CMI-021</td>
+<td>清迈大量房源缺空气净化器；仅部分 Nimman 高端 listing 提及</td>
+<td>房源具体设备</td>
+</tr>
+<tr>
+<td>Pediatric Healthcare</td>
+<td>24h 儿科急诊</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-015;S-LIS-017;S-LIS-018;S-LIS-019</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-015;S-CMI-016;S-CMI-018</td>
+<td>里斯本：Dona Estefânia + CUF + Lusíadas + Hospital da Luz；清迈：Bangkok Hospital CM + Ram + Sriphat</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Pediatric Healthcare</td>
+<td>英文服务</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-017;S-LIS-022;S-LIS-023</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-015;S-CMI-017</td>
+<td>两地均有明确英文+多语支持的私立医院</td>
+<td>加拿大旅游医疗保险直付协议</td>
+</tr>
+<tr>
+<td>Pediatric Healthcare</td>
+<td>候选区距离</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-017</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-015</td>
+<td>Parque das Nações 紧邻 CUF；Nimman 距 Bangkok Hospital CM 5-10 分钟</td>
+<td>各区到顶级公立急诊驾车时间</td>
+</tr>
+<tr>
+<td>Daily Outdoor Activity</td>
+<td>候选数量（每区前 3 强）</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-LIS-026;S-LIS-027;S-LIS-049;S-LIS-051</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-023;S-CMI-028;S-CMI-030</td>
+<td>每区均 ≥3 个高质量户外候选</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Daily Outdoor Activity</td>
+<td>可重复性（受季节影响）</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-010;S-LIS-049</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-011</td>
+<td>里斯本：雨季打折；清迈：烧林季 3-4 月几乎为零</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Nature / Open-Ended Play</td>
+<td>城市内可达</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-049;S-LIS-056</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-023;S-CMI-028;S-CMI-030</td>
+<td>里斯本 Monsanto 森林 + Estrela；清迈 CMU + Huai Kaeo + Huay Tung Tao</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Nature / Open-Ended Play</td>
+<td>周边短途</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-LIS-035;S-LIS-072</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-029;S-CMI-031;S-CMI-051</td>
+<td>里斯本：Cascais 海滩 40 分钟火车；清迈：Doi Inthanon/Doi Suthep/大象保护区</td>
+<td>登山/瀑布对 2.5 岁儿童具体可行性</td>
+</tr>
+<tr>
+<td>Indoor Fallback</td>
+<td>候选数量</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-052;S-LIS-053;S-LIS-054;S-LIS-083</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-026;S-CMI-027</td>
+<td>两地均 ≥ 8 候选；清迈尤多 mall 室内乐园</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Indoor Fallback</td>
+<td>烧林季空气净化兼容</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-026</td>
+<td>清迈仅部分场所显式 air-purified（Reyn.ne /Wooden Ville）；其余仅 mall AC 滤效不足</td>
+<td>场所 PM2.5 实测/HEPA 等级</td>
+</tr>
+<tr>
+<td>Structured Child Activities</td>
+<td>短期接纳度</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-083</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-032;S-CMI-050</td>
+<td>里斯本：陶瓷 / Pastel de Nata / 烹饪等接受 drop-in；清迈：Beaver Club worldschooling hub 明确接受短期</td>
+<td>具体周班课时间表</td>
+</tr>
+<tr>
+<td>Parent Relief / Childcare</td>
+<td>可靠性</td>
+<td>Yellow</td>
+<td>low</td>
+<td>Lisbon_evidence_thin</td>
+<td>Yellow</td>
+<td>low</td>
+<td>S-CMI-033</td>
+<td>两地都不可作为硬依赖；清迈世界学社群略强</td>
+<td>需到达后实际试用</td>
+</tr>
+<tr>
+<td>Walkability / Mobility</td>
+<td>候选区步行</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-026;S-LIS-027;S-LIS-044;S-LIS-080</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-036;S-CMI-037</td>
+<td>里斯本中心区坡+卵石+老楼无电梯；清迈人行道不平 Nimman 较好</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Walkability / Mobility</td>
+<td>公交/打车便利度</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-051;S-LIS-052</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-035;S-CMI-038</td>
+<td>里斯本 Metro+Carris+Uber/Bolt 成熟；清迈 Grab + songthaew 普及</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Walkability / Mobility</td>
+<td>儿童安全座椅</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-052</td>
+<td>Red</td>
+<td>high</td>
+<td>S-CMI-039</td>
+<td>里斯本：Uber/Bolt 可预订有座椅车辆有限；清迈：Grab/出租车基本无 car seat，泰国法律弱执行</td>
+<td>自带便携座椅</td>
+</tr>
+<tr>
+<td>Walkability / Mobility</td>
+<td>婴儿车友好度</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-044;S-LIS-045;S-LIS-080</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-CMI-036;S-CMI-037</td>
+<td>里斯本：中心区坡+卵石；清迈：人行道破损 + 摩托车占道</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Daily Logistics</td>
+<td>杂货/超市</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-053;S-LIS-054</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-040;S-CMI-041</td>
+<td>里斯本 Pingo Doce/Continente；清迈 Rimping/Tops/Big C/Makro</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Daily Logistics</td>
+<td>药店</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-053</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-040;S-CMI-042</td>
+<td>两地药店密集；清迈 7-Eleven 也卖基础药/婴儿用品</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Daily Logistics</td>
+<td>洗衣</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-LIS-053</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-040</td>
+<td>两地自助洗衣或外送洗衣容易获得</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Culture Experience</td>
+<td>日常融入</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-053;S-LIS-054</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-042;S-CMI-043</td>
+<td>里斯本：欧式日常 + 多样餐饮；清迈：佛教节庆+寺庙+夜市</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Culture Experience</td>
+<td>儿童友好文化活动</td>
+<td>Yellow</td>
+<td>medium</td>
+<td>S-LIS-052;S-LIS-053;S-LIS-083</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-032;S-CMI-050</td>
+<td>清迈烹饪/手工/泰拳/大象保护区更适合幼儿亲手体验</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Nature Experience</td>
+<td>可达性</td>
+<td>Green</td>
+<td>high</td>
+<td>S-LIS-035;S-LIS-049;S-LIS-056</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-CMI-028;S-CMI-029;S-CMI-031</td>
+<td>里斯本：Monsanto 森林+Cascais 海滩；清迈：山+瀑布+植物园+大象（季节性限制）</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Community Support</td>
+<td>expat 家庭社群</td>
+<td>Green</td>
+<td>medium</td>
+<td>S-LIS-058;S-LIS-059;S-LIS-060;S-LIS-061</td>
+<td>Green</td>
+<td>high</td>
+<td>S-CMI-033</td>
+<td>里斯本 Lisbon for Parents + Lisbon Parents &amp; Kids；清迈 Beaver Club + worldschooling hub</td>
+<td>Reddit 信号缺失(平台限制)</td>
+</tr>
+<tr>
+<td>Main Failure Modes</td>
+<td>跨季节断点</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-010;S-LIS-046</td>
+<td>Red</td>
+<td>high</td>
+<td>S-CMI-008</td>
+<td>里斯本：冬季雨/冷/霉；清迈：3-4 月烧林+酷热&quot;几乎不可居住&quot;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Main Failure Modes</td>
+<td>健康风险</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-LIS-024;S-LIS-025</td>
+<td>Yellow</td>
+<td>high</td>
+<td>S-CMI-008;S-CMI-013;S-CMI-049</td>
+<td>里斯本：地震（低概率高破坏）；清迈：PM2.5+登革热+狂犬</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Overall First-Base Suitability</td>
+<td>与本家庭目标月份匹配</td>
+<td>Green (3-4月) / Yellow (1/10/11月)</td>
+<td>high</td>
+<td>综合</td>
+<td>Green (1/11月) / Red (3-4月) / Yellow (2/10月)</td>
+<td>high</td>
+<td>综合</td>
+<td>两地&quot;互补&quot;：3-4 月去里斯本；1/11 月清迈优；2/10 月谨慎</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

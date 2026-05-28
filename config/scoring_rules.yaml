@@ -1,16 +1,65 @@
-status:
-  Green: "证据显示运行良好，且关键风险可控。"
-  Yellow: "可运行，但存在明显摩擦、成本或季节限制。"
-  Red: "对本家庭的三个月稳定生活可能构成实质问题。"
-  Gray: "证据不足，不能做正向判断。"
-confidence:
-  High: "官方/平台/地图证据加多个支持来源。"
-  Medium: "至少两个来源类型支持。"
-  Low: "证据有限或主要来自轶事。"
-  Unknown: "数据不足。"
-rules:
-  no_single_score: true
-  hard_constraints_require_official_sources: true
-  community_not_definitive: true
-  weak_evidence_defaults_to_gray: true
-  visa_recent_change_requires_next_verification: true
+traffic_light:
+  green:
+    label: Works well
+    requirement: Multiple source types (official + platform + community) confirm the dimension supports the family's needs.
+  yellow:
+    label: Workable but friction or uncertainty
+    requirement: Evidence supports basic feasibility but conflicts or unknowns exist.
+  red:
+    label: Likely problematic
+    requirement: Multiple sources flag concrete obstacles for this family with young children.
+  gray:
+    label: Insufficient evidence
+    requirement: Not enough sources or sources too thin to judge.
+
+confidence_levels:
+  high: official/platform/map evidence plus multiple supporting sources
+  medium: at least two source types support the claim
+  low: limited evidence or mostly anecdotal
+  unknown: not enough data
+
+valid_signal_rules:
+  child_activity:
+    daily_repeatable_min: 3
+    indoor_fallback_min: 2
+    actual_use_evidence_sources_min: 2
+    age_fit_or_distance_or_facility_evidence_required: true
+  community_anecdote:
+    threshold_independent_comments_for_signal: 5
+    OR_threshold_independent_platforms: 3
+    single_anecdote_only_as_case_example: true
+
+minimum_evidence_before_stopping:
+  per_city:
+    visa_safety_official_sources: 2
+    climate_air_sources: 2
+    healthcare_sources: 3
+    housing_samples: 10
+    child_outdoor_candidates: 5
+    indoor_fallback_candidates: 5
+    community_signals: 5
+    structured_activity_candidates: 3
+    community_anecdotal_items: 10
+
+red_flag_triggers:
+  visa:
+    - "3-month stay not clearly legal"
+    - "Rules recently changed or conflicting"
+    - "Different passport rules complicate the family route"
+  healthcare:
+    - "No clear pediatric pathway"
+    - "No 24h emergency option"
+    - "English service unclear"
+  children:
+    - "Few repeatable daily activity options"
+    - "No indoor fallback during target months"
+    - "Unsafe traffic or stroller-unfriendly"
+  housing:
+    - "Few suitable 2-bedroom monthly rentals"
+    - "Repeated complaints about noise, mold, scams"
+  climate:
+    - "Severe seasonal pollution overlaps target months"
+    - "Extreme heat limits outdoor child life"
+  mobility:
+    - "Daily life requires car but car-seat unclear"
+    - "Walking is unsafe with young children"

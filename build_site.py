@@ -1,11 +1,16 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>首页 · 里斯本 vs 清迈 家庭慢旅基地</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
-<style>
+"""Build static HTML site from markdown reports for GitHub Pages."""
+import os
+import shutil
+from pathlib import Path
+import markdown
+import csv
+import html
+
+ROOT = Path(__file__).parent
+SITE = ROOT / "docs"
+SITE.mkdir(exist_ok=True)
+
+CSS = """
 :root {
   --bg: #fafaf8;
   --fg: #1a1a1a;
@@ -79,26 +84,146 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 .callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
 .callout.warn { background: #fef2f2; border-color: #fecaca; }
 .callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
-</style>
+"""
+
+
+def navlinks(active=""):
+    items = [
+        ("index.html", "首页"),
+        ("evidence_side_by_side.html", "证据横向对照"),
+        ("final_comparison_report.html", "最终对比报告"),
+        ("red_flags.html", "红旗清单"),
+        ("unknowns_and_next_verifications.html", "未知与下一步"),
+        ("comparison_matrix.html", "对比矩阵"),
+        ("evidence_lisbon.html", "里斯本证据"),
+        ("evidence_chiang_mai.html", "清迈证据"),
+    ]
+    out = []
+    for href, label in items:
+        cls = ' class="active"' if href == active else ""
+        out.append(f'      <a href="{href}"{cls}>{label}</a>')
+    return "\n".join(out)
+
+
+def wrap_page(title, body_html, active=""):
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html.escape(title)} · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>{CSS}</style>
 </head>
 <body>
 <header class="top">
   <div class="inner">
     <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
     <nav>
-      <a href="index.html" class="active">首页</a>
-      <a href="evidence_side_by_side.html">证据横向对照</a>
-      <a href="final_comparison_report.html">最终对比报告</a>
-      <a href="red_flags.html">红旗清单</a>
-      <a href="unknowns_and_next_verifications.html">未知与下一步</a>
-      <a href="comparison_matrix.html">对比矩阵</a>
-      <a href="evidence_lisbon.html">里斯本证据</a>
-      <a href="evidence_chiang_mai.html">清迈证据</a>
+{navlinks(active)}
     </nav>
   </div>
 </header>
 <main>
+{body_html}
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>
+"""
 
+
+def colorize_sources(html_text):
+    """Wrap source IDs in colored spans."""
+    import re
+    html_text = re.sub(r'\[S-LIS-(\d+)\]', r'<span class="s-lis">[S-LIS-\1]</span>', html_text)
+    html_text = re.sub(r'\[S-CMI-(\d+)\]', r'<span class="s-cmi">[S-CMI-\1]</span>', html_text)
+    return html_text
+
+
+def md_to_html(md_path, title, active):
+    with open(md_path) as f:
+        md = f.read()
+    body = markdown.markdown(
+        md,
+        extensions=["tables", "fenced_code", "toc"],
+        extension_configs={"toc": {"permalink": "¶"}},
+    )
+    body = colorize_sources(body)
+    return wrap_page(title, body, active)
+
+
+def csv_to_html(csv_path, title, active, intro=""):
+    with open(csv_path) as f:
+        rows = list(csv.reader(f))
+    if not rows:
+        return wrap_page(title, "<p>（空）</p>", active)
+    headers = rows[0]
+    body_html = [f'<h1 class="page-title">{html.escape(title)}</h1>']
+    if intro:
+        body_html.append(f'<p class="page-sub">{intro}</p>')
+    body_html.append("<table>")
+    body_html.append("<thead><tr>")
+    for h in headers:
+        body_html.append(f"<th>{html.escape(h)}</th>")
+    body_html.append("</tr></thead><tbody>")
+    for row in rows[1:]:
+        body_html.append("<tr>")
+        for cell in row:
+            cell_html = html.escape(cell).replace("\n", "<br>")
+            body_html.append(f"<td>{cell_html}</td>")
+        body_html.append("</tr>")
+    body_html.append("</tbody></table>")
+    return wrap_page(title, colorize_sources("\n".join(body_html)), active)
+
+
+def combined_evidence_page(city, files, title, active):
+    """Combine all evidence markdown for one city into a single page."""
+    body_parts = [f'<h1 class="page-title">{html.escape(title)}</h1>']
+    body_parts.append('<p class="page-sub">本页汇总该城所有 evidence markdown 文件，按维度组织。</p>')
+    toc = ['<div class="callout"><strong>本页章节</strong><ul>']
+    section_id_pairs = []
+    for fname, label in files:
+        sid = fname.replace(".md", "").replace("/", "_")
+        section_id_pairs.append((sid, label))
+        toc.append(f'<li><a href="#{sid}">{label}</a></li>')
+    toc.append("</ul></div>")
+    body_parts.append("\n".join(toc))
+
+    for fname, label in files:
+        sid = fname.replace(".md", "").replace("/", "_")
+        md_path = ROOT / "evidence" / city / fname
+        if not md_path.exists():
+            continue
+        with open(md_path) as f:
+            md = f.read()
+        # demote heading levels by 1 (so file's "# Title" becomes h2)
+        md_lines = []
+        for ln in md.splitlines():
+            if ln.startswith("# "):
+                md_lines.append(f'<h2 id="{sid}">{html.escape(ln[2:])}</h2>')
+            elif ln.startswith("## "):
+                md_lines.append(f"### {ln[3:]}")
+            elif ln.startswith("### "):
+                md_lines.append(f"#### {ln[4:]}")
+            else:
+                md_lines.append(ln)
+        section_md = "\n".join(md_lines)
+        section_html = markdown.markdown(
+            section_md,
+            extensions=["tables", "fenced_code"],
+        )
+        body_parts.append(f'<section id="{sid}">{section_html}</section>')
+        body_parts.append("<hr>")
+    return wrap_page(title, colorize_sources("\n".join(body_parts)), active)
+
+
+# === Build pages ===
+
+# Index
+index_body = """
 <h1 class="page-title">里斯本 vs 清迈：家庭 3 个月慢旅基地证据库</h1>
 <p class="page-sub">为 2 大人 + 4.5 岁 + 2.5 岁家庭评估两座城市作为约 90 天慢旅基地的可行性。本站列出所有事实证据，每条挂源 ID，判断由读者自行做出。</p>
 
@@ -189,10 +314,59 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 <li>目标月份候选：1、2、3、4、10、11 月</li>
 <li>风险容忍：低到中；Childcare 可选不必需；不必需远程工作</li>
 </ul>
+"""
 
-</main>
-<footer>
-  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
-</footer>
-</body>
-</html>
+(SITE / "index.html").write_text(wrap_page("首页", index_body, "index.html"))
+
+# Reports
+report_pages = [
+    ("reports/evidence_side_by_side.md", "evidence_side_by_side.html", "证据横向对照表"),
+    ("reports/final_comparison_report.md", "final_comparison_report.html", "最终对比报告"),
+    ("reports/red_flags.md", "red_flags.html", "红旗清单"),
+    ("reports/unknowns_and_next_verifications.md", "unknowns_and_next_verifications.html", "未知与下一步核实"),
+]
+for md, out, title in report_pages:
+    (SITE / out).write_text(md_to_html(ROOT / md, title, out))
+
+# Comparison matrix CSV → HTML
+(SITE / "comparison_matrix.html").write_text(
+    csv_to_html(
+        ROOT / "reports/comparison_matrix.csv",
+        "对比矩阵",
+        "comparison_matrix.html",
+        intro="18 个维度红黄绿灰 + 置信度 + 关键源 ID。Status 仅作快速比较，详细事实见证据横向对照表。",
+    )
+)
+
+# Evidence pages (combined per city)
+lisbon_files = [
+    ("hard_constraints.md", "硬约束（签证 / 安全 / 气候空气 / 医疗基线 / 住房基线）"),
+    ("healthcare_pathway.md", "医疗路径（儿科 / 急诊 / 英文医疗）"),
+    ("housing_samples.md", "住房样本（10 个）"),
+    ("child_activity_ecosystem.md", "儿童活动生态"),
+    ("mobility.md", "移动性"),
+    ("life_operability.md", "生活可运营性"),
+    ("community_feedback.md", "社区反馈"),
+]
+(SITE / "evidence_lisbon.html").write_text(
+    combined_evidence_page("lisbon", lisbon_files, "里斯本 · 全部证据", "evidence_lisbon.html")
+)
+(SITE / "evidence_chiang_mai.html").write_text(
+    combined_evidence_page("chiang_mai", lisbon_files, "清迈 · 全部证据", "evidence_chiang_mai.html")
+)
+
+# 404 for SPA niceness
+(SITE / "404.html").write_text(
+    wrap_page(
+        "404",
+        '<h1 class="page-title">404</h1><p>页面不存在 · <a href="index.html">回首页</a></p>',
+        "",
+    )
+)
+
+# .nojekyll so GitHub Pages serves files literally
+(SITE / ".nojekyll").write_text("")
+
+print(f"✅ Built {len(list(SITE.glob('*.html')))} HTML pages in {SITE}")
+for f in sorted(SITE.glob("*.html")):
+    print(f"  - {f.name} ({f.stat().st_size // 1024} KB)")

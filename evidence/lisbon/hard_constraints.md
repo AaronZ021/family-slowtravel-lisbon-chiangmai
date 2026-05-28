@@ -1,126 +1,150 @@
-# 里斯本硬约束证据
+# 里斯本 — 硬约束证据
 
-## 签证 / 合法停留
+> 范围：签证 / 安全 / 气候空气 / 医疗基线 / 住房基线  
+> 目标月份：1、2、3、4、10、11 月  
+> 家庭：2 大人 + 4.5 岁 + 2.5 岁 / 中国护照（加拿大居民）
 
-```yaml
-visa:
-  stay_model: "中国护照通常需要葡萄牙/申根短期签证；加拿大护照等免签护照仍受申根 90/180 天规则约束。"
-  max_stay_days: "最多 90 天，按整个申根区任意 180 天累计，而非葡萄牙单国。"
-  extension_possible: "短期申根签证通常不应计划延期；超过 90 天需要国家签证或其他合法路径。"
-  applies_to_chinese_passport: "需要按葡萄牙短期申根签证路径核验和申请。"
-  applies_to_canadian_passport: "通常免签短停，但仍受 90/180 天限制。"
-  family_complexity: "若家庭成员护照不同，规则、材料、允许停留方式可能不同；必须逐人核验。"
-  remote_work_risk: "短期申根签证/免签以旅游、商务、探亲等短停为主；若实际从葡萄牙持续远程工作，应向领馆或移民律师确认。"
-  official_sources: [LIS_VISA_01, EU_VISA_01]
-  confidence: High
-  red_flags:
-    - "三个月行程如果精确排满 90 天，航班延误或计算错误会触发超期风险。"
-    - "申根天数是区域累计；不能用离开葡萄牙去西班牙等方式重置。"
-  next_verification:
-    - "用官方申根计算器输入家庭每位成员过去 180 天旅行史。"
-    - "按每位护照确认 VFS/领馆材料、预约周期、签证有效期和多次入境。"
-```
+## 摘要（关键发现）
 
-## 官方安全建议
+- 签证：中国护照（即便是加拿大 PR）必须申请葡萄牙申根短期签证；可在多伦多/温哥华/渥太华领事馆 + VFS Global 办理，处理时间 15 个工作日，费用约 CAD$135 [S-LIS-001][S-LIS-005]。
+- 90/180 规则严格：3 个月（约 90 天）刚好用满上限，归来后 90 天内不能再次入申根 [S-LIS-002]。
+- 气候上 1–4 月与 10–11 月属于温和但**多雨**季节（1 月、10 月、11 月降雨量 110–135mm/月，雨天 9–10 天），加上里斯本住宅普遍**无中央暖气**，被多个 expat 来源标记为冬季关键摩擦点 [S-LIS-010][S-LIS-046][S-LIS-047][S-LIS-048][S-LIS-081]。
+- 医疗基线为绿色：公立儿童医院 Dona Estefânia 24h 急诊 + 多家私立（CUF Descobertas, Lusíadas, Hospital da Luz）24h 儿科服务，均位于候选区步行或短程范围内 [S-LIS-015][S-LIS-017][S-LIS-018][S-LIS-019]。
+- 地震风险：里斯本处于中至高地震带（1755 年地震历史 + 2025 年 8 月有感地震），但 2026 年市政正进行抗震评估和公众应急 App [S-LIS-024][S-LIS-025]。
+- 旅游警告：加拿大政府"正常防范"等级，恐袭威胁等级 3/5（"显著"），主要安全风险是扒手与商品/钱包窃取，特别是 28/15/25 路 tram [S-LIS-008][S-LIS-009][S-LIS-077]。
 
-```yaml
-safety:
-  canada_advisory_level: "Take normal security precautions"
-  us_advisory_summary: "Level 1 - Exercise normal precautions"
-  uk_advisory_summary: "未在本轮完整采样；需补 UK FCDO Portugal 页面。"
-  region_specific_warnings: "加拿大提示里斯本、波尔图等大城市扒窃、抢包、公共交通和旅游区盗窃；15、25、28 路电车需特别注意。"
-  relevance_to_city: "主要是财物和旅游区风险，不是儿童生活红线。"
-  relevance_to_family_with_children: "需要住房门窗安全、少带现金、避开拥挤电车和夜间低照明区域。"
-  confidence: High
-  red_flags:
-    - "短租公寓和车辆盗窃/入室风险需作为住房筛选项。"
-  sources: [CAN_PT_01, US_PT_01]
-```
+---
 
-## 气候 / 空气
+## 1. 签证 / 入境
 
-```yaml
-climate_air:
-  best_months: ["March", "April", "October"]
-  workable_months: ["January", "February", "November"]
-  avoid_months: []
-  average_high_temp_by_target_month_f:
-    January: 58
-    February: 60
-    March: 65
-    April: 67
-    October: 72
-    November: 64
-  rainy_days_by_target_month:
-    January: 7.3
-    February: 5.8
-    March: 5.3
-    April: 6.1
-    October: 7.4
-    November: 8.4
-  humidity_concern: "低到中；冬季湿冷和住房保温/除湿比高温更重要。"
-  air_quality_risk: "相对低；城市有 PM2.5/PM10/NO2/O3 等监测网络。"
-  child_outdoor_life_impact: "大多数目标月份适合户外日常；11 月和冬季雨天需要室内 fallback。"
-  indoor_fallback_importance: "中。"
-  confidence: Medium
-  red_flags:
-    - "冬季雨天和老房保温/潮湿可能影响日常舒适度。"
-  sources: [LIS_CLIM_01, LIS_AIR_01, LIS_AIR_02]
-```
+### 事实
+- 中国护照持有人无论居住国家，都需申请申根签证才能进入葡萄牙 [S-LIS-001][S-LIS-004]。
+- 加拿大 PR 或工作/学习许可（有效期需至少回程后 60 天）可作为加拿大常住证明；申请地为多伦多、渥太华、温哥华领事馆 + VFS Global 配合采集生物识别 [S-LIS-001][S-LIS-005][S-LIS-003]。
+- 短期签证（Type C）允许在申根区 **任意 180 天内最多 90 天**——3 个月停留刚好用满，需精确规划入境/出境日 [S-LIS-002][S-LIS-004]。
+- 标准材料：护照（有效期>停留+90 天）、加拿大居民证明、近 3 个月银行流水、住宿预订、往返机票预订、医疗保险 ≥ €30,000 覆盖全申根、雇主信或自雇证明、家庭关系证明（子女）[S-LIS-001][S-LIS-004]。
+- 费用：约 CAD$135（按 ECB 汇率浮动）；处理时间标称 15 个工作日（可延至 45 天）[S-LIS-001]。
+- 申请需走在线门户 https://pedidodevistos.mne.pt/VistosOnline/，并预付 Canada Post / UPS / DHL 自寄返回信封 [S-LIS-001]。
 
-## 医疗可达性
+### 长期签证（备选）
+- D8 数字游民签证：2026 年要求月收入约 €3,680（主申请人），配偶 +50%、每个儿童 +30%；存款 ≥ 12 倍葡萄牙最低工资（约 €11,040）；不适合本家庭（不要求远程工作）[S-LIS-006]。
+- D7 被动收入签证：2026 年起明确不适合主动远程工作者，仅适合被动收入（退休金/股息/版税/租金）[S-LIS-007]。
+- **解释**：90 天慢旅基线只需短期申根签，无需 D7/D8；但若未来想超 90 天，需提前 3-4 个月申请长期签。
 
-```yaml
-healthcare:
-  pediatric_options:
-    - name: "Hospital Dona Estefania"
-      type: "公立儿童/儿科参考医院"
-      official_url: "https://www.ulssjose.min-saude.pt/hospital-dona-estefania/"
-      24h_emergency: "需电话确认；社区和二级资料反复指向儿科急诊。"
-      pediatric_service: true
-      english_service_evidence: "未在官方页确认；公立医院英语不应默认。"
-      foreigner_access_evidence: "公立急诊可作为严重情况路径；费用/保险需确认。"
-      confidence: Medium
-      source_ids: [LIS_HEALTH_01]
-    - name: "Hospital CUF Descobertas"
-      type: "私立综合医院"
-      official_url: "https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-descobertas-lisboa"
-      pediatric_service: true
-      english_service_evidence: "未逐医生确认；私立系统对外国人较友好但需核验。"
-      confidence: Medium
-      source_ids: [LIS_HEALTH_02]
-    - name: "Hospital da Luz Lisboa"
-      type: "私立医院/24h urgent care"
-      official_url: "https://www.hospitaldaluz.pt/lisboa/en/services/urgent-care-24-hours"
-      24h_emergency: true
-      pediatric_service: "需确认儿科急诊时段和排班。"
-      confidence: Medium
-      source_ids: [LIS_HEALTH_03]
-    - name: "UMC Lisbon Pediatrics"
-      type: "私立门诊"
-      english_service_evidence: "页面显示可提供 medical coordinator/translation assistance。"
-      confidence: Medium
-      source_ids: [LIS_HEALTH_04]
-  emergency_pathway: "严重症状或夜间急症：112 或 Hospital Dona Estefania / 私立医院急诊；轻中度发热、皮疹、肠胃炎：私立儿科门诊或 CUF/Luz urgent care。"
-  routine_child_illness_pathway: "提前建立 1-2 个私立儿科门诊账号，确认英文医生、保险直付和周末时段。"
-  biggest_unknowns:
-    - "每家医院儿科急诊是否 24h、英文医生是否稳定、等待时间和保险直付。"
-  red_flags:
-    - "路径存在但不能假设无摩擦；公立儿科高峰等待可能长。"
-  confidence: Medium
-```
+### 未知 / 下一步
+- 配偶/孩子是否持加拿大或其他国家护照（如加拿大护照则免签 90 天，路径完全不同）→ **必须先核实**。
+- 中国护照配偶持加拿大公民护照子女是否需要监护信、双亲同意书等 → 需查目的领事馆具体清单。
 
-## 住房基线
+### 红黄绿灰
+- 签证可行性：**Yellow**（confidence high）— 路径清晰但材料 + 时间窗管理需提前 3 个月起步；3 个月停留恰好顶到 90 天上限。
 
-事实：Flatio、服务式公寓和 Vrbo 样本显示 2 居、厨房、洗衣和 30 天以上中租供应存在，但价格跨度大，核心区成本明显高于清迈。[LISH_01-LISH_10]
+---
 
-解释：里斯本住房不是“找不到”，而是“三个月、适合幼儿、少坡、安静、有洗衣/厨房、电梯或低楼层”的筛选会显著缩小供应。短租公寓安全、押金、噪音、飞行路径、楼梯和潮湿需要逐套核验。
+## 2. 安全 / 风险
 
-未知：Airbnb/Booking 实时 75-90 晚总价、本地短租法规、冬季供暖/除湿、电梯、窗户安全、儿童床具。
+### 事实
+- 加拿大政府：旅行警告级别为"正常防范"（"take normal security precautions"），日期 2026-05-26 [S-LIS-008]。
+- 主要犯罪：扒手与抢包（pickpocketing / bag-snatching），高发于 Lisboa 与 Porto 的旅游电车 **15、25、28 路** [S-LIS-008][S-LIS-009][S-LIS-077]。
+- 暴力犯罪罕见但有记录，主要发生于 Lisboa/Porto/Algarve 夜店酒吧（与家庭活动无关）[S-LIS-008]。
+- 恐袭威胁等级 3/5（"significant"），UK FCDO 同样表述"terror attacks cannot be ruled out" [S-LIS-008][S-LIS-009]。
+- 自然风险：秋冬强降雨可引发洪水/滑坡；夏季野火主要影响 4–10 月；地震属持续风险 [S-LIS-008]。
 
-红线：如果预算无法覆盖约 2500-4000 EUR/月的保守中高质量 2BR 区间，里斯本会变成住房风险而不是生活风险。
+### 解释
+- 与 4.5 岁 + 2.5 岁孩子相关的实际风险主要是扒手（不是暴力犯罪），可通过避开 28 路高峰电车 + 用婴儿背带替代敞口包来缓解。
 
-证据强度：Medium  
-来源限制：平台价格动态，未大规模抓取。  
-新鲜度：平台搜索结果和页面为 2026-05-27 访问。  
-需要人工核验：对 10 个候选 listing 发消息确认 90 晚、儿童、洗衣、供暖、楼层、电梯、噪音和取消政策。
+### 未知 / 下一步
+- 各候选区（Campo de Ourique / Estrela / Parque das Nações / Belém）夜间感受性安全数据 → 后续在 community_feedback 中跨多源验证。
+
+### 红黄绿灰
+- 总体安全：**Green**（confidence high）— 扒手是唯一频繁红旗，已知可控。
+
+---
+
+## 3. 气候 & 空气
+
+### 事实（目标月份）
+| 月 | 高温 °C | 低温 °C | 降雨 mm | 雨天 | 日照 h/日 | 备注 |
+|---|---|---|---|---|---|---|
+| 1 | 14.9 | 8.8 | 110 | 10 | 4.5 | 温和；雨频；偶有西风 [S-LIS-010] |
+| 2 | 16.1 | 9.2 | 80 | 8 | 5.5 | 温和；海水冷 [S-LIS-010] |
+| 3 | 18.6 | 11.1 | 75 | 8 | 6.5 | 改善期 [S-LIS-010] |
+| 4 | 20.1 | 12.3 | 70 | 8 | 8.0 | 4 月下半月开始稳定 [S-LIS-010] |
+| 10 | 22.6 | 15.4 | 115 | 9 | 7.0 | 仍温暖但雨剧增 [S-LIS-010] |
+| 11 | 18.0 | 11.9 | 135 | 10 | 5.0 | 全年降雨最多月之一 [S-LIS-010] |
+
+- 年均降雨 774 mm，集中于 11 月—2 月 [S-LIS-010][S-LIS-012]。
+- 空气质量：IQAir 当前 AQI ~56（Moderate），里斯本年均 PM2.5 ≈ 6 µg/m³（IQAir 年报数据点）；当前为 WHO 年度准则约 2 倍但远低于亚洲多数大城市 [S-LIS-013][S-LIS-014]。
+- 比较各区：Oeiras AQI 71 较高（西部、靠主干道）；Santa Iria da Azoia AQI 33 较低 [S-LIS-013]。
+
+### 解释
+- 1、10、11 月雨水显著，对 2.5 岁孩子户外可重复性有挤压；3—4 月是窗口最舒适的月份。
+- 空气质量整体优于亚洲城市，但应在野火季（夏季）外，因此 1-4 / 10-11 是较安全时段。
+
+### 未知 / 下一步
+- 月度 PM2.5 分布（IQAir 单页未展示历史月度），需要专项抓 history 或外部数据集。
+
+### 红黄绿灰
+- 气候：**Yellow**（confidence medium）— 雨/冷对幼儿可重复性是中度摩擦；3-4 月最佳，1/10/11 月需重室内备案。
+- 空气：**Green**（confidence medium）— 远好于亚洲对照。
+
+---
+
+## 4. 医疗基线
+
+### 事实
+- **Hospital Dona Estefânia**（公立儿童医院，CHULC）：成立 1877，葡萄牙首个儿科专科医院，**24 小时全年儿科 + 成人急诊**，国家儿科参考中心 [S-LIS-015][S-LIS-016]。
+- **Hospital CUF Descobertas**（私立，Parque das Nações）：**儿科 24 小时开放**（"Pediatria Aberto 24h"），多语言（英、葡、西、法、德），有儿童与青少年中心；地址 Rua Mário Botas 1998-018 Lisboa [S-LIS-017]。
+- **Hospital Lusíadas Lisboa**（私立，Sete Rios 附近）：儿科 walk-in 每日 08-22 点；网站 + 院内全英文支持；24h 急诊在部分单位 [S-LIS-018]。
+- **Hospital da Luz Lisboa**（私立，Luz）：24h 急诊（含儿科），明示接收境外/旅游者 [S-LIS-019]。
+- 国际诊所路径：Alegria Medical Centre、CMIL 等专注于国际人群、家庭医学、儿科、英语为主 [S-LIS-022][S-LIS-023]。
+- 对外国人付费：紧急救助（公立）对所有外国人开放（"any foreigner who feels ill ... has the right to be assisted"），紧急 112 / 非紧急 SNS 24 拨 808 24 24 24 [S-LIS-020][S-LIS-021]。
+- 私人就诊典型费用 €60–€120/visit（无保险情况下）[S-LIS-022]。
+
+### 解释
+- 即使不参与 SNS，本家庭通过私立医院 + 旅游医疗保险（≥€30,000，签证强制）+ 自付，可在 30 分钟内到达至少 2 家 24h 儿科。
+- Parque das Nações 候选区距 CUF Descobertas 步行/<10 分钟，是医疗可达性最强的候选区。
+
+### 未知 / 下一步
+- 各候选区到 Hospital Dona Estefânia 的实际驾车时间（30 分钟阈值）需 Google Maps 抽样核验。
+- 私立医院"接受加拿大旅游医疗保险直付"的实际操作（多数为先付后报销）。
+
+### 红黄绿灰
+- 医疗可达性：**Green**（confidence high）。
+
+---
+
+## 5. 地震 / 自然灾害
+
+### 事实
+- 葡萄牙处于欧亚板块西南，受 Azores–Gibraltar Transform Fault 与 Mid-Atlantic Ridge 影响，里斯本属"中—高"地震风险区 [S-LIS-024][S-LIS-025]。
+- 历史：1755 年里斯本大地震（约 M 8.5–9.0）+ 海啸 + 火灾，城市几乎全毁 [S-LIS-024]。
+- 2025-08-26 里斯本附近发生有感地震，市长称已对 1,500 栋建筑做抗震评估，约 10% 需补强 [S-LIS-024]。
+- 里斯本大都会区约 2/3 建筑建于 1980 年代抗震法规之前 [S-LIS-024]。
+- 市政推出 LXRes App 提供应急指引 [S-LIS-024]。
+
+### 解释
+- 风险存在但 3 个月窗口内的实际事件概率较低；需在选房时优先选 1980 年代后或翻新公寓。
+- 海啸风险沿河沿海街道更高，Belém 河边、Parque das Nações 河边 listing 需额外检查。
+
+### 红黄绿灰
+- 地震基线：**Yellow**（confidence high）— 风险存在、可缓解（建造年代选房 + App + 应急包）。
+
+---
+
+## 6. 住房基线
+
+### 事实
+- 公寓普遍**无中央暖气**，依赖空调或便携电暖；老建筑单层玻璃居多 [S-LIS-046][S-LIS-081]。
+- 冬季湿冷 + 不通风 → 霉菌问题被多个 expat 反复提到（"musty smell"、closets 与封闭房间最明显）[S-LIS-046][S-LIS-047]。
+- 实操建议：选 double-glazing + 电暖气 + 除湿机；冬季每日开窗换气 [S-LIS-048][S-LIS-081]。
+- 整体租金水平：2026 年 Campo de Ourique 与 Alvalade 的 2 卧约 €1,600–€2,200/月；Parque das Nações 属"较贵 2 卧"区段 [S-LIS-042]。
+
+### 红黄绿灰
+- 冬季住房舒适：**Yellow**（confidence medium）— 选房标准明确即可缓解；但若选不当 listing 风险显著。
+
+---
+
+## 关键不确定与下一步核实
+1. **必须先核实**：配偶/孩子护照国别（决定整个签证路径）。
+2. 月度 PM2.5 分布（特别是 1/10/11 月雨季是否有显著差异）。
+3. 各候选区到 Dona Estefânia 公立儿科急诊的实际驾车时间。
+4. 私立医院对加拿大旅游医疗保险（如 Manulife / Sun Life）的直付协议。

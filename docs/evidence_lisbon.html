@@ -1,0 +1,1659 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>里斯本 · 全部证据 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="evidence_side_by_side.html">证据横向对照</a>
+      <a href="final_comparison_report.html">最终对比报告</a>
+      <a href="red_flags.html">红旗清单</a>
+      <a href="unknowns_and_next_verifications.html">未知与下一步</a>
+      <a href="comparison_matrix.html">对比矩阵</a>
+      <a href="evidence_lisbon.html" class="active">里斯本证据</a>
+      <a href="evidence_chiang_mai.html">清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 class="page-title">里斯本 · 全部证据</h1>
+<p class="page-sub">本页汇总该城所有 evidence markdown 文件，按维度组织。</p>
+<div class="callout"><strong>本页章节</strong><ul>
+<li><a href="#hard_constraints">硬约束（签证 / 安全 / 气候空气 / 医疗基线 / 住房基线）</a></li>
+<li><a href="#healthcare_pathway">医疗路径（儿科 / 急诊 / 英文医疗）</a></li>
+<li><a href="#housing_samples">住房样本（10 个）</a></li>
+<li><a href="#child_activity_ecosystem">儿童活动生态</a></li>
+<li><a href="#mobility">移动性</a></li>
+<li><a href="#life_operability">生活可运营性</a></li>
+<li><a href="#community_feedback">社区反馈</a></li>
+</ul></div>
+<section id="hard_constraints"><h2 id="hard_constraints">里斯本 — 硬约束证据</h2>
+
+<blockquote>
+<p>范围：签证 / 安全 / 气候空气 / 医疗基线 / 住房基线<br />
+目标月份：1、2、3、4、10、11 月<br />
+家庭：2 大人 + 4.5 岁 + 2.5 岁 / 中国护照（加拿大居民）</p>
+</blockquote>
+<h3>摘要（关键发现）</h3>
+<ul>
+<li>签证：中国护照（即便是加拿大 PR）必须申请葡萄牙申根短期签证；可在多伦多/温哥华/渥太华领事馆 + VFS Global 办理，处理时间 15 个工作日，费用约 CAD$135 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-005]</span>。</li>
+<li>90/180 规则严格：3 个月（约 90 天）刚好用满上限，归来后 90 天内不能再次入申根 <span class="s-lis">[S-LIS-002]</span>。</li>
+<li>气候上 1–4 月与 10–11 月属于温和但<strong>多雨</strong>季节（1 月、10 月、11 月降雨量 110–135mm/月，雨天 9–10 天），加上里斯本住宅普遍<strong>无中央暖气</strong>，被多个 expat 来源标记为冬季关键摩擦点 <span class="s-lis">[S-LIS-010]</span><span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span><span class="s-lis">[S-LIS-048]</span><span class="s-lis">[S-LIS-081]</span>。</li>
+<li>医疗基线为绿色：公立儿童医院 Dona Estefânia 24h 急诊 + 多家私立（CUF Descobertas, Lusíadas, Hospital da Luz）24h 儿科服务，均位于候选区步行或短程范围内 <span class="s-lis">[S-LIS-015]</span><span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-019]</span>。</li>
+<li>地震风险：里斯本处于中至高地震带（1755 年地震历史 + 2025 年 8 月有感地震），但 2026 年市政正进行抗震评估和公众应急 App <span class="s-lis">[S-LIS-024]</span><span class="s-lis">[S-LIS-025]</span>。</li>
+<li>旅游警告：加拿大政府"正常防范"等级，恐袭威胁等级 3/5（"显著"），主要安全风险是扒手与商品/钱包窃取，特别是 28/15/25 路 tram <span class="s-lis">[S-LIS-008]</span><span class="s-lis">[S-LIS-009]</span><span class="s-lis">[S-LIS-077]</span>。</li>
+</ul>
+<hr />
+<h3>1. 签证 / 入境</h3>
+<h4>事实</h4>
+<ul>
+<li>中国护照持有人无论居住国家，都需申请申根签证才能进入葡萄牙 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-004]</span>。</li>
+<li>加拿大 PR 或工作/学习许可（有效期需至少回程后 60 天）可作为加拿大常住证明；申请地为多伦多、渥太华、温哥华领事馆 + VFS Global 配合采集生物识别 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-005]</span><span class="s-lis">[S-LIS-003]</span>。</li>
+<li>短期签证（Type C）允许在申根区 <strong>任意 180 天内最多 90 天</strong>——3 个月停留刚好用满，需精确规划入境/出境日 <span class="s-lis">[S-LIS-002]</span><span class="s-lis">[S-LIS-004]</span>。</li>
+<li>标准材料：护照（有效期&gt;停留+90 天）、加拿大居民证明、近 3 个月银行流水、住宿预订、往返机票预订、医疗保险 ≥ €30,000 覆盖全申根、雇主信或自雇证明、家庭关系证明（子女）<span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-004]</span>。</li>
+<li>费用：约 CAD$135（按 ECB 汇率浮动）；处理时间标称 15 个工作日（可延至 45 天）<span class="s-lis">[S-LIS-001]</span>。</li>
+<li>申请需走在线门户 https://pedidodevistos.mne.pt/VistosOnline/，并预付 Canada Post / UPS / DHL 自寄返回信封 <span class="s-lis">[S-LIS-001]</span>。</li>
+</ul>
+<h4>长期签证（备选）</h4>
+<ul>
+<li>D8 数字游民签证：2026 年要求月收入约 €3,680（主申请人），配偶 +50%、每个儿童 +30%；存款 ≥ 12 倍葡萄牙最低工资（约 €11,040）；不适合本家庭（不要求远程工作）<span class="s-lis">[S-LIS-006]</span>。</li>
+<li>D7 被动收入签证：2026 年起明确不适合主动远程工作者，仅适合被动收入（退休金/股息/版税/租金）<span class="s-lis">[S-LIS-007]</span>。</li>
+<li><strong>解释</strong>：90 天慢旅基线只需短期申根签，无需 D7/D8；但若未来想超 90 天，需提前 3-4 个月申请长期签。</li>
+</ul>
+<h4>未知 / 下一步</h4>
+<ul>
+<li>配偶/孩子是否持加拿大或其他国家护照（如加拿大护照则免签 90 天，路径完全不同）→ <strong>必须先核实</strong>。</li>
+<li>中国护照配偶持加拿大公民护照子女是否需要监护信、双亲同意书等 → 需查目的领事馆具体清单。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>签证可行性：<strong>Yellow</strong>（confidence high）— 路径清晰但材料 + 时间窗管理需提前 3 个月起步；3 个月停留恰好顶到 90 天上限。</li>
+</ul>
+<hr />
+<h3>2. 安全 / 风险</h3>
+<h4>事实</h4>
+<ul>
+<li>加拿大政府：旅行警告级别为"正常防范"（"take normal security precautions"），日期 2026-05-26 <span class="s-lis">[S-LIS-008]</span>。</li>
+<li>主要犯罪：扒手与抢包（pickpocketing / bag-snatching），高发于 Lisboa 与 Porto 的旅游电车 <strong>15、25、28 路</strong> <span class="s-lis">[S-LIS-008]</span><span class="s-lis">[S-LIS-009]</span><span class="s-lis">[S-LIS-077]</span>。</li>
+<li>暴力犯罪罕见但有记录，主要发生于 Lisboa/Porto/Algarve 夜店酒吧（与家庭活动无关）<span class="s-lis">[S-LIS-008]</span>。</li>
+<li>恐袭威胁等级 3/5（"significant"），UK FCDO 同样表述"terror attacks cannot be ruled out" <span class="s-lis">[S-LIS-008]</span><span class="s-lis">[S-LIS-009]</span>。</li>
+<li>自然风险：秋冬强降雨可引发洪水/滑坡；夏季野火主要影响 4–10 月；地震属持续风险 <span class="s-lis">[S-LIS-008]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>与 4.5 岁 + 2.5 岁孩子相关的实际风险主要是扒手（不是暴力犯罪），可通过避开 28 路高峰电车 + 用婴儿背带替代敞口包来缓解。</li>
+</ul>
+<h4>未知 / 下一步</h4>
+<ul>
+<li>各候选区（Campo de Ourique / Estrela / Parque das Nações / Belém）夜间感受性安全数据 → 后续在 community_feedback 中跨多源验证。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>总体安全：<strong>Green</strong>（confidence high）— 扒手是唯一频繁红旗，已知可控。</li>
+</ul>
+<hr />
+<h3>3. 气候 &amp; 空气</h3>
+<h4>事实（目标月份）</h4>
+<table>
+<thead>
+<tr>
+<th>月</th>
+<th>高温 °C</th>
+<th>低温 °C</th>
+<th>降雨 mm</th>
+<th>雨天</th>
+<th>日照 h/日</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>14.9</td>
+<td>8.8</td>
+<td>110</td>
+<td>10</td>
+<td>4.5</td>
+<td>温和；雨频；偶有西风 <span class="s-lis">[S-LIS-010]</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>16.1</td>
+<td>9.2</td>
+<td>80</td>
+<td>8</td>
+<td>5.5</td>
+<td>温和；海水冷 <span class="s-lis">[S-LIS-010]</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td>18.6</td>
+<td>11.1</td>
+<td>75</td>
+<td>8</td>
+<td>6.5</td>
+<td>改善期 <span class="s-lis">[S-LIS-010]</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td>20.1</td>
+<td>12.3</td>
+<td>70</td>
+<td>8</td>
+<td>8.0</td>
+<td>4 月下半月开始稳定 <span class="s-lis">[S-LIS-010]</span></td>
+</tr>
+<tr>
+<td>10</td>
+<td>22.6</td>
+<td>15.4</td>
+<td>115</td>
+<td>9</td>
+<td>7.0</td>
+<td>仍温暖但雨剧增 <span class="s-lis">[S-LIS-010]</span></td>
+</tr>
+<tr>
+<td>11</td>
+<td>18.0</td>
+<td>11.9</td>
+<td>135</td>
+<td>10</td>
+<td>5.0</td>
+<td>全年降雨最多月之一 <span class="s-lis">[S-LIS-010]</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>年均降雨 774 mm，集中于 11 月—2 月 <span class="s-lis">[S-LIS-010]</span><span class="s-lis">[S-LIS-012]</span>。</li>
+<li>空气质量：IQAir 当前 AQI ~56（Moderate），里斯本年均 PM2.5 ≈ 6 µg/m³（IQAir 年报数据点）；当前为 WHO 年度准则约 2 倍但远低于亚洲多数大城市 <span class="s-lis">[S-LIS-013]</span><span class="s-lis">[S-LIS-014]</span>。</li>
+<li>比较各区：Oeiras AQI 71 较高（西部、靠主干道）；Santa Iria da Azoia AQI 33 较低 <span class="s-lis">[S-LIS-013]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>1、10、11 月雨水显著，对 2.5 岁孩子户外可重复性有挤压；3—4 月是窗口最舒适的月份。</li>
+<li>空气质量整体优于亚洲城市，但应在野火季（夏季）外，因此 1-4 / 10-11 是较安全时段。</li>
+</ul>
+<h4>未知 / 下一步</h4>
+<ul>
+<li>月度 PM2.5 分布（IQAir 单页未展示历史月度），需要专项抓 history 或外部数据集。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>气候：<strong>Yellow</strong>（confidence medium）— 雨/冷对幼儿可重复性是中度摩擦；3-4 月最佳，1/10/11 月需重室内备案。</li>
+<li>空气：<strong>Green</strong>（confidence medium）— 远好于亚洲对照。</li>
+</ul>
+<hr />
+<h3>4. 医疗基线</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Hospital Dona Estefânia</strong>（公立儿童医院，CHULC）：成立 1877，葡萄牙首个儿科专科医院，<strong>24 小时全年儿科 + 成人急诊</strong>，国家儿科参考中心 <span class="s-lis">[S-LIS-015]</span><span class="s-lis">[S-LIS-016]</span>。</li>
+<li><strong>Hospital CUF Descobertas</strong>（私立，Parque das Nações）：<strong>儿科 24 小时开放</strong>（"Pediatria Aberto 24h"），多语言（英、葡、西、法、德），有儿童与青少年中心；地址 Rua Mário Botas 1998-018 Lisboa <span class="s-lis">[S-LIS-017]</span>。</li>
+<li><strong>Hospital Lusíadas Lisboa</strong>（私立，Sete Rios 附近）：儿科 walk-in 每日 08-22 点；网站 + 院内全英文支持；24h 急诊在部分单位 <span class="s-lis">[S-LIS-018]</span>。</li>
+<li><strong>Hospital da Luz Lisboa</strong>（私立，Luz）：24h 急诊（含儿科），明示接收境外/旅游者 <span class="s-lis">[S-LIS-019]</span>。</li>
+<li>国际诊所路径：Alegria Medical Centre、CMIL 等专注于国际人群、家庭医学、儿科、英语为主 <span class="s-lis">[S-LIS-022]</span><span class="s-lis">[S-LIS-023]</span>。</li>
+<li>对外国人付费：紧急救助（公立）对所有外国人开放（"any foreigner who feels ill ... has the right to be assisted"），紧急 112 / 非紧急 SNS 24 拨 808 24 24 24 <span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span>。</li>
+<li>私人就诊典型费用 €60–€120/visit（无保险情况下）<span class="s-lis">[S-LIS-022]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>即使不参与 SNS，本家庭通过私立医院 + 旅游医疗保险（≥€30,000，签证强制）+ 自付，可在 30 分钟内到达至少 2 家 24h 儿科。</li>
+<li>Parque das Nações 候选区距 CUF Descobertas 步行/&lt;10 分钟，是医疗可达性最强的候选区。</li>
+</ul>
+<h4>未知 / 下一步</h4>
+<ul>
+<li>各候选区到 Hospital Dona Estefânia 的实际驾车时间（30 分钟阈值）需 Google Maps 抽样核验。</li>
+<li>私立医院"接受加拿大旅游医疗保险直付"的实际操作（多数为先付后报销）。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>医疗可达性：<strong>Green</strong>（confidence high）。</li>
+</ul>
+<hr />
+<h3>5. 地震 / 自然灾害</h3>
+<h4>事实</h4>
+<ul>
+<li>葡萄牙处于欧亚板块西南，受 Azores–Gibraltar Transform Fault 与 Mid-Atlantic Ridge 影响，里斯本属"中—高"地震风险区 <span class="s-lis">[S-LIS-024]</span><span class="s-lis">[S-LIS-025]</span>。</li>
+<li>历史：1755 年里斯本大地震（约 M 8.5–9.0）+ 海啸 + 火灾，城市几乎全毁 <span class="s-lis">[S-LIS-024]</span>。</li>
+<li>2025-08-26 里斯本附近发生有感地震，市长称已对 1,500 栋建筑做抗震评估，约 10% 需补强 <span class="s-lis">[S-LIS-024]</span>。</li>
+<li>里斯本大都会区约 2/3 建筑建于 1980 年代抗震法规之前 <span class="s-lis">[S-LIS-024]</span>。</li>
+<li>市政推出 LXRes App 提供应急指引 <span class="s-lis">[S-LIS-024]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>风险存在但 3 个月窗口内的实际事件概率较低；需在选房时优先选 1980 年代后或翻新公寓。</li>
+<li>海啸风险沿河沿海街道更高，Belém 河边、Parque das Nações 河边 listing 需额外检查。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>地震基线：<strong>Yellow</strong>（confidence high）— 风险存在、可缓解（建造年代选房 + App + 应急包）。</li>
+</ul>
+<hr />
+<h3>6. 住房基线</h3>
+<h4>事实</h4>
+<ul>
+<li>公寓普遍<strong>无中央暖气</strong>，依赖空调或便携电暖；老建筑单层玻璃居多 <span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-081]</span>。</li>
+<li>冬季湿冷 + 不通风 → 霉菌问题被多个 expat 反复提到（"musty smell"、closets 与封闭房间最明显）<span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span>。</li>
+<li>实操建议：选 double-glazing + 电暖气 + 除湿机；冬季每日开窗换气 <span class="s-lis">[S-LIS-048]</span><span class="s-lis">[S-LIS-081]</span>。</li>
+<li>整体租金水平：2026 年 Campo de Ourique 与 Alvalade 的 2 卧约 €1,600–€2,200/月；Parque das Nações 属"较贵 2 卧"区段 <span class="s-lis">[S-LIS-042]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>冬季住房舒适：<strong>Yellow</strong>（confidence medium）— 选房标准明确即可缓解；但若选不当 listing 风险显著。</li>
+</ul>
+<hr />
+<h3>关键不确定与下一步核实</h3>
+<ol>
+<li><strong>必须先核实</strong>：配偶/孩子护照国别（决定整个签证路径）。</li>
+<li>月度 PM2.5 分布（特别是 1/10/11 月雨季是否有显著差异）。</li>
+<li>各候选区到 Dona Estefânia 公立儿科急诊的实际驾车时间。</li>
+<li>私立医院对加拿大旅游医疗保险（如 Manulife / Sun Life）的直付协议。</li>
+</ol></section>
+<hr>
+<section id="healthcare_pathway"><h2 id="healthcare_pathway">里斯本 — 儿科 / 急诊 / 英文医疗路径</h2>
+
+<h3>摘要</h3>
+<ul>
+<li>公立 24h 儿科参考：<strong>Hospital Dona Estefânia</strong>（葡萄牙首家儿科专科医院，全国儿科国家级转诊中心）<span class="s-lis">[S-LIS-015]</span><span class="s-lis">[S-LIS-016]</span>。</li>
+<li>私立 24h 儿科至少 3 家：<strong>CUF Descobertas</strong>（Parque das Nações）、<strong>Lusíadas Lisboa</strong>（Sete Rios）、<strong>Hospital da Luz Lisboa</strong>（Luz / Carnide）<span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-019]</span>。</li>
+<li>英文服务在私立医院基本默认（多语言官网 + 多语种员工），公立医院英文非保障 <span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-022]</span>。</li>
+<li>紧急号码：112（生命危险）、SNS 24 → 808 24 24 24（非紧急但需指引）<span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span>。</li>
+<li>旅游者付费方式：通常先自付 + 凭收据向旅游医疗保险报销；签证强制 ≥ €30,000 保险已覆盖大部分场景 <span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-001]</span>。</li>
+</ul>
+<hr />
+<h3>1. 公立路径</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Hospital Dona Estefânia</strong>（CHULC / ULS São José）：1877 年成立，葡萄牙第一家儿科医院；地址在 Estefânia 区（中心偏北）；急诊 24/7 <span class="s-lis">[S-LIS-015]</span><span class="s-lis">[S-LIS-016]</span>。</li>
+<li>公立儿科急诊向所有外国人开放，按 SNS 通用规则 <span class="s-lis">[S-LIS-021]</span>。</li>
+<li>急诊基础治疗在公立医院可能免费或低收费，后续随访可能产生小额自付 <span class="s-lis">[S-LIS-020]</span>。</li>
+</ul>
+<h4>解释 / 未知</h4>
+<ul>
+<li>公立医院<strong>英文水平不保证</strong>，搜索结果未直接证实 Dona Estefânia 急诊 24h 配英文医生；多数 expat 来源建议家庭走私立 <span class="s-lis">[S-LIS-022]</span>。</li>
+<li>候选区到 Dona Estefânia 步行/驾车时间 → 未核（待 Google Maps 抽样）。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>公立可达性：<strong>Green</strong> / 英文友好度：<strong>Yellow</strong>（confidence medium）。</li>
+</ul>
+<hr />
+<h3>2. 私立路径（主推荐）</h3>
+<h4>Hospital CUF Descobertas（Parque das Nações）</h4>
+<ul>
+<li>地址：Rua Mário Botas, Parque das Nações, 1998-018 Lisboa；电话 +351 210 025 200 <span class="s-lis">[S-LIS-017]</span>。</li>
+<li>儿科 <strong>24 小时开放</strong>（"Pediatria Aberto 24h"），亦有成人 24h 急诊 <span class="s-lis">[S-LIS-017]</span>。</li>
+<li>多语言：英、葡、西、法、德；专设"Centro da Criança e do Adolescente"儿童与青少年中心 <span class="s-lis">[S-LIS-017]</span>。</li>
+<li>与 Parque das Nações 候选区步行可达；与 Belém / Restelo 距离约 15-20 分钟驾车（待核）。</li>
+</ul>
+<h4>Hospital Lusíadas Lisboa</h4>
+<ul>
+<li>地址：Rua Abílio Mendes, 1500-458 Lisboa；电话 +351 21 770 40 40 <span class="s-lis">[S-LIS-018]</span>。</li>
+<li>儿科 walk-in 每日 08:00-22:00；部分单位 24 小时儿科急诊 <span class="s-lis">[S-LIS-018]</span>。</li>
+<li>全英文官网与国际患者联系信息 <span class="s-lis">[S-LIS-018]</span>。</li>
+<li>位于 Sete Rios 附近，距 Campo de Ourique / Estrela 约 10-15 分钟 Uber <span class="s-lis">[S-LIS-018]</span>。</li>
+</ul>
+<h4>Hospital da Luz Lisboa</h4>
+<ul>
+<li>24h 紧急救助 + 儿科 <span class="s-lis">[S-LIS-019]</span>。</li>
+<li>明示接受境外/旅游者 <span class="s-lis">[S-LIS-019]</span>。</li>
+<li>位于 Luz / Carnide 区，距 Campo de Ourique / Belém 约 10-15 分钟驾车（待核）。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>私立 24h 儿科可达性：<strong>Green</strong>（confidence high）。</li>
+</ul>
+<hr />
+<h3>3. 门诊 / 国际诊所 / 英文儿科</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Alegria Medical Centre</strong>：面向国际人群，儿科 / 家庭医学 / 妇科 / 心血管 / 自然疗法；多语言 <span class="s-lis">[S-LIS-023]</span>。</li>
+<li><strong>International Medical Clinic of Lisbon (CMIL)</strong>：英文为第一/第二语言的多科诊所 <span class="s-lis">[S-LIS-022]</span>。</li>
+<li>Walk-in 诊所在 Praça de Alvalade、Telheiras、Odivelas、Sintra 等地有英文支持 <span class="s-lis">[S-LIS-022]</span>。</li>
+<li>私人门诊典型费 <strong>€60–€120/visit</strong>（无保险）<span class="s-lis">[S-LIS-022]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>英文儿科可获得性：<strong>Green</strong>（confidence medium）。</li>
+</ul>
+<hr />
+<h3>4. 紧急流程</h3>
+<h4>事实</h4>
+<ul>
+<li>生命危险 → 112（欧洲通用）<span class="s-lis">[S-LIS-020]</span>。</li>
+<li>非生命危险但需指引 → SNS 24 拨 808 24 24 24（电话分诊）<span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span>。</li>
+<li>旅游医疗保险 ≥ €30,000 是申根签证强制；建议加买含<strong>儿科急诊直付</strong>条款 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-020]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>操作建议：到达后 24 小时内把 112 / SNS 24 / 离家最近 3 家 24h 儿科地址 + 保险公司应急号码做成卡片放钱包。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>紧急流程清晰度：<strong>Green</strong>（confidence high）。</li>
+</ul>
+<hr />
+<h3>5. 付款 / 保险</h3>
+<h4>事实</h4>
+<ul>
+<li>非欧盟旅游者：通常<strong>先付后报</strong>，少数私立医院可与某些保险公司直付 <span class="s-lis">[S-LIS-020]</span>。</li>
+<li>公立紧急救助通常对外国人免费或低额，但后续随访有自付 <span class="s-lis">[S-LIS-020]</span>。</li>
+<li>私立标准价：常规问诊 €60–€120；24h 急诊会更高 <span class="s-lis">[S-LIS-022]</span>。</li>
+</ul>
+<h4>未知 / 下一步</h4>
+<ul>
+<li>加拿大常见保险（Manulife COVERME, Allianz, Sun Life）是否与 CUF / Lusíadas / Luz 有直付协议 → <strong>必须出发前致电保险确认</strong>。</li>
+<li>私立医院刷卡 / 现金 / 处方药支付细节。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>保险与付款摩擦度：<strong>Yellow</strong>（confidence medium）— 可解决，但需出发前打 1-2 次电话核实。</li>
+</ul>
+<hr />
+<h3>6. 与候选区的距离评估（初步）</h3>
+<table>
+<thead>
+<tr>
+<th>候选区</th>
+<th>最近私立 24h 儿科</th>
+<th>估算时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parque das Nações</td>
+<td>CUF Descobertas</td>
+<td>&lt; 10 分钟步行/驾</td>
+</tr>
+<tr>
+<td>Campo de Ourique</td>
+<td>Lusíadas Lisboa</td>
+<td>10-15 分钟 Uber</td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td>Lusíadas Lisboa</td>
+<td>10-15 分钟 Uber</td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>Hospital da Luz</td>
+<td>10-15 分钟驾车</td>
+</tr>
+<tr>
+<td>Alvalade / Areeiro</td>
+<td>Lusíadas / CUF</td>
+<td>10-15 分钟驾车</td>
+</tr>
+<tr>
+<td>Cascais / Estoril</td>
+<td>CUF Cascais（待核）</td>
+<td>当地有 CUF 分院</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>：上述时间为估算，未做 Google Maps 抽样验证 → 标 confidence medium-low。</p>
+<h4>红黄绿灰</h4>
+<ul>
+<li>总体医疗路径：<strong>Green</strong>（confidence high）— 4 家 24h 儿科 + 多家英文门诊 + 救护车 112 体系完整。</li>
+</ul>
+<hr />
+<h3>下一步核实</h3>
+<ol>
+<li>Google Maps 抽样：每候选区中心到最近 24h 儿科的实际驾车时间。</li>
+<li>出发前 1 个月致电私立医院 + 保险公司确认直付/报销路径。</li>
+<li>在 Dona Estefânia 公立急诊确认英文翻译可用性（电话或邮件）。</li>
+</ol></section>
+<hr>
+<section id="housing_samples"><h2 id="housing_samples">里斯本 — 住房样本（10 个）</h2>
+
+<blockquote>
+<p>警告：本研究<strong>未爬取 Airbnb/Booking 搜索页</strong>。样本来源于公开可访问的页面（Blueground 单 listing、Idealista 列表页 + WebSearch 摘要、博客中提到的具体房源）。<br />
+Idealista / Flatio 搜索结果页的具体房源未单页抓取，仅作为"该区有 T2 furnished 库存"的存在证明 → 标 confidence: low–medium。<br />
+价格区间以 2026 年区域中位 €1,600–€2,200/T2 furnished/月作为参考基线 <span class="s-lis">[S-LIS-042]</span>。</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>Campo de Ourique</strong>：Blueground 至少 3 个 2 卧带家具房源（Rua Maria Pia / Rua Silva Carvalho / Rua do Sol ao Rato），均含空调，部分含电梯/洗衣机 <span class="s-lis">[S-LIS-036]</span><span class="s-lis">[S-LIS-037]</span><span class="s-lis">[S-LIS-038]</span>。</li>
+<li><strong>Parque das Nações</strong>：Idealista 多个 T2 furnished listing（Distrikt、Rua das Urcas、Av. D. João II 53、Expo Central），80m²+，靠 Vasco da Gama / Gare do Oriente <span class="s-lis">[S-LIS-039]</span>。</li>
+<li><strong>Belém</strong>：Idealista T2 furnished 起价约 €900/月，多数靠 Belém Tower / Jerónimos 步行可达 <span class="s-lis">[S-LIS-040]</span>。</li>
+<li><strong>Estrela / Lapa</strong>：Idealista T2 furnished 有库存，部分 1F <strong>无电梯</strong>（与有孩家庭兼容性差）<span class="s-lis">[S-LIS-041]</span>。</li>
+<li>主要负面信号：无电梯 + 楼梯多、冬季湿冷无中央暖气、霉菌、单层玻璃、cobblestone 周边 <span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span><span class="s-lis">[S-LIS-080]</span>。</li>
+</ul>
+<hr />
+<h3>评价框架</h3>
+<p>每个样本评估：价格、卧室数、洗衣机、Wi-Fi、空调/暖气、电梯、距杂货/医疗/儿童活动、负面评论主题、traffic_light、confidence。</p>
+<hr />
+<h3>Sample 1 — Campo de Ourique · Rua Maria Pia（Blueground）</h3>
+<ul>
+<li>ID: lis-1508488P <span class="s-lis">[S-LIS-036]</span></li>
+<li>2 卧 / 1 卫；阳台、空调 <span class="s-lis">[S-LIS-036]</span></li>
+<li>可入住：2026-10-03（恰好对应 10 月窗口）</li>
+<li>Wi-Fi / 洗衣机：页面未明示</li>
+<li>价格：未在抓取页面显示（Blueground 通常需联系，参考区域均价 €1,600–€2,200/月）<span class="s-lis">[S-LIS-042]</span></li>
+<li>距杂货：步行 Mercado de Campo de Ourique（市场 + 食肆）&lt; 10 分钟 <span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span></li>
+<li>距医疗：Lusíadas Lisboa Uber 10-15 分钟 <span class="s-lis">[S-LIS-018]</span></li>
+<li>距儿童活动：Jardim Teófilo Braga 步行可达（Campo de Ourique 内带 2–10 岁游乐场）<span class="s-lis">[S-LIS-027]</span></li>
+<li>负面：价格未公开 + 可入住时间锁定 10 月 = 排他性强</li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: medium</li>
+</ul>
+<h3>Sample 2 — Campo de Ourique · Rua Silva Carvalho（Blueground）</h3>
+<ul>
+<li>ID: lis-1288615P <span class="s-lis">[S-LIS-037]</span></li>
+<li>2 卧 / 1 卫；<strong>98 m²</strong>；洗衣机、空调 <span class="s-lis">[S-LIS-037]</span></li>
+<li>可入住：2026-06-02（适合 10/11 月起租）</li>
+<li>Wi-Fi / 电梯：未明示</li>
+<li>距杂货 / 医疗 / 儿童活动：同 Sample 1</li>
+<li>优势：洗衣机已确认（家庭关键设施）+ 较大面积</li>
+<li>traffic_light：<strong>Green</strong>；confidence: medium</li>
+</ul>
+<h3>Sample 3 — Campo de Ourique · Rua do Sol ao Rato（Blueground）</h3>
+<ul>
+<li>ID: lis-1288597P <span class="s-lis">[S-LIS-038]</span></li>
+<li>2 卧 / 1 卫；<strong>90 m²</strong>；1F <strong>有电梯</strong>、阳台、洗衣机、空调 <span class="s-lis">[S-LIS-038]</span></li>
+<li>可入住：2026-05-30</li>
+<li>优势：电梯 + 洗衣机 + 1 楼（最低升降高度，适合幼儿 + 婴儿车）</li>
+<li>负面：靠近 Largo do Rato，主路噪音可能（待核）</li>
+<li>traffic_light：<strong>Green</strong>；confidence: medium</li>
+</ul>
+<h3>Sample 4 — Parque das Nações · Distrikt 大厦（Idealista 搜索描述）</h3>
+<ul>
+<li>房源描述：T2 with 阳台 + 储藏室 + 停车位，位于 Distrikt 综合体 <span class="s-lis">[S-LIS-039]</span></li>
+<li>优势：现代高层、平坦人行道、空气好、靠 CUF Descobertas（24h 儿科）&lt; 10 分钟步行</li>
+<li>负面：Idealista 单 listing 未单页抓取 → 具体价/家具/Wi-Fi 未确认</li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: low</li>
+</ul>
+<h3>Sample 5 — Parque das Nações · Rua das Urcas（Idealista 搜索描述）</h3>
+<ul>
+<li>2 卧 furnished；靠 Campus of Justice、Gare do Oriente、Vasco da Gama Shopping <span class="s-lis">[S-LIS-039]</span></li>
+<li>优势：Metro 红线 Oriente 步行 5 分钟；商场内有 Continente 超市</li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: low</li>
+</ul>
+<h3>Sample 6 — Parque das Nações · Av. Dom João II 53（Expo Central, Idealista）</h3>
+<ul>
+<li>T2、<strong>80 m²</strong>、fully equipped <span class="s-lis">[S-LIS-039]</span></li>
+<li>优势：核心广场，靠 Oceanário + Pavilhão do Conhecimento（步行 &lt; 15 分钟）</li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: low</li>
+</ul>
+<h3>Sample 7 — Belém · 河景 T2 步行 Belém Tower（Idealista 描述）</h3>
+<ul>
+<li>2 分钟步行到 Tagus 河 + Belém Tower 花园；周边有 cafe / 餐厅 / 超市 / 药店 <span class="s-lis">[S-LIS-040]</span></li>
+<li>优势：Belém 主要儿童景点（MAAT、Jerónimos、Pastéis de Belém）步行可达</li>
+<li>负面：旅游区可能游客密集，部分时段噪音</li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: low</li>
+</ul>
+<h3>Sample 8 — Belém · Rua Alexandre Sá Pinto 73（Idealista 描述）</h3>
+<ul>
+<li>2 卧、<strong>65 m²</strong>、整翻新、双层玻璃、近 cozinha furnished <span class="s-lis">[S-LIS-040]</span></li>
+<li>优势：<strong>双层玻璃</strong>（冬季隔热关键，缓解里斯本无暖气问题）<span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-081]</span></li>
+<li>负面：65m² 对 2 大 2 小较紧；具体价未抓</li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: low</li>
+</ul>
+<h3>Sample 9 — Belém Loft 翻新 T2 100m²（Idealista 描述）</h3>
+<ul>
+<li>2 卧 loft、100m²、furnished、靠河 <span class="s-lis">[S-LIS-040]</span></li>
+<li>Idealista 总览：Belém furnished 起价 €900/月（具体房型不定）<span class="s-lis">[S-LIS-040]</span></li>
+<li>traffic_light：<strong>Yellow</strong>；confidence: low</li>
+</ul>
+<h3>Sample 10 — Estrela · ISEG / Santos / Parlamento 附近 T2（Idealista 描述）</h3>
+<ul>
+<li>2 卧 furnished；高天花板（~3.5m）、双层玻璃、装备齐全的厨房 <span class="s-lis">[S-LIS-041]</span></li>
+<li>负面：另一同区 listing 明示"1st floor <strong>without elevator</strong>"——对婴儿车与 4.5/2.5 岁孩子是显著摩擦 <span class="s-lis">[S-LIS-041]</span><span class="s-lis">[S-LIS-045]</span></li>
+<li>traffic_light：<strong>Yellow</strong>（取决于是否选到带电梯）；confidence: low</li>
+</ul>
+<hr />
+<h3>跨样本主题</h3>
+<h4>常见正面</h4>
+<ul>
+<li>翻新 + 双层玻璃 + 装备齐全的厨房在多个样本出现（Sol ao Rato、Silva Carvalho、Belém Sá Pinto）。</li>
+<li>Parque das Nações 现代化建筑 + 平坦人行道 + 靠 CUF 医疗（持续优势）<span class="s-lis">[S-LIS-028]</span><span class="s-lis">[S-LIS-017]</span>。</li>
+</ul>
+<h4>常见红旗（跨 ≥ 3 样本 / ≥ 3 来源）</h4>
+<ul>
+<li><strong>冬季湿冷 + 无中央暖气 + 霉菌</strong>：&gt;5 来源（expat 论坛、AnchorLess、Atlas Lisboa、Portugalist、We Heart Lisbon）<span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span><span class="s-lis">[S-LIS-048]</span><span class="s-lis">[S-LIS-081]</span>。</li>
+<li><strong>无电梯 + 高楼层 + 婴儿车</strong>：旅游评论 + 博客明示，特别老城区（Estrela 部分 listing 也有）<span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-080]</span><span class="s-lis">[S-LIS-041]</span>。</li>
+<li><strong>Cobblestone + 山坡 + 婴儿车不便</strong>：≥5 个家庭博客一致提到，普遍建议改用 baby carrier <span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span>。</li>
+<li>电梯故障/狭窄：Tripadvisor 公寓评论 <span class="s-lis">[S-LIS-080]</span>。</li>
+</ul>
+<h4>红黄绿灰 — 按区</h4>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>住房供应</th>
+<th>冬季摩擦</th>
+<th>婴儿车兼容</th>
+<th>总评</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campo de Ourique</td>
+<td>Green</td>
+<td>Yellow</td>
+<td>Green</td>
+<td><strong>Green</strong>（confidence medium）</td>
+</tr>
+<tr>
+<td>Parque das Nações</td>
+<td>Green</td>
+<td>Yellow（新建好一些）</td>
+<td><strong>Green</strong>（最佳）</td>
+<td><strong>Green</strong>（confidence medium）</td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td>Yellow</td>
+<td>Yellow</td>
+<td>Yellow（部分无电梯）</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>Yellow</td>
+<td>Yellow</td>
+<td>Green（平坦河边）</td>
+<td><strong>Green</strong>（confidence low–medium）</td>
+</tr>
+<tr>
+<td>Alvalade / Areeiro</td>
+<td>Yellow（库存待核）</td>
+<td>Yellow</td>
+<td>Green</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>Cascais / Estoril</td>
+<td>Yellow（库存待核）</td>
+<td>Yellow</td>
+<td>Green</td>
+<td>Yellow</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>选房 checklist（基于证据综合）</h3>
+<ol>
+<li><strong>电梯</strong>（电梯故障是评论高频，建议 ≤ 2F 即使有电梯）<span class="s-lis">[S-LIS-080]</span></li>
+<li><strong>双层玻璃 + 暖气来源</strong>（空调反向制热 / 电暖气 / 不依赖燃气）<span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-081]</span></li>
+<li><strong>洗衣机</strong> + 厨房齐全</li>
+<li><strong>建造年代 ≥ 1980 年</strong>（抗震法规阈值）<span class="s-lis">[S-LIS-024]</span></li>
+<li>步行 ≤ 500m 到超市 + ≤ 800m 到游乐场 + ≤ 15 分钟到 24h 儿科</li>
+<li>入住前 1 周向房东确认除湿机可借/在场</li>
+</ol>
+<hr />
+<h3>不可访问 / 降级记录</h3>
+<ul>
+<li>Airbnb / Booking 搜索结果页：未爬取（按项目约束）。</li>
+<li>Flatio Parque das Nações 当前无 listing → 已记录（无 listing 不等于不可用，但限制了样本数）[来源：WebFetch flatio]。</li>
+<li>Idealista 单房 listing 未抓取（仅依靠 WebSearch 摘要 + 搜索页 URL）→ 标 confidence low–medium。</li>
+</ul></section>
+<hr>
+<section id="child_activity_ecosystem"><h2 id="child_activity_ecosystem">里斯本 — 儿童活动生态</h2>
+
+<blockquote>
+<p>评估维度：户外/自然 / 室内备选 / 结构化活动 / 社交机会 / 可重复性<br />
+目标年龄：2.5 岁 + 4.5 岁<br />
+目标月份：1–4 月、10–11 月（多雨季节）</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li>户外候选丰富：每个候选区都有至少 2–3 个高质量游乐场（每区前 3 见下）<span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-050]</span><span class="s-lis">[S-LIS-051]</span>。</li>
+<li>雨季室内备选稳健：Oceanário + Pavilhão do Conhecimento + Sandcastle + 多个购物中心儿童区 + LUCA 儿童剧院 → ≥ 8 候选（达标）<span class="s-lis">[S-LIS-052]</span><span class="s-lis">[S-LIS-053]</span><span class="s-lis">[S-LIS-054]</span><span class="s-lis">[S-LIS-055]</span><span class="s-lis">[S-LIS-083]</span><span class="s-lis">[S-LIS-084]</span>。</li>
+<li>结构化短期活动：陶瓷绘画、Pastel de Nata 烘焙、Graffiti 工作坊、烹饪课程都接受 day-drop in / 短期；多数英文 <span class="s-lis">[S-LIS-083]</span>。</li>
+<li>社交：Lisbon for Parents（FB + Meetup）+ Lisbon Parents &amp; Kids（Meetup，每周六 15:00–18:00）+ ≥ 3 个 FB 群组 <span class="s-lis">[S-LIS-058]</span><span class="s-lis">[S-LIS-059]</span><span class="s-lis">[S-LIS-060]</span><span class="s-lis">[S-LIS-061]</span><span class="s-lis">[S-LIS-062]</span>。</li>
+<li>可重复性总评：<strong>Green</strong>（confidence medium）。</li>
+</ul>
+<hr />
+<h3>1. 户外 / 自然 — 每候选区前 3</h3>
+<h4>Campo de Ourique</h4>
+<ol>
+<li><strong>Jardim Teófilo Braga（Parada Garden）</strong> — 2–10 岁专属游乐场、有遮荫，"more contained than Estrela, ideal for under 3s" <span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span></li>
+<li><strong>Mercado de Campo de Ourique</strong> — 室内市场含小型室内游乐区 <span class="s-lis">[S-LIS-026]</span></li>
+<li>距 <strong>Jardim da Estrela</strong> 步行 &lt; 15 分钟（见下）</li>
+</ol>
+<h4>Estrela / Lapa</h4>
+<ol>
+<li><strong>Jardim da Estrela</strong> — Lisboa 最受家庭喜爱的中心公园：两个游乐区（小童砂池 + 大童绳索金字塔）、动物造型滑梯、湖、孔雀/天鹅/鸭子、亭子餐饮、儿童洗手间 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span><span class="s-lis">[S-LIS-057]</span></li>
+<li><strong>Tapada das Necessidades</strong>（步行 15 分钟）— 大片绿地</li>
+<li><strong>Jardim 9 de Abril 河边步道</strong> — 平坦，婴儿车友好</li>
+</ol>
+<h4>Parque das Nações</h4>
+<ol>
+<li><strong>Parque Tejo + Jardins Garcia de Orta</strong> — 沿河绿带，无车区、宽人行道 <span class="s-lis">[S-LIS-028]</span><span class="s-lis">[S-LIS-029]</span></li>
+<li><strong>Jardim da Música / Jardins da Água</strong> — 互动喷泉/水玩 <span class="s-lis">[S-LIS-028]</span></li>
+<li><strong>Oceanário Plaza + Vasco da Gama 河边</strong> — 平坦多元 <span class="s-lis">[S-LIS-029]</span></li>
+</ol>
+<h4>Belém / Restelo</h4>
+<ol>
+<li><strong>Jardim da Praça do Império</strong>（Belém 主广场）— 平坦巨大草坪 <span class="s-lis">[S-LIS-032]</span></li>
+<li><strong>Jardim Botânico Tropical</strong>（含池塘异国植物）— Restelo 步行可达 <span class="s-lis">[S-LIS-032]</span></li>
+<li><strong>Parque Florestal de Monsanto</strong> 边缘（Monsanto Restelo 入口）— 自然森林 <span class="s-lis">[S-LIS-032]</span></li>
+</ol>
+<h4>Alvalade / Areeiro</h4>
+<ol>
+<li><strong>Jardim do Campo Grande</strong> — 大型公园 + 多个游乐场 <span class="s-lis">[S-LIS-033]</span></li>
+<li><strong>Jardim Fernando Pessoa</strong>（Areeiro）— 当地最爱、游乐场 + 绿地 <span class="s-lis">[S-LIS-034]</span></li>
+<li><strong>Parque José Gomes Ferreira / Bela Vista</strong>（Alvalade 步行/短驾）<span class="s-lis">[S-LIS-033]</span></li>
+</ol>
+<h4>Cascais / Estoril</h4>
+<ol>
+<li><strong>Praia da Ribeira / Conceição / Duquesa</strong> — 浅滩沙滩、夏季充气游乐 <span class="s-lis">[S-LIS-035]</span></li>
+<li><strong>Parque Marechal Carmona</strong> — 大型市镇公园</li>
+<li>Cascais 海滨人行道（步行至 Estoril）— 完全婴儿车友好 <span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-072]</span></li>
+</ol>
+<hr />
+<h3>2. 自然 / 开放式玩耍（≥ 5 个）</h3>
+<table>
+<thead>
+<tr>
+<th>地点</th>
+<th>类型</th>
+<th>频率适配</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jardim da Estrela</td>
+<td>城市公园</td>
+<td>每周 2-3 次</td>
+<td>中心 + 最丰富 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span></td>
+</tr>
+<tr>
+<td>Parque Florestal de Monsanto（Parque dos Índios 5.6 公顷）</td>
+<td>大型森林公园</td>
+<td>每周 1 次</td>
+<td>含迷宫、儿童交通模拟、印第安帐篷 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-056]</span></td>
+</tr>
+<tr>
+<td>Parque Tejo（Parque das Nações 河边）</td>
+<td>城市河岸</td>
+<td>每日（如住该区）</td>
+<td>平坦、空气好 <span class="s-lis">[S-LIS-028]</span></td>
+</tr>
+<tr>
+<td>Jardim Gulbenkian</td>
+<td>艺术花园</td>
+<td>偶尔</td>
+<td>鸭子/乌龟池塘 + 雕塑 <span class="s-lis">[S-LIS-049]</span></td>
+</tr>
+<tr>
+<td>Cascais 海滩</td>
+<td>海边</td>
+<td>每月 1-2 次（淡季）</td>
+<td>火车 40 分钟、车票 €2.55/€1.30 <span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-072]</span></td>
+</tr>
+<tr>
+<td>Sintra / Cabo da Roca</td>
+<td>山区/海角</td>
+<td>一次性</td>
+<td>适合周末短途</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>3. 室内备选（≥ 8 候选 / 保留 ≥ 5；雨季关键）</h3>
+<table>
+<thead>
+<tr>
+<th>候选</th>
+<th>区域</th>
+<th>年龄上限</th>
+<th>空调</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Oceanário de Lisboa</strong></td>
+<td>Parque das Nações</td>
+<td>全</td>
+<td>是</td>
+<td>欧洲最大室内水族馆；0-2 岁免费，3-12 岁 €18+，成人 €29+ <span class="s-lis">[S-LIS-052]</span><span class="s-lis">[S-LIS-054]</span></td>
+</tr>
+<tr>
+<td><strong>Pavilhão do Conhecimento</strong></td>
+<td>Parque das Nações</td>
+<td>3+（toddler 房）</td>
+<td>是</td>
+<td>互动科学馆，3 小时停留；票 €10-15；3 岁以下免费；家庭票 €35 <span class="s-lis">[S-LIS-052]</span><span class="s-lis">[S-LIS-055]</span></td>
+</tr>
+<tr>
+<td><strong>SandCastle 室内游乐 + 家长 coworking</strong></td>
+<td>Av. Miguel Bombarda</td>
+<td>0-8 岁</td>
+<td>是</td>
+<td>有 nanny 看护、强 Wi-Fi、咖啡、家长视频监控；4.8★ / 125+ 评论 <span class="s-lis">[S-LIS-053]</span></td>
+</tr>
+<tr>
+<td><strong>Centro Cultural de Belém / MAAT</strong></td>
+<td>Belém</td>
+<td>全</td>
+<td>是</td>
+<td>雨天文化备选 <span class="s-lis">[S-LIS-052]</span></td>
+</tr>
+<tr>
+<td><strong>LUCA — Teatro Luís de Camões</strong></td>
+<td>中央</td>
+<td>全</td>
+<td>是</td>
+<td>专门面向儿童与青少年的剧院 + 活动 <span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td><strong>Tile Painting Workshops</strong></td>
+<td>多区</td>
+<td>4+</td>
+<td>是</td>
+<td>短期 drop-in <span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td><strong>Time Out Market 烹饪学校（儿童区）</strong></td>
+<td>Cais do Sodré</td>
+<td>6+（儿童区视情况）</td>
+<td>是</td>
+<td>短期课程 <span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td><strong>Vasco da Gama / Colombo Shopping kids zones</strong></td>
+<td>Parque das Nações / Benfica</td>
+<td>全</td>
+<td>是</td>
+<td>雨天 fallback <span class="s-lis">[S-LIS-073]</span></td>
+</tr>
+<tr>
+<td><strong>KidZania Lisboa</strong>（Colombo / 周边）</td>
+<td>Benfica</td>
+<td>4+</td>
+<td>是</td>
+<td>角色扮演主题乐园（4.5 岁可玩；2.5 岁受限）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>4. 结构化活动（≥ 5 候选；含短期接受度）</h3>
+<table>
+<thead>
+<tr>
+<th>活动</th>
+<th>主办</th>
+<th>短期接受</th>
+<th>英文</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pastel de Nata 烘焙课</td>
+<td>多家（Cooking Lisbon 等）</td>
+<td>是（drop-in）</td>
+<td>是</td>
+<td>6+ 推荐 <span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Tile painting workshop</td>
+<td>Little Lisbon / 工作室</td>
+<td>是</td>
+<td>是</td>
+<td>全年龄 <span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Graffiti 街头艺术工作坊</td>
+<td>Little Lisbon</td>
+<td>是</td>
+<td>是</td>
+<td>4.5 岁可参与 <span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>烹饪市场游 + 烹饪课</td>
+<td>Cooking Lisbon</td>
+<td>是</td>
+<td>是</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Family scavenger hunt walking tour</td>
+<td>Sunbonoo / Withlocals</td>
+<td>是（单次预订）</td>
+<td>是</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>LUCA 剧院活动 + 工作坊</td>
+<td>市政</td>
+<td>是（按节目）</td>
+<td>部分</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>SandCastle 工作日游乐时段</td>
+<td>SandCastle</td>
+<td>是（按小时）</td>
+<td>是</td>
+<td><span class="s-lis">[S-LIS-053]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>5. 社交 / Expat 群体（≥ 3 群组 + ≥ 5 帖子/评论）</h3>
+<h4>群组（≥ 3）</h4>
+<ol>
+<li><strong>Lisbon for Parents</strong>（FB + Meetup，2017 年起；每周 playgroup；同时有 Moms for Moms Lisbon 子社区）<span class="s-lis">[S-LIS-058]</span></li>
+<li><strong>Lisbon Parents &amp; Kids</strong>（Meetup，每周六 15:00–18:00 不同游乐场，0–10 岁孩子）<span class="s-lis">[S-LIS-059]</span></li>
+<li><strong>The Lisbon Expat Meetup Group</strong>（FB + Meetup）<span class="s-lis">[S-LIS-060]</span></li>
+<li><strong>Expat families in Portugal</strong>（FB）<span class="s-lis">[S-LIS-061]</span></li>
+<li><strong>Lisbon Cascais Expats &amp; Friends</strong>（Meetup，2018 起）<span class="s-lis">[S-LIS-062]</span></li>
+</ol>
+<h4>帖子 / 评论信号（≥ 5 来源汇总）</h4>
+<ul>
+<li>Heritage Mom 三个月 worldschooling 欧洲行总结 → 提到 Lisbon 加入行程 <span class="s-lis">[S-LIS-075]</span></li>
+<li>One Tiny Leap 多年 Lisbon 家庭活动博客 → "Jardim da Estrela was our family's favourite, near-daily" <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span></li>
+<li>The Plane Book "Lisbon with Kids: Honest Family Guide 2026" <span class="s-lis">[S-LIS-076]</span></li>
+<li>Lx.us Portugal 儿童友好区评测 <span class="s-lis">[S-LIS-064]</span></li>
+<li>Dispatches Europe 家庭区指南 <span class="s-lis">[S-LIS-063]</span></li>
+<li>By Suzike 家庭 vlog（Monteiro-Mor Park，2025-02）<span class="s-lis">[S-LIS-065]</span></li>
+</ul>
+<p>→ 跨 ≥ 5 独立来源一致结论：<strong>Lisbon 对幼儿家庭社交资源充足</strong>，confidence high。</p>
+<hr />
+<h3>6. 可重复性总结</h3>
+<h4>Green — 高可重复（每周 ≥ 2 次）</h4>
+<ul>
+<li>Jardim da Estrela（中央）/ Jardim Teófilo Braga（Campo de Ourique）/ Parque Tejo（Parque das Nações）</li>
+<li>邻里超市 / mercearia / 周末市场 <span class="s-lis">[S-LIS-074]</span></li>
+</ul>
+<h4>Yellow — 中可重复（每周/双周 1 次）</h4>
+<ul>
+<li>SandCastle（亲子工作时段）</li>
+<li>Monsanto / Parque dos Índios（短驾）</li>
+<li>Cascais 海滩日（火车 40 分钟）<span class="s-lis">[S-LIS-072]</span></li>
+</ul>
+<h4>Gray / 一次性</h4>
+<ul>
+<li>Oceanário（票价高，1–2 次）</li>
+<li>KidZania / 主题工作坊</li>
+<li>Sintra / Cabo da Roca / Belém 文化游</li>
+</ul>
+<h4>风险（Red）</h4>
+<ul>
+<li>雨季室外可重复性受限 → 必须前置 SandCastle + Pavilhão + Shopping 室内 routine。</li>
+</ul>
+<hr />
+<h3>红黄绿灰 — 整体</h3>
+<ul>
+<li>户外候选丰富度：<strong>Green</strong>（confidence high）</li>
+<li>雨季室内备选：<strong>Green</strong>（confidence medium）</li>
+<li>结构化短期活动可获得性：<strong>Green</strong>（confidence medium）</li>
+<li>社交 / expat 群体：<strong>Green</strong>（confidence high）</li>
+<li><strong>总评：Green</strong> — 里斯本是欧洲家庭活动生态最强的城市之一。</li>
+</ul></section>
+<hr>
+<section id="mobility"><h2 id="mobility">里斯本 — 移动性（步行 / 公交 / 打车 / 婴儿车 / 儿童安全座椅）</h2>
+
+<h3>摘要</h3>
+<ul>
+<li>公交无障碍程度较高：<strong>Metro &gt; 75% 站点无台阶</strong> + Carris 公交 &gt; 80% 装有低地板斜坡 <span class="s-lis">[S-LIS-067]</span><span class="s-lis">[S-LIS-068]</span>。</li>
+<li>婴儿车在中心老区遇到的最大摩擦是<strong>山坡 + 卵石路 + 老楼无电梯</strong>，多个家庭博客一致建议改用 baby carrier 或在某些日子用车 <span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-069]</span>。</li>
+<li>儿童安全座椅法律：<strong>12 岁以下或身高 &lt; 135cm 必须使用座椅</strong>；3 岁以下不得坐前排 <span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+<li>出租车 / Uber / Bolt <strong>法律豁免</strong>儿童座椅要求；但安全推荐自带或预约带座椅服务（Taxi Bambino 等）<span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+<li>Lisbon → Cascais 火车：40 分钟 + €2.55/成人、€1.30/儿童 + 4 岁以下免费 → 周末海滩可达 <span class="s-lis">[S-LIS-067]</span><span class="s-lis">[S-LIS-072]</span>。</li>
+</ul>
+<hr />
+<h3>1. 步行</h3>
+<h4>事实</h4>
+<ul>
+<li>多个家庭博客一致提到：里斯本中心多山坡 + cobblestone（calçada）人行道 → 不平整、对婴儿车不友好 <span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span>。</li>
+<li>Parque das Nações 是少数全区平坦 + 现代化人行道的候选区 <span class="s-lis">[S-LIS-028]</span><span class="s-lis">[S-LIS-029]</span>。</li>
+<li>Belém / Cascais 河边/海边步道平坦 <span class="s-lis">[S-LIS-032]</span><span class="s-lis">[S-LIS-035]</span>。</li>
+<li>推荐工具：Google Maps 选"轮椅无障碍"路线，可避开主要楼梯/斜坡 <span class="s-lis">[S-LIS-069]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>步行/婴儿车友好度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parque das Nações</td>
+<td><strong>Green</strong></td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>Green（河边）/ Yellow（Restelo 内部坡）</td>
+</tr>
+<tr>
+<td>Cascais / Estoril</td>
+<td><strong>Green</strong></td>
+</tr>
+<tr>
+<td>Campo de Ourique</td>
+<td>Yellow（中心平台，但出区有坡）</td>
+</tr>
+<tr>
+<td>Alvalade / Areeiro</td>
+<td>Green / Yellow</td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td><strong>Yellow → Red</strong>（依房而定，老城坡多）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>2. 公共交通（Metro / Carris bus / Tram）</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Metro</strong>：≥ 75% 站点无台阶（电梯/斜坡/宽闸门）；设有为婴儿车保留的特殊闸口，必要时由站务员协助 <span class="s-lis">[S-LIS-067]</span>。</li>
+<li><strong>Carris bus</strong>：几乎全部 city bus 为 "kneeling buses" 配可伸缩斜坡 + 残障/婴儿车专区；&gt; 80% 配斜坡 <span class="s-lis">[S-LIS-068]</span>。</li>
+<li>Alfama 区的微型公交（minibus）小且无斜坡，<strong>不适合婴儿车</strong> <span class="s-lis">[S-LIS-069]</span>。</li>
+<li><strong>4 岁以下儿童</strong>免费乘坐所有公交 <span class="s-lis">[S-LIS-069]</span>。</li>
+<li>家庭友好公交线路推荐：<strong>714、727</strong>（途经景观街区，相对不挤）<span class="s-lis">[S-LIS-069]</span>。</li>
+<li>复古 tram（12 / 28 / 25 / 15）非常拥挤 + 婴儿车难以登车 + 是<strong>扒手高发线</strong>；旅游博客明确建议家庭"避开高峰" <span class="s-lis">[S-LIS-077]</span><span class="s-lis">[S-LIS-078]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>Metro 婴儿车友好：<strong>Green</strong></li>
+<li>公交可达性：<strong>Green</strong></li>
+<li>Tram 历史线路（28 等）：<strong>Yellow / Red</strong>（拥挤 + 扒手 + 婴儿车难，建议作为景点而非日常）</li>
+</ul>
+<hr />
+<h3>3. 出租车 / Uber / Bolt / FreeNow</h3>
+<h4>事实</h4>
+<ul>
+<li>Uber、Bolt、FreeNow 在里斯本运营良好，覆盖核心区 + Cascais <span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+<li>法律：<strong>出租车 + ride-share 豁免儿童座椅要求</strong>（3 岁以下可不约束，3 岁以上需坐后排系安全带）<span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+<li>操作上 Uber 等可在 booking 时备注"需要婴儿座椅"，但<strong>不保证</strong>实际车辆有 <span class="s-lis">[S-LIS-070]</span>。</li>
+<li><strong>Taxi Bambino</strong> 等专门家庭出租车服务可预订含座椅 <span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>与加拿大法律对比，本地 ride-share 豁免座椅是显著松动点；从家庭风险容忍（低-中）角度看，建议：</li>
+<li>短途同城 Uber：可豁免（孩子坐后排 + 大人抱 / 系安全带，2.5 岁建议大人抱紧）</li>
+<li>机场接送 / 长途 / 跨城：<strong>预约 Taxi Bambino 等含座椅服务</strong></li>
+<li>或自带 2 个轻便升级座椅（4.5 岁可用 booster，2.5 岁需 group 1）<span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+</ul>
+<h4>未知 / 下一步</h4>
+<ul>
+<li>自带座椅在 Uber 安装的实操（部分车型安全带配置不兼容）→ 到达后试验。</li>
+<li>Bolt vs Uber 价格差（一般 Bolt 略低）。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>打车可获得性：<strong>Green</strong></li>
+<li>儿童座椅合规：<strong>Yellow</strong>（法律松、需主动准备）</li>
+</ul>
+<hr />
+<h3>4. 私人租车 / 长租</h3>
+<h4>事实</h4>
+<ul>
+<li>私人车辆 + 租赁汽车<strong>强制座椅</strong> <span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span>。</li>
+<li>3 个月慢旅本家庭对长租车需求低（中心区步行 + 公交 + 短途 Uber 已可覆盖）。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>不依赖私车：<strong>Green</strong>（确认 candidate 区均无私车需求）</li>
+</ul>
+<hr />
+<h3>5. 周末跨城</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Lisbon → Cascais</strong>：Cais do Sodré 站，40 分钟，€2.55/€1.30/张（单程），Navegante 卡 €0.50/张 <span class="s-lis">[S-LIS-072]</span>。</li>
+<li>火车沿海岸线，景观佳；Cascais 是无坡走 town（与里斯本对比）<span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-072]</span>。</li>
+<li>4 岁以下免费 <span class="s-lis">[S-LIS-069]</span>。</li>
+<li><strong>Lisbon → Sintra</strong>：火车从 Rossio 出发，约 40 分钟（未抓但已知）。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>周末跨城可达性：<strong>Green</strong></li>
+</ul>
+<hr />
+<h3>6. 综合建议</h3>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>邻里日常</td>
+<td>步行 + Carris bus（无障碍线 714/727）</td>
+</tr>
+<tr>
+<td>中心区景点</td>
+<td>Metro（婴儿车闸口）+ 普通公交</td>
+</tr>
+<tr>
+<td>紧急医疗</td>
+<td>自家附近私立 24h 儿科步行 / Uber &lt; 10 分钟</td>
+</tr>
+<tr>
+<td>雨天</td>
+<td>Uber / Bolt（避免雨中拖婴儿车上坡）</td>
+</tr>
+<tr>
+<td>跨城 / 海滩</td>
+<td>CP 火车（Cascais 线 / Sintra 线）</td>
+</tr>
+<tr>
+<td>机场接送 / 长途</td>
+<td>Taxi Bambino 含座椅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>红黄绿灰 — 总评</h3>
+<ul>
+<li>公交无障碍度：<strong>Green</strong>（confidence high）</li>
+<li>中心区步行婴儿车摩擦：<strong>Yellow</strong>（confidence high）— 老城有坡 + 卵石，但有 baby carrier + Uber + Metro 互补</li>
+<li>儿童座椅合规风险：<strong>Yellow</strong>（confidence high）— 法律松，需自带</li>
+<li>总评：<strong>Green</strong>（confidence medium-high）</li>
+</ul>
+<h3>下一步</h3>
+<ol>
+<li>出发前测量孩子身高确认座椅 group（2.5 岁通常 group 1；4.5 岁 group 2/3 booster）。</li>
+<li>到达后试 Bolt + Uber + Taxi Bambino 各一次确定首选。</li>
+<li>标记最近 Metro 站台 + 电梯路径。</li>
+</ol></section>
+<hr>
+<section id="life_operability"><h2 id="life_operability">里斯本 — 生活可运营性（杂货 / 药店 / 洗衣 / 餐饮 / 咖啡 / 文化与自然）</h2>
+
+<h3>摘要</h3>
+<ul>
+<li>主流超市连锁覆盖完整：<strong>Pingo Doce / Continente / Lidl</strong> 在所有候选区都有分布 <span class="s-lis">[S-LIS-073]</span><span class="s-lis">[S-LIS-074]</span>。</li>
+<li>药店（farmácia）密度高，市区每 200-400m 一家（多数博客提及）；大型 hipermercado 内含 farmácia <span class="s-lis">[S-LIS-073]</span>。</li>
+<li>自助洗衣：少数大型超市连锁（如 E.Leclerc）内有；中心区有 lavandaria self-service 店但样本未具体核 <span class="s-lis">[S-LIS-073]</span>。</li>
+<li>餐饮：里斯本对孩子普遍非常欢迎；Cascais 沿海可在 任意时段吃 pastel/三明治 <span class="s-lis">[S-LIS-035]</span>。</li>
+<li>文化 / 自然 / 旅游泡沫分隔：候选区中 <strong>Campo de Ourique / Alvalade / Areeiro</strong> 偏本地生活；<strong>Belém / Cais do Sodré / Baixa</strong> 偏旅游 <span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span><span class="s-lis">[S-LIS-029]</span><span class="s-lis">[S-LIS-033]</span><span class="s-lis">[S-LIS-034]</span>。</li>
+</ul>
+<hr />
+<h3>1. 杂货 / 超市</h3>
+<h4>事实</h4>
+<ul>
+<li>主要连锁：<strong>Pingo Doce、Continente、Lidl</strong>；Continente 是国内最大零售商，多数大店内含药店 <span class="s-lis">[S-LIS-073]</span>。</li>
+<li>邻里小店：mercearias（食品杂货）+ frutarias（果蔬）+ panificadoras（面包店），分布密集 <span class="s-lis">[S-LIS-073]</span>。</li>
+<li>周边市场（mercados）兼具新鲜食材 + 食肆：Campo de Ourique 市场（1934 起）+ Mercado da Ribeira（Time Out Market）等 <span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-074]</span>。</li>
+</ul>
+<h4>各区供应</h4>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>主要超市点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campo de Ourique</td>
+<td>Pingo Doce（区内）+ Mercado de Campo de Ourique <span class="s-lis">[S-LIS-026]</span></td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td>Pingo Doce Rua do Quelhas（"20 分钟步行/15 分钟公交"，靠西）<span class="s-lis">[S-LIS-073]</span></td>
+</tr>
+<tr>
+<td>Parque das Nações</td>
+<td><strong>Continente Vasco da Gama</strong>（大型 + 含药店）<span class="s-lis">[S-LIS-073]</span></td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>Pingo Doce Belém + Continente nearby</td>
+</tr>
+<tr>
+<td>Alvalade</td>
+<td>Pingo Doce + 当地市场 + 多个 Mercearia</td>
+</tr>
+<tr>
+<td>Areeiro</td>
+<td>Pingo Doce + 周边</td>
+</tr>
+<tr>
+<td>Cascais</td>
+<td>Continente + Pingo Doce</td>
+</tr>
+</tbody>
+</table>
+<h4>红黄绿灰</h4>
+<ul>
+<li>杂货可达性：<strong>Green</strong>（confidence high）</li>
+</ul>
+<hr />
+<h3>2. 药店 / 健康用品</h3>
+<h4>事实</h4>
+<ul>
+<li>葡萄牙药店（farmácia）覆盖密集 + 24h 轮值（每区每天有 farmácia de serviço）<span class="s-lis">[S-LIS-073]</span>。</li>
+<li>大型超市内通常配药店；CUF / Lusíadas / Hospital da Luz 均有内部药房 <span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-019]</span>。</li>
+<li>处方药 = 需医生处方；OTC 含基本儿童退烧、止咳、抗过敏可直接购买 <span class="s-lis">[S-LIS-020]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>药店可获得性：<strong>Green</strong>（confidence high）</li>
+</ul>
+<hr />
+<h3>3. 洗衣</h3>
+<h4>事实</h4>
+<ul>
+<li>多数长租 furnished 公寓自带洗衣机（Blueground 样本明示 2/3 含 washing machine）<span class="s-lis">[S-LIS-037]</span><span class="s-lis">[S-LIS-038]</span>。</li>
+<li>烘干机较少（葡萄牙家庭多用阳台/晾衣架）→ 雨季需室内晾或自带除湿机配合 <span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-081]</span>。</li>
+<li>E.Leclerc 等大卖场内有自助洗衣（lavandaria self-service），中心区也有独立店但样本未具体核 <span class="s-lis">[S-LIS-073]</span>。</li>
+<li>选房 checklist 已列：<strong>洗衣机</strong> + <strong>除湿机</strong>（房东配 / 自购）是雨季关键。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>公寓内洗衣：<strong>Green</strong>（取决于选房 checklist）</li>
+<li>烘干 / 雨季晾干：<strong>Yellow</strong></li>
+</ul>
+<hr />
+<h3>4. 餐饮 / 咖啡</h3>
+<h4>事实</h4>
+<ul>
+<li>Pastéis de Nata 与 cafés 几乎每个街角都有；4.5/2.5 岁孩子可吃半份 + 鲜榨果汁 + 烤三明治 <span class="s-lis">[S-LIS-035]</span>。</li>
+<li>葡萄牙文化对儿童在餐厅极友好 <span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-064]</span>。</li>
+<li>Parque das Nações 餐厅儿童套餐 ~€10–12 <span class="s-lis">[S-LIS-029]</span>。</li>
+<li>Cascais 海滨步道任意时段 light meal 可得 <span class="s-lis">[S-LIS-035]</span>。</li>
+<li>葡萄牙午餐供应窗口约 12:00–15:00，晚餐 19:30 起；与孩子常用 17:30–18:30 节奏冲突 → cafés 是最佳折中 <span class="s-lis">[S-LIS-035]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>家庭就餐友好：<strong>Green</strong>（confidence high）</li>
+<li>时间对接：<strong>Yellow</strong>（与中国/北美早晚餐时间有 1–2 小时偏差）</li>
+</ul>
+<hr />
+<h3>5. 文化 / 自然 与日常融合</h3>
+<h4>事实</h4>
+<ul>
+<li>中心候选区（Campo de Ourique / Alvalade / Areeiro / Estrela）= <strong>本地家庭多于游客</strong>，"village-like" 描述出现在多个来源 <span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span><span class="s-lis">[S-LIS-033]</span><span class="s-lis">[S-LIS-034]</span><span class="s-lis">[S-LIS-064]</span>。</li>
+<li>Belém + Baixa + Cais do Sodré + Alfama = <strong>旅游泡沫</strong>集中；Belém Tower / Jerónimos / Pastéis 高峰季拥挤 <span class="s-lis">[S-LIS-032]</span>。</li>
+<li>Parque das Nações = 现代化非传统街区，旅游与本地混合，相对均衡 <span class="s-lis">[S-LIS-028]</span><span class="s-lis">[S-LIS-029]</span>。</li>
+<li>自然融合：Monsanto 森林 + Tagus 河滨步道 + Belém 河岸 + Cascais 海岸都在 30 分钟可达 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-072]</span>。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>旅游泡沫 vs 本地</th>
+<th>评</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campo de Ourique</td>
+<td>本地为主</td>
+<td><strong>Green</strong></td>
+</tr>
+<tr>
+<td>Alvalade / Areeiro</td>
+<td>本地为主</td>
+<td><strong>Green</strong></td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td>本地为主 + 少量游客</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>Parque das Nações</td>
+<td>混合</td>
+<td>Yellow → Green</td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>旅游热区</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>Cascais</td>
+<td>旅游 + 本地混合（淡季较好）</td>
+<td>Yellow → Green（淡季）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>6. 周末 / 短途</h3>
+<h4>事实</h4>
+<ul>
+<li>Cascais 火车 40 分钟、€2.55/张 <span class="s-lis">[S-LIS-072]</span>。</li>
+<li>Sintra 火车 40 分钟（未抓但已知）。</li>
+<li>Algarve / Porto 需高铁/飞机半天以上。</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li>周末微旅行：<strong>Green</strong></li>
+</ul>
+<hr />
+<h3>7. 整体生活节奏</h3>
+<h4>解释</h4>
+<ul>
+<li>一周典型节奏（推荐）：</li>
+<li>上午：邻里游乐场 + market 采购</li>
+<li>中午：家中或邻里 café 午餐</li>
+<li>下午（睡醒后）：室内活动（Sandcastle / Pavilhão）或室外公园</li>
+<li>周中 1-2 次跨区活动（Oceanário、Monsanto、Gulbenkian）</li>
+<li>周末 1 次跨城（Cascais / Sintra）</li>
+</ul>
+<h4>红黄绿灰</h4>
+<ul>
+<li><strong>总评：Green</strong>（confidence high）— 生活基础设施完整，节奏可重复。</li>
+</ul>
+<hr />
+<h3>下一步</h3>
+<ol>
+<li>出发前在 Google Maps 标记：所选房 500m 内的 Pingo Doce / farmácia / 游乐场 / café / Metro。</li>
+<li>询问房东是否配除湿机 + 烘干机。</li>
+<li>跨城火车的 Navegante 卡注册 + 票务规则核实。</li>
+</ol></section>
+<hr>
+<section id="community_feedback"><h2 id="community_feedback">里斯本 — 社区反馈（Reddit / 博客 / 论坛 / YouTube / Google 评论）</h2>
+
+<blockquote>
+<p>方法：每个结论需要 ≥ 5 条独立评论 OR ≥ 3 平台才能成"主题信号"。<br />
+单条只作为"案例例证"使用。<br />
+Reddit 直接搜索多次返回 0 结果（site:reddit.com 在 WebSearch 表现差），所以本研究 Reddit 数据稀薄 → 标 confidence low 区域明显。</p>
+</blockquote>
+<h3>摘要 — 跨多源主题信号</h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>信号方向</th>
+<th>证据来源数</th>
+<th>平台数</th>
+<th>confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本对家庭友好 + 餐厅欢迎孩子</td>
+<td>正面</td>
+<td>≥ 6</td>
+<td>4（blog / vlog / forum / tour）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>中心区婴儿车摩擦（坡 + 卵石）</td>
+<td>负面</td>
+<td>≥ 5</td>
+<td>3（家庭博客 / forum / 评论）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>冬季湿冷 + 无中央暖气 + 霉菌</td>
+<td>负面</td>
+<td>≥ 5</td>
+<td>3（expat 论坛 / 博客 / 翻译）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>28 路 tram 扒手 + 与婴儿车冲突</td>
+<td>负面</td>
+<td>≥ 4</td>
+<td>2-3（官方警告 / 旅游博客 / forum）</td>
+<td>medium-high</td>
+</tr>
+<tr>
+<td>Campo de Ourique 是家庭首选</td>
+<td>正面</td>
+<td>≥ 5</td>
+<td>3（neighborhood guides / 家庭博客）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Parque das Nações 现代 + 平坦 + 适合幼儿</td>
+<td>正面</td>
+<td>≥ 4</td>
+<td>3（neighborhood guides / 家庭博客）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Worldschooling 家庭社区活跃</td>
+<td>正面</td>
+<td>≥ 3</td>
+<td>2（博客 / Meetup）</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>私立医院英文友好</td>
+<td>正面</td>
+<td>≥ 4</td>
+<td>3（医院官网 / 博客 / 比价 site）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Lisbon 安全总体可控 + 扒手是唯一频繁红旗</td>
+<td>中性</td>
+<td>≥ 3 官方</td>
+<td>3（加 / 英 / 葡）</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>1. 来源清单（按平台）</h3>
+<h4>Reddit</h4>
+<ul>
+<li>WebSearch 直接搜 site:reddit.com 共 5 次，<strong>0 返回</strong>。这是工具/索引限制。  </li>
+<li>替代：通过博客与 Meetup 收集到 Reddit 之外的社区证据 → 标 Reddit dimension 为 <strong>Gray</strong>。</li>
+<li><strong>下一步</strong>：到达后手动浏览 r/Lisbon、r/Portugal、r/expats、r/digitalnomad，做单次抽样。</li>
+</ul>
+<h4>博客（独立家庭 / Expat）</h4>
+<ul>
+<li>One Tiny Leap（多年家庭活动博客）<span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span><span class="s-lis">[S-LIS-052]</span></li>
+<li>The Plane Book "Lisbon with Kids 2026"<span class="s-lis">[S-LIS-076]</span></li>
+<li>Lx.us Portugal — Most Child-Friendly Neighborhoods <span class="s-lis">[S-LIS-064]</span></li>
+<li>Dispatches Europe — Lisbon expat guide pt.2 families <span class="s-lis">[S-LIS-063]</span></li>
+<li>Wherever Family — Campo de Ourique deep-dive <span class="s-lis">[S-LIS-027]</span></li>
+<li>Heritage Mom — 3-month worldschooling Europe inc. Lisbon <span class="s-lis">[S-LIS-075]</span></li>
+<li>Atlas Lisboa — 7 hacks to survive Lisbon winter <span class="s-lis">[S-LIS-048]</span></li>
+<li>Portugalist — How to stay warm in Portuguese houses <span class="s-lis">[S-LIS-081]</span></li>
+<li>AnchorLess — Mold housing problems in Portugal <span class="s-lis">[S-LIS-047]</span></li>
+<li>We Heart Lisbon — Baby carrier vs buggy <span class="s-lis">[S-LIS-045]</span></li>
+<li>Katy Travel Blog — Lisbon with baby <span class="s-lis">[S-LIS-044]</span></li>
+<li>Taxi Bambino — English-speaking doctors / transport with kids <span class="s-lis">[S-LIS-022]</span><span class="s-lis">[S-LIS-069]</span></li>
+<li>Now in Portugal — Estrela neighborhood guide <span class="s-lis">[S-LIS-030]</span></li>
+</ul>
+<h4>论坛</h4>
+<ul>
+<li>Expat.com Portugal forum — Heating in Portuguese apartments <span class="s-lis">[S-LIS-046]</span></li>
+<li>Fodor's Travel Talk Forums — Tram 28 with kids / rental advice <span class="s-lis">[S-LIS-078]</span><span class="s-lis">[S-LIS-079]</span></li>
+<li>Expat Exchange — Heating Options for Winter / Best neighborhoods 2025</li>
+</ul>
+<h4>YouTube / Vlog</h4>
+<ul>
+<li>By Suzike — Walking with Kids at Monteiro-Mor Park（2025-02）<span class="s-lis">[S-LIS-065]</span></li>
+<li>Lisbon Vlogs YouTube playlist <span class="s-lis">[S-LIS-066]</span></li>
+<li>80 Portugal Travel YouTubers (feedspot 2025 list)</li>
+</ul>
+<h4>Tripadvisor / Yelp / Google Reviews</h4>
+<ul>
+<li>Jardim Da Estrela Park reviews <span class="s-lis">[S-LIS-057]</span></li>
+<li>Oceanário de Lisboa reviews <span class="s-lis">[S-LIS-054]</span></li>
+<li>Parque dos Indios（Monsanto）<span class="s-lis">[S-LIS-056]</span></li>
+<li>Lisbon Serviced Apartments elevator complaint <span class="s-lis">[S-LIS-080]</span></li>
+<li>The Lisbon Connection — Tram 15/28 pickpocket safety <span class="s-lis">[S-LIS-077]</span></li>
+</ul>
+<h4>Facebook / Meetup</h4>
+<ul>
+<li>Lisbon for Parents — FB + Meetup <span class="s-lis">[S-LIS-058]</span></li>
+<li>Lisbon Parents &amp; Kids — Meetup（每周六）<span class="s-lis">[S-LIS-059]</span></li>
+<li>The Lisbon Expat Meetup Group — FB <span class="s-lis">[S-LIS-060]</span></li>
+<li>Expat families in Portugal — FB <span class="s-lis">[S-LIS-061]</span></li>
+<li>Lisbon Cascais Expats &amp; Friends — Meetup <span class="s-lis">[S-LIS-062]</span></li>
+</ul>
+<hr />
+<h3>2. 关键主题深挖</h3>
+<h4>主题 A — 中心区婴儿车摩擦</h4>
+<ul>
+<li>We Heart Lisbon："carrier or buggy" 专题，建议某些日子用 carrier <span class="s-lis">[S-LIS-045]</span></li>
+<li>Katy Travel Blog："hills, stairs, and bumpy cobbled sidewalks require significant effort"<span class="s-lis">[S-LIS-044]</span></li>
+<li>Taxi Bambino："choose wheelchair-accessible route in Google Maps"<span class="s-lis">[S-LIS-069]</span></li>
+<li>One Tiny Leap / The Plane Book / 多家博客一致提及 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-076]</span></li>
+<li>Lisbon Serviced Apartments elevator failure 评论 <span class="s-lis">[S-LIS-080]</span></li>
+</ul>
+<p>→ ≥ 5 源、3 平台 → <strong>结论可信</strong>：<strong>Yellow</strong> 摩擦点，可控但需选房 + carrier 备案。</p>
+<h4>主题 B — 冬季湿冷 + 无中央暖气 + 霉菌</h4>
+<ul>
+<li>Expat.com forum 直接讨论 <span class="s-lis">[S-LIS-046]</span></li>
+<li>AnchorLess 详述 mold 与气候因果 <span class="s-lis">[S-LIS-047]</span></li>
+<li>Atlas Lisboa "7 hacks to survive winter in Lisbon"<span class="s-lis">[S-LIS-048]</span></li>
+<li>Portugalist "How to stay warm in Portuguese houses during winter"<span class="s-lis">[S-LIS-081]</span></li>
+<li>Quora "How bad is mould in Lisbon"</li>
+</ul>
+<p>→ ≥ 5 源、3 平台 → <strong>结论可信</strong>：<strong>Yellow → Red 风险</strong>，需选房时严控（双层玻璃 / 除湿机 / 现代化）。</p>
+<h4>主题 C — Tram 28 + 扒手</h4>
+<ul>
+<li>Canadian Government 官方明示 "extra cautious on trams 15, 25, 28"<span class="s-lis">[S-LIS-008]</span></li>
+<li>UK FCDO 通用警告 <span class="s-lis">[S-LIS-009]</span></li>
+<li>The Lisbon Connection 详述 <span class="s-lis">[S-LIS-077]</span></li>
+<li>Fodor's forum 多人讨论 <span class="s-lis">[S-LIS-078]</span></li>
+<li>Tripadvisor 多条评论</li>
+</ul>
+<p>→ ≥ 4 源 / 多平台 → <strong>结论可信</strong>：<strong>Yellow</strong>，不影响日常但要主动避开 / 用婴儿背带。</p>
+<h4>主题 D — Campo de Ourique 是家庭首选</h4>
+<ul>
+<li>Wherever Family deep-dive <span class="s-lis">[S-LIS-027]</span></li>
+<li>portugal.com 邻里指南 <span class="s-lis">[S-LIS-026]</span></li>
+<li>Lx.us Portugal 儿童友好排名 <span class="s-lis">[S-LIS-064]</span></li>
+<li>Dispatches Europe expat 指南 <span class="s-lis">[S-LIS-063]</span></li>
+<li>Me You and Lisbon — 5+1 Cool Family Neighbourhoods</li>
+<li>Blast Advisors family neighborhoods <span class="s-lis">[S-LIS-082]</span></li>
+</ul>
+<p>→ ≥ 5 源、3 平台 → <strong>结论可信</strong>：<strong>Green</strong>。</p>
+<h4>主题 E — Parque das Nações 平坦/现代/适合幼儿</h4>
+<ul>
+<li>Rent Remote PDN guide <span class="s-lis">[S-LIS-028]</span></li>
+<li>LisbonLisboaPortugal independent guide <span class="s-lis">[S-LIS-029]</span></li>
+<li>One Tiny Leap / Mummy Travels（Oceanário 评测家庭视角）</li>
+<li>Tripadvisor 综合评论</li>
+</ul>
+<p>→ ≥ 4 源 / 3 平台 → <strong>结论可信</strong>：<strong>Green</strong>。</p>
+<h4>主题 F — 私立医院英文友好</h4>
+<ul>
+<li>CUF Descobertas 官方多语言 <span class="s-lis">[S-LIS-017]</span></li>
+<li>Lusíadas 全英文官网 <span class="s-lis">[S-LIS-018]</span></li>
+<li>Hospital da Luz 24h 急诊接收外国人 <span class="s-lis">[S-LIS-019]</span></li>
+<li>Taxi Bambino blog 推荐 <span class="s-lis">[S-LIS-022]</span></li>
+<li>Pacific Prime "Best hospitals in Portugal for expats"</li>
+</ul>
+<p>→ ≥ 5 源 / 3 平台 → <strong>结论可信</strong>：<strong>Green</strong>。</p>
+<hr />
+<h3>3. 单条案例（不作为结论，仅作语境）</h3>
+<ul>
+<li>"Jardim da Estrela was our favourite, nearly every day visits during stay" — One Tiny Leap 家庭博客 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span></li>
+<li>"Lift was not in service for 2+ days, had to carry luggage up 4 flights" — Tripadvisor 评论 <span class="s-lis">[S-LIS-080]</span></li>
+<li>"Trams 28 are very small and can become very congested, getting on might be a problem if you can't fold the strollers" — 旅游博客综合 <span class="s-lis">[S-LIS-077]</span></li>
+</ul>
+<hr />
+<h3>4. 不可访问 / 降级记录</h3>
+<h4>Reddit</h4>
+<ul>
+<li>直接 site:reddit.com 搜索 ≥ 5 次：0 结果。这是 WebSearch / 索引限制（<strong>不</strong>等于 Reddit 没有内容）。</li>
+<li>降级措施：依赖 Meetup + FB + 家庭博客综合验证。<strong>confidence: low</strong> 标在所有"Reddit dimension"上。</li>
+<li><strong>下一步</strong>：到达后浏览 r/Lisbon / r/Portugal 各 50 条 top posts，整理本地 expat 真实信号。</li>
+</ul>
+<h4>Facebook 群组</h4>
+<ul>
+<li>只记录群组名 + 公开描述 URL，未爬取内部帖子（与项目规则一致）<span class="s-lis">[S-LIS-060]</span><span class="s-lis">[S-LIS-061]</span><span class="s-lis">[S-LIS-062]</span>。</li>
+</ul>
+<h4>Airbnb / Booking</h4>
+<ul>
+<li>列表/搜索页未爬取（按规则）；评论摘要通过家庭博客与 Tripadvisor 等替代 <span class="s-lis">[S-LIS-080]</span>。</li>
+</ul>
+<hr />
+<h3>5. 主题表（semantic_tags）</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>方向</th>
+<th>来源数</th>
+<th>平台数</th>
+<th>confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>family_welcoming_culture</td>
+<td>+</td>
+<td>6</td>
+<td>4</td>
+<td>high</td>
+</tr>
+<tr>
+<td>stroller_friction_oldcity</td>
+<td>-</td>
+<td>6</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>winter_damp_no_central_heat</td>
+<td>-</td>
+<td>5</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>tram28_pickpocket</td>
+<td>-</td>
+<td>4</td>
+<td>3</td>
+<td>medium-high</td>
+</tr>
+<tr>
+<td>campo_ourique_family_top</td>
+<td>+</td>
+<td>6</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>pdn_modern_flat</td>
+<td>+</td>
+<td>5</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>private_hospital_english</td>
+<td>+</td>
+<td>5</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>public_pediatric_strong</td>
+<td>+</td>
+<td>3</td>
+<td>2</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>oceanario_family_winner</td>
+<td>+</td>
+<td>4</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>jardim_estrela_repeat_visit</td>
+<td>+</td>
+<td>5</td>
+<td>3</td>
+<td>high</td>
+</tr>
+<tr>
+<td>reddit_signal_thin</td>
+<td>gray</td>
+<td>0</td>
+<td>0</td>
+<td>low（工具限制）</td>
+</tr>
+<tr>
+<td>worldschool_community_active</td>
+<td>+</td>
+<td>3</td>
+<td>2</td>
+<td>medium</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>红黄绿灰 — 总评</h3>
+<ul>
+<li>整体社区反馈一致性：<strong>Green / Yellow 混合</strong></li>
+<li>高频红旗：<strong>冬季湿冷 + 中心区婴儿车</strong>（明确，可缓解）</li>
+<li>高频绿旗：<strong>家庭友好文化 + 私立医疗英文 + Campo de Ourique / PDN 适合家庭</strong></li>
+<li>已识别盲点：<strong>Reddit dimension Gray</strong>（建议到达后补抓）</li>
+</ul></section>
+<hr>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

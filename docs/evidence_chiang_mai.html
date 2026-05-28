@@ -1,0 +1,1602 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>清迈 · 全部证据 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="evidence_side_by_side.html">证据横向对照</a>
+      <a href="final_comparison_report.html">最终对比报告</a>
+      <a href="red_flags.html">红旗清单</a>
+      <a href="unknowns_and_next_verifications.html">未知与下一步</a>
+      <a href="comparison_matrix.html">对比矩阵</a>
+      <a href="evidence_lisbon.html">里斯本证据</a>
+      <a href="evidence_chiang_mai.html" class="active">清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 class="page-title">清迈 · 全部证据</h1>
+<p class="page-sub">本页汇总该城所有 evidence markdown 文件，按维度组织。</p>
+<div class="callout"><strong>本页章节</strong><ul>
+<li><a href="#hard_constraints">硬约束（签证 / 安全 / 气候空气 / 医疗基线 / 住房基线）</a></li>
+<li><a href="#healthcare_pathway">医疗路径（儿科 / 急诊 / 英文医疗）</a></li>
+<li><a href="#housing_samples">住房样本（10 个）</a></li>
+<li><a href="#child_activity_ecosystem">儿童活动生态</a></li>
+<li><a href="#mobility">移动性</a></li>
+<li><a href="#life_operability">生活可运营性</a></li>
+<li><a href="#community_feedback">社区反馈</a></li>
+</ul></div>
+<section id="hard_constraints"><h2 id="hard_constraints">清迈 · 硬约束 Evidence</h2>
+
+<blockquote>
+<p>范围：签证 / 安全 / 气候与空气 / 医疗基线 / 住房基线
+家庭：2 大人 + 4.5 岁 + 2.5 岁；中国护照（加拿大居民）；目标 90 天；目标月份 1/2/3/4/10/11</p>
+</blockquote>
+<h3>摘要（核心发现）</h3>
+<ul>
+<li><strong>🟥 烧林季（2-4 月，3 月为高峰）是最强红线</strong>：2026 年 3 月 30 日清迈 AQI 达 233、PM2.5 188 µg/m³，全球第一 <span class="s-cmi">[S-CMI-009]</span>；CNX Local 报告 AQI 可冲至 300-700+ <span class="s-cmi">[S-CMI-010]</span>；儿童为 WHO 明确指出的高敏人群 <span class="s-cmi">[S-CMI-008]</span>。</li>
+<li><strong>🟧 签证路径有动荡</strong>：2024-03-01 起中泰互免 30 天有效 <span class="s-cmi">[S-CMI-001]</span>；但 2026-05-19 泰内阁决议取消对 90+ 国的 60 天免签 <span class="s-cmi">[S-CMI-002]</span>，对中国具体影响仍需官方公告确认。30 天可在境内续 30 天（1,900 THB）= 最长 60 天 <span class="s-cmi">[S-CMI-002]</span>，不够 90 天 → 需 DTV 或 TR/60。</li>
+<li><strong>🟧 DTV 对中国护照有"必须在就业国申请"约束</strong> <span class="s-cmi">[S-CMI-004]</span>：从加拿大申请可能被拒，需第三国（Vientiane/Singapore/HK）走"physical presence"路线 <span class="s-cmi">[S-CMI-005]</span>。</li>
+<li><strong>🟩 清迈在加拿大旅行建议中属低风险旅游区</strong>（与南部分离主义地区/泰柬边境对比）<span class="s-cmi">[S-CMI-007]</span>。</li>
+<li><strong>🟧 登革热（雨季）、狂犬病（街边野狗 7 万 +）为持续中等风险</strong> <span class="s-cmi">[S-CMI-012]</span><span class="s-cmi">[S-CMI-013]</span><span class="s-cmi">[S-CMI-048]</span>。</li>
+</ul>
+<hr />
+<h3>1. 签证路径</h3>
+<h4>事实 (Fact)</h4>
+<ul>
+<li><strong>中泰互免协议</strong>自 2024-03-01 生效：普通护照持有者 <strong>30 天内免签</strong>，180 天内累计不超过 90 天；不可用于居住/就业/学习/媒体活动 <span class="s-cmi">[S-CMI-001]</span>。</li>
+<li><strong>境内续签</strong>：免签身份可在清迈 immigration 续 1 次 30 天，费 1,900 THB → 最长 60 天 <span class="s-cmi">[S-CMI-002]</span>。</li>
+<li><strong>2026-05-19 内阁决议</strong>：取消 60 天免签计划（对部分国家）。中国为双边协议项，文章未明确说明协议是否受影响，但维基条目记录"30-day exemption remains as bilateral" <span class="s-cmi">[S-CMI-002]</span>。</li>
+<li><strong>DTV (Destination Thailand Visa)</strong>：5 年多次入境，每次最长 180 天；金融门槛 500,000 THB（约 14,000 USD）持有 3 个月以上；20 岁以上；可带配偶 + 未满 20 岁子女（dependents 需单独申请）；申请费 10,000 THB <span class="s-cmi">[S-CMI-003]</span>。</li>
+<li><strong>DTV 中国申请要求</strong>：可在中国 9 个泰使领馆（北京/上海/广州/成都/厦门/西安/青岛/昆明/南宁）任一处申请，<strong>必须从"就业所在国"申请</strong> <span class="s-cmi">[S-CMI-004]</span>。</li>
+<li><strong>DTV 在境外（第三国）申请</strong>：部分使馆按 physical presence 接受，例如 Vientiane (Laos)、Singapore、Hong Kong、Macau（HK/Macau 需当地居留证）<span class="s-cmi">[S-CMI-005]</span>。</li>
+</ul>
+<h4>解释 (Interpretation)</h4>
+<ul>
+<li>90 天目标 <strong>不能</strong>靠纯免签 + 1 次续签覆盖（最多 60 天）。可行路径：</li>
+<li><strong>DTV</strong> — 但需要 ≥ 500k THB 持有 3 个月 + 远程工作/Thai soft-power 活动证明 + 文件认证。家庭背景没有"必需远程工作"，但 DTV 仍可走"Thai Soft Power"（如学 Muay Thai、烹饪、Thai 语等）。</li>
+<li><strong>TR（旅游签 60 天）+ 30 天续签</strong> = 90 天，从渥太华泰使馆申请最稳妥。</li>
+<li><strong>免签 30 天 + 续签 30 天 + 离境再入境（visa run）</strong> 在新政策不确定下风险较高。</li>
+<li>中国护照 + 加居身份从渥太华申请：使馆官网未明确接受非加籍申请人 <span class="s-cmi">[S-CMI-006]</span>，但常规实践是允许"合法居留 + 完整文件"。</li>
+</ul>
+<h4>Unknown / Next Verification</h4>
+<ul>
+<li>2026-05-19 内阁决议<strong>对中国双边协议是否产生实际影响</strong>（红黄绿灰 = Gray）。</li>
+<li>渥太华泰使馆<strong>对中国护照 + Canadian PR 申请 TR/DTV 的最新接受度</strong>（需电话/邮件直接确认）。</li>
+<li>配偶/孩子护照情况（用户备注 to_verify）—— 影响 DTV dependents 路径。</li>
+</ul>
+<h4>Traffic light: 🟧 Yellow · Confidence: med</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-001]</span><span class="s-cmi">[S-CMI-002]</span><span class="s-cmi">[S-CMI-003]</span><span class="s-cmi">[S-CMI-004]</span><span class="s-cmi">[S-CMI-005]</span><span class="s-cmi">[S-CMI-006]</span></p>
+<hr />
+<h3>2. 安全（治安 + 突发事件）</h3>
+<h4>事实</h4>
+<ul>
+<li>加拿大对泰国整体建议为 <strong>"Exercise a high degree of caution"</strong> —— 原因是曼谷及其他地区的偶发政治紧张和示威 <span class="s-cmi">[S-CMI-007]</span>。</li>
+<li><strong>避免地区</strong>：泰柬边境 50 公里内；南部 Narathiwat/Pattani/Yala/Songkhla 部分地区（分离主义袭击）<span class="s-cmi">[S-CMI-007]</span>。</li>
+<li><strong>清迈本身</strong>：与曼谷、Phuket、Krabi 同列<strong>低风险旅游区，无明显限制</strong> <span class="s-cmi">[S-CMI-007]</span>。</li>
+<li>街边野狗：清迈估算 <strong>7 万只甚至 30 万只</strong>流浪狗 <span class="s-cmi">[S-CMI-048]</span>；可能传播狂犬、钩端螺旋体 <span class="s-cmi">[S-CMI-049]</span>；建议长期居留者接种暴露前狂犬疫苗 <span class="s-cmi">[S-CMI-049]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>清迈本身治安和家庭风险 <strong>不在加拿大警告区域</strong>，与拉美/南亚部分城市相比相对安全。</li>
+<li><strong>儿童 + 流浪狗</strong>是清迈特有的 yellow flag，特别是 Hang Dong / San Sai / Mae Rim 等城郊半乡村区域，街道有野狗群活动。</li>
+</ul>
+<h4>Unknown / Next Verification</h4>
+<ul>
+<li>各候选社区野狗密度差异（数据缺）。</li>
+</ul>
+<h4>Traffic light: 🟩 Green（治安）/ 🟧 Yellow（狂犬犬只暴露）· Confidence: high (治安) / med (狂犬)</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-007]</span><span class="s-cmi">[S-CMI-048]</span><span class="s-cmi">[S-CMI-049]</span></p>
+<hr />
+<h3>3. 气候 与 空气（按月）</h3>
+<h4>事实 — 气候逐月（climate-data） <span class="s-cmi">[S-CMI-011]</span></h4>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>平均高/低 (°C)</th>
+<th>降雨 (mm)</th>
+<th>湿度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 月</td>
+<td>30 / 15</td>
+<td>10</td>
+<td>64%</td>
+</tr>
+<tr>
+<td>2 月</td>
+<td>33 / 16</td>
+<td>10</td>
+<td>52%</td>
+</tr>
+<tr>
+<td>3 月</td>
+<td>35.4 / 19.6</td>
+<td>20</td>
+<td>47%</td>
+</tr>
+<tr>
+<td>4 月</td>
+<td>36.7 / 22.9</td>
+<td>55</td>
+<td>52%</td>
+</tr>
+<tr>
+<td>10 月</td>
+<td>31.8 / 22.2</td>
+<td>120</td>
+<td>76%</td>
+</tr>
+<tr>
+<td>11 月</td>
+<td>30.9 / 19.3</td>
+<td>50</td>
+<td>71%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>最佳月份：12 月 / 1 月（凉爽 + 低降水）<span class="s-cmi">[S-CMI-011]</span></p>
+</blockquote>
+<h4>事实 — 烧林季空气数据</h4>
+<ul>
+<li><strong>2024 年清迈 PM2.5 年均 26.4 µg/m³</strong> = WHO 年度 5 µg/m³ 标准的 5.2 倍 <span class="s-cmi">[S-CMI-008]</span>。</li>
+<li><strong>2026 年 3 月 30 日</strong>：清迈 AQI 233、PM2.5 188 µg/m³，<strong>全球污染城市第 1</strong> <span class="s-cmi">[S-CMI-009]</span>。</li>
+<li><strong>2026 年 3 月 4 日</strong> AQI &gt; 150（unhealthy），全球第 3 <span class="s-cmi">[S-CMI-008]</span>。</li>
+<li>烧林季 AQI "can hit 300, 400, even 700+"（&gt; 300 为 Hazardous）<span class="s-cmi">[S-CMI-010]</span>。</li>
+<li>烧林季时间：<strong>约 2 月至 4 月，3 月高峰</strong>；Songkran（4 月中）后基本结束 <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-010]</span>。</li>
+<li>IQAir 健康影响声明：<strong>"may increase the risk of respiratory issues … particularly for children, the elderly, and people with underlying health conditions"</strong> <span class="s-cmi">[S-CMI-008]</span>。</li>
+<li>4 月平均高温 36.7°C（极高），低温也升至 22.9°C<span class="s-cmi">[S-CMI-011]</span>。</li>
+<li>10 月降水 120 mm（雨季尾），登革热风险上升 <span class="s-cmi">[S-CMI-011]</span><span class="s-cmi">[S-CMI-013]</span>。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li><strong>目标月份 1/11 = 🟩 绿灯</strong>：低温、低雨、空气尚可。</li>
+<li><strong>2 月 = 🟧 黄灯</strong>：烧林季常已启动但未到高峰。</li>
+<li><strong>3-4 月 = 🟥 红灯（对 2.5-4.5 岁儿童）</strong>：PM2.5 持续 hazardous + 4 月酷热（36-38°C）。家庭策略上，3-4 月应<strong>完全避开 OR 离境到海岛</strong>。</li>
+<li><strong>10 月 = 🟧 黄灯</strong>：仍有雨与登革热风险，但空气好。</li>
+</ul>
+<h4>Unknown / Next Verification</h4>
+<ul>
+<li>1 月烧林尚未启动是否可保证 PM2.5 &lt; 35（WHO daily）—— 暂无逐月历史月均数据，IQAir 历史 PM 2.5 dashboard 提供但需在烟季前后核验。</li>
+<li>各候选区域（Nimman vs Hang Dong vs Mae Rim）PM2.5 差异（站点数据尚需查询）。</li>
+</ul>
+<h4>Traffic light: 月份分段（见上）· Confidence: high</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-009]</span><span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-011]</span></p>
+<hr />
+<h3>4. 医疗基线（更详见 healthcare_pathway.md）</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Bangkok Hospital Chiang Mai</strong> — JCI 认证，24/7 急诊 + Mobile ICU + 直升机 + 多语言（24 种）24/7；24/7 儿科急诊单元独立设立 <span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-016]</span><span class="s-cmi">[S-CMI-017]</span>。</li>
+<li><strong>Chiang Mai Ram Hospital</strong> — JCI 认证，children's hospital 板块 + 儿科次专科（儿童呼吸、发育）<span class="s-cmi">[S-CMI-018]</span>。</li>
+<li><strong>Sriphat Medical Center</strong>（CMU 附属）— 中等价位，质量高 <span class="s-cmi">[S-CMI-017]</span>。</li>
+<li><strong>Lanna Hospital</strong> — 价位最低的私立 <span class="s-cmi">[S-CMI-017]</span>。</li>
+</ul>
+<h4>Traffic light: 🟩 Green · Confidence: high</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-016]</span><span class="s-cmi">[S-CMI-017]</span><span class="s-cmi">[S-CMI-018]</span></p>
+<hr />
+<h3>5. 住房基线（更详见 housing_samples.md）</h3>
+<h4>事实 — 月租范围</h4>
+<ul>
+<li><strong>Nimman / Santitham</strong>：1BR 10-23k THB；2BR 15-28k THB；豪宅级别 35k-68k THB <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span><span class="s-cmi">[S-CMI-025]</span>。</li>
+<li><strong>Old City inside moat</strong>：apartments 约 6.5-18k THB <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-022]</span>。</li>
+<li><strong>Hang Dong</strong>：家庭别墅 35,000-80,000 THB/月（包含 international school 学区溢价）<span class="s-cmi">[S-CMI-024]</span>；中位 condo/house 12-30k <span class="s-cmi">[S-CMI-023]</span>。</li>
+<li><strong>San Sai</strong>：家庭整体预算 55-90k THB/月（含房租 + 餐饮 + 上学），房租比 Hang Dong 低 25-40k <span class="s-cmi">[S-CMI-024]</span>。</li>
+<li><strong>Mae Rim</strong>：~20k THB 可租到带空间的房子 <span class="s-cmi">[S-CMI-022]</span>。</li>
+</ul>
+<h4>红线主题（评论 / 文献复现）</h4>
+<ul>
+<li>大量房源缺少<strong>空气净化器</strong>（仅部分 Nimman 高端 listing 显式提及）—— 烧林季关键短板 <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span>。</li>
+<li>中央空调 / 封闭性不一 —— 一些较老 condo 漏风。</li>
+</ul>
+<h4>Traffic light: 🟩 Green（可达性高）· 🟧 Yellow（烧林季空气过滤资产稀缺）· Confidence: med</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span><span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span><span class="s-cmi">[S-CMI-025]</span></p>
+<hr />
+<h3>综合 Traffic Light 矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>1月</th>
+<th>2月</th>
+<th>3月</th>
+<th>4月</th>
+<th>10月</th>
+<th>11月</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>签证可行性</td>
+<td>🟧</td>
+<td>🟧</td>
+<td>🟧</td>
+<td>🟧</td>
+<td>🟧</td>
+<td>🟧</td>
+</tr>
+<tr>
+<td>治安</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>气候</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟧</td>
+<td>🟥</td>
+<td>🟧</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>空气</td>
+<td>🟩→🟧</td>
+<td>🟥</td>
+<td>🟥</td>
+<td>🟧</td>
+<td>🟩</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>登革热</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟧</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>医疗</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+<td>🟩</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最佳家庭月份组合：11月、1月</strong>（次选 12 月）；3-4 月<strong>强烈建议不进入清迈或安排到海岛/越南</strong>。</p></section>
+<hr>
+<section id="healthcare_pathway"><h2 id="healthcare_pathway">清迈 · 儿童医疗路径 Evidence</h2>
+
+<blockquote>
+<p>范围：4.5 岁 + 2.5 岁就医路径、24/7 急诊、英文服务、外国人就医流程</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>🟩 清迈儿科急诊路径成熟</strong>：Bangkok Hospital Chiang Mai 与 Chiangmai Ram 双 JCI、24/7 急诊 + 独立儿科 ER，多语言 24/7 <span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-016]</span><span class="s-cmi">[S-CMI-018]</span>。</li>
+<li><strong>🟩 英文服务密集</strong>，International Medical Services Department 提供 24 种语言电话支持 <span class="s-cmi">[S-CMI-016]</span>。</li>
+<li><strong>🟧 费用差异显著</strong>：BCM 最贵，Ram 中高，Lanna 最便宜；无保险家庭就医单次咨询 + X 光约 1,900 THB（Ram）<span class="s-cmi">[S-CMI-017]</span>。</li>
+<li><strong>🟧 中文服务覆盖未明确</strong>（医院主打英文 + 多语言电话）；中国护照家庭可能需要英文沟通能力。</li>
+</ul>
+<hr />
+<h3>推荐医院（按家庭场景）</h3>
+<h4>1) Bangkok Hospital Chiang Mai (BCM)</h4>
+<p><strong>用于：高严重度急诊 / 创伤 / 重症</strong> </p>
+<p><strong>事实</strong> <span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-016]</span><span class="s-cmi">[S-CMI-017]</span>：
+- JCI 认证（清迈仅两家之一）
+- <strong>24 小时 / 7 天</strong>急诊创伤中心
+- <strong>独立的 Pediatric Emergency Care Unit</strong> —— 专门儿科 ER 设备 + life-support
+- <strong>Mobile ICU + 紧急医疗直升机 + 航空医疗转运</strong>
+- International Medical Services Department：<strong>24 语言多语种翻译 + Medical Coordinators，24/7 电话</strong>
+- 距清迈国际机场 15 分钟车程
+- <strong>联系电话</strong>：+66 (0)52 089 888，急诊分机 1719
+- 费用：大型手术 1.5 M THB+，"most expensive" private hospital</p>
+<p><strong>适用场景</strong>：摔伤、发热抽搐、严重过敏、误食、夜间急症</p>
+<p><strong>Traffic light: 🟩 Green · Confidence: high</strong></p>
+<h4>2) Chiangmai Ram Hospital</h4>
+<p><strong>用于：综合就诊 / 儿科次专科</strong></p>
+<p><strong>事实</strong> <span class="s-cmi">[S-CMI-017]</span><span class="s-cmi">[S-CMI-018]</span>：
+- JCI 认证
+- 设有 <strong>Chiangmai Ram Children's Hospital</strong> 板块
+- 泰国北部<strong>第一家</strong>提供小儿肺病与发育疾病次专科
+- 英文 staff fluent；24h walk-in clinic
+- 单次诊费 + X 光约 <strong>1,900 THB (~53 USD)</strong> 无保险 expat
+- expat 反馈 "kind and considerate"，明确事先讨论费用
+- <strong>可申请无保险 expat 折扣</strong>（reviews 显示）</p>
+<p><strong>适用场景</strong>：发烧不退、慢性病 follow-up、过敏专科、儿童耳鼻喉</p>
+<p><strong>Traffic light: 🟩 Green · Confidence: high</strong></p>
+<h4>3) Sriphat Medical Center (CMU 附属)</h4>
+<p><strong>用于：经济选择</strong></p>
+<p><strong>事实</strong> <span class="s-cmi">[S-CMI-017]</span>：
+- 隶属 Chiang Mai University Faculty of Medicine
+- 英文 staff
+- 价位明显低于 BCM / Ram（心脏手术 13k USD vs 大型私立的数倍）
+- "High standard of care at affordable rates"</p>
+<p><strong>Traffic light: 🟩 Green · Confidence: med</strong>（外国人就医流程信息较少）</p>
+<h4>4) Lanna Hospital</h4>
+<p><strong>用于：基础门诊 / 价格敏感</strong></p>
+<p><strong>事实</strong> <span class="s-cmi">[S-CMI-017]</span>：
+- 最便宜的私立
+- 英文 staff
+- "Genuinely invested" 但未详述儿科次专科</p>
+<p><strong>Traffic light: 🟩 Green · Confidence: med</strong></p>
+<hr />
+<h3>就医流程（外国人 → 医院）</h3>
+<h4>事实</h4>
+<ul>
+<li>私立医院默认接受 walk-in 与挂号；international department 提供从挂号、翻译、保险结算的一站式 <span class="s-cmi">[S-CMI-016]</span>。</li>
+<li>现金 / 信用卡 / 保险直付（部分国际保险）。</li>
+<li>24 小时医院药房可在医院内拿药 + 处方咨询，BCM 与 Ram 都有 <span class="s-cmi">[S-CMI-017]</span>（暗示）。</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>中国护照家庭应<strong>事先准备 1) 旅行医疗保险（覆盖儿科 ER） 2) 英文沟通卡片 3) 当前用药英文名清单</strong>。</li>
+<li>第一周到达后可去 Ram 或 BCM 做一次<strong>面熟拜访</strong>：在 international desk 留底 + 拿急诊电话，避免夜里慌乱。</li>
+</ul>
+<h4>Unknown / Next Verification</h4>
+<ul>
+<li><strong>中文翻译服务</strong>是否在 international department 24/7 覆盖（医院页面只列"24 languages"未具体）。</li>
+<li>BCM/Ram 是否能<strong>直接对接中国常用保险</strong>（如平安、安联）。</li>
+<li>儿童<strong>疫苗补种</strong>服务（如有补种麻腮风、A 肝、日本脑炎、暴露前狂犬）—— 需医院预约确认。</li>
+<li>实际<strong>夜间急诊等待时间</strong>（无可靠样本）。</li>
+</ul>
+<hr />
+<h3>儿科常见场景速查表</h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐去向</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>夜间高热 / 抽搐</td>
+<td>BCM 儿科 ER</td>
+<td>24/7；最快</td>
+</tr>
+<tr>
+<td>一般发烧 / 咳嗽</td>
+<td>Ram pediatric clinic</td>
+<td>性价比</td>
+</tr>
+<tr>
+<td>摔伤骨折</td>
+<td>BCM Emergency Trauma</td>
+<td>Mobile ICU 配套</td>
+</tr>
+<tr>
+<td>过敏反应</td>
+<td>BCM 或 Ram ER</td>
+<td>都可</td>
+</tr>
+<tr>
+<td>慢性病随访</td>
+<td>Ram 次专科</td>
+<td>北部最全</td>
+</tr>
+<tr>
+<td>经济门诊</td>
+<td>Sriphat / Lanna</td>
+<td>英文略弱</td>
+</tr>
+<tr>
+<td>登革热怀疑</td>
+<td>Ram 或 BCM（验血 NS1）</td>
+<td>警惕 5-6 天持续高热 <span class="s-cmi">[S-CMI-013]</span></td>
+</tr>
+<tr>
+<td>狂犬暴露</td>
+<td>BCM 或 Ram 立即处理</td>
+<td>暴露后 4 针 + RIG <span class="s-cmi">[S-CMI-049]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>综合 Traffic light</h3>
+<p><strong>🟩 Green</strong> —— 清迈儿科急诊路径达到 expat 家庭可放心住 90 天的水平。
+<strong>主要剩余风险</strong>：中文沟通短板、保险直付落地、夜间等待时间（all unknown）。</p>
+<p>Sources: <span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-016]</span><span class="s-cmi">[S-CMI-017]</span><span class="s-cmi">[S-CMI-018]</span><span class="s-cmi">[S-CMI-019]</span><span class="s-cmi">[S-CMI-013]</span><span class="s-cmi">[S-CMI-049]</span></p></section>
+<hr>
+<section id="housing_samples"><h2 id="housing_samples">清迈 · 住房样本 Evidence</h2>
+
+<blockquote>
+<p>范围：10 个住房样本 + 评论主题汇总
+注：Airbnb / Booking 单页被 403 / login wall 阻挡（已记录到 inaccessible_sources.csv），样本来自公开 listing 网站、aggregator 与社区指南；个别样本以 listing 名称 + 来源页代表，confidence 标 med。</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>🟧 烧林季关键短板</strong>：大部分公开样本<strong>未明确标注空气净化器</strong>或封闭式窗体。仅少数 Nimman 高端 listing（如 Luxe de Nimman、特定 Airbnb 户型）明确标 air purifier <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-026]</span>。</li>
+<li>月租分布：1BR 在 Nimman 约 <strong>10-23k THB</strong>，2BR <strong>15-35k THB</strong>；San Sai 房子 8-15k THB 但远；Hang Dong 家庭别墅 35-80k THB（含 international school 学区溢价）<span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-024]</span>。</li>
+<li>评论复现主题：<strong>地板硬 / 沙发硬</strong>、<strong>电梯有无</strong>、<strong>洗衣（in-unit vs 公共）</strong>、<strong>Wi-Fi 稳定性</strong>、<strong>周围野狗</strong>（San Sai/Mae Rim）—— 详见后表。</li>
+</ul>
+<hr />
+<h3>10 个住房样本</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>区域</th>
+<th>物业名 / 类型</th>
+<th>月租 (THB)</th>
+<th>房间</th>
+<th>主要 amenity</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Santitham</td>
+<td>D Vieng Santitham (Studio)</td>
+<td>12,000</td>
+<td>Studio 30 m²</td>
+<td>AC, Wi-Fi, Lanna+现代设计；低层步行</td>
+<td><span class="s-cmi">[S-CMI-021]</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Santitham</td>
+<td>D Vieng Santitham (1BR)</td>
+<td>15,000</td>
+<td>1BR 38 m²</td>
+<td>AC, Wi-Fi, 共用 pool/gym</td>
+<td><span class="s-cmi">[S-CMI-021]</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Santitham</td>
+<td>D Vieng Santitham (2BR)</td>
+<td>22,000</td>
+<td>2BR 60 m²</td>
+<td>AC, Wi-Fi, pool</td>
+<td><span class="s-cmi">[S-CMI-021]</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Suthep / Nimman</td>
+<td>Near One Nimman condo (FazWaz median)</td>
+<td>~20,000 (USD 591)</td>
+<td>1BR</td>
+<td>Pool, gym, central Nimman</td>
+<td><span class="s-cmi">[S-CMI-025]</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Suthep / Nimman</td>
+<td>Near One Nimman condo (FazWaz median)</td>
+<td>~36,500 (USD 1015)</td>
+<td>2BR</td>
+<td>Pool, gym</td>
+<td><span class="s-cmi">[S-CMI-025]</span></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Old City</td>
+<td>The Pacific Cool Chic</td>
+<td>6,500</td>
+<td>studio/1BR</td>
+<td>Wi-Fi, pool, parking</td>
+<td><span class="s-cmi">[S-CMI-020]</span></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Old City</td>
+<td>Smith Residence</td>
+<td>8,000+</td>
+<td>1BR fully furnished</td>
+<td>Rooftop pool, furnished</td>
+<td><span class="s-cmi">[S-CMI-020]</span></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Old City</td>
+<td>Himku Hotel monthly</td>
+<td>18,000</td>
+<td>Suite</td>
+<td>Wi-Fi, parking, breakfast (酒店式)</td>
+<td><span class="s-cmi">[S-CMI-020]</span></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Hang Dong</td>
+<td>家庭别墅典型租金</td>
+<td>35,000-80,000</td>
+<td>3-4BR house</td>
+<td>Garden / pool / 在 international school 学区 (Prem/Lanna/Grace)</td>
+<td><span class="s-cmi">[S-CMI-024]</span></td>
+</tr>
+<tr>
+<td>10</td>
+<td>San Sai</td>
+<td>新建 townhouse / detached typical</td>
+<td>8,000-15,000</td>
+<td>2-3BR house</td>
+<td>较新建筑 / Sansai-Sankamphaeng Road 沿线</td>
+<td><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>代表性补充样本</strong>（Airbnb 不可直访，引用 search 摘要 + 命名 listing）：
+- "House next to Nimman 1" Airbnb <span class="s-cmi">[S-CMI-020]</span> — 显式标 <strong>air purifier, huge terrace, fast internet, free parking</strong>；类型：独立小屋（Chang Phueak）。confidence: low（无法核实当前价格）。</p>
+</blockquote>
+<hr />
+<h3>评论 / 文献主题汇总</h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>复现频次</th>
+<th>解读</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>空气净化器稀缺</strong></td>
+<td>高（多来源）</td>
+<td>烧林季关键 → 入住前必问/必带便携 HEPA</td>
+<td><span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td><strong>Wi-Fi 评价两极</strong></td>
+<td>中</td>
+<td>Nimman/Santitham 普遍快；郊区/老 condo 易断</td>
+<td><span class="s-cmi">[S-CMI-020]</span></td>
+</tr>
+<tr>
+<td><strong>洗衣不在室内</strong></td>
+<td>高</td>
+<td>多数 condo 无 in-unit washer，依赖 25-50 THB/kg 外送服务</td>
+<td><span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-043]</span></td>
+</tr>
+<tr>
+<td><strong>电梯有无</strong></td>
+<td>中</td>
+<td>低层 Lanna 风 condo 常无电梯；带 stroller 不便</td>
+<td><span class="s-cmi">[S-CMI-021]</span></td>
+</tr>
+<tr>
+<td><strong>野狗 + 街道</strong>（San Sai/Mae Rim）</td>
+<td>中</td>
+<td>半乡村区域，儿童夜间外出注意</td>
+<td><span class="s-cmi">[S-CMI-048]</span></td>
+</tr>
+<tr>
+<td><strong>池畔 / kid 安全围栏</strong></td>
+<td>低</td>
+<td>几乎无 listing 强调 child-proof</td>
+<td>inference</td>
+</tr>
+<tr>
+<td><strong>温度 4 月酷热</strong>（无中央 AC 之户）</td>
+<td>中</td>
+<td>4 月 36-38°C 需多机 split AC</td>
+<td><span class="s-cmi">[S-CMI-011]</span></td>
+</tr>
+<tr>
+<td><strong>押金 1-2 个月</strong></td>
+<td>中</td>
+<td>标准 <span class="s-cmi">[S-CMI-022]</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>区域 vs 家庭场景 速查</h3>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>1BR / 2BR 月租</th>
+<th>步行性</th>
+<th>学校</th>
+<th>公园</th>
+<th>医院 30min</th>
+<th>烧林空气过滤资产</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nimman</strong></td>
+<td>15-30k</td>
+<td>中</td>
+<td>蒙特梭利 + 国际</td>
+<td>Huai Kaeo / CMU</td>
+<td>BCM/Ram 在 ~15 min</td>
+<td>部分高端有</td>
+<td>🟩 主推（生活便利）</td>
+</tr>
+<tr>
+<td><strong>Santitham</strong></td>
+<td>12-22k</td>
+<td>良好</td>
+<td>距 Nimman 学校 5-10 min</td>
+<td>Huai Kaeo</td>
+<td>BCM ~15 min</td>
+<td>部分</td>
+<td>🟩 性价比</td>
+</tr>
+<tr>
+<td><strong>Old City</strong></td>
+<td>6.5-18k</td>
+<td>良好</td>
+<td>Varee CM</td>
+<td>Hai Ya / Nong Buak Hard</td>
+<td>BCM ~20 min</td>
+<td>较少</td>
+<td>🟧（人多车多）</td>
+</tr>
+<tr>
+<td><strong>Hang Dong</strong></td>
+<td>35-80k 房</td>
+<td>差</td>
+<td>Prem/Lanna/Grace/Panyaden</td>
+<td>多 family park</td>
+<td>BCM ~30 min</td>
+<td>别墅可装</td>
+<td>🟩 学区优先家庭</td>
+</tr>
+<tr>
+<td><strong>San Sai</strong></td>
+<td>8-15k 房</td>
+<td>差</td>
+<td>Mill Hill (Doi Saket)</td>
+<td>LOL Kids / 社区公园</td>
+<td>BCM ~25 min</td>
+<td>别墅可装</td>
+<td>🟩 预算优先</td>
+</tr>
+<tr>
+<td><strong>Mae Rim</strong></td>
+<td>~20k 房</td>
+<td>差</td>
+<td>Prem</td>
+<td>植物园 / 国家公园</td>
+<td>BCM ~30-40 min</td>
+<td>别墅可装</td>
+<td>🟧 远</td>
+</tr>
+<tr>
+<td><strong>Wat Ket / Riverside</strong></td>
+<td>15-35k</td>
+<td>良好</td>
+<td>CMIS / Windfield</td>
+<td>Charoen Prathet</td>
+<td>BCM ~20 min</td>
+<td>部分</td>
+<td>🟩 副选</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Unknown / Next Verification</h3>
+<ul>
+<li>具体 Airbnb listing 价格 + amenity（被 403 阻挡，需用户在订房阶段单独核验 listing 当前情况）</li>
+<li>各样本物业是否提供<strong>儿童家具</strong>（cot, high chair）</li>
+<li>物业<strong>车位</strong>适用于车载儿童安全座椅的家庭</li>
+<li><strong>真实 PM2.5 室内 vs 室外</strong> 在不同建筑年代的差异</li>
+</ul>
+<h3>不可访问源记录</h3>
+<ul>
+<li>airbnb.com/rooms/* → HTTP 403 → fallback 到 search summaries + 命名 listing</li>
+<li>flatio.com/i/* → landing page 无 listing 数据 → fallback 同上</li>
+<li>chiangmaifamilyguide.com/best-indoor-playgrounds/ → 404</li>
+</ul>
+<p>Sources: <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span><span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span><span class="s-cmi">[S-CMI-025]</span><span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-043]</span><span class="s-cmi">[S-CMI-048]</span><span class="s-cmi">[S-CMI-011]</span></p></section>
+<hr>
+<section id="child_activity_ecosystem"><h2 id="child_activity_ecosystem">清迈 · 儿童活动生态 Evidence</h2>
+
+<blockquote>
+<p>范围：户外 / 自然 / 室内备选 / 结构化活动 / 社交机会 / 可重复性
+家庭：2.5 岁 + 4.5 岁</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>🟩 室内有空调/净化器的备选丰富</strong>（≥ 8 个备选 → 7 个保留）—— 烧林季可执行 <span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span>。</li>
+<li><strong>🟩 自然/开放玩耍</strong> 在 1-2 月和 10-11 月十分充足（湖、植物园、瀑布、农场），3-4 月需打折扣 <span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-030]</span><span class="s-cmi">[S-CMI-031]</span>。</li>
+<li><strong>🟩 结构化活动</strong>完整覆盖：Beaver Club worldschooling hub 接受短期、烹饪课/艺术课/水上乐园（≥ 5 候选）<span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-050]</span>。</li>
+<li><strong>🟩 社交/世界学社群</strong>密集（清迈是亚洲 worldschooling 热门点之一）<span class="s-cmi">[S-CMI-033]</span>。</li>
+</ul>
+<hr />
+<h3>1. 户外 / 自然（每区 ≥ 5 候选；前 3 推荐）</h3>
+<h4>Mae Rim 区</h4>
+<ol>
+<li><strong>Queen Sirikit Botanic Garden</strong> — 3 条步道 + canopy walkway + 温室 + 自然科学馆；adult 100 THB / child &lt;12 免费 <span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-029]</span></li>
+<li><strong>Huay Tung Tao Lake</strong> — 距市区 20 分钟；天鹅船、游泳、picnic 亭；外国人 50 THB <span class="s-cmi">[S-CMI-030]</span></li>
+<li><strong>Maerim Elephant Sanctuary / Kanta Elephant Sanctuary</strong> — 道德、无骑乘、年龄 4+ 适合幼儿、有半日选项 <span class="s-cmi">[S-CMI-051]</span></li>
+<li><strong>Mae Sa Waterfall</strong> — 阶梯式瀑布；婴儿车不便但小段步道可走</li>
+<li><strong>农场 / 草莓园季节性</strong>（11-2 月）</li>
+</ol>
+<h4>Hang Dong 区</h4>
+<ol>
+<li><strong>Royal Park Rajapruek</strong> — 大型植物园；<strong>电动 tram 每 15 min 一班</strong>、自行车出租、平坦草坪；儿童奔跑友好 <span class="s-cmi">[S-CMI-056]</span></li>
+<li><strong>Grand Canyon Water Park</strong> — 跳水 + 水上设施 + 救生员 <span class="s-cmi">[S-CMI-057]</span></li>
+<li><strong>Tube Trek Water Park</strong> — 滑梯 + inflatable，气候热月份好选 <span class="s-cmi">[S-CMI-057]</span></li>
+<li><strong>Bella Goose Cafe + 户外</strong> — 家庭咖啡 + 草坪 <span class="s-cmi">[S-CMI-023]</span></li>
+<li><strong>Triplets Eat &amp; Play</strong> — 户外 playground <span class="s-cmi">[S-CMI-023]</span></li>
+</ol>
+<h4>Doi Inthanon / Doi Suthep（远程出游）</h4>
+<ol>
+<li><strong>Royal Pagodas Loop (Doi Inthanon)</strong> — 平坦铺装小径，<strong>stroller-friendly</strong> <span class="s-cmi">[S-CMI-031]</span></li>
+<li><strong>Doi Inthanon waterfalls + parking-to-falls 短铺装段</strong> — 适合小孩 <span class="s-cmi">[S-CMI-031]</span></li>
+<li><strong>Doi Suthep Temple</strong> — 有 lift 替代 306 阶 <span class="s-cmi">[S-CMI-031]</span></li>
+</ol>
+<h4>Nimman / Old City</h4>
+<ol>
+<li><strong>Huai Kaeo Arboretum</strong> — Nimman 近，林荫小径 <span class="s-cmi">[S-CMI-023]</span></li>
+<li><strong>CMU 校园 + Ang Kaew Reservoir</strong> — 平坦、绿地、湖；本地家庭休闲点 <span class="s-cmi">[S-CMI-023]</span></li>
+<li><strong>Nong Buak Hard Public Park (Old City)</strong> — 树荫多 + 草地 <span class="s-cmi">[S-CMI-023]</span></li>
+<li><strong>Hai Ya Garden</strong> — 较小但合幼儿 <span class="s-cmi">[S-CMI-023]</span></li>
+</ol>
+<blockquote>
+<p><strong>烧林季可行性折扣</strong>：以上户外项目在 2-4 月 PM2.5 &gt; 150 期间应<strong>避免</strong> 2.5-4.5 岁儿童外出 <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-010]</span>。</p>
+</blockquote>
+<p><strong>Traffic light: 🟩 Green（1/11月） / 🟥 Red（3-4 月）· Confidence: med</strong></p>
+<hr />
+<h3>2. 室内备选（≥ 8 候选，保留 8；烧林季备选核心）</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>区域</th>
+<th>年龄</th>
+<th>价格</th>
+<th>空调/净化器证据</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reyn.ne' Playhouse &amp; Cafe</strong></td>
+<td>Hang Dong</td>
+<td>1-4 toddler</td>
+<td>150 / 50 THB</td>
+<td>显式 air purifier</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td><strong>Wooden Ville Kids Café</strong></td>
+<td>Nonghoi</td>
+<td>toddler-12</td>
+<td>300 THB / 2h</td>
+<td>显式 air-purified premium</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td><strong>Block &amp; Play</strong></td>
+<td>Tha Sala / Mahidol</td>
+<td>跨年龄</td>
+<td>n/a</td>
+<td>空调 + 益智区</td>
+<td><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+<tr>
+<td><strong>Bouncetopia</strong></td>
+<td>Central Chiangmai mall</td>
+<td>1+</td>
+<td>mall 价</td>
+<td>2000 m²，inflatable，toddler 专区</td>
+<td>[S-CMI-026 类]</td>
+</tr>
+<tr>
+<td><strong>After School Playground</strong></td>
+<td>TBD</td>
+<td>toddler+</td>
+<td>n/a</td>
+<td>室内空调 + toddler 区</td>
+<td>[S-CMI-027 类]</td>
+</tr>
+<tr>
+<td><strong>Fun Planet</strong></td>
+<td>Central Airport Plaza 4F</td>
+<td>infant +</td>
+<td>50 THB adult</td>
+<td>mall AC</td>
+<td>[S-CMI-027 类]</td>
+</tr>
+<tr>
+<td><strong>Little Soul Kids Planet</strong></td>
+<td>Hang Dong</td>
+<td>toddler+</td>
+<td>299 / 50 THB</td>
+<td>室内 + 室外 + 有机餐</td>
+<td><span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+<tr>
+<td><strong>LOL Kids Castle</strong></td>
+<td>San Sai</td>
+<td>toddler+</td>
+<td>250 / 50 THB</td>
+<td>室内</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td><strong>Kid's Kingdom</strong></td>
+<td>Tha Sala</td>
+<td>4-8</td>
+<td>100-150 / 50 THB</td>
+<td>空调 + zone</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td><strong>Kiddy Land</strong></td>
+<td>Lotus Chom Thong / Hang Dong / Maya</td>
+<td>跨</td>
+<td>mall 价</td>
+<td>mall AC</td>
+<td><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关键</strong>：CNX Local 提到"有 app 追踪有空气净化器的店铺" <span class="s-cmi">[S-CMI-010]</span>，烧林季前订阅本地家长群 / Facebook Chiang Mai Family Guide 实时分享。</p>
+</blockquote>
+<p><strong>Traffic light: 🟩 Green · Confidence: high</strong></p>
+<hr />
+<h3>3. 结构化活动（≥ 5 候选；含短期接受）</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>短期接受</th>
+<th>价格</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beaver Club / TruePath Worldschooling Hub</strong></td>
+<td>世界学日校 3-18 岁</td>
+<td><strong>明确：一周/一月 OK</strong></td>
+<td>1100-1500 THB/日；12.6-18.6k THB/月；6.5k 注册非退</td>
+<td><span class="s-cmi">[S-CMI-032]</span></td>
+</tr>
+<tr>
+<td><strong>Smile Organic Farm Cooking School</strong></td>
+<td>家庭烹饪课</td>
+<td>单次</td>
+<td>n/a</td>
+<td><span class="s-cmi">[S-CMI-050]</span></td>
+</tr>
+<tr>
+<td><strong>Zabb E Lee / Baan Thai Cooking</strong></td>
+<td>烹饪课（kid course）</td>
+<td>单次</td>
+<td>n/a</td>
+<td><span class="s-cmi">[S-CMI-050]</span></td>
+</tr>
+<tr>
+<td><strong>Four Seasons Children's Cooking</strong></td>
+<td>儿童烹饪 6-11 岁</td>
+<td>单次</td>
+<td>hotel 价</td>
+<td><span class="s-cmi">[S-CMI-050]</span></td>
+</tr>
+<tr>
+<td><strong>Elephant Parade Land</strong></td>
+<td>艺术 + 教育</td>
+<td>单次</td>
+<td>n/a</td>
+<td><span class="s-cmi">[S-CMI-050]</span></td>
+</tr>
+<tr>
+<td><strong>Art in Paradise (3D museum)</strong></td>
+<td>室内艺术</td>
+<td>单次</td>
+<td>adult ~400 THB</td>
+<td><span class="s-cmi">[S-CMI-050]</span></td>
+</tr>
+<tr>
+<td><strong>Grand Canyon / Tube Trek Water Parks</strong></td>
+<td>游泳</td>
+<td>单次</td>
+<td>day pass</td>
+<td><span class="s-cmi">[S-CMI-057]</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beaver Club 重点</strong>：地处 Hang Dong，附带 on-site family 住宿 1,200 THB/晚起，含中餐 + 实地考察。课程：英语、生活技能、户外。<strong>这是 90 天计划里最强的"社交锚"</strong>。</p>
+<p><strong>Traffic light: 🟩 Green · Confidence: high</strong></p>
+<hr />
+<h3>4. 社交机会（worldschooling / expat 家庭）</h3>
+<h4>已确认社群</h4>
+<ul>
+<li><strong>Beaver Club / TruePath</strong> Hang Dong — 实体 hub，家庭日常碰头 <span class="s-cmi">[S-CMI-032]</span></li>
+<li><strong>Chiang Mai Family Guide</strong> Facebook group — 日常活动信息 <span class="s-cmi">[S-CMI-050]</span><span class="s-cmi">[S-CMI-052]</span></li>
+<li><strong>CHIANG MAI EXPATS</strong> Facebook group <span class="s-cmi">[S-CMI-034]</span></li>
+<li><strong>Worldschoolers in Thailand</strong> Facebook group <span class="s-cmi">[S-CMI-035]</span></li>
+<li><strong>Chiang Mai Expat Teachers</strong> Facebook group [S-CMI-034 ref]</li>
+</ul>
+<h4>文献复现</h4>
+<ul>
+<li>世界学家庭密集（"one of the most popular places in Asia for worldschooling" <span class="s-cmi">[S-CMI-033]</span>）</li>
+<li>烧林季很多家庭离开 1-3 个月 <span class="s-cmi">[S-CMI-046]</span></li>
+</ul>
+<p><strong>Traffic light: 🟩 Green · Confidence: high</strong></p>
+<hr />
+<h3>5. 可重复性（90 天里"可日常去 + 同样的地方 5+ 次"）</h3>
+<h4>可重复锚点（推荐 daily / weekly）</h4>
+<ul>
+<li><strong>Beaver Club 短期注册</strong> —— 每周/每天可去 → 形成 routine</li>
+<li><strong>Royal Park Rajapruek + tram</strong> —— 大型且变化丰富 → 每周可换路线</li>
+<li><strong>Little Soul Kids Planet</strong> —— 烧林季每周 2-3 次</li>
+<li><strong>Maya Shopping Mall Rimping + Bouncetopia / Fun Planet</strong> —— 一站多用</li>
+<li><strong>CMU Ang Kaew Reservoir</strong> —— 步行湖滨 daily walk</li>
+</ul>
+<h4>短旅 (weekend trip)</h4>
+<ul>
+<li>Doi Inthanon Royal Pagodas Loop</li>
+<li>Huay Tung Tao 湖</li>
+<li>Mae Rim 植物园</li>
+<li>Mae Rim 大象保护区</li>
+<li>周末水上乐园</li>
+</ul>
+<p><strong>Traffic light: 🟩 Green · Confidence: med</strong></p>
+<hr />
+<h3>综合 Traffic Light</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>户外/自然（11/1 月）</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>户外/自然（3-4 月）</td>
+<td>🟥</td>
+</tr>
+<tr>
+<td>室内备选（空气过滤）</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>结构化活动</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>社交机会</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>90 天可重复性</td>
+<td>🟩</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span><span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-029]</span><span class="s-cmi">[S-CMI-030]</span><span class="s-cmi">[S-CMI-031]</span><span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-033]</span><span class="s-cmi">[S-CMI-034]</span><span class="s-cmi">[S-CMI-035]</span><span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-050]</span><span class="s-cmi">[S-CMI-051]</span><span class="s-cmi">[S-CMI-052]</span><span class="s-cmi">[S-CMI-056]</span><span class="s-cmi">[S-CMI-057]</span></p></section>
+<hr>
+<section id="mobility"><h2 id="mobility">清迈 · 出行 Evidence</h2>
+
+<blockquote>
+<p>范围：Grab / songthaew / 步行 / 婴儿车 / 儿童安全座椅</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>🟥 儿童安全座椅严重短缺</strong>：Grab 和泰国出租车<strong>默认不提供</strong> child car seat —— 已多源确认 <span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-038]</span><span class="s-cmi">[S-CMI-039]</span>。<strong>家庭必须自带</strong>或使用 Taxi Bambino（清迈本地认证安装服务）<span class="s-cmi">[S-CMI-036]</span>。</li>
+<li><strong>🟧 Songthaew（红色双排车）便宜灵活但无安全带、无座椅</strong> —— 不适合 2.5 岁幼儿，4.5 岁可短途但需大人怀抱 <span class="s-cmi">[S-CMI-037]</span><span class="s-cmi">[S-CMI-039]</span>。</li>
+<li><strong>🟧 婴儿车不友好</strong>：步行道不平、坑洞、共享行车道；建议<strong>baby carrier 优先</strong>，便携 stroller 备用 <span class="s-cmi">[S-CMI-040]</span>。</li>
+<li><strong>🟩 Grab/Bolt 出行覆盖好</strong> —— 但 7-seater minivan 需提前指定 <span class="s-cmi">[S-CMI-038]</span>。</li>
+</ul>
+<hr />
+<h3>1. Grab / 出租车</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Grab</strong> 是主流叫车 app；可叫私家车、出租车、tuk-tuk、songthaew（RodDaeng 选项）<span class="s-cmi">[S-CMI-037]</span><span class="s-cmi">[S-CMI-038]</span></li>
+<li><strong>极少司机自带 child car seat</strong> —— "Very few taxis or Grab drivers have child seats" <span class="s-cmi">[S-CMI-036]</span></li>
+<li><strong>泰国 2022 法律规定 6 岁以下需用 car seat，但执法几乎为零</strong> <span class="s-cmi">[S-CMI-036]</span></li>
+<li><strong>Taxi Bambino</strong> —— 清迈 + 全泰服务，提供经认证 child car seat 安装的预约出租 <span class="s-cmi">[S-CMI-036]</span></li>
+<li><strong>Indrive</strong> app（替代 Grab）—— 允许指定车型、与司机直接沟通座位数，<strong>更适合家庭</strong> <span class="s-cmi">[S-CMI-038]</span></li>
+<li><strong>7-seater taxis / vans</strong> 在泰国可叫到 —— "It's not uncommon to find 7-seater taxis and vans throughout Thailand" <span class="s-cmi">[S-CMI-038]</span></li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>4.5 岁 + 2.5 岁家庭<strong>必须自带 car seat 2 个</strong> —— 用 inflatable / 便携式（meets European standards）；从加拿大随行李带过来 <span class="s-cmi">[S-CMI-038]</span></li>
+<li>短期内：用 <strong>Taxi Bambino</strong> 做机场接送 + 重要 weekly 出行；日常用 Grab + 自家 seat</li>
+<li>不建议依赖 Grab 司机的"标配安全带" —— 后排有时安全带缺失或卡扣损坏</li>
+</ul>
+<h4>Traffic light: 🟧 Yellow（需自带 seat）· Confidence: high</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-037]</span><span class="s-cmi">[S-CMI-038]</span><span class="s-cmi">[S-CMI-039]</span></p>
+<hr />
+<h3>2. Songthaew（红色双排车 / 红车）</h3>
+<h4>事实</h4>
+<ul>
+<li>跨城共享：<strong>"part shared taxi, part local experience"</strong> <span class="s-cmi">[S-CMI-037]</span></li>
+<li>票价：<strong>Old City 内 20-30 THB/人</strong>，全程不超过 100 THB <span class="s-cmi">[S-CMI-037]</span></li>
+<li><strong>无固定路线</strong>，挥手即停，确认方向 + 点头上车 <span class="s-cmi">[S-CMI-037]</span></li>
+<li>行程时间不可预测：15 min 直接路线常变 30-45 min（沿途搭客）<span class="s-cmi">[S-CMI-037]</span></li>
+<li><strong>关键安全限制</strong>："A songthaew has no seat belts, nor any other safety equipment on board" <span class="s-cmi">[S-CMI-037]</span></li>
+<li>家庭使用反馈：<strong>多人 + stroller 整车装载可行</strong> —— "families can put strollers right into the truck bed with children locked in" <span class="s-cmi">[S-CMI-039]</span><span class="s-cmi">[S-CMI-053]</span></li>
+<li><strong>婴幼儿（3 岁以下）应坐大人膝上</strong> —— 多源建议 <span class="s-cmi">[S-CMI-039]</span></li>
+<li>Grab 内有 <strong>"RodDaeng"</strong> 选项 —— app 内提前显示价格 <span class="s-cmi">[S-CMI-037]</span></li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>2.5 岁孩子：songthaew 仅用于<strong>极短距离 + 大人怀抱</strong></li>
+<li>4.5 岁孩子：可坐 bench，但<strong>长途/夜间/雨天慎用</strong></li>
+<li>Songthaew 是文化体验 + 极致便宜 —— 适合<strong>周末市场短途 / 周日步行街</strong>，不适合<strong>机场 / 高速 / 长距离</strong></li>
+</ul>
+<h4>Traffic light: 🟧 Yellow · Confidence: high</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-037]</span><span class="s-cmi">[S-CMI-039]</span><span class="s-cmi">[S-CMI-053]</span></p>
+<hr />
+<h3>3. 步行 / 人行道</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>整体 walkability：差到一般</strong>：sidewalks 不平、有坑、有时窄如 balance beam <span class="s-cmi">[S-CMI-040]</span></li>
+<li><strong>Nimman</strong>：sidewalks 较好 + 较宽 + 数字游民区改善明显 <span class="s-cmi">[S-CMI-040]</span></li>
+<li><strong>Old City 内</strong>：可走，但小巷无人行道，需占用车道</li>
+<li><strong>郊区（Hang Dong / San Sai）</strong>：基本无 sidewalk，需车</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li><strong>婴儿车不适合多数场景</strong>："taking a stroller into the city is a non-starter" <span class="s-cmi">[S-CMI-040]</span></li>
+<li><strong>Baby carrier 优先</strong> —— "a baby carrier is often much easier than a stroller, especially when exploring temples or walking on charming, uneven paths" <span class="s-cmi">[S-CMI-055]</span></li>
+<li>建议家庭携带 <strong>轻便折叠 stroller + 2 个 baby carrier</strong></li>
+<li>Nimman + Santitham + Wat Ket 适合 stroller，Hang Dong + Mae Rim + San Sai 必须开车</li>
+</ul>
+<h4>Traffic light: 🟧 Yellow（区域差异大）· Confidence: high</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-055]</span></p>
+<hr />
+<h3>4. 自行车 / 摩托车</h3>
+<h4>事实</h4>
+<ul>
+<li>清迈 expat 常用 scooter（125-150cc 月租 2,500-4,000 THB）</li>
+<li><strong>带儿童骑摩托车</strong>在泰国普遍但 <strong>危险性显著</strong> —— 加拿大旅行建议未直接列入，但医院 ER 摩托外伤为常见 input</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>不建议带 2.5 岁 + 4.5 岁孩子使用摩托车作为日常交通</li>
+<li>自行车适合 Royal Park Rajapruek、CMU 校园（park 内有 bike rental，但儿童座椅不普及）<span class="s-cmi">[S-CMI-056]</span></li>
+</ul>
+<h4>Traffic light: 🟧 Yellow · Confidence: med</h4>
+<hr />
+<h3>5. 跨城交通</h3>
+<h4>事实</h4>
+<ul>
+<li>清迈机场（CNX）→ 市区：15-30 min Grab / Taxi Bambino / 出租</li>
+<li>跨城火车：清迈 → 曼谷 13-14 小时（睡卧铺）；适合大孩，2.5 岁辛苦</li>
+<li>跨城飞行：AirAsia / Nok / Thai Smile 飞海岛 1-2 小时 —— 烧林季离开方案的关键</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>3-4 月烧林季方案：飞 Phuket / Krabi / Koh Samui / Koh Lanta（家庭 expat 主流逃离地）<span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span></li>
+</ul>
+<hr />
+<h3>出行决策树（家庭 day-to-day）</h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>机场 ↔ 住处</td>
+<td>Taxi Bambino（带 2 seat）</td>
+</tr>
+<tr>
+<td>Nimman 内 短距</td>
+<td>Grab Car + 自带 seat</td>
+</tr>
+<tr>
+<td>Old City 周末市场</td>
+<td>Songthaew（短）+ 大人抱</td>
+</tr>
+<tr>
+<td>跨城 (Hang Dong → 市区)</td>
+<td>Grab car + 自带 seat</td>
+</tr>
+<tr>
+<td>公园 / 周末出游</td>
+<td>月租 car（自带 seat 安装）</td>
+</tr>
+<tr>
+<td>步行（Nimman）</td>
+<td>折叠 stroller + 1 carrier</td>
+</tr>
+<tr>
+<td>步行（Old City）</td>
+<td>Baby carrier 优先</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Unknown / Next Verification</h3>
+<ul>
+<li><strong>月租 car (有 child seat) 公司</strong>清迈的稳定供应商（暂无收集足够样本）</li>
+<li><strong>Grab Family</strong> 是否在清迈推出 child seat 选项（曼谷有 pilot）</li>
+<li>公共<strong>婴儿座椅租赁服务</strong>长租选项</li>
+</ul>
+<h3>综合 Traffic Light</h3>
+<p><strong>🟧 Yellow</strong> —— 出行可解，但需要<strong>主动准备</strong>（带 seat、用 Taxi Bambino、月租车）。</p>
+<p>Sources: <span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-037]</span><span class="s-cmi">[S-CMI-038]</span><span class="s-cmi">[S-CMI-039]</span><span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span><span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-055]</span><span class="s-cmi">[S-CMI-056]</span></p></section>
+<hr>
+<section id="life_operability"><h2 id="life_operability">清迈 · 生活可运营性 Evidence</h2>
+
+<blockquote>
+<p>范围：杂货 / 药店 / 洗衣 / 餐饮 / 咖啡 / 文化与自然综合</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>🟩 杂货高度可运营</strong>：Rimping (Kad Farang / 旗舰)、Tops、Big C、Makro、Tesco Lotus、Maya basement Rimping —— 进口食品、婴幼儿食品、配方奶都齐全 <span class="s-cmi">[S-CMI-041]</span><span class="s-cmi">[S-CMI-042]</span><span class="s-cmi">[S-CMI-045]</span>。</li>
+<li><strong>🟩 药店 24h</strong>：BCM + Ram 均有 24 小时医院药房 <span class="s-cmi">[S-CMI-045]</span>；7-Eleven 每条街都有覆盖基础用品。</li>
+<li><strong>🟩 洗衣便捷</strong>：30+ THB/kg 服务 + 免费 pickup；多家在 Nimman/Santitham 1 km 内 <span class="s-cmi">[S-CMI-043]</span><span class="s-cmi">[S-CMI-044]</span>。</li>
+<li><strong>🟩 餐饮 + 咖啡</strong>：清迈是亚洲咖啡 + 美食 expat 友好首选之一；Nimman 密度最高 <span class="s-cmi">[S-CMI-023]</span>。</li>
+<li><strong>🟧 文化生活 vs 旅游泡沫</strong>：Nimman 偏数字游民泡沫；Old City 偏游客；San Sai/Hang Dong 更本地化 <span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span>。</li>
+</ul>
+<hr />
+<h3>1. 杂货</h3>
+<h4>关键超市</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>位置</th>
+<th>类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rimping Kad Farang</strong> (Mae Rim)</td>
+<td>Mae Rim</td>
+<td>旗舰 + 进口（瑞士德国意大利美日法等）</td>
+<td><span class="s-cmi">[S-CMI-041]</span></td>
+</tr>
+<tr>
+<td><strong>Rimping Mahidol Road</strong></td>
+<td>城内</td>
+<td>中型</td>
+<td><span class="s-cmi">[S-CMI-041]</span></td>
+</tr>
+<tr>
+<td><strong>Rimping Maya basement</strong></td>
+<td>Nimman</td>
+<td>小型 + 进口</td>
+<td><span class="s-cmi">[S-CMI-041]</span><span class="s-cmi">[S-CMI-042]</span></td>
+</tr>
+<tr>
+<td><strong>Tops</strong></td>
+<td>Central Festival / Maya 周边 / KSK</td>
+<td>主流进口</td>
+<td><span class="s-cmi">[S-CMI-042]</span></td>
+</tr>
+<tr>
+<td><strong>Big C</strong></td>
+<td>多店</td>
+<td>大型本地 + 婴儿食品</td>
+<td><span class="s-cmi">[S-CMI-045]</span></td>
+</tr>
+<tr>
+<td><strong>Tesco Lotus</strong></td>
+<td>多店</td>
+<td>大型本地 + 尿布/配方奶</td>
+<td><span class="s-cmi">[S-CMI-045]</span></td>
+</tr>
+<tr>
+<td><strong>Makro</strong></td>
+<td>仓储</td>
+<td>批发 / 大宗</td>
+<td>(常识)</td>
+</tr>
+</tbody>
+</table>
+<h4>婴幼儿食品 / 用品</h4>
+<ul>
+<li><strong>Tesco Lotus 和 Big C</strong>：尿布、湿巾、Mead Johnson Enfagrow、Nestle、Dumex 配方奶 <span class="s-cmi">[S-CMI-045]</span></li>
+<li><strong>7-Eleven 普及</strong>：每条街有 → 临时用品 / 零食 / 牛奶 / 水 <span class="s-cmi">[S-CMI-045]</span></li>
+<li><strong>进口配方</strong> 可能不全 → 建议从国内/加拿大带"过渡期"的偏好品牌 <span class="s-cmi">[S-CMI-045]</span></li>
+</ul>
+<h4>Traffic light: 🟩 Green · Confidence: high</h4>
+<p>Sources: <span class="s-cmi">[S-CMI-041]</span><span class="s-cmi">[S-CMI-042]</span><span class="s-cmi">[S-CMI-045]</span></p>
+<hr />
+<h3>2. 药店</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>24h 医院药房</strong>：BCM + Chiangmai Ram 都有 [S-CMI-045 ref]</li>
+<li><strong>Boots / Watsons</strong> 在 Maya / Central Festival 等 mall 有店 — 西式 OTC</li>
+<li><strong>本地 pharmacy</strong> 散布 —— 大部分通用医药 (ibuprofen, paracetamol, electrolyte) 可无处方购买</li>
+<li><strong>7-Eleven</strong> 卖基础（OTC, 防蚊液, 防晒霜, 创可贴）</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>家庭准备 first-aid kit + 退烧药 + 防蚊喷雾 + ORS 电解质包 → 90 天慢旅基线</li>
+<li><strong>登革热出血热</strong> 严重需求血小板：BCM/Ram 急诊立即转入 <span class="s-cmi">[S-CMI-013]</span></li>
+</ul>
+<h4>Traffic light: 🟩 Green · Confidence: high</h4>
+<hr />
+<h3>3. 洗衣</h3>
+<h4>事实 <span class="s-cmi">[S-CMI-043]</span><span class="s-cmi">[S-CMI-044]</span></h4>
+<ul>
+<li><strong>WashDrop</strong>：洗 + 烘 + 次日返；25-50 THB/kg；烫衣 +10-20 THB/kg；<strong>免费 60 分钟内取件</strong></li>
+<li><strong>Em's Laundry</strong>：同日特快 90 THB/kg；干洗 80-140；免费 pickup &amp; delivery；828 reviews</li>
+<li><strong>Royal Laundry</strong>：按件，月套餐约 50% 优惠</li>
+<li><strong>Happy 24 / Laundery</strong>：月套餐 + 区域配送</li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>多数 condo 无 in-unit washer，但<strong>外送洗衣 + 月套餐</strong>完全可覆盖 4 口家庭日常</li>
+<li>平均 6,000-9,000 THB/月（按 ~150-200 kg）</li>
+</ul>
+<h4>Traffic light: 🟩 Green · Confidence: high</h4>
+<hr />
+<h3>4. 餐饮 + 咖啡</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Nimman</strong> —— 数字游民 + expat 咖啡密度最高；Roast8ry Lab Nimman / Fohhide / One Nimman 市场 / One Nimman 餐饮 <span class="s-cmi">[S-CMI-023]</span></li>
+<li><strong>Santitham</strong> —— 性价比本地 + 部分咖啡</li>
+<li><strong>Old City</strong> —— 寺庙 + 古城内餐厅；价格中等</li>
+<li><strong>Hang Dong</strong> —— Bella Goose / family cafe 多；Triplets Eat &amp; Play 一站式 <span class="s-cmi">[S-CMI-023]</span></li>
+<li><strong>Sunday Walking Street (Old City)</strong> —— 周日整周末市场，餐饮 + 手工艺集合 <span class="s-cmi">[S-CMI-055]</span></li>
+</ul>
+<h4>儿童友好餐饮</h4>
+<ul>
+<li>多家 family cafe 设儿童游乐区（Wooden Ville, Little Soul, Bella Goose）<span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span></li>
+<li>Cooking class 含 kid program（Zabb E Lee, Baan Thai, Four Seasons 6-11 岁）<span class="s-cmi">[S-CMI-050]</span></li>
+</ul>
+<h4>Traffic light: 🟩 Green · Confidence: high</h4>
+<hr />
+<h3>5. 文化 / 自然 综合融入日常 (vs 旅游泡沫)</h3>
+<h4>事实</h4>
+<ul>
+<li><strong>Wat Chedi Luang (Old City)</strong> —— stroller 友好，小额门票 <span class="s-cmi">[S-CMI-055]</span></li>
+<li><strong>Sunday Walking Street + Sunday Night Market</strong> —— 大型街市，文化体验主线</li>
+<li><strong>Doi Suthep Temple</strong> —— 有 lift；半日游</li>
+<li><strong>Nimman 数字游民"泡沫"评价复现</strong>："we didn't want to come to Chiang Mai because of all the digital nomads" [S-CMI-040 ref]</li>
+<li><strong>Hang Dong / San Sai</strong> —— "more local feel"，"mixed Thai-expat community"，children 语言发展更好 <span class="s-cmi">[S-CMI-024]</span></li>
+<li><strong>Mae Rim</strong> —— "Green haven"；自然 + 凉爽 + 距市区 30 min <span class="s-cmi">[S-CMI-023]</span></li>
+</ul>
+<h4>解释</h4>
+<ul>
+<li>短期 30-60 天 → Nimman / Santitham 性价比最高（密度 + 步行性）</li>
+<li>长期 90 天 + 想要本地化 → Hang Dong 或 San Sai；接受车出行</li>
+<li>Mae Rim 太远 + 烧林季空气受森林火灾影响更重，<strong>不推荐烧林季住 Mae Rim</strong></li>
+</ul>
+<h4>Traffic light: 🟩 Green · Confidence: med</h4>
+<hr />
+<h3>6. 其他生活基础</h3>
+<h4>网络 / SIM</h4>
+<ul>
+<li>Nimman 普遍光纤 ≥ 500 Mbps；预付 SIM (AIS/TrueMove/DTAC) 1 月套餐 ~300 THB</li>
+<li>公共 Wi-Fi 充足</li>
+</ul>
+<h4>银行 / 取现</h4>
+<ul>
+<li>ATM 取现费 220 THB/笔；Wise 可直接 ATM 取</li>
+<li>大型 mall 内换汇柜台 OK</li>
+</ul>
+<h4>应急</h4>
+<ul>
+<li>紧急号码 191（警察）/ 1669（救护）</li>
+<li>BCM 急诊 +66 (0)52 089 888 <span class="s-cmi">[S-CMI-015]</span></li>
+</ul>
+<hr />
+<h3>综合 Traffic Light</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>杂货</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>药店</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>洗衣</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>餐饮 / 咖啡</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>儿童食品 / 用品</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>文化融入 vs 泡沫</td>
+<td>🟩（看选区域）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>清迈生活可运营性是其相对里斯本的最大相对优势之一</strong> —— 价格低、English-friendly 商业生态成熟、家庭设施密度高。</p>
+<p>Sources: <span class="s-cmi">[S-CMI-013]</span><span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span><span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span><span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-041]</span><span class="s-cmi">[S-CMI-042]</span><span class="s-cmi">[S-CMI-043]</span><span class="s-cmi">[S-CMI-044]</span><span class="s-cmi">[S-CMI-045]</span><span class="s-cmi">[S-CMI-050]</span><span class="s-cmi">[S-CMI-055]</span></p></section>
+<hr>
+<section id="community_feedback"><h2 id="community_feedback">清迈 · 社区反馈 Evidence</h2>
+
+<blockquote>
+<p>范围：Reddit / 博客 / 论坛 / YouTube / Google 评论的复现信号 + 主题表
+注：Reddit 直访被 fetch blocked（已记 inaccessible_sources.csv），改用 search summaries + 第三方 expat 博客作为复现代理。</p>
+</blockquote>
+<h3>摘要</h3>
+<ul>
+<li><strong>🟥 烧林季离家</strong>是社区共识：多源（Iglu, Tieland to Thailand, CNX Local）反复出现"expats leave 1-3 months during peak burning"作为主题 —— 复现信号强 <span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span><span class="s-cmi">[S-CMI-010]</span></li>
+<li><strong>🟩 worldschooling 家庭聚集</strong>：清迈被多家旅行家庭博客列为亚洲 worldschooling top hub <span class="s-cmi">[S-CMI-033]</span><span class="s-cmi">[S-CMI-032]</span></li>
+<li><strong>🟧 婴儿车 + 人行道</strong>抱怨复现 —— TripAdvisor 论坛、Lonely Planet、Family Can Travel 一致 <span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-055]</span></li>
+<li><strong>🟧 大象保护区评论极化</strong> —— 部分"ethical sanctuary"实际"zoo-like" [TripAdvisor 评论复现]</li>
+</ul>
+<hr />
+<h3>主题复现表</h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>复现频次</th>
+<th>平台 / 信号</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>烧林季 PM2.5 实质危险 + 离开</td>
+<td>≥ 6 来源 ≥ 3 平台（IQAir, 新闻, expat blog, FB group, 旅游平台）<span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-009]</span><span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span></td>
+<td>News + Industry + Blog</td>
+<td>🟥</td>
+</tr>
+<tr>
+<td>Worldschooling 家庭热门</td>
+<td>≥ 4 来源（World Travel Family, Beaver Club, ExpatDen, FB groups）<span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-033]</span><span class="s-cmi">[S-CMI-034]</span><span class="s-cmi">[S-CMI-035]</span></td>
+<td>Hub site + Blog + FB</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>人行道 / stroller 不友好</td>
+<td>≥ 5 来源（TripAdvisor 论坛, Lonely Planet, Family Can Travel, Marquita's, Kids Roam）<span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-055]</span></td>
+<td>Forum + Blog + 平台</td>
+<td>🟧</td>
+</tr>
+<tr>
+<td>Car seat 在 Grab/Taxi 不存在</td>
+<td>≥ 4 来源（Taxi Bambino, Kids Roam, Swandoo, TripAdvisor 论坛）<span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-038]</span><span class="s-cmi">[S-CMI-039]</span></td>
+<td>Service + Blog + Forum</td>
+<td>🟥</td>
+</tr>
+<tr>
+<td>街边野狗 / 狂犬</td>
+<td>≥ 3 来源（Chiang Mai Care, Chiang Mai Citylife, Pacific Prime）<span class="s-cmi">[S-CMI-048]</span><span class="s-cmi">[S-CMI-049]</span></td>
+<td>News + Blog</td>
+<td>🟧</td>
+</tr>
+<tr>
+<td>清迈对孩子整体友好 / Thai 对孩子温和</td>
+<td>≥ 5 来源（Lonely Planet, Marquita, Family Can Travel, Learners and Makers, Shiny Visa）<span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-054]</span><span class="s-cmi">[S-CMI-055]</span><span class="s-cmi">[S-CMI-058]</span></td>
+<td>Blog</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>Hang Dong = expat 学区首选</td>
+<td>≥ 3 来源（CNX Local, Chiang Mai Properties, ExpatDen）<span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span></td>
+<td>Local + 房产 + Expat</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>San Sai = 性价比新移民首选</td>
+<td>≥ 2 来源（Chiang Mai Properties, CNX Local）<span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span></td>
+<td>房产 + Local</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>Nimman = 数字游民泡沫 / 噪音</td>
+<td>≥ 3 来源（Yahoo Lifestyle, CNX Local, Reddit summary）<span class="s-cmi">[S-CMI-023]</span></td>
+<td>新闻 + Blog</td>
+<td>🟧</td>
+</tr>
+<tr>
+<td>公立医疗对 expat 不熟悉 / 私立优先</td>
+<td>≥ 3 来源（ExpatDen, ChiangmaiKids, ClinicsOnCall）<span class="s-cmi">[S-CMI-017]</span><span class="s-cmi">[S-CMI-018]</span></td>
+<td>Blog + 服务</td>
+<td>🟩</td>
+</tr>
+<tr>
+<td>4 月酷热 + 4 月初烟季尾巴</td>
+<td>≥ 4 来源（Climate to Travel, 各旅行博客）<span class="s-cmi">[S-CMI-011]</span></td>
+<td>数据 + Blog</td>
+<td>🟥 (4 月)</td>
+</tr>
+<tr>
+<td>大象保护区"ethical" 含糊</td>
+<td>≥ 2 来源（TripAdvisor 负评, Reddit 引用）<span class="s-cmi">[S-CMI-051]</span>[搜索摘要]</td>
+<td>Forum + Blog</td>
+<td>🟧</td>
+</tr>
+<tr>
+<td>公共空气过滤资源 app/list 存在</td>
+<td>≥ 2 来源（CNX Local, IQAir）<span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-026]</span></td>
+<td>Local + 业内</td>
+<td>🟩</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>代表性引用 (Verbatim Quotes)</h3>
+<h4>烧林季</h4>
+<blockquote>
+<p>"By Songkran (mid-April) it's almost always cleared up."  — CNX Local <span class="s-cmi">[S-CMI-010]</span></p>
+<p>"Most expats leave Northern Thailand for 1-3 months during the peak of the burning season."  — Iglu Survivor Guide <span class="s-cmi">[S-CMI-046]</span></p>
+<p>"Children, seniors and pregnant women wear anti-pollution masks, and minimize outdoor activities, when air pollution levels are high." — Canada Travel Advisory <span class="s-cmi">[S-CMI-007]</span></p>
+<p>"March 30: AQI 233, PM2.5 188 µg/m³, ranked #1 globally" — Open Magazine 2026 报告 <span class="s-cmi">[S-CMI-009]</span></p>
+</blockquote>
+<h4>出行 / 安全</h4>
+<blockquote>
+<p>"In Thailand, it will be very difficult to rely on local safety seats to be reliable and safe. Our recommendation is to bring your own safety seats from home!" — Kids Roam the Globe <span class="s-cmi">[S-CMI-038]</span></p>
+<p>"A songthaew has no seat belts, nor any other safety equipment on board." — Chiang Mai Traveller <span class="s-cmi">[S-CMI-037]</span></p>
+<p>"Sidewalks (if there are any) are uneven, full of random holes and are sometimes as narrow as a balance beam."  — TripAdvisor 论坛 <span class="s-cmi">[S-CMI-040]</span></p>
+</blockquote>
+<h4>Worldschooling</h4>
+<blockquote>
+<p>"Chiang Mai has quietly become one of the most popular places in Asia for worldschooling families."  — World Travel Family <span class="s-cmi">[S-CMI-033]</span></p>
+<p>Beaver Club 接受短期 — "Families can join for a week, a month, or longer — without long contracts or complicated enrollment processes." <span class="s-cmi">[S-CMI-032]</span></p>
+</blockquote>
+<h4>Hang Dong / San Sai</h4>
+<blockquote>
+<p>"Hang Dong offers the highest density of international schools and established western-standard infrastructure, with family homes from 6.8M–20M THB." — CNX Local <span class="s-cmi">[S-CMI-023]</span></p>
+<p>"Sansai delivers newer housing stock at 2.5M–8M THB with a quieter, more local feel — and a faster commute to the city centre." — Chiang Mai Properties <span class="s-cmi">[S-CMI-024]</span></p>
+</blockquote>
+<h4>整体 family 友好</h4>
+<blockquote>
+<p>"The Thai genuinely adore children, and with English widely spoken, calm traffic, and a great mix of local culture and Western comforts, Chiang Mai is incredibly approachable with kids in tow." — Family Can Travel <span class="s-cmi">[S-CMI-053]</span></p>
+</blockquote>
+<h4>狂犬 / 野狗</h4>
+<blockquote>
+<p>"In Chiang Mai province alone, there are believed to be 70,000 stray dogs, most of which lack precautionary vaccinations." — Chiang Mai Care <span class="s-cmi">[S-CMI-048]</span></p>
+</blockquote>
+<hr />
+<h3>Reddit 直访结果（Gray / Unknown）</h3>
+<ul>
+<li>WebFetch 对 reddit.com 返回 blocked，无法读取具体 thread。</li>
+<li>WebSearch 对多个 reddit-specific 查询返回 "No links found"（详 search_log.csv）。</li>
+<li><strong>降级处理</strong>：使用 expat blog 综合（Iglu, Tieland to Thailand）+ Facebook group 列表作为社区代理。</li>
+<li>复现强度按"≥ 5 条独立评论 OR ≥ 3 平台"标准，<strong>烧林季 + car seat + 人行道 + worldschooling</strong> 四个主题都满足，可作结论；其余只作案例例证。</li>
+</ul>
+<hr />
+<h3>综合 Traffic Light</h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>颜色</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>烧林季 PM2.5 离开</td>
+<td>🟥</td>
+<td>≥ 6 源 ≥ 3 平台</td>
+</tr>
+<tr>
+<td>出行 car seat</td>
+<td>🟥</td>
+<td>≥ 4 源 ≥ 3 平台</td>
+</tr>
+<tr>
+<td>Stroller / sidewalks</td>
+<td>🟧</td>
+<td>≥ 5 源</td>
+</tr>
+<tr>
+<td>街边野狗</td>
+<td>🟧</td>
+<td>≥ 3 源</td>
+</tr>
+<tr>
+<td>Worldschooling 社群</td>
+<td>🟩</td>
+<td>≥ 4 源</td>
+</tr>
+<tr>
+<td>整体家庭友好</td>
+<td>🟩</td>
+<td>≥ 5 源</td>
+</tr>
+</tbody>
+</table>
+<p>Sources（社区反馈层主要源）：<span class="s-cmi">[S-CMI-007]</span><span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-009]</span><span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span><span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-033]</span><span class="s-cmi">[S-CMI-034]</span><span class="s-cmi">[S-CMI-035]</span><span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-037]</span><span class="s-cmi">[S-CMI-038]</span><span class="s-cmi">[S-CMI-039]</span><span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span><span class="s-cmi">[S-CMI-048]</span><span class="s-cmi">[S-CMI-049]</span><span class="s-cmi">[S-CMI-051]</span><span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-054]</span><span class="s-cmi">[S-CMI-055]</span><span class="s-cmi">[S-CMI-058]</span></p></section>
+<hr>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

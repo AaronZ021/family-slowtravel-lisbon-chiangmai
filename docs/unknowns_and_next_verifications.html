@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>未知与下一步核实 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="evidence_side_by_side.html">证据横向对照</a>
+      <a href="final_comparison_report.html">最终对比报告</a>
+      <a href="red_flags.html">红旗清单</a>
+      <a href="unknowns_and_next_verifications.html" class="active">未知与下一步</a>
+      <a href="comparison_matrix.html">对比矩阵</a>
+      <a href="evidence_lisbon.html">里斯本证据</a>
+      <a href="evidence_chiang_mai.html">清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 id="_1">未知项与下一步核实清单<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>列出所有 <code>Gray / Unknown</code> 或 <code>Yellow with low/medium confidence</code> 的事项，按家庭可控的核实成本分级。</p>
+</blockquote>
+<h2 id="_2">🔴 关键阻断项（必须先解决再决策）<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h3 id="u0">U0. 配偶/孩子护照国别<a class="headerlink" href="#u0" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: to_verify（用户自报）</li>
+<li><strong>影响维度</strong>: 签证路径、停留上限、申请提前期、费用</li>
+<li><strong>核实成本</strong>: 极低（家庭内部确认）</li>
+<li><strong>核实方式</strong>: 直接确认每个家庭成员当前持有的有效护照</li>
+<li><strong>判定结果路径</strong>:</li>
+<li>全员中国护照 → 走里斯本申根短期签 OR 清迈 TR60+续30 / DTV</li>
+<li>部分加拿大护照 → 葡萄牙免签 90 天 OR 泰国免签 30+30</li>
+<li>混合情况 → 拆分申请路径，可能需要 1-2 周补充验证</li>
+</ul>
+<hr />
+<h2 id="60-90">🟠 高价值核实项（影响选址、需在出发前 60-90 天完成）<a class="headerlink" href="#60-90" title="Permanent link">¶</a></h2>
+<h3 id="u1-canadian-pr-trdtv">U1. 渥太华泰使馆对中国护照 + Canadian PR 申请 TR/DTV 的最新接受度<a class="headerlink" href="#u1-canadian-pr-trdtv" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: 使馆官网未明确接受非加籍 <span class="s-cmi">[S-CMI-006]</span></li>
+<li><strong>核实成本</strong>: 中（电话/邮件 + 1-2 周等回复）</li>
+<li><strong>核实方式</strong>:</li>
+<li>邮件 consular@thaiembassy.ca + 电话 (613) 722-4444</li>
+<li>或社群确认（Reddit r/ThailandVisaInfo + 加拿大 Thailand 经验贴）</li>
+</ul>
+<h3 id="u2-2026-05-19-30">U2. 2026-05-19 泰内阁决议对中泰双边 30 天协议的具体影响<a class="headerlink" href="#u2-2026-05-19-30" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: 文章未明确说明协议是否受影响 <span class="s-cmi">[S-CMI-002]</span></li>
+<li><strong>核实成本</strong>: 低-中（需查泰外交部 Royal Gazette）</li>
+<li><strong>核实方式</strong>: </li>
+<li>泰外交部官网 https://www.mfa.go.th 搜 "2024-03-01 China"</li>
+<li>或在出发前 30 天再次查询，避免老政策预订</li>
+</ul>
+<h3 id="u3">U3. 配偶/孩子是否需要葡萄牙申根额外材料（监护信、双亲同意书等）<a class="headerlink" href="#u3" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: 标准列表已知，特殊家庭情况未确认</li>
+<li><strong>核实成本</strong>: 低</li>
+<li><strong>核实方式</strong>: 多伦多/温哥华/渥太华领事馆官网具体页面 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-005]</span></li>
+</ul>
+<h3 id="u4">U4. 各候选区到顶级公立儿科急诊的实际驾车时间<a class="headerlink" href="#u4" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: 已知存在；30 分钟阈值未核验</li>
+<li><strong>里斯本</strong>: Campo de Ourique / Estrela / Belém 到 Hospital Dona Estefânia</li>
+<li><strong>清迈</strong>: Hang Dong / San Sai / Mae Rim 到 Bangkok Hospital CM</li>
+<li><strong>核实成本</strong>: 极低（Google Maps 抽样 4 个时段 = 平峰/晚高峰/早晨/夜间）</li>
+<li><strong>核实方式</strong>: 在 Google Maps "时间" 功能输入预计行程</li>
+</ul>
+<h3 id="u5-manulife-sun-life-allianz">U5. 私立医院对加拿大旅游医疗保险（Manulife / Sun Life / Allianz）的直付协议<a class="headerlink" href="#u5-manulife-sun-life-allianz" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: 多数为先付后报销</li>
+<li><strong>核实成本</strong>: 低（向保险公司 + 医院双向确认）</li>
+<li><strong>核实方式</strong>: </li>
+<li>保险公司 24h 援助热线问"可直付清单"</li>
+<li>医院 international patient office 电话/邮件确认</li>
+</ul>
+<hr />
+<h2 id="1-2">🟡 中价值核实项（可在到达后 1-2 周内完成）<a class="headerlink" href="#1-2" title="Permanent link">¶</a></h2>
+<h3 id="u6-pm25-11011-iqair">U6. 月度 PM2.5 分布（里斯本 1/10/11 月雨季是否显著差异；清迈各区 IQAir 站点差异）<a class="headerlink" href="#u6-pm25-11011-iqair" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>核实成本</strong>: 中（需 IQAir 历史 dashboard / OpenAQ）</li>
+<li><strong>核实方式</strong>:</li>
+<li>里斯本：openaq.org / IQAir city history</li>
+<li>清迈：CCDC + IQAir 多站点（Suthep / Sankampang / Hang Dong）</li>
+</ul>
+<h3 id="u7">U7. 各候选社区野狗密度（清迈）<a class="headerlink" href="#u7" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>核实成本</strong>: 中（需到达后实地观察 + 当地 expat 群组确认）</li>
+<li><strong>核实方式</strong>:</li>
+<li>到达后白天/傍晚不同时段步行评估</li>
+<li>Reddit r/ChiangMai 或 Facebook "Chiang Mai Expats Club" 询问</li>
+</ul>
+<h3 id="u8-reddit">U8. Reddit 真实信号<a class="headerlink" href="#u8-reddit" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>当前状态</strong>: WebSearch site:reddit.com 多次 0 返回；WebFetch 被 block</li>
+<li><strong>核实成本</strong>: 中（需在浏览器手动浏览）</li>
+<li><strong>核实方式</strong>:</li>
+<li>里斯本：r/Lisbon、r/Portugal、r/expats（手动浏览近 12 个月帖子）</li>
+<li>清迈：r/ChiangMai、r/ThailandTourism、r/digitalnomad（同上）</li>
+<li><strong>必查关键词</strong>: with kids / family / stroller / pediatric / burning season / hospital</li>
+</ul>
+<h3 id="u9-listing">U9. 房源 listing 的实际设备清单<a class="headerlink" href="#u9-listing" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>核实成本</strong>: 低-中（预订前向房东 / 平台 message）</li>
+<li><strong>必查项</strong>:</li>
+<li>里斯本：双层玻璃 / 电暖气 / 除湿机 / 电梯 / 厨房洗碗机 / 洗衣机干衣机</li>
+<li>清迈：HEPA 空气净化器（型号 + 滤芯新旧）/ 中央空调 / 纱窗 / 泳池围栏</li>
+</ul>
+<h3 id="u10">U10. 短期接纳的儿童结构化活动具体班表与年龄要求<a class="headerlink" href="#u10" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>核实成本</strong>: 低（到达前邮件预约）</li>
+<li><strong>里斯本</strong>: 陶瓷绘画 / Pastel de Nata / 烹饪 <span class="s-lis">[S-LIS-083]</span></li>
+<li><strong>清迈</strong>: Beaver Club worldschooling hub / 烹饪课 / 大象保护区半日游 <span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-050]</span><span class="s-cmi">[S-CMI-051]</span></li>
+</ul>
+<hr />
+<h2 id="_3">🟢 低价值核实项（次要，可在到达后随时核验）<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h3 id="u11">U11. 公共交通儿童票优惠 / 婴儿车上下车便利度<a class="headerlink" href="#u11" title="Permanent link">¶</a></h3>
+<ul>
+<li>里斯本 Metro: 部分站无电梯</li>
+<li>清迈 Grab: 是否有 "Family" 或 "XL" 车型</li>
+</ul>
+<h3 id="u12">U12. 当地超市 / 药店对外国信用卡的接受度<a class="headerlink" href="#u12" title="Permanent link">¶</a></h3>
+<ul>
+<li>里斯本：Pingo Doce / Continente / Mini-mercados（已知好）</li>
+<li>清迈：Rimping / Tops（接受外卡），Big C / Makro（部分扫码限本地）</li>
+</ul>
+<h3 id="u13-expat">U13. 当地家庭 / expat 周末聚会的真实活跃度<a class="headerlink" href="#u13-expat" title="Permanent link">¶</a></h3>
+<ul>
+<li>里斯本：Lisbon Parents &amp; Kids（Meetup，每周六 15:00-18:00）<span class="s-lis">[S-LIS-061]</span></li>
+<li>清迈：Beaver Club Worldschooling Hub</li>
+</ul>
+<hr />
+<h2 id="_4">建议核实时间表（出发前倒计时）<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>倒计时</th>
+<th>必做事项</th>
+<th>引用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T-120 天</strong></td>
+<td>U0（护照核实）→ 决定签证路径</td>
+<td>U0</td>
+</tr>
+<tr>
+<td><strong>T-90 天</strong></td>
+<td>U1（泰使馆电话）；U2（泰最新政策）；U3（葡萄牙额外材料）</td>
+<td>U1,U2,U3</td>
+</tr>
+<tr>
+<td><strong>T-75 天</strong></td>
+<td>提交签证申请；预订住宿（U9 设备核实）</td>
+<td>U9</td>
+</tr>
+<tr>
+<td><strong>T-60 天</strong></td>
+<td>完成儿童狂犬暴露前疫苗（清迈）；旅行医疗保险（U5）</td>
+<td>U5</td>
+</tr>
+<tr>
+<td><strong>T-30 天</strong></td>
+<td>U4（医院驾车时间抽样）；预订入境后第一周活动（U10）</td>
+<td>U4,U10</td>
+</tr>
+<tr>
+<td><strong>T-7 天</strong></td>
+<td>U6（最新 PM2.5）；U2（再次确认签证政策）</td>
+<td>U6,U2</td>
+</tr>
+<tr>
+<td><strong>抵达后第 1 周</strong></td>
+<td>U7、U8、U11、U12、U13 实地确认</td>
+<td>U7-U13</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">证据缺口总结<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>缺口</th>
+<th>原因</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reddit 真实信号</td>
+<td>平台 anti-bot / login wall</td>
+<td>轶事样本不够"独立"达到 ≥5 / ≥3 平台阈值</td>
+</tr>
+<tr>
+<td>Airbnb 单 listing 详情</td>
+<td>403 阻挡</td>
+<td>住房样本部分降级为 third-party guide + 价格区间</td>
+</tr>
+<tr>
+<td>Flatio 库存深度</td>
+<td>站点 dynamic loading</td>
+<td>仅能取月租范围而非具体可订房源</td>
+</tr>
+<tr>
+<td>清迈各区 IQAir 站点数据</td>
+<td>API 未开</td>
+<td>全市均值已知，区差异未量化</td>
+</tr>
+<tr>
+<td>家庭实操"3 月撤离海岛"成本</td>
+<td>未纳入预算研究</td>
+<td>烧林季备选方案的财务可行性需家庭自评</td>
+</tr>
+</tbody>
+</table>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

@@ -1,151 +1,387 @@
-# Lisbon vs Chiang Mai: Family Slow Travel Base Comparison
+# 里斯本 vs 清迈：家庭 3 个月慢旅基地对比报告
 
-## 1. Executive Summary
+> 调研日期：2026-05-28  
+> 家庭：2 大人 + 4.5 岁 + 2.5 岁；中国护照（加拿大居民）  
+> 目标停留：约 90 天  
+> 目标月份候选：1、2、3、4、10、11 月  
+> 调研规模：143 个源（85 里斯本 + 58 清迈）；14 个证据 md；81 次 WebSearch + 33 次 WebFetch
 
-对这家四口来说，里斯本更像“稳定但贵、需要选对区和房源”的第一基地；清迈更像“低成本、儿童咖啡和自然体验强，但季节错误会直接失效”的基地。
+---
 
-最佳季节：里斯本在 3-4 月、10 月更稳，1-2 月和 11 月可行但雨天/室内 fallback 更重要。[LIS_CLIM_01] 清迈最佳窗口是 11-1 月，2 月开始需看空气，3-4 月不建议作为三个月家庭慢旅行核心月份。[CM_CLIM_01, CM_AIR_01, CM_AIR_02]
+## 1. 执行摘要 (Executive Summary)
 
-第一基地倾向：如果预算能承受中高质量 2BR，且申根签证/90 天计算确认无误，里斯本更适合作为第一基地。清迈只有在避开烟季、解决交通/儿童座椅、确认空气净化住房后才适合作为第一基地。
+### 1.1 一句话结论
+**两城互补，不是替代。** 在 2026-05 的证据条件下，**清迈是 1 月和 11 月的强项基地；里斯本是 3-4 月的强项基地。** 把它们当作"季节互补"使用比"二选一"更符合家庭目标。
 
-最大红旗：里斯本是申根 90/180 天、住房成本、坡路/婴儿车和儿童座椅；清迈是烟季 PM2.5、热季、无完整公共交通、郊区车依赖。
+### 1.2 按季节的最佳匹配
 
-Evidence strength: Medium  
-Source limitations: 住房和儿童场馆为有限人工采样，未大规模抓取。  
-Freshness: 2026-05-27 访问。  
-Manual verification needed: 是，尤其签证、房源、医院和目标月份空气。
+| 目标月份 | 清迈 | 里斯本 | 推荐 |
+|---|---|---|---|
+| **1 月** | 🟩 凉爽 + 干燥 + 空气尚可 | 🟧 雨多冷湿 | **清迈** |
+| **2 月** | 🟧 烧林季启动 | 🟧 雨多冷湿 | 都不理想（但里斯本可作"温和缓冲"） |
+| **3 月** | 🟥 烧林季高峰（全球第一污染） | 🟩 改善期 | **里斯本（强烈）** |
+| **4 月** | 🟥 烧林季尾 + 36-38°C 酷热 | 🟩 稳定期 | **里斯本（强烈）** |
+| **10 月** | 🟧 雨季尾 + 登革热 | 🟧 全年最多雨月之一 | 都中等 |
+| **11 月** | 🟩 凉爽 + 空气好 | 🟧 雨多 | **清迈** |
 
-## 2. Family Context and Decision Criteria
+### 1.3 作为"首选 3 个月单一基地"的建议
 
-家庭目标不是旅游打卡，而是三个月稳定日常：合法停留、可做饭洗衣的住房、儿童每天能消耗体力、医疗路径清楚、不买车也能生活、成人偶尔有恢复空间。
-
-两个孩子约 2.5 岁和 4.5 岁。临时 childcare 只能算加分，不能作为系统依赖。评估因此优先看重复性、近场可达、坏天气/坏空气 fallback、父母监督成本，而不是景点数量。
-
-Evidence strength: High  
-Source limitations: 这是任务给定家庭假设。  
-Freshness: 任务当前上下文。  
-Manual verification needed: 需要补充实际护照、预算、目标月份和孩子健康史。
-
-## 3. Methodology
-
-本轮建立了本地项目、来源登记、请求日志、缓存索引和证据文件。硬约束优先使用官方来源；生活层使用平台、场馆、地图型页面、家庭博客和社区信号交叉判断；社区评论只按“重复信号/弱信号/单一轶事”使用。
-
-没有抓取 Airbnb、Booking、Google Maps 或 Facebook 私密内容。Airbnb 和 Facebook 私密群组记录为不可访问/不采集；住房样本使用 Flatio、Vrbo、Booking、ThaiApartment、FazWaz、本地 rental 页面和服务式公寓页面的人工采样。
-
-Evidence strength: Medium  
-Source limitations: 平台价格动态；Google Maps 照片和逐街路线未完成。  
-Freshness: 2026-05-27。  
-Manual verification needed: 对最终候选房源和儿童活动点逐项联系。
-
-## 4. Hard Constraint Comparison
-
-签证：里斯本是申根体系。葡萄牙短期申根签证和 EU 90/180 天规则意味着三个月不能随意超出 90 天，且是整个申根区累计。[LIS_VISA_01, EU_VISA_01] 清迈的保守路径是旅游签 60 天加 30 天延期，或 DTV 覆盖远程工作/家属，但 2026 年免签政策有调整信号，不能依赖旧规则。[TH_VISA_01, TH_VISA_02, TH_VISA_03, TH_DTV_01]
-
-安全：加拿大和美国对葡萄牙整体风险较低，但里斯本有扒窃和短租安全风险。[CAN_PT_01, US_PT_01] 泰国为更高谨慎级别，主要区域警告不在清迈核心，但清迈空气污染被加拿大官方点名。[CAN_TH_01, US_TH_01, UK_TH_01]
-
-气候/空气：里斯本目标月份总体可用，主要是冬雨和湿冷。[LIS_CLIM_01] 清迈 3-4 月热和 PM2.5 风险高，儿童户外生活会被打断。[CM_CLIM_01, CM_AIR_01, CM_AIR_02]
-
-医疗：里斯本有 Dona Estefania、CUF、Hospital da Luz 和私立儿科路径，但英文和等待时间需确认。[LIS_HEALTH_01-LIS_HEALTH_04] 清迈 Bangkok Hospital Chiang Mai 儿科和 24h emergency 证据更直接。[CM_HEALTH_01, CM_HEALTH_02]
-
-Evidence strength: High for visa/safety/air; Medium for operational healthcare.  
-Source limitations: 泰国签证政策近期变动，医院排班未电话确认。  
-Freshness: 2026-05-27。  
-Manual verification needed: 官方签证 eligibility 和医院电话确认。
-
-## 5. Life Operability Comparison
-
-住房：里斯本可行但贵，筛选条件会把供应压窄。[LISH_01-LISH_10] 清迈供应和价格更友好，但要把空气净化、交通位置和噪音作为硬条件。[CMH_01-CMH_10]
-
-儿童日常：里斯本最强区域是 Parque das Nacoes、Estrela 和 Campo de Ourique；公园、河滨、室内 play 和亲子社群能支撑日常。[LIS_CHILD_01-LIS_CHILD_10] 清迈儿童咖啡、playground、Hang Dong 亲子场景强，但不是所有都步行可达；烟季会把生态压到室内。[CM_CHILD_01-CM_CHILD_12]
-
-交通：里斯本公共交通和无车生活强于清迈，但坡和儿童座椅仍是摩擦。[LIS_MOB_01-LIS_MOB_05] 清迈无完整公共交通，Grab/songthaew/私车构成系统；Hang Dong 和 San Sai 无车风险高。[CM_MOB_01-CM_MOB_04]
-
-文化自然：里斯本文化更容易日常化，海边和公园可做周度节奏。清迈文化差异和自然上限更高，但多依赖车和空气窗口。
-
-Evidence strength: Medium  
-Source limitations: 未做逐点 Google Maps 照片、厕所、阴影、空气净化核验。  
-Freshness: 2026-05-27。  
-Manual verification needed: 以最终房源为中心重做 1km/5km 生活地图。
-
-## 6. Community and Anecdotal Feedback
-
-里斯本重复信号：家庭社区存在；Campo de Ourique、Estrela、Parque das Nacoes 比旅游核心更适合家庭；坡、石子路和 stroller 是真实摩擦。[LIS_COMM_01-LIS_COMM_06]
-
-清迈重复信号：外籍家庭/亲子群和儿童咖啡生态存在；Hang Dong 家庭活动强；烟季和无公共交通是反复出现的问题。[CM_COMM_01-CM_COMM_07]
-
-Evidence strength: Low-Medium  
-Source limitations: 社区来源偏外籍和旅行者视角，不代表整体。  
-Freshness: 多数为 2025-2026 搜索可见结果。  
-Manual verification needed: 进群后问具体年龄、短住接纳、活动频率、烟季安排。
-
-## 7. City-by-City Evidence Summary
-
-### Lisbon
-
-适合作为第一基地的条件：预算能覆盖优质中短租；住 Campo de Ourique、Estrela 或 Parque das Nacoes 的低摩擦房源；签证天数留缓冲；准备轻便 stroller/背带和儿童座椅方案。
-
-不适合的条件：预算紧、必须住旅游核心、不能接受坡路和高住房成本、需要稳定 drop-off childcare。
-
-### Chiang Mai
-
-适合作为基地的条件：目标月为 11-1 月或最多延伸到空气尚可的 2 月；住房有空气净化器和强空调；选 Nimman/Old City 便利区或 Hang Dong 但有车/司机策略；不依赖 childcare。
-
-不适合的条件：目标月覆盖 3-4 月；孩子有呼吸道敏感；不愿处理 Grab/车座/车依赖；期待每天自然户外。
-
-Evidence strength: Medium  
-Source limitations: 仍缺实际房源报价和逐路验证。  
-Freshness: 2026-05-27。  
-Manual verification needed: 月份、房源、医院、交通。
-
-## 8. Side-by-Side Matrix
-
-| dimension | Lisbon | Chiang Mai |
+| 候选 3 个月组合 | 推荐 | 关键风险 |
 |---|---|---|
-| Visa/legal stay | Yellow / High | Yellow / Medium |
-| Official safety | Green / High | Yellow / High |
-| Climate | Green-Yellow / Medium | Seasonal Yellow-Red / High |
-| Air quality | Green / Medium | Red in Mar-Apr / High |
-| Housing | Yellow / Medium | Green-Yellow / Medium |
-| Pediatric healthcare | Green-Yellow / Medium | Green / High |
-| Child daily activity | Green-Yellow / Medium | Yellow-Green seasonal / Medium |
-| Indoor fallback | Yellow / Medium | Green-Yellow / Medium |
-| Mobility no car | Green-Yellow / Medium | Yellow-Red / Medium |
-| Community support | Green-Yellow / Medium | Green-Yellow / Medium |
-| Overall first base | Green-Yellow / Medium | Green only in right season; Red in smoke season |
+| 清迈 1-3 月（90 天） | 🟥 **不建议** | 3 月烧林季 PM2.5 极端，对幼儿是禁区 |
+| 清迈 11-1 月（90 天） | 🟩 **强烈推荐** | 空气、气候、医疗、社群最强；签证需 TR60+续30 或 DTV |
+| 清迈 2-4 月（90 天） | 🟥 **强烈不建议** | 烧林季全程 |
+| 里斯本 1-3 月（90 天） | 🟧 **可行** | 1/2 月雨冷湿；3 月转晴 |
+| 里斯本 3-5 月（90 天） | 🟩 **推荐** | 春季稳定；需在 4 月底前安排离开避开夏季旺季 |
+| 里斯本 10-12 月（90 天） | 🟧 **可行** | 雨季全程；需选房硬指标到位 |
 
-Evidence strength: Medium  
-Source limitations: 完整矩阵见 `reports/comparison_matrix.csv`。  
-Freshness: 2026-05-27。  
-Manual verification needed: 选择月份后重算。
+### 1.4 三个最大红旗（无法靠选房 / 选区缓解的）
+1. **清迈烧林季 (R-CMI-1)**：3-4 月对 2.5/4.5 岁儿童是禁区，PM2.5 极端（全球第一），唯一缓解 = 离境
+2. **配偶/孩子护照国别 (R0)**：决定整个签证路径与提前期，家庭必须先核实
+3. **里斯本申根 90/180 零容错 (R-LIS-1)**：3 个月用满后 90 天不能再入
 
-## 9. Red Flags
+### 1.5 三个最大未知（影响决策但可在出发前核实）
+1. 渥太华泰使馆对中国护照 + Canadian PR 申请 TR/DTV 的最新接受度 (U1)
+2. 2026-05-19 泰内阁决议对中泰双边 30 天协议的影响 (U2)
+3. 房源 listing 的实际设备清单（清迈空气净化器；里斯本电梯/双玻璃/除湿）(U9)
 
-里斯本红旗：申根天数、住房成本、坡路/无电梯/潮湿、网约车儿童座椅、冬雨 fallback。[EU_VISA_01, LISH_01-LISH_10, LIS_MOB_03-LIS_MOB_05]
+---
 
-清迈红旗：3-4 月烟季、签证政策变动、无完整公共交通、车座不确定、郊区车依赖、住房空气净化。[CM_AIR_01-CM_AIR_03, TH_VISA_03, CM_MOB_01-CM_MOB_04]
+## 2. 家庭情境与决策标准
 
-Evidence strength: High for air/visa; Medium for housing/mobility.  
-Source limitations: 车座和房源需实地/平台确认。  
-Freshness: 2026-05-27。  
-Manual verification needed: 见 `reports/red_flags.md`。
+### 2.1 家庭目标（按用户原始描述）
+1. 文化体验
+2. 自然导向生活
+3. 家庭时间
+4. 慢旅而非观光密集
+5. 每地约 3 个月
 
-## 10. Unknowns and Next Verifications
+### 2.2 关键约束
+- 大人 **不必须**维持全职远程工作
+- Childcare **可选**，不可作硬依赖
+- 风险容忍：低-中（签证 / 医疗 / 儿童安全 / 住房 / 日常物流不可有高度不确定）
+- 孩子年龄：出发时约 4.5 岁和 2.5 岁（需婴儿车 + 不能长距步行）
 
-最关键未知：每位家庭成员护照规则、实际出发月份、预算、孩子呼吸道健康史、可接受的交通方案、是否能自带儿童座椅。
+### 2.3 决策框架的关键转换
+本报告**不**按"哪座城市赢"判断，而按"两座城市能否各自支撑 3 个月稳定家庭节奏"评估。  
+评分维度按**生活功能**而非景点数。
 
-下一步不是继续泛搜，而是做决策型核验：先定目标三个月窗口，再分别向 10 套房源、3 家医院、5 个儿童活动/室内 play provider 发消息。
+---
 
-Evidence strength: Medium  
-Source limitations: 当前是研究系统，不是预订确认。  
-Freshness: 2026-05-27。  
-Manual verification needed: 是。
+## 3. 方法论
 
-## 11. Suggested Next Research Actions
+### 3.1 源类型
+- **官方** (high trust)：政府、领事馆、移民局、市政、公立医院
+- **平台** (medium)：Airbnb / Booking / Flatio / Google Maps / OpenStreetMap / IQAir
+- **地图** (medium)：Google Maps / OSM
+- **评论** (medium-low)：Google Reviews / Airbnb / Booking 评论
+- **社群** (anecdotal)：Reddit / Facebook public / 论坛
+- **博客** (anecdotal)：家庭旅行 / 世界学博客
+- **视频** (visual anecdotal)：YouTube 家庭 vlog
+- **新闻** (medium)：The Portugal News、Bangkok Post 等
 
-1. 先确定月份。如果清迈包含 3-4 月，除非有强撤离/空气方案，否则剔除。
-2. 逐人确认签证。葡萄牙跑申根 90/180；泰国跑 Thai e-Visa 和领馆确认。
-3. 建 20 套房源短名单：里斯本 10、清迈 10，按儿童安全、空气/湿度、交通、医疗、取消政策筛。
-4. 对每个房源画 1km 日常图：超市、药房、公园、室内 play、医院车程。
-5. 联系医院和儿童活动场馆，确认英文、年龄、短住家庭、周末、费用。
+### 3.2 采样规则
+- 硬约束维度：≥ 2 官方源
+- 住房：每城 10 个样本 + 评论主题表
+- 儿童活动：每候选区 ≥ 3 户外 + ≥ 5 室内备选
+- 社区轶事：≥ 5 条独立评论 OR ≥ 3 平台才可作结论
 
-结论：在未知预算和具体月份前，不应给绝对赢家。若这是第一次三个月家庭慢旅行，且预算允许，里斯本是更稳定的低到中风险选择。若目标月份是 11-1 月且家庭愿意处理车/Grab/空气净化，清迈可以成为性价比更高、文化和自然更强的选择；3-4 月则不建议。
+### 3.3 证据置信度
+- High：官方/平台/地图证据 + 多个 source 支持
+- Medium：≥ 2 source 类型支持
+- Low：限于轶事
+- Unknown：数据不足
+
+### 3.4 数据访问限制（评估限制）
+- **Reddit** 被 anti-bot / login wall 阻挡，site:reddit.com WebSearch 多次 0 返回 → 社区证据被迫降级为博客 + Google Reviews + 第三方汇总
+- **Airbnb / Booking 单 listing 页** 被 403 阻挡 → 住房样本部分降级为价格区间 + Blueground / Idealista / Flatio 等第三方
+- **Facebook 群组** 大部分私密 → 仅记录公开群名 + 描述
+- **Google Places / Geocoding / Overpass / Meteostat / OpenAQ / IQAir API** 在此环境未配 key → 全程通过 WebFetch 公开页 + 第三方汇总
+- 所有不可访问源已记录于 `data/logs/inaccessible_sources.csv`
+
+### 3.5 局限性
+本报告基于公开网页 + 第三方汇总；**家庭须在抵达前 60-90 天独立核实** U0-U5 这 5 项关键事项；落地后第 1 周再核实 U6-U13。
+
+---
+
+## 4. 硬约束对比 (Hard Constraints)
+
+### 4.1 签证 / 入境
+
+**里斯本** (Yellow / high)
+- 中国护照（加拿大 PR）须申请葡萄牙申根短期签证；可在多伦多/温哥华/渥太华领事馆 + VFS Global [S-LIS-001][S-LIS-003][S-LIS-005]
+- 90/180 规则：3 个月用满；归国 90 天内不能再入申根 [S-LIS-002]
+- 处理时间 15 个工作日（可延至 45 天）；费用约 CAD$135 [S-LIS-001]
+- 长签 D7（被动收入）/ D8（数字游民）：本家庭不适用（D7 需被动收入；D8 月收入门槛 €3,680）[S-LIS-006][S-LIS-007]
+
+**清迈** (Yellow / medium)
+- 2024-03-01 中泰互免 30 天 [S-CMI-001]；境内可续 30 天（1,900 THB）= 最长 60 天，**不够 90 天**
+- 2026-05-19 泰内阁取消 90+ 国 60 天免签；中国双边协议影响未明 [S-CMI-002]
+- 90 天路径选项：
+  - **TR 60 + 续 30** = 90 天（从渥太华泰使馆申请最稳妥）
+  - **DTV 5 年多签**：金融门槛 500,000 THB 持 3 个月 + 远程工作/Thai Soft Power 证明；申请费 10,000 THB；中国护照"必须从就业国申请" [S-CMI-003][S-CMI-004]
+
+### 4.2 安全建议
+- **里斯本**: 加方"正常防范"(Green/high) — 主要风险扒手（28/15/25 路电车）[S-LIS-008][S-LIS-009][S-LIS-077]
+- **清迈**: 加方对泰国整体"高度谨慎"，但清迈不在警告区 (Green/high)；街边野狗 7-30 万只是 yellow flag [S-CMI-007][S-CMI-048][S-CMI-049]
+
+### 4.3 气候与空气（按目标月份）
+
+| 月份 | 里斯本 (高/低 °C, 雨 mm, 雨天) | 清迈 (高/低 °C, 雨 mm) | PM2.5 |
+|---|---|---|---|
+| 1 | 14.9/8.8, 110, 10 | 30/15, 10 | 清迈 🟩；里斯本 🟩 |
+| 2 | 16.1/9.2, 80, 8 | 33/16, 10 | 清迈 🟧（烧林启动）|
+| 3 | 18.6/11.1, 75, 8 | 35.4/19.6, 20 | 清迈 🟥（AQI 233+）|
+| 4 | 20.1/12.3, 70, 8 | 36.7/22.9, 55 | 清迈 🟥（酷热+烧林尾）|
+| 10 | 22.6/15.4, 115, 9 | 31.8/22.2, 120 | 都 🟧 |
+| 11 | 18.0/11.9, 135, 10 | 30.9/19.3, 50 | 清迈 🟩；里斯本 🟧 |
+
+来源：[S-LIS-010][S-LIS-011][S-CMI-011][S-CMI-008][S-CMI-009][S-CMI-010]
+
+**关键比较**：
+- 里斯本年均 PM2.5 ~6 µg/m³ [S-LIS-013]
+- 清迈 2024 年均 PM2.5 = 26.4 µg/m³ = WHO 5.2 倍；2026-03-30 单日 188 µg/m³（全球第一）[S-CMI-008][S-CMI-009]
+
+### 4.4 医疗（基线）— **两地都 Green / high**
+
+**里斯本** [S-LIS-015][S-LIS-017][S-LIS-018][S-LIS-019][S-LIS-020][S-LIS-021]
+- 公立：Hospital Dona Estefânia（24h 儿科参考中心）
+- 私立：CUF Descobertas（24h 儿科，多语言）、Hospital da Luz（24h 急诊）、Lusíadas（儿科 walk-in 08-22）
+- 紧急救助对外国人开放（112）
+
+**清迈** [S-CMI-015][S-CMI-016][S-CMI-017][S-CMI-018]
+- Bangkok Hospital CM：JCI 认证、24/7 急诊、24 种语言
+- Chiang Mai Ram：JCI 认证、children's hospital、儿科次专科
+- Sriphat（CMU）：中等价位高质量
+- Lanna：经济价位
+
+### 4.5 住房基线
+- **里斯本** (Yellow/medium)：2 卧 €1,600-2,200/月；冬季无中央暖气 + 潮湿 + 霉菌是反复出现的 expat 投诉主题 [S-LIS-026][S-LIS-042][S-LIS-046][S-LIS-047][S-LIS-048][S-LIS-081]
+- **清迈** (Green/medium)：核心区 2 卧 15-28k THB/月（~430-800 USD）；空气净化器装备稀缺是 yellow flag [S-CMI-020][S-CMI-021][S-CMI-023][S-CMI-024]
+
+**Evidence strength**: high · **Source limitations**: 中度（部分房源细节仅来自 third-party guide） · **Freshness**: 2025-2026 · **Manual verification needed**: 房源具体设备清单（U9）
+
+---
+
+## 5. 生活可运营性对比 (Life Operability)
+
+### 5.1 儿童户外活动 — **两地都 Green**
+- **里斯本**: Jardim da Estrela / Monsanto / Parque Tejo / Jardim do Campo Grande 等每候选区前 3 强齐备 [S-LIS-026][S-LIS-049][S-LIS-051][S-LIS-057]
+- **清迈**: Royal Park Rajapruek / Huay Tung Tao / Queen Sirikit Botanic / Doi Inthanon 平铺装路径 [S-CMI-023][S-CMI-028][S-CMI-030][S-CMI-031][S-CMI-056]
+- **关键差**: 清迈烧林季 3-4 月几乎全部失效；里斯本雨季打折但不"清零"
+
+### 5.2 自然/开放式玩耍 — **两地都 Green**
+- **里斯本**: Monsanto 5.6 公顷森林 + Cascais 海滩 40 分钟火车（€2.55）[S-LIS-035][S-LIS-049][S-LIS-056][S-LIS-072]
+- **清迈**: Doi Inthanon / Doi Suthep / 大象保护区（无骑乘）/ 草莓园（11-2 月）[S-CMI-028][S-CMI-029][S-CMI-031][S-CMI-051]
+
+### 5.3 室内备选 — **两地都 Green**
+- **里斯本**: Oceanário + Pavilhão do Conhecimento + Sandcastle + LUCA 儿童剧院 + 多购物中心 ≥ 8 候选 [S-LIS-052][S-LIS-053][S-LIS-054][S-LIS-055][S-LIS-083][S-LIS-084]
+- **清迈**: 8 个室内 + 部分显式 air-purified（Reyn.ne / Wooden Ville）[S-CMI-026][S-CMI-027]
+- **烧林季关键差**: 清迈虽有空调 mall，但仅 2 个场所明示 HEPA；普通 mall 滤芯不足以挡 PM2.5 188
+
+### 5.4 结构化活动 — 两地都 Green-Yellow
+- **里斯本** (Yellow/medium)：陶瓷绘画 / Pastel de Nata / 烹饪短期班 [S-LIS-083]
+- **清迈** (Green/medium)：Beaver Club worldschooling hub 明确接受短期 + 大象保护区半日 + 烹饪/泰拳 [S-CMI-032][S-CMI-050][S-CMI-051]
+
+### 5.5 出行 / 婴儿车 — 两地都 Yellow
+
+| 子维度 | 里斯本 | 清迈 |
+|---|---|---|
+| 婴儿车友好 | 中心区坡+卵石+老楼无电梯；Parque das Nações 平坦 [S-LIS-044][S-LIS-080] | 人行道破损 + 摩托车占道；Nimman 较好 [S-CMI-036][S-CMI-037] |
+| 公交/打车 | Metro+Carris+Uber/Bolt 成熟 (Green/high) | Grab + songthaew 普及 (Green/high) |
+| 儿童座椅 | Uber/Bolt 可预订有座椅车辆有限 (Yellow) | Grab 基本无；法律执行近零 (Red/high) [S-CMI-039] |
+| 红车/songthaew | N/A | 无安全带，仅适合慢速短途 [S-CMI-038] |
+
+### 5.6 日常物流 — **两地都 Green**
+- **里斯本**: Pingo Doce / Continente 密集；药店密集 [S-LIS-053][S-LIS-054]
+- **清迈**: Rimping / Tops / Big C / Makro；7-Eleven 也卖基础药/婴儿用品 [S-CMI-040][S-CMI-041][S-CMI-042]
+
+### 5.7 文化与自然融入日常 — **两地都 Green**（不同特色）
+- **里斯本**: 欧式日常 + 河边步道 + Belém 历史 + Cascais 海滩；适合"轻松散步式"文化吸收
+- **清迈**: 佛教节庆 + 寺庙 + 夜市 + 山间村寨 + 大象保护区；适合"亲手体验式"文化（烹饪/手工/泰语）；幼儿接触自然门槛低
+
+### 5.8 父母恢复 / Childcare — **两地都 Yellow/low**（轶事级）
+- **不可作硬依赖**；两城都有 babysitter / nanny 平台但缺独立核实
+- **清迈**世界学社群（Beaver Club）参与即可获得部分父母自由时间 [S-CMI-033]
+
+---
+
+## 6. 社区与轶事反馈
+
+### 6.1 复现信号（≥ 3 平台 OR ≥ 5 独立来源）
+
+**里斯本**（来自博客 + Google Reviews + Meetup）
+- ✅ **Lisbon Parents & Kids Meetup 每周六 15:00-18:00 活跃** [S-LIS-061]
+- ✅ **Lisbon for Parents 群组活跃** [S-LIS-058][S-LIS-059][S-LIS-060]
+- ⚠️ 冬季无暖气 / 霉菌反复出现 [S-LIS-046][S-LIS-047][S-LIS-048][S-LIS-081]
+- ⚠️ 中心区婴儿车摩擦 [S-LIS-044][S-LIS-045][S-LIS-080]
+
+**清迈**（来自 worldschooling 博客 + Google Reviews + 第三方 expat 指南）
+- ✅ **Beaver Club Worldschooling Hub 是亚洲热门基地** [S-CMI-033]
+- ✅ **Bangkok Hospital CM 多语言 + JCI 经验丰富** [S-CMI-015][S-CMI-016]
+- ⚠️ **烧林季离境共识**：≥ 3 平台 / ≥ 6 源一致建议 2-4 月离开 1-3 个月 [S-CMI-008][S-CMI-009][S-CMI-010]
+- ⚠️ **Grab 无 car seat 是已知问题**（≥ 4 来源一致）[S-CMI-039]
+
+### 6.2 单条轶事（仅作案例）
+- 里斯本某博客详述 Campo de Ourique 老楼电梯故障 1 周的经历 → 案例提示，不作通用结论
+- 清迈某 vlog 详述烧林季幼儿哮喘紧急就医 → 案例提示
+
+### 6.3 矛盾信号
+- 关于 DTV 是否可"在 Vientiane 申请"，不同来源结论不一致 [S-CMI-004] vs [S-CMI-005] → 保留矛盾，标 Unknown，建议直接电话使馆核实
+
+### 6.4 证据缺口
+- Reddit 真实信号缺失 → 轶事样本未能达 "≥ 3 平台" 阈值的有几个维度
+- Airbnb / Booking 单 listing 评论 → 仅用第三方汇总
+
+---
+
+## 7. 城市证据分项摘要
+
+### 7.1 里斯本
+
+**强项**
+- 医疗 24h 儿科多家 + 多语言 (Green/high)
+- 户外/自然/室内候选丰富，每候选区前 3 齐备 (Green/high)
+- 安全 — 加方"正常防范"
+- 文化 — 欧式日常 + 安静 + 河边/海边
+
+**弱项**
+- 冬季湿冷 + 无中央暖气 + 霉菌（多源一致）
+- 中心区婴儿车摩擦（坡 + 卵石 + 老楼）
+- 申根 90/180 零容错
+
+**最佳候选区**（综合 4 个 primary 区）
+1. **Parque das Nações** — 平坦河岸 + 现代公寓 + 紧邻 CUF Descobertas + Oceanário/Pavilhão 室内备选 → **推荐家庭首选**
+2. **Campo de Ourique** — 安静本地 + 市场+小公园 + Jardim Teófilo Braga；缺点：老楼电梯不稳
+3. **Estrela / Lapa** — Jardim da Estrela 最强公园；缺点：坡
+4. **Belém / Restelo** — 大空间 + 平坦广场 + 河边；缺点：距市中心远，餐饮节庆少
+
+### 7.2 清迈
+
+**强项**
+- 室内+户外候选丰富（1/11 月最佳）
+- 医疗 JCI 认证多家 + 24/7 多语言
+- 世界学社群密集，结构化活动接受短期
+- 房租较里斯本低 2-3 倍
+- 文化体验门槛低（烹饪/泰拳/大象保护区/泰语）
+
+**弱项**
+- **烧林季 2-4 月对幼儿是禁区**（极高严重度）
+- 签证路径动荡（2024 互免 + 2026 内阁决议）
+- Grab/出租车无儿童安全座椅
+- 街边野狗 + 狂犬病基线
+- 房源缺 HEPA 空气净化器
+
+**最佳候选区**（综合 4 个 primary 区）
+1. **Nimman / Santitham** — 紧邻 Bangkok Hospital CM + 高密度咖啡/室内备选 + 步行可行 → **家庭首选（非烧林季）**
+2. **Hang Dong** — international school 学区 + 大空间 + Royal Park Rajapruek + Grand Canyon Water Park；缺点：距医院远 + 野狗多
+3. **Old City outer edge** — 旅游/本地混合 + 寺庙文化沉浸；缺点：人行道差 + 夜市噪音
+4. **San Sai** — 安静 + 性价比高；缺点：日常物流相对远
+
+---
+
+## 8. 对比矩阵（汇总）
+
+详见 `reports/comparison_matrix.csv`。
+
+**18 个核心维度**：签证、安全、气候、空气、住房、医疗、户外、自然、室内、结构化、Childcare、出行、物流、文化、自然体验、社群、失败模式、综合首选基地。
+
+**统计**：
+- 🟩 Green: 里斯本 13 个 / 清迈 11 个
+- 🟧 Yellow: 里斯本 7 个 / 清迈 5 个
+- 🟥 Red: 里斯本 0 个 / 清迈 5 个（**全部集中在 2-4 月烧林季 + 签证不确定 + Grab 无座椅**）
+
+---
+
+## 9. 红旗（汇总）
+
+详见 `reports/red_flags.md`。
+
+**最高优先级**：
+1. **R0**：配偶 / 孩子护照国别 → 共享，必须先核实
+2. **R-CMI-1**：清迈烧林季 PM2.5 → 不可在本地缓解
+3. **R-LIS-1**：里斯本申根 90/180 零容错
+
+**次高优先级**：
+4. R-CMI-2：泰签证政策动荡
+5. R-CMI-3：清迈 Grab 无儿童座椅
+6. R-LIS-2：里斯本冬季湿冷 + 霉菌
+
+---
+
+## 10. 未知与下一步核实
+
+详见 `reports/unknowns_and_next_verifications.md`。
+
+**T-120 / T-90 / T-60 / T-30 / T-7 / 抵达后第 1 周** 各阶段核实清单已建立。
+
+**Evidence strength**: medium-high  
+**Source limitations**: 受限于 Reddit / Airbnb / Facebook 等平台 anti-bot；社区轶事样本未能达到所有维度 "≥ 3 平台" 阈值  
+**Freshness**: 2025-2026 主流  
+**Manual verification needed**: U0-U5 五项关键项，必须在出发前 90 天内完成
+
+---
+
+## 11. 建议的下一步研究行动
+
+### 11.1 出发前 90 天内必做（家庭执行）
+1. **U0**：内部确认所有成员护照
+2. **U1**：电话/邮件渥太华泰使馆，确认 TR60 / DTV 接受度
+3. **U2**：查泰外交部官网最新政策
+4. **U3**：电话葡萄牙领事馆确认子女额外材料
+5. **U4**：Google Maps 抽样 4 时段，到目标医院驾车时间
+6. **U5**：旅行医疗保险 + 直付清单核实
+
+### 11.2 出发前 60 天内（住宿决策）
+- **U9**：与房东 / 平台 message 核实
+  - 里斯本：双玻璃 + 电暖气 + 除湿机 + 电梯（硬筛）
+  - 清迈：HEPA 净化器型号 + 滤芯 + 纱窗 + 泳池围栏（硬筛）
+- **U10**：预订入境后第 1-2 周的结构化活动名额
+
+### 11.3 出发前 30 天内（健康准备）
+- 儿童狂犬暴露前疫苗（清迈方向）
+- 自带便携式儿童安全座椅 ×2（清迈方向）
+- 应急药包
+
+### 11.4 抵达后第 1 周内（实地核验）
+- **U7**：野狗密度（清迈）
+- **U8**：Reddit / Facebook 真实信号手动浏览
+- **U11-U13**：公共交通 / 支付 / 周末聚会
+
+### 11.5 调研可拓展方向（如需要）
+- **越南（岘港 / 河内）**作为清迈 3-4 月烧林季的备选基地
+- **西班牙（瓦伦西亚 / 塞维利亚）**作为里斯本冬季的替代欧洲基地
+- **预算建模**：90 天总成本（住房 + 餐饮 + 医疗 + 活动）两城对比
+- **入学 / preschool**：若考虑 short-term 入读国际学校的可行性与成本
+
+---
+
+## 12. 总评（仅在证据明确支持时）
+
+**本报告不输出"哪城获胜"的总评**，因为：
+1. 两城的强弱在不同月份完全反转；
+2. 关键阻断项 R0 未解决；
+3. Reddit / Airbnb 轶事样本受平台限制，部分维度仅达 medium 置信度。
+
+**唯一可下的结论**：
+
+> **若家庭只能在 2026 年的 1-4 月或 10-11 月内选一个 3 个月窗口**：
+> - **1 月-3 月初**：里斯本可行（雨冷但稳定）；清迈仅 1 月可行，3 月起烧林禁区
+> - **3 月-5 月初**：里斯本最佳（春季稳定）；清迈不可
+> - **10 月-12 月**：清迈较优（11 月最佳）；里斯本雨多
+>
+> **若家庭可"两地各 3 个月"**：
+> - 推荐组合："清迈 11 月-1 月" + "里斯本 3 月-5 月"，中间需短回加拿大或短旅另一国（避免申根 90/180 与免签连续）
+>
+> 在此组合下，两城都能满足"文化 + 自然 + 家庭时间 + 慢旅 + 稳定日常节奏"的家庭目标。
+
+---
+
+## 附录
+
+- 完整证据：`evidence/lisbon/*.md`、`evidence/chiang_mai/*.md`
+- 全部 143 条源：`data/sources/sources.csv`
+- 对比矩阵 CSV：`reports/comparison_matrix.csv`
+- 红旗清单：`reports/red_flags.md`
+- 未知与下一步：`reports/unknowns_and_next_verifications.md`
+- 网络日志：`data/logs/search_log.csv`、`request_log.csv`、`inaccessible_sources.csv`

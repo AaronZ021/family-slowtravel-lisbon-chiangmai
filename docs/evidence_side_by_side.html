@@ -1,0 +1,1466 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>证据横向对照表 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="evidence_side_by_side.html" class="active">证据横向对照</a>
+      <a href="final_comparison_report.html">最终对比报告</a>
+      <a href="red_flags.html">红旗清单</a>
+      <a href="unknowns_and_next_verifications.html">未知与下一步</a>
+      <a href="comparison_matrix.html">对比矩阵</a>
+      <a href="evidence_lisbon.html">里斯本证据</a>
+      <a href="evidence_chiang_mai.html">清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 id="vs">证据横向对照表 — 里斯本 vs 清迈<a class="headerlink" href="#vs" title="Permanent link">¶</a></h1>
+<blockquote>
+<p><strong>规则</strong>：本文件<strong>只列事实</strong>，不做颜色判断、不做推荐、不做严重度排序。<br />
+每条事实挂源 ID（详见 <code>data/sources/sources.csv</code>）。<br />
+留给读者自行比较。</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 签证 / 入境（针对中国护照 + 加拿大居民）<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本 / 葡萄牙</th>
+<th>清迈 / 泰国</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否需签证</td>
+<td>必须申请申根短期签证 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-004]</span></td>
+<td>中泰互免 30 天（2024-03-01 生效）<span class="s-cmi">[S-CMI-001]</span></td>
+</tr>
+<tr>
+<td>单次停留上限</td>
+<td>90 天 / 任意 180 天滚动 <span class="s-lis">[S-LIS-002]</span></td>
+<td>30 天免签；境内可续 1 次 30 天（1,900 THB）= 60 天 <span class="s-cmi">[S-CMI-002]</span></td>
+</tr>
+<tr>
+<td>90 天路径</td>
+<td>短期签即可（恰好用满）<span class="s-lis">[S-LIS-002]</span></td>
+<td>TR 60 + 续 30 = 90 天 / 或 DTV 5 年多次 <span class="s-cmi">[S-CMI-002]</span><span class="s-cmi">[S-CMI-003]</span></td>
+</tr>
+<tr>
+<td>申请地点</td>
+<td>Toronto / Vancouver / Ottawa 领事馆 + VFS Global <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-003]</span><span class="s-lis">[S-LIS-005]</span></td>
+<td>Royal Thai Embassy Ottawa；DTV 从中国 9 个泰使领馆或第三国（Laos/Singapore/HK/Macau） <span class="s-cmi">[S-CMI-004]</span><span class="s-cmi">[S-CMI-005]</span></td>
+</tr>
+<tr>
+<td>处理时间</td>
+<td>15 个工作日（可延至 45 天）<span class="s-lis">[S-LIS-001]</span></td>
+<td>未明确给出（TR 通常 5-15 工作日）</td>
+</tr>
+<tr>
+<td>费用</td>
+<td>CAD$135 <span class="s-lis">[S-LIS-001]</span></td>
+<td>DTV 申请费 10,000 THB <span class="s-cmi">[S-CMI-003]</span>；TR 费用未明确</td>
+</tr>
+<tr>
+<td>必备金融条件</td>
+<td>近 3 月银行流水 + 医疗保险 ≥ €30,000 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-004]</span></td>
+<td>DTV：500,000 THB 持 3 个月以上 <span class="s-cmi">[S-CMI-003]</span></td>
+</tr>
+<tr>
+<td>长期签备选</td>
+<td>D7（被动收入）/ D8（数字游民 月入门槛 €3,680）<span class="s-lis">[S-LIS-006]</span><span class="s-lis">[S-LIS-007]</span></td>
+<td>DTV 5 年多次（含 Soft Power 路径如学厨/泰拳/泰语）<span class="s-cmi">[S-CMI-003]</span></td>
+</tr>
+<tr>
+<td>子女随行规则</td>
+<td>子女需独立签证 + 监护材料（具体清单需查领事馆）</td>
+<td>DTV dependents（配偶 + &lt; 20 岁子女）需单独申请 <span class="s-cmi">[S-CMI-003]</span></td>
+</tr>
+<tr>
+<td>续签后再入境</td>
+<td>出申根后 180 天滚动窗口内不可超 90 天 <span class="s-lis">[S-LIS-002]</span></td>
+<td>30 天免签可在境内续 30 天；overstay 罚款 500 THB/日</td>
+</tr>
+<tr>
+<td>远程工作合法性</td>
+<td>短签不允许商业活动；D8 才合法 <span class="s-lis">[S-LIS-006]</span></td>
+<td>免签/TR 不允许 paid employment；DTV 允许 remote work for foreign employer <span class="s-cmi">[S-CMI-003]</span></td>
+</tr>
+<tr>
+<td>政策变动信号</td>
+<td>Schengen 通用规则较稳定</td>
+<td>2026-05-19 内阁取消 90+ 国 60 天免签计划；中国双边协议影响未明 <span class="s-cmi">[S-CMI-002]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">2. 官方旅行建议<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本 / 葡萄牙</th>
+<th>清迈 / 泰国</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加拿大政府等级</td>
+<td>"Take normal security precautions"（最低级）<span class="s-lis">[S-LIS-008]</span></td>
+<td>"Exercise a high degree of caution"（第二级）<span class="s-cmi">[S-CMI-007]</span></td>
+</tr>
+<tr>
+<td>加方建议日期</td>
+<td>2026-05-26 <span class="s-lis">[S-LIS-008]</span></td>
+<td>（未明确日期）<span class="s-cmi">[S-CMI-007]</span></td>
+</tr>
+<tr>
+<td>加方对城市具体说明</td>
+<td>里斯本不在警告区</td>
+<td>清迈不在警告区（警告区为南部 Narathiwat/Pattani/Yala/Songkhla 及柬埔寨边境 50 km 内）<span class="s-cmi">[S-CMI-007]</span></td>
+</tr>
+<tr>
+<td>主要犯罪类型</td>
+<td>扒手 + 抢包，高发于 tram 15/25/28 <span class="s-lis">[S-LIS-008]</span><span class="s-lis">[S-LIS-009]</span><span class="s-lis">[S-LIS-077]</span></td>
+<td>偶发政治紧张和示威（曼谷）；清迈无明显警告 <span class="s-cmi">[S-CMI-007]</span></td>
+</tr>
+<tr>
+<td>暴力犯罪</td>
+<td>罕见，主要在夜店酒吧 <span class="s-lis">[S-LIS-008]</span></td>
+<td>未提及清迈具体</td>
+</tr>
+<tr>
+<td>恐袭威胁等级</td>
+<td>3/5 "Significant"（UK FCDO 表述）<span class="s-lis">[S-LIS-008]</span><span class="s-lis">[S-LIS-009]</span></td>
+<td>未明确</td>
+</tr>
+<tr>
+<td>自然灾害基线</td>
+<td>秋冬强降雨可引发洪水；夏季野火 4-10 月；地震属持续风险 <span class="s-lis">[S-LIS-008]</span></td>
+<td>雨季登革热；烧林季空气污染（见第 4 节）<span class="s-cmi">[S-CMI-013]</span></td>
+</tr>
+<tr>
+<td>城市特有风险</td>
+<td>旅游电车扒手高发 <span class="s-lis">[S-LIS-008]</span></td>
+<td>街边野狗 7-30 万只（清迈省）<span class="s-cmi">[S-CMI-048]</span><span class="s-cmi">[S-CMI-049]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3">3. 气候（按目标月份）<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>里斯本 高/低 °C · 雨 mm · 雨天 <span class="s-lis">[S-LIS-010]</span></th>
+<th>清迈 高/低 °C · 雨 mm · 湿度 <span class="s-cmi">[S-CMI-011]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 月</td>
+<td>14.9 / 8.8 · 110 mm · 10 天</td>
+<td>30 / 15 · 10 mm · 64%</td>
+</tr>
+<tr>
+<td>2 月</td>
+<td>16.1 / 9.2 · 80 mm · 8 天</td>
+<td>33 / 16 · 10 mm · 52%</td>
+</tr>
+<tr>
+<td>3 月</td>
+<td>18.6 / 11.1 · 75 mm · 8 天</td>
+<td>35.4 / 19.6 · 20 mm · 47%</td>
+</tr>
+<tr>
+<td>4 月</td>
+<td>20.1 / 12.3 · 70 mm · 8 天</td>
+<td>36.7 / 22.9 · 55 mm · 52%</td>
+</tr>
+<tr>
+<td>10 月</td>
+<td>22.6 / 15.4 · 115 mm · 9 天</td>
+<td>31.8 / 22.2 · 120 mm · 76%</td>
+</tr>
+<tr>
+<td>11 月</td>
+<td>18.0 / 11.9 · 135 mm · 10 天</td>
+<td>30.9 / 19.3 · 50 mm · 71%</td>
+</tr>
+<tr>
+<td>年均降雨</td>
+<td>774 mm（集中在 11 月-2 月）<span class="s-lis">[S-LIS-010]</span><span class="s-lis">[S-LIS-012]</span></td>
+<td>（未明确年均，见上月度）</td>
+</tr>
+<tr>
+<td>日照高峰</td>
+<td>4 月起 8h/日 <span class="s-lis">[S-LIS-010]</span></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4. 空气质量<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年均 PM2.5</td>
+<td>~6 µg/m³ <span class="s-lis">[S-LIS-013]</span></td>
+<td>26.4 µg/m³（2024 年）= WHO 5.2 倍 <span class="s-cmi">[S-CMI-008]</span></td>
+</tr>
+<tr>
+<td>当前 AQI</td>
+<td>当前 ~56 (Moderate) <span class="s-lis">[S-LIS-013]</span></td>
+<td>2026-03-30: AQI 233 / PM2.5 188 µg/m³（全球第 1）<span class="s-cmi">[S-CMI-009]</span></td>
+</tr>
+<tr>
+<td>烧林/野火季</td>
+<td>夏季野火主要影响 4-10 月（与目标月份重叠较小）<span class="s-lis">[S-LIS-008]</span></td>
+<td>2-4 月烧林季，3 月高峰；AQI 可达 300-700+ <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-010]</span></td>
+</tr>
+<tr>
+<td>烧林季持续</td>
+<td>—</td>
+<td>至 4 月中 Songkran 节前后基本结束 <span class="s-cmi">[S-CMI-010]</span></td>
+</tr>
+<tr>
+<td>区域差异</td>
+<td>Oeiras AQI 71 较高；Santa Iria 33 较低 <span class="s-lis">[S-LIS-013]</span></td>
+<td>各候选区站点差异未量化（数据缺口）</td>
+</tr>
+<tr>
+<td>WHO 健康警告</td>
+<td>—</td>
+<td>IQAir 声明儿童为高敏人群 <span class="s-cmi">[S-CMI-008]</span></td>
+</tr>
+<tr>
+<td>加方政府声明</td>
+<td>—</td>
+<td>"Children, seniors and pregnant women wear anti-pollution masks ... minimize outdoor activities when pollution levels are high" <span class="s-cmi">[S-CMI-007]</span></td>
+</tr>
+<tr>
+<td>跨平台社区共识</td>
+<td>—</td>
+<td>多源（Iglu, Tieland, CNX Local）记录 "expats leave 1-3 months during peak burning" <span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span><span class="s-cmi">[S-CMI-010]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5">5. 医疗（儿科 + 急诊）<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顶级公立儿科</td>
+<td>Hospital Dona Estefânia（1877，葡萄牙首家儿科专科 + 国家儿科参考中心，24/7 急诊）<span class="s-lis">[S-LIS-015]</span><span class="s-lis">[S-LIS-016]</span></td>
+<td>Sriphat Medical Center（CMU 附属，价位较低，质量高）<span class="s-cmi">[S-CMI-017]</span></td>
+</tr>
+<tr>
+<td>JCI 认证医院</td>
+<td>（未明确）；CUF / Lusíadas / Luz 为大型私立</td>
+<td>Bangkok Hospital Chiang Mai + Chiangmai Ram（清迈仅两家 JCI）<span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-018]</span></td>
+</tr>
+<tr>
+<td>24/7 儿科急诊</td>
+<td>CUF Descobertas（"Pediatria Aberto 24h"）+ Hospital da Luz + 部分 Lusíadas 单位 <span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-019]</span></td>
+<td>Bangkok Hospital CM（独立 Pediatric Emergency Care Unit + 直升机转运）<span class="s-cmi">[S-CMI-015]</span><span class="s-cmi">[S-CMI-016]</span></td>
+</tr>
+<tr>
+<td>多语言服务</td>
+<td>CUF 英葡西法德；Lusíadas 全英文官网；Alegria / CMIL 国际诊所 <span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-022]</span><span class="s-lis">[S-LIS-023]</span></td>
+<td>Bangkok Hospital CM "24 语言多语种翻译 + Medical Coordinators 24/7" <span class="s-cmi">[S-CMI-016]</span></td>
+</tr>
+<tr>
+<td>中文服务</td>
+<td>（未明确）</td>
+<td>未明确（医院主打英文 + 多语电话）[CMI healthcare#84]</td>
+</tr>
+<tr>
+<td>紧急号码</td>
+<td>112（生命危险）+ SNS 24 → 808 24 24 24 <span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span></td>
+<td>191（警察）/ 1669（救护）；BCM 急诊 +66 (0)52 089 888 <span class="s-cmi">[S-CMI-015]</span></td>
+</tr>
+<tr>
+<td>公立急诊对外国人</td>
+<td>紧急救助对所有外国人开放（"any foreigner who feels ill ... has the right to be assisted"）<span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span></td>
+<td>私立路径为主，公立 expat 体验数据少 <span class="s-cmi">[S-CMI-017]</span></td>
+</tr>
+<tr>
+<td>私人门诊典型费用</td>
+<td>€60-120 / visit（无保险）<span class="s-lis">[S-LIS-022]</span></td>
+<td>单次咨询 + X 光 ~1,900 THB (~53 USD)（Chiangmai Ram 无保险 expat）<span class="s-cmi">[S-CMI-017]</span></td>
+</tr>
+<tr>
+<td>旅游医疗保险</td>
+<td>申根签证强制 ≥ €30,000；通常先付后报 <span class="s-lis">[S-LIS-001]</span><span class="s-lis">[S-LIS-020]</span></td>
+<td>（强制度未明确，但建议）；BCM/Ram 部分国际保险直付 <span class="s-cmi">[S-CMI-016]</span></td>
+</tr>
+<tr>
+<td>距候选区</td>
+<td>Parque das Nações 步行 &lt; 10 min 到 CUF；Campo de Ourique / Estrela 10-15 min Uber 到 Lusíadas；Belém 10-15 min 驾车到 Luz <span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-019]</span></td>
+<td>Nimman/Santitham 15 min 到 Bangkok Hospital CM；Hang Dong 30 min；San Sai 25 min；Mae Rim 30-40 min <span class="s-cmi">[S-CMI-015]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6">6. 住房（核心区月租范围 + 关键设施）<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
+<h3 id="2-furnished">里斯本（2 卧 furnished）<a class="headerlink" href="#2-furnished" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>月租范围</th>
+<th>关键设施观察</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campo de Ourique</td>
+<td>€1,600-2,200 中位</td>
+<td>Blueground 3 个具名 listing：90-98 m²、空调标配，1 个明示电梯+洗衣机</td>
+<td><span class="s-lis">[S-LIS-036]</span><span class="s-lis">[S-LIS-037]</span><span class="s-lis">[S-LIS-038]</span><span class="s-lis">[S-LIS-042]</span></td>
+</tr>
+<tr>
+<td>Parque das Nações</td>
+<td>较贵端 €1,600-2,200+</td>
+<td>Distrikt / Av. D. João II 53 / Rua das Urcas；80-100 m²；阳台 + 现代化</td>
+<td><span class="s-lis">[S-LIS-039]</span></td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td>范围未具体</td>
+<td>Idealista 有库存；部分 1F 明示<strong>无电梯</strong></td>
+<td><span class="s-lis">[S-LIS-041]</span></td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>T2 furnished 起 €900/月</td>
+<td>65-100 m²；Rua Sá Pinto 明示<strong>双层玻璃</strong></td>
+<td><span class="s-lis">[S-LIS-040]</span></td>
+</tr>
+<tr>
+<td>Alvalade / Areeiro</td>
+<td>范围未具体</td>
+<td>库存待核</td>
+<td><span class="s-lis">[S-LIS-033]</span><span class="s-lis">[S-LIS-034]</span></td>
+</tr>
+<tr>
+<td>Cascais / Estoril</td>
+<td>范围未具体</td>
+<td>库存待核</td>
+<td><span class="s-lis">[S-LIS-035]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1">清迈（按区）<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>月租范围 (THB)</th>
+<th>关键设施观察</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nimman / Santitham</td>
+<td>1BR 10-23k / 2BR 15-35k</td>
+<td>D Vieng Santitham (12-22k) + 高端 Luxe de Nimman；空气净化器仅部分高端 listing 明示</td>
+<td><span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span><span class="s-cmi">[S-CMI-025]</span></td>
+</tr>
+<tr>
+<td>Old City</td>
+<td>6.5-18k</td>
+<td>The Pacific Cool Chic 6,500 / Smith Residence 8,000+ / Himku Hotel 18,000 月套</td>
+<td><span class="s-cmi">[S-CMI-020]</span></td>
+</tr>
+<tr>
+<td>Hang Dong</td>
+<td>35-80k 别墅</td>
+<td>含 international school 学区（Prem/Lanna/Grace）</td>
+<td><span class="s-cmi">[S-CMI-024]</span></td>
+</tr>
+<tr>
+<td>San Sai</td>
+<td>8-15k 房</td>
+<td>新建 townhouse / detached；学校 Mill Hill</td>
+<td><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span></td>
+</tr>
+<tr>
+<td>Mae Rim</td>
+<td>~20k 房</td>
+<td>自然 + 凉爽，距市区 30 min</td>
+<td><span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-023]</span></td>
+</tr>
+<tr>
+<td>Wat Ket / Riverside</td>
+<td>15-35k</td>
+<td>副选；步行性良好</td>
+<td><span class="s-cmi">[S-CMI-023]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">跨城对比 — 房源评论高频主题<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冬季湿冷 + 无中央暖气</td>
+<td>≥ 5 来源 ≥ 3 平台（Expat.com / AnchorLess / Atlas Lisboa / Portugalist / We Heart Lisbon）<span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span><span class="s-lis">[S-LIS-048]</span><span class="s-lis">[S-LIS-081]</span></td>
+<td>（清迈冬季干爽）</td>
+</tr>
+<tr>
+<td>霉菌 / 潮湿</td>
+<td>多源一致 <span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span><span class="s-lis">[S-LIS-081]</span></td>
+<td>雨季部分郊区有，不是主流投诉</td>
+</tr>
+<tr>
+<td>无电梯 / 高楼层</td>
+<td>多源（Tripadvisor 评论 / Estrela listing 1F no elevator）<span class="s-lis">[S-LIS-041]</span><span class="s-lis">[S-LIS-080]</span></td>
+<td>"电梯有无" — Lanna 风 condo 常无 <span class="s-cmi">[S-CMI-021]</span></td>
+</tr>
+<tr>
+<td>Cobblestone / 山坡 / 婴儿车难</td>
+<td>≥ 5 家庭博客一致（We Heart Lisbon / Katy Travel / Taxi Bambino）<span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-069]</span></td>
+<td>"Sidewalks uneven, full of random holes"（TripAdvisor 论坛）<span class="s-cmi">[S-CMI-040]</span></td>
+</tr>
+<tr>
+<td>空气净化器</td>
+<td>（非主流议题）</td>
+<td>多来源标记<strong>稀缺</strong>：仅部分 Nimman 高端 listing 明示 <span class="s-cmi">[S-CMI-020]</span><span class="s-cmi">[S-CMI-021]</span><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td>Wi-Fi 稳定</td>
+<td>普遍可用</td>
+<td>Nimman/Santitham 普遍快；郊区 condo 易断 <span class="s-cmi">[S-CMI-020]</span></td>
+</tr>
+<tr>
+<td>洗衣</td>
+<td>Blueground 样本 2/3 明示 in-unit washer；烘干机较少 <span class="s-lis">[S-LIS-037]</span><span class="s-lis">[S-LIS-038]</span></td>
+<td>多数 condo 无 in-unit；外送 25-50 THB/kg + 免费 pickup 普及 <span class="s-cmi">[S-CMI-043]</span><span class="s-cmi">[S-CMI-044]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-3">7. 儿童户外活动（每候选区前 3）<a class="headerlink" href="#7-3" title="Permanent link">¶</a></h2>
+<h3 id="_3">里斯本<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>户外 1</th>
+<th>户外 2</th>
+<th>户外 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campo de Ourique</td>
+<td>Jardim Teófilo Braga（2-10 岁专属，有遮荫）<span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span></td>
+<td>Mercado de Campo de Ourique（含室内游乐区）<span class="s-lis">[S-LIS-026]</span></td>
+<td>步行 &lt;15 min 到 Jardim da Estrela</td>
+</tr>
+<tr>
+<td>Estrela / Lapa</td>
+<td>Jardim da Estrela（两个游乐区 + 湖 + 孔雀/天鹅/鸭子 + 亭子餐饮）<span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span><span class="s-lis">[S-LIS-057]</span></td>
+<td>Tapada das Necessidades（步行 15 min 大绿地）</td>
+<td>Jardim 9 de Abril 河边步道（平坦，婴儿车友好）</td>
+</tr>
+<tr>
+<td>Parque das Nações</td>
+<td>Parque Tejo + Jardins Garcia de Orta（沿河无车区，宽人行道）<span class="s-lis">[S-LIS-028]</span><span class="s-lis">[S-LIS-029]</span></td>
+<td>Jardins da Água（互动喷泉/水玩）<span class="s-lis">[S-LIS-028]</span></td>
+<td>Vasco da Gama 河边 <span class="s-lis">[S-LIS-029]</span></td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>Jardim da Praça do Império（平坦大草坪）<span class="s-lis">[S-LIS-032]</span></td>
+<td>Jardim Botânico Tropical（池塘异国植物）<span class="s-lis">[S-LIS-032]</span></td>
+<td>Parque Florestal de Monsanto 边缘 <span class="s-lis">[S-LIS-032]</span></td>
+</tr>
+<tr>
+<td>Alvalade / Areeiro</td>
+<td>Jardim do Campo Grande（大型公园 + 多游乐场）<span class="s-lis">[S-LIS-033]</span></td>
+<td>Jardim Fernando Pessoa <span class="s-lis">[S-LIS-034]</span></td>
+<td>Bela Vista 公园 <span class="s-lis">[S-LIS-033]</span></td>
+</tr>
+<tr>
+<td>Cascais / Estoril</td>
+<td>Praia da Ribeira/Conceição/Duquesa（浅滩 + 夏季充气游乐）<span class="s-lis">[S-LIS-035]</span></td>
+<td>Parque Marechal Carmona</td>
+<td>Cascais 海滨人行道（完全婴儿车友好）<span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-072]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">清迈<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>区</th>
+<th>户外 1</th>
+<th>户外 2</th>
+<th>户外 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nimman / Old City</td>
+<td>Huai Kaeo Arboretum（Nimman 近，林荫小径）<span class="s-cmi">[S-CMI-023]</span></td>
+<td>CMU 校园 + Ang Kaew Reservoir <span class="s-cmi">[S-CMI-023]</span></td>
+<td>Nong Buak Hard Public Park (Old City)<span class="s-cmi">[S-CMI-023]</span></td>
+</tr>
+<tr>
+<td>Hang Dong</td>
+<td>Royal Park Rajapruek（电动 tram 每 15 min + 自行车 + 平坦草坪）<span class="s-cmi">[S-CMI-056]</span></td>
+<td>Grand Canyon Water Park <span class="s-cmi">[S-CMI-057]</span></td>
+<td>Tube Trek Water Park <span class="s-cmi">[S-CMI-057]</span></td>
+</tr>
+<tr>
+<td>Mae Rim</td>
+<td>Queen Sirikit Botanic Garden（3 步道 + canopy walk + 温室）<span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-029]</span></td>
+<td>Huay Tung Tao Lake（距市区 20 min，天鹅船/picnic 亭）<span class="s-cmi">[S-CMI-030]</span></td>
+<td>Maerim / Kanta Elephant Sanctuary（道德、无骑乘、4+ 岁）<span class="s-cmi">[S-CMI-051]</span></td>
+</tr>
+<tr>
+<td>Doi Inthanon/Suthep</td>
+<td>Royal Pagodas Loop（平铺装小径，stroller-friendly）<span class="s-cmi">[S-CMI-031]</span></td>
+<td>Doi Inthanon waterfalls <span class="s-cmi">[S-CMI-031]</span></td>
+<td>Doi Suthep Temple（有 lift）<span class="s-cmi">[S-CMI-031]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-5">8. 自然 / 开放式玩耍（≥5 候选 + 频率分类）<a class="headerlink" href="#8-5" title="Permanent link">¶</a></h2>
+<h3 id="_5">里斯本<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>地点</th>
+<th>类型</th>
+<th>频率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jardim da Estrela</td>
+<td>城市公园</td>
+<td>每周 2-3 次</td>
+<td><span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span></td>
+</tr>
+<tr>
+<td>Parque Florestal de Monsanto（5.6 公顷 Parque dos Índios，含迷宫/交通模拟/印第安帐篷）</td>
+<td>大型森林公园</td>
+<td>每周 1 次</td>
+<td><span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-056]</span></td>
+</tr>
+<tr>
+<td>Parque Tejo（Parque das Nações 河边）</td>
+<td>城市河岸</td>
+<td>每日（若住该区）</td>
+<td><span class="s-lis">[S-LIS-028]</span></td>
+</tr>
+<tr>
+<td>Jardim Gulbenkian</td>
+<td>艺术花园（鸭子/乌龟池塘 + 雕塑）</td>
+<td>偶尔</td>
+<td><span class="s-lis">[S-LIS-049]</span></td>
+</tr>
+<tr>
+<td>Cascais 海滩</td>
+<td>海边</td>
+<td>每月 1-2 次（淡季）；火车 40 min · €2.55/€1.30 · 4 岁以下免费</td>
+<td><span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-072]</span></td>
+</tr>
+<tr>
+<td>Sintra / Cabo da Roca</td>
+<td>山区/海角</td>
+<td>一次性 / 周末</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">清迈<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>地点</th>
+<th>类型</th>
+<th>季节性</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Queen Sirikit Botanic Garden（Mae Rim）</td>
+<td>植物园</td>
+<td>1-2 月 / 10-11 月最佳</td>
+<td><span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-029]</span></td>
+</tr>
+<tr>
+<td>Huay Tung Tao Lake</td>
+<td>湖（外国人 50 THB）</td>
+<td>全年（雨季 7-9 月跳过）</td>
+<td><span class="s-cmi">[S-CMI-030]</span></td>
+</tr>
+<tr>
+<td>Royal Park Rajapruek</td>
+<td>大型植物园 + tram + 自行车</td>
+<td>全年</td>
+<td><span class="s-cmi">[S-CMI-056]</span></td>
+</tr>
+<tr>
+<td>Doi Inthanon Pagodas Loop</td>
+<td>平铺装小径 / 瀑布</td>
+<td>11-2 月最佳；3-4 月烧林季暂停</td>
+<td><span class="s-cmi">[S-CMI-031]</span></td>
+</tr>
+<tr>
+<td>Mae Sa Waterfall</td>
+<td>阶梯式瀑布</td>
+<td>雨季后水量大</td>
+<td>—</td>
+</tr>
+<tr>
+<td>大象保护区（Kanta/Maerim 等道德）</td>
+<td>半日</td>
+<td>全年；4 岁起</td>
+<td><span class="s-cmi">[S-CMI-051]</span></td>
+</tr>
+<tr>
+<td>草莓园 / 农场</td>
+<td>季节</td>
+<td>11-2 月</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>季节性说明</strong>：清迈 2-4 月 PM2.5 &gt; 150 µg/m³ 期间，IQAir 与加方建议幼儿减少户外活动 <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-007]</span>。</p>
+</blockquote>
+<hr />
+<h2 id="9-8">9. 室内备选（≥8 候选）<a class="headerlink" href="#9-8" title="Permanent link">¶</a></h2>
+<h3 id="_7">里斯本<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oceanário de Lisboa</td>
+<td><span class="s-lis">[S-LIS-054]</span></td>
+</tr>
+<tr>
+<td>Pavilhão do Conhecimento（科学馆）</td>
+<td><span class="s-lis">[S-LIS-052]</span><span class="s-lis">[S-LIS-053]</span></td>
+</tr>
+<tr>
+<td>Sandcastle（室内游乐）</td>
+<td><span class="s-lis">[S-LIS-055]</span></td>
+</tr>
+<tr>
+<td>LUCA 儿童剧院</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Mercado de Campo de Ourique（市场含室内游乐）</td>
+<td><span class="s-lis">[S-LIS-026]</span></td>
+</tr>
+<tr>
+<td>Centro Comercial Vasco da Gama 内儿童区</td>
+<td><span class="s-lis">[S-LIS-029]</span></td>
+</tr>
+<tr>
+<td>各区图书馆 storytime（部分英文）</td>
+<td><span class="s-lis">[S-LIS-084]</span></td>
+</tr>
+<tr>
+<td>Museu da Marioneta、Museu da Marinha 等儿童区</td>
+<td><span class="s-lis">[S-LIS-053]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">清迈（含空调/净化器证据）<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>区域</th>
+<th>年龄</th>
+<th>价格</th>
+<th>空调/净化器</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reyn.ne' Playhouse &amp; Cafe</td>
+<td>Hang Dong</td>
+<td>1-4 toddler</td>
+<td>150 / 50 THB</td>
+<td>显式 <strong>air purifier</strong></td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td>Wooden Ville Kids Café</td>
+<td>Nonghoi</td>
+<td>toddler-12</td>
+<td>300 THB / 2h</td>
+<td>显式 <strong>air-purified premium</strong></td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td>Block &amp; Play</td>
+<td>Tha Sala / Mahidol</td>
+<td>跨年龄</td>
+<td>n/a</td>
+<td>空调 + 益智区</td>
+<td><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+<tr>
+<td>Bouncetopia</td>
+<td>Central Chiangmai mall</td>
+<td>1+</td>
+<td>mall 价</td>
+<td>2000 m²，inflatable，toddler 专区</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td>After School Playground</td>
+<td>TBD</td>
+<td>toddler+</td>
+<td>n/a</td>
+<td>室内空调 + toddler 区</td>
+<td><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+<tr>
+<td>Fun Planet</td>
+<td>Central Airport Plaza 4F</td>
+<td>infant+</td>
+<td>50 THB adult</td>
+<td>mall AC</td>
+<td><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+<tr>
+<td>Little Soul Kids Planet</td>
+<td>Hang Dong</td>
+<td>toddler+</td>
+<td>299 / 50 THB</td>
+<td>室内 + 室外 + 有机餐</td>
+<td><span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+<tr>
+<td>LOL Kids Castle</td>
+<td>San Sai</td>
+<td>toddler+</td>
+<td>250 / 50 THB</td>
+<td>室内</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td>Kid's Kingdom</td>
+<td>Tha Sala</td>
+<td>4-8</td>
+<td>100-150 / 50 THB</td>
+<td>空调 + zone</td>
+<td><span class="s-cmi">[S-CMI-026]</span></td>
+</tr>
+<tr>
+<td>Kiddy Land</td>
+<td>Lotus Chom Thong / Hang Dong / Maya</td>
+<td>跨</td>
+<td>mall 价</td>
+<td>mall AC</td>
+<td><span class="s-cmi">[S-CMI-027]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10">10. 结构化短期活动<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<h3 id="_9">里斯本<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>备注</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>陶瓷绘画工坊（drop-in）</td>
+<td>多家接受</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Pastel de Nata 烘焙体验</td>
+<td>短期</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Graffiti 工作坊</td>
+<td>接受 day pass</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>烹饪课程（家庭友好）</td>
+<td>多数英文</td>
+<td><span class="s-lis">[S-LIS-083]</span></td>
+</tr>
+<tr>
+<td>Lisbon Parents &amp; Kids Meetup（每周六 15:00-18:00）</td>
+<td>接受家庭参加</td>
+<td><span class="s-lis">[S-LIS-061]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_10">清迈<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>备注</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beaver Club Worldschooling Hub</td>
+<td>明确接受短期 — "join for a week, a month, or longer — without long contracts"</td>
+<td><span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-033]</span></td>
+</tr>
+<tr>
+<td>Cooking class with kid program</td>
+<td>Zabb E Lee / Baan Thai / Four Seasons 6-11 岁</td>
+<td><span class="s-cmi">[S-CMI-050]</span></td>
+</tr>
+<tr>
+<td>道德大象保护区（半日，4+ 岁）</td>
+<td>Kanta / Maerim Elephant Sanctuary</td>
+<td><span class="s-cmi">[S-CMI-051]</span></td>
+</tr>
+<tr>
+<td>泰拳 / 泰语 / 手工艺工作坊</td>
+<td>DTV Soft Power 路径包含的项目</td>
+<td><span class="s-cmi">[S-CMI-003]</span></td>
+</tr>
+<tr>
+<td>Water park / 游泳课</td>
+<td>Grand Canyon / Tube Trek</td>
+<td><span class="s-cmi">[S-CMI-057]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="11-relief-childcare">11. 父母 relief / Childcare<a class="headerlink" href="#11-relief-childcare" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Babysitter / Nanny 平台</td>
+<td>数据较薄；FB 群组有零散资源 <span class="s-lis">[S-LIS-058]</span></td>
+<td>Beaver Club + worldschooling 互助 + 私人 nanny 服务（来自 expat 渠道）<span class="s-cmi">[S-CMI-033]</span></td>
+</tr>
+<tr>
+<td>短期 preschool 接收</td>
+<td>部分接受 short-term（具体名单需核）</td>
+<td>接受短期参与的 worldschooling hub 明确 <span class="s-cmi">[S-CMI-032]</span></td>
+</tr>
+<tr>
+<td>整体证据强度</td>
+<td>轶事级</td>
+<td>轶事级；社群密度更高</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12">12. 移动性（步行 / 公交 / 打车 / 婴儿车 / 儿童座椅）<a class="headerlink" href="#12" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公交无障碍</td>
+<td>Metro &gt; 75% 站点无台阶 + 婴儿车专闸口；Carris &gt; 80% 配低地板斜坡 <span class="s-lis">[S-LIS-067]</span><span class="s-lis">[S-LIS-068]</span></td>
+<td>Songthaew 无安全带、无座椅；Grab 私家车标配普通后排 <span class="s-cmi">[S-CMI-037]</span></td>
+</tr>
+<tr>
+<td>公交对幼儿优惠</td>
+<td>4 岁以下免费乘所有公交 <span class="s-lis">[S-LIS-069]</span></td>
+<td>未明确</td>
+</tr>
+<tr>
+<td>主要打车 app</td>
+<td>Uber / Bolt / FreeNow（覆盖核心区 + Cascais）<span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span></td>
+<td>Grab / Bolt / Indrive（可选车型）<span class="s-cmi">[S-CMI-038]</span></td>
+</tr>
+<tr>
+<td>法律对儿童座椅</td>
+<td>12 岁以下或 &lt; 135cm 必须；3 岁以下不得坐前排 <span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span></td>
+<td>2022 法律：6 岁以下需 car seat —— "enforcement is virtually zero" <span class="s-cmi">[S-CMI-036]</span></td>
+</tr>
+<tr>
+<td>出租车/Ride-share 豁免</td>
+<td><strong>豁免</strong>儿童座椅要求；推荐自带或 Taxi Bambino <span class="s-lis">[S-LIS-070]</span></td>
+<td>Grab/出租车默认<strong>不提供</strong> car seat <span class="s-cmi">[S-CMI-036]</span>；推荐 Taxi Bambino 清迈本地认证 <span class="s-cmi">[S-CMI-036]</span></td>
+</tr>
+<tr>
+<td>婴儿车在步行道</td>
+<td>中心区坡 + cobblestone + 老楼无电梯（Estrela 部分明示 1F no elevator）<span class="s-lis">[S-LIS-041]</span><span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-080]</span></td>
+<td>Sidewalks 不平、有坑、有时窄如 balance beam <span class="s-cmi">[S-CMI-040]</span>；Nimman 较好 <span class="s-cmi">[S-CMI-040]</span></td>
+</tr>
+<tr>
+<td>Stroller 友好区</td>
+<td>Parque das Nações（平坦河岸）/ Belém 河边 / Cascais 海滨</td>
+<td>Nimman + Santitham + Wat Ket；Hang Dong/San Sai/Mae Rim 必须开车</td>
+</tr>
+<tr>
+<td>跨城短途</td>
+<td>Lisbon → Cascais：CP 火车 40 min，€2.55 / €1.30 / 4 岁以下免费 <span class="s-lis">[S-LIS-072]</span></td>
+<td>Songthaew 文化体验 + Grab car for cross-district；机场 → 市区 15-30 min Grab</td>
+</tr>
+<tr>
+<td>复古/特色车</td>
+<td>Tram 28/15/25 拥挤 + 扒手高发 + 婴儿车难登 <span class="s-lis">[S-LIS-077]</span><span class="s-lis">[S-LIS-078]</span></td>
+<td>Songthaew（红车） Old City 内 20-30 THB/人；无安全带 <span class="s-cmi">[S-CMI-037]</span></td>
+</tr>
+<tr>
+<td>摩托车带儿童</td>
+<td>不常见</td>
+<td>普遍但医院 ER 摩托外伤常见 input [S-CMI mobility#80]</td>
+</tr>
+<tr>
+<td>跨城/海岛飞行</td>
+<td>Lisbon → Porto/Algarve 半天以上</td>
+<td>CNX → Phuket / Krabi / Koh Samui / Koh Lanta 1-2 小时 <span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13">13. 日常物流（杂货 / 药店 / 洗衣）<a class="headerlink" href="#13" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要超市连锁</td>
+<td>Pingo Doce / Continente / Lidl <span class="s-lis">[S-LIS-073]</span></td>
+<td>Rimping / Tops / Big C / Tesco Lotus / Makro <span class="s-cmi">[S-CMI-041]</span><span class="s-cmi">[S-CMI-042]</span><span class="s-cmi">[S-CMI-045]</span></td>
+</tr>
+<tr>
+<td>进口食品供应</td>
+<td>Continente / Lidl 较全</td>
+<td>Rimping Kad Farang（瑞士/德/意/美/日/法）旗舰；Tops/Big C 也有 <span class="s-cmi">[S-CMI-041]</span></td>
+</tr>
+<tr>
+<td>婴幼儿食品 / 配方奶</td>
+<td>标准欧洲</td>
+<td>Tesco Lotus / Big C 有 Mead Johnson Enfagrow / Nestle / Dumex；进口品牌可能不全 <span class="s-cmi">[S-CMI-045]</span></td>
+</tr>
+<tr>
+<td>便利店密度</td>
+<td>邻里小店 mercearias 密集</td>
+<td>7-Eleven 每条街都有；卖基础药/婴儿用品 <span class="s-cmi">[S-CMI-045]</span></td>
+</tr>
+<tr>
+<td>邻里市场</td>
+<td>Mercado de Campo de Ourique（1934）+ Mercado da Ribeira（Time Out Market）<span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-074]</span></td>
+<td>Sunday Walking Street + Sunday Night Market（古城）<span class="s-cmi">[S-CMI-055]</span></td>
+</tr>
+<tr>
+<td>药店密度</td>
+<td>Farmácia 每 200-400m 一家；24h 轮值 <span class="s-lis">[S-LIS-073]</span></td>
+<td>24h 医院药房（BCM + Ram）；Boots / Watsons 在 mall；7-Eleven 卖 OTC</td>
+</tr>
+<tr>
+<td>洗衣</td>
+<td>长租 furnished 通常自带洗衣机；烘干机较少；雨季依赖室内晾 + 除湿机 <span class="s-lis">[S-LIS-037]</span><span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-081]</span></td>
+<td>多数 condo 无 in-unit washer；外送服务 25-50 THB/kg + 免费 pickup（WashDrop / Em's Laundry / Royal）<span class="s-cmi">[S-CMI-043]</span><span class="s-cmi">[S-CMI-044]</span></td>
+</tr>
+<tr>
+<td>餐饮儿童友好</td>
+<td>葡萄牙文化对儿童在餐厅极友好 <span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-064]</span></td>
+<td>"The Thai genuinely adore children"（Family Can Travel）<span class="s-cmi">[S-CMI-053]</span></td>
+</tr>
+<tr>
+<td>餐饮节奏</td>
+<td>午 12:00-15:00 / 晚 19:30 起；与孩子 17:30-18:30 节奏冲突，cafés 折中 <span class="s-lis">[S-LIS-035]</span></td>
+<td>全天小食 + 多 family cafe</td>
+</tr>
+<tr>
+<td>应急号码</td>
+<td>112 + SNS 24 (808 24 24 24) <span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span></td>
+<td>191 警察 / 1669 救护 / BCM +66 52 089 888 <span class="s-cmi">[S-CMI-015]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14">14. 文化体验<a class="headerlink" href="#14" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心氛围</td>
+<td>欧式日常 + 河边/海边 + Belém 历史 + Pastel de Nata 文化 <span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-064]</span></td>
+<td>佛教节庆 + 寺庙 + 夜市 + 山间村寨 + 大象保护区 <span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-055]</span></td>
+</tr>
+<tr>
+<td>候选区"本地 vs 游客泡沫"</td>
+<td>Campo de Ourique / Alvalade / Areeiro / Estrela = 本地多；Belém / Baixa / Alfama = 游客多；Parque das Nações = 混合 <span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span><span class="s-lis">[S-LIS-033]</span><span class="s-lis">[S-LIS-034]</span><span class="s-lis">[S-LIS-064]</span></td>
+<td>Nimman = 数字游民泡沫（评论："we didn't want to come ... because of all the digital nomads"）；Old City = 游客；Hang Dong / San Sai = local feel；Mae Rim = green haven <span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span></td>
+</tr>
+<tr>
+<td>儿童亲手体验</td>
+<td>陶瓷 / Pastel 烘焙 / Graffiti / 烹饪 <span class="s-lis">[S-LIS-083]</span></td>
+<td>烹饪（Zabb E Lee 6-11 岁）/ 泰拳 / 泰语 / 大象保护区半日 <span class="s-cmi">[S-CMI-050]</span><span class="s-cmi">[S-CMI-051]</span></td>
+</tr>
+<tr>
+<td>Stroller 友好寺庙/景点</td>
+<td>—</td>
+<td>Wat Chedi Luang（stroller 友好，小额门票）<span class="s-cmi">[S-CMI-055]</span>；Doi Suthep（有 lift）<span class="s-cmi">[S-CMI-031]</span></td>
+</tr>
+<tr>
+<td>周末跨城</td>
+<td>Cascais 火车 40 min；Sintra 火车 40 min</td>
+<td>CNX 飞海岛 1-2 h；古城 30 min 内多个文化点</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="15">15. 自然体验<a class="headerlink" href="#15" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>城市内森林/大公园</td>
+<td>Parque Florestal de Monsanto 5.6 公顷 + Jardim da Estrela <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-056]</span></td>
+<td>Huai Kaeo Arboretum + CMU + Ang Kaew Reservoir + Nong Buak Hard <span class="s-cmi">[S-CMI-023]</span></td>
+</tr>
+<tr>
+<td>海/水</td>
+<td>Cascais 海滩 40 min 火车 <span class="s-lis">[S-LIS-035]</span><span class="s-lis">[S-LIS-072]</span></td>
+<td>Huay Tung Tao Lake 20 min；Doi Inthanon waterfalls <span class="s-cmi">[S-CMI-030]</span><span class="s-cmi">[S-CMI-031]</span></td>
+</tr>
+<tr>
+<td>山</td>
+<td>Sintra/Cabo da Roca 周末</td>
+<td>Doi Suthep（有 lift）；Doi Inthanon</td>
+</tr>
+<tr>
+<td>植物园</td>
+<td>Jardim Botânico Tropical (Belém)；Jardim Gulbenkian <span class="s-lis">[S-LIS-032]</span><span class="s-lis">[S-LIS-049]</span></td>
+<td>Queen Sirikit Botanic Garden (Mae Rim) — 3 步道 + canopy walk + 温室 <span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-029]</span></td>
+</tr>
+<tr>
+<td>与动物互动</td>
+<td>海洋（Oceanário）；公园里的鸭/天鹅/孔雀（Estrela）<span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span><span class="s-lis">[S-LIS-054]</span></td>
+<td>道德大象保护区（无骑乘，4+ 岁）<span class="s-cmi">[S-CMI-051]</span></td>
+</tr>
+<tr>
+<td>农场/草莓园</td>
+<td>—</td>
+<td>11-2 月草莓园</td>
+</tr>
+<tr>
+<td>季节性折扣</td>
+<td>雨季 (11月-2月) 户外频率减少 <span class="s-lis">[S-LIS-010]</span></td>
+<td>烧林季 (2-4月) 户外几乎暂停 <span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-010]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="16-expat">16. 社区 / Expat 群体<a class="headerlink" href="#16-expat" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>子项</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要 FB / Meetup 群组</td>
+<td>Lisbon for Parents / Lisbon Parents &amp; Kids / Lisbon Expat Meetup / Expat Families in Portugal / Lisbon Cascais Expats &amp; Friends <span class="s-lis">[S-LIS-058]</span><span class="s-lis">[S-LIS-059]</span><span class="s-lis">[S-LIS-060]</span><span class="s-lis">[S-LIS-061]</span><span class="s-lis">[S-LIS-062]</span></td>
+<td>Beaver Club Worldschooling Hub + Chiang Mai Expats Club (FB) <span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-033]</span></td>
+</tr>
+<tr>
+<td>Worldschooling 热度</td>
+<td>个别博客（Heritage Mom）有记录 <span class="s-lis">[S-LIS-075]</span></td>
+<td>"One of the most popular places in Asia for worldschooling families"（World Travel Family）<span class="s-cmi">[S-CMI-033]</span></td>
+</tr>
+<tr>
+<td>Reddit 直接可达性</td>
+<td>WebSearch site:reddit.com 多次 0 返回；WebFetch 阻挡</td>
+<td>WebSearch 同样 0 返回；WebFetch 阻挡 [CMI 73]</td>
+</tr>
+<tr>
+<td>定期儿童活动</td>
+<td>Lisbon Parents &amp; Kids Meetup 每周六 15:00-18:00 <span class="s-lis">[S-LIS-061]</span></td>
+<td>Beaver Club 接受短期周/月参与 <span class="s-cmi">[S-CMI-032]</span></td>
+</tr>
+<tr>
+<td>主要 expat 信息源</td>
+<td>Atlas Lisboa, Portugalist, AnchorLess, The Plane Book, Now in Portugal, Heritage Mom, Wherever Family</td>
+<td>ExpatDen, CNX Local, Tieland to Thailand, Iglu, Family Can Travel, Kids Roam the Globe</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="17-5-or-3">17. 跨平台社区主题（复现 ≥ 5 评论 OR ≥ 3 平台）<a class="headerlink" href="#17-5-or-3" title="Permanent link">¶</a></h2>
+<h3 id="_11">里斯本<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>信号方向</th>
+<th>来源数</th>
+<th>平台数</th>
+<th>来源 ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本对家庭友好 + 餐厅欢迎孩子</td>
+<td>正面</td>
+<td>≥ 6</td>
+<td>4</td>
+<td>多源汇总</td>
+</tr>
+<tr>
+<td>中心区婴儿车摩擦（坡 + 卵石）</td>
+<td>负面</td>
+<td>≥ 5</td>
+<td>3</td>
+<td><span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-069]</span></td>
+</tr>
+<tr>
+<td>冬季湿冷 + 无中央暖气 + 霉菌</td>
+<td>负面</td>
+<td>≥ 5</td>
+<td>3</td>
+<td><span class="s-lis">[S-LIS-046]</span><span class="s-lis">[S-LIS-047]</span><span class="s-lis">[S-LIS-048]</span><span class="s-lis">[S-LIS-081]</span></td>
+</tr>
+<tr>
+<td>28 路 tram 扒手 + 婴儿车冲突</td>
+<td>负面</td>
+<td>≥ 4</td>
+<td>3</td>
+<td><span class="s-lis">[S-LIS-008]</span><span class="s-lis">[S-LIS-009]</span><span class="s-lis">[S-LIS-077]</span><span class="s-lis">[S-LIS-078]</span></td>
+</tr>
+<tr>
+<td>Campo de Ourique 家庭首选</td>
+<td>正面</td>
+<td>≥ 5</td>
+<td>3</td>
+<td><span class="s-lis">[S-LIS-026]</span><span class="s-lis">[S-LIS-027]</span><span class="s-lis">[S-LIS-064]</span></td>
+</tr>
+<tr>
+<td>Parque das Nações 现代 + 平坦 + 适合幼儿</td>
+<td>正面</td>
+<td>≥ 4</td>
+<td>3</td>
+<td><span class="s-lis">[S-LIS-028]</span><span class="s-lis">[S-LIS-029]</span></td>
+</tr>
+<tr>
+<td>私立医院英文友好</td>
+<td>正面</td>
+<td>≥ 4</td>
+<td>3</td>
+<td><span class="s-lis">[S-LIS-017]</span><span class="s-lis">[S-LIS-018]</span><span class="s-lis">[S-LIS-022]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">清迈<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>信号方向</th>
+<th>来源数</th>
+<th>平台数</th>
+<th>来源 ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>烧林季 PM2.5 实质危险 + expats 离开 1-3 月</td>
+<td>负面</td>
+<td>≥ 6</td>
+<td>3</td>
+<td><span class="s-cmi">[S-CMI-008]</span><span class="s-cmi">[S-CMI-009]</span><span class="s-cmi">[S-CMI-010]</span><span class="s-cmi">[S-CMI-046]</span><span class="s-cmi">[S-CMI-047]</span></td>
+</tr>
+<tr>
+<td>Worldschooling 家庭热门</td>
+<td>正面</td>
+<td>≥ 4</td>
+<td>3</td>
+<td><span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-033]</span><span class="s-cmi">[S-CMI-034]</span><span class="s-cmi">[S-CMI-035]</span></td>
+</tr>
+<tr>
+<td>人行道 / stroller 不友好</td>
+<td>负面</td>
+<td>≥ 5</td>
+<td>3</td>
+<td><span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-055]</span></td>
+</tr>
+<tr>
+<td>Car seat 在 Grab/Taxi 不存在</td>
+<td>负面</td>
+<td>≥ 4</td>
+<td>3</td>
+<td><span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-038]</span><span class="s-cmi">[S-CMI-039]</span></td>
+</tr>
+<tr>
+<td>街边野狗 / 狂犬</td>
+<td>负面</td>
+<td>≥ 3</td>
+<td>2</td>
+<td><span class="s-cmi">[S-CMI-048]</span><span class="s-cmi">[S-CMI-049]</span></td>
+</tr>
+<tr>
+<td>清迈对孩子整体友好 / Thai 对孩子温和</td>
+<td>正面</td>
+<td>≥ 5</td>
+<td>1+</td>
+<td><span class="s-cmi">[S-CMI-053]</span><span class="s-cmi">[S-CMI-054]</span><span class="s-cmi">[S-CMI-055]</span><span class="s-cmi">[S-CMI-058]</span></td>
+</tr>
+<tr>
+<td>Hang Dong = expat 学区首选</td>
+<td>正面</td>
+<td>≥ 3</td>
+<td>3</td>
+<td><span class="s-cmi">[S-CMI-022]</span><span class="s-cmi">[S-CMI-023]</span><span class="s-cmi">[S-CMI-024]</span></td>
+</tr>
+<tr>
+<td>Nimman = 数字游民泡沫 / 噪音</td>
+<td>负面</td>
+<td>≥ 3</td>
+<td>2</td>
+<td><span class="s-cmi">[S-CMI-023]</span></td>
+</tr>
+<tr>
+<td>4 月酷热 + 4 月初烟季尾</td>
+<td>负面</td>
+<td>≥ 4</td>
+<td>2</td>
+<td><span class="s-cmi">[S-CMI-011]</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="18-verbatim">18. 代表性 verbatim 引用<a class="headerlink" href="#18-verbatim" title="Permanent link">¶</a></h2>
+<h3 id="_13">清迈<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>"By Songkran (mid-April) it's almost always cleared up." — CNX Local <span class="s-cmi">[S-CMI-010]</span><br />
+"Most expats leave Northern Thailand for 1-3 months during the peak of the burning season." — Iglu Survivor Guide <span class="s-cmi">[S-CMI-046]</span><br />
+"March 30: AQI 233, PM2.5 188 µg/m³, ranked #1 globally" — Open Magazine 2026 <span class="s-cmi">[S-CMI-009]</span><br />
+"Children, seniors and pregnant women wear anti-pollution masks, and minimize outdoor activities, when air pollution levels are high." — Canada Travel Advisory <span class="s-cmi">[S-CMI-007]</span><br />
+"In Thailand, it will be very difficult to rely on local safety seats to be reliable and safe. Our recommendation is to bring your own safety seats from home!" — Kids Roam the Globe <span class="s-cmi">[S-CMI-038]</span><br />
+"A songthaew has no seat belts, nor any other safety equipment on board." — Chiang Mai Traveller <span class="s-cmi">[S-CMI-037]</span><br />
+"Sidewalks (if there are any) are uneven, full of random holes and are sometimes as narrow as a balance beam." — TripAdvisor 论坛 <span class="s-cmi">[S-CMI-040]</span><br />
+"Chiang Mai has quietly become one of the most popular places in Asia for worldschooling families." — World Travel Family <span class="s-cmi">[S-CMI-033]</span><br />
+"The Thai genuinely adore children, and with English widely spoken, calm traffic, and a great mix of local culture and Western comforts, Chiang Mai is incredibly approachable with kids in tow." — Family Can Travel <span class="s-cmi">[S-CMI-053]</span><br />
+"In Chiang Mai province alone, there are believed to be 70,000 stray dogs, most of which lack precautionary vaccinations." — Chiang Mai Care <span class="s-cmi">[S-CMI-048]</span></p>
+</blockquote>
+<h3 id="_14">里斯本<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>"Extra caution on trams 15, 25, and 28." — Canadian Government Travel Advisory <span class="s-lis">[S-LIS-008]</span><br />
+"Choose wheelchair-accessible route in Google Maps to avoid main stairs/slopes." — Taxi Bambino <span class="s-lis">[S-LIS-069]</span><br />
+"Hills, stairs, and bumpy cobbled sidewalks require significant effort." — Katy Travel Blog <span class="s-lis">[S-LIS-044]</span><br />
+(家庭博客 "carrier or buggy" 专题，建议某些日子用 carrier) — We Heart Lisbon <span class="s-lis">[S-LIS-045]</span><br />
+"Any foreigner who feels ill ... has the right to be assisted." — Portugal Government / Migrants Healthcare <span class="s-lis">[S-LIS-020]</span><span class="s-lis">[S-LIS-021]</span><br />
+"Pediatria Aberto 24h" — Hospital CUF Descobertas <span class="s-lis">[S-LIS-017]</span></p>
+</blockquote>
+<hr />
+<h2 id="_15">数据缺口<a class="headerlink" href="#_15" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>缺口</th>
+<th>里斯本</th>
+<th>清迈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reddit 真实信号</td>
+<td>site:reddit.com WebSearch 多次 0 返回；手动核验留给抵达后</td>
+<td>同；WebFetch 直接 403</td>
+</tr>
+<tr>
+<td>Airbnb 单 listing 详情</td>
+<td>未爬取（按项目约束）；用 Blueground / Idealista 替代</td>
+<td>多个 listing 直访 403；用 search summary + 命名 listing 替代</td>
+</tr>
+<tr>
+<td>月度 PM2.5 分布</td>
+<td>IQAir 单页未展示历史月度，需另抓</td>
+<td>全市均值已知；各候选区 IQAir 站点差异未量化</td>
+</tr>
+<tr>
+<td>各候选区到顶级公立急诊驾车时间</td>
+<td>未做 Google Maps 抽样</td>
+<td>同</td>
+</tr>
+<tr>
+<td>各候选区野狗密度</td>
+<td>—</td>
+<td>未量化（仅"7-30 万省级"宏观数据）</td>
+</tr>
+<tr>
+<td>配偶/孩子护照国别</td>
+<td>用户标 to_verify（家庭内部信息）</td>
+<td>同</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_16">来源使用情况<a class="headerlink" href="#_16" title="Permanent link">¶</a></h2>
+<ul>
+<li>全部源登记：<code>data/sources/sources.csv</code> 共 143 条（85 LIS + 58 CMI）</li>
+<li>网络日志：<code>data/logs/search_log.csv</code>（81 次 WebSearch）、<code>request_log.csv</code>（35 次 WebFetch）、<code>inaccessible_sources.csv</code>（7 类降级）</li>
+<li>全部 14 个 evidence markdown 详见 <code>evidence/lisbon/*.md</code>、<code>evidence/chiang_mai/*.md</code></li>
+</ul>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>
