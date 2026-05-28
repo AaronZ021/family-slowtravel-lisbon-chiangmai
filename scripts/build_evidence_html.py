@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_CSV = ROOT / "data" / "sources" / "sources.csv"
 CROSSWALK_CSV = ROOT / "reports" / "evidence_crosswalk.csv"
 ASSESSMENT_CSV = ROOT / "reports" / "layered_dimension_assessment.csv"
+STACK_CSV = ROOT / "reports" / "indicator_evidence_stack.csv"
 DOCS_INDEX = ROOT / "docs" / "index.html"
 REPORT_HTML = ROOT / "reports" / "evidence_crosswalk.html"
 
@@ -239,6 +240,84 @@ def assessment_cell(row, city, sources):
     """
 
 
+def stack_cell(row, sources):
+    official_badges = " ".join(source_badges(row["official_source_ids"], sources))
+    platform_badges = " ".join(source_badges(row["platform_source_ids"], sources))
+    community_badges = " ".join(source_badges(row["community_source_ids"], sources))
+    return f"""
+      <div class="cell-block">
+        <div class="cell-label">当前维度评估</div>
+        <p>{esc(row['current_dimension_assessment'])}</p>
+        <div class="meta-row">
+          <span class="meta-pill">证据充分性：{esc(row['evidence_sufficiency'])}</span>
+          <span class="meta-pill">置信度：{esc(row['confidence'])}</span>
+        </div>
+        <div class="evidence-tier official-tier">
+          <div class="cell-label">官方/统计证据</div>
+          <p>{esc(row['official_stat_evidence'])}</p>
+          <div class="badges">{official_badges}</div>
+        </div>
+        <div class="evidence-tier platform-tier">
+          <div class="cell-label">平台/地图证据</div>
+          <p>{esc(row['platform_map_evidence'])}</p>
+          <div class="badges">{platform_badges}</div>
+        </div>
+        <div class="evidence-tier community-tier">
+          <div class="cell-label">社区反馈 overlay</div>
+          <p>{esc(row['community_overlay'])}</p>
+          <div class="badges">{community_badges}</div>
+        </div>
+        <div class="cell-label">缺口</div>
+        <p>{esc(row['gaps'])}</p>
+        <div class="cell-label">下一步补数</div>
+        <p>{esc(row['next_data_to_collect'])}</p>
+      </div>
+    """
+
+
+def stack_sections(rows, sources):
+    by_layer = {}
+    for row in rows:
+        by_layer.setdefault(row["layer"], {}).setdefault(row["dimension"], {})[row["city"]] = row
+    sections = []
+    for layer, dims in by_layer.items():
+        body = []
+        for dimension, cities in dims.items():
+            lisbon = cities.get("里斯本")
+            chiang_mai = cities.get("清迈")
+            body.append(
+                f"""
+                <tr>
+                  <td class="dimension"><strong>{esc(dimension)}</strong></td>
+                  <td>{stack_cell(lisbon, sources) if lisbon else ''}</td>
+                  <td>{stack_cell(chiang_mai, sources) if chiang_mai else ''}</td>
+                </tr>
+                """
+            )
+        sections.append(
+            f"""
+            <section class="layer-section">
+              <h2>{esc(layer)}</h2>
+              <div class="table-wrap" aria-label="{esc(layer)}指标证据栈">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>维度</th>
+                      <th>里斯本</th>
+                      <th>清迈</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {''.join(body)}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            """
+        )
+    return "\n".join(sections)
+
+
 def assessment_sections(rows, sources):
     by_layer = {}
     for row in rows:
@@ -419,6 +498,20 @@ def build_html(assessments, crosswalk, source_rows):
       font-size: 12px;
       font-weight: 650;
     }}
+    .evidence-tier {{
+      border-left: 4px solid var(--line);
+      padding: 8px 0 2px 10px;
+      margin: 10px 0;
+    }}
+    .official-tier {{
+      border-left-color: #275d8c;
+    }}
+    .platform-tier {{
+      border-left-color: #6d7b2c;
+    }}
+    .community-tier {{
+      border-left-color: #8a5b1f;
+    }}
     .source-badge.missing {{
       background: #f5e7d5;
       color: var(--warn);
@@ -493,9 +586,9 @@ def build_html(assessments, crosswalk, source_rows):
   </header>
   <main>
     <section class="note">
-      <strong>读法：</strong>第 1 层是来源登记，放在页面底部；主表按第 2 层硬约束、第 3 层生活可运行性、第 4 层社区/轶事反馈分开。这里的“维度评估”不是城市级推荐，只是说明该维度当前证据能支撑到什么程度。
+      <strong>读法：</strong>第 1 层是来源登记，放在页面底部；主表按第 2 层城市级硬数据 baseline、第 3 层候选区域生活可运行性、第 4 层社区反馈 overlay 分开。每个小格子都分成官方/统计证据、平台/地图证据、社区反馈 overlay，再说明当前维度评估、充分性、缺口和下一步补数。
     </section>
-    {assessment_sections(assessments, sources)}
+    {stack_sections(assessments, sources)}
     <h2>来源索引</h2>
     <section class="sources">
       {source_details(source_rows)}
@@ -512,7 +605,7 @@ def build_html(assessments, crosswalk, source_rows):
 def main():
     source_rows = read_csv(SOURCES_CSV)
     crosswalk = read_csv(CROSSWALK_CSV)
-    assessments = read_csv(ASSESSMENT_CSV)
+    assessments = read_csv(STACK_CSV)
     html_text = build_html(assessments, crosswalk, source_rows)
     DOCS_INDEX.write_text(html_text, encoding="utf-8")
     REPORT_HTML.write_text(html_text, encoding="utf-8")
