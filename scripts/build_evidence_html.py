@@ -76,9 +76,8 @@ def source_badges(value, sources):
         src = sources.get(sid)
         if src:
             title = f"{src.get('title','')} | {src.get('source_type','')} | {src.get('accessed_date','')}"
-            href = src.get("url") or f"#src-{sid}"
             badges.append(
-                f'<a class="source-badge" href="{esc(href)}" target="_blank" rel="noopener" '
+                f'<a class="source-badge" href="#src-{esc(sid)}" '
                 f'title="{esc(title)}">{esc(sid)}</a>'
             )
         else:
@@ -104,6 +103,7 @@ def source_details(rows):
                 <div><dt>区域</dt><dd>{esc(row['area'])}</dd></div>
                 <div><dt>层级</dt><dd>{esc(row['layer'])}</dd></div>
                 <div><dt>维度</dt><dd>{esc(row['dimension'])}</dd></div>
+                <div><dt>URL</dt><dd><a href="{esc(row['url'])}" target="_blank" rel="noopener">{esc(row['url'])}</a></dd></div>
                 <div><dt>机构/作者</dt><dd>{esc(row['author_or_org'])}</dd></div>
                 <div><dt>发布日期</dt><dd>{esc(row['published_date'])}</dd></div>
                 <div><dt>访问日期</dt><dd>{esc(row['accessed_date'])}</dd></div>
