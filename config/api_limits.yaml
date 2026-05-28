@@ -1,0 +1,50 @@
+apis:
+  google_places:
+    enabled: false
+    max_requests_per_minute: 30
+    backoff_on_429_seconds: [10, 30, 60, 300]
+    cache_ttl_days: 30
+    notes: "未使用 Google Places API；只做公开页面和搜索结果人工采样。"
+  google_geocoding:
+    enabled: false
+    max_requests_per_minute: 20
+    cache_ttl_days: 90
+    notes: "未使用 Google Geocoding API；候选区域用 Nominatim 小量查询缓存。"
+  overpass_osm:
+    enabled: false
+    max_requests_per_minute: 2
+    max_area_radius_km: 5
+    timeout_seconds: 60
+    cache_ttl_days: 30
+    notes: "本轮未运行 Overpass；用 Nominatim 坐标、公开地图/平台信号替代。"
+  reddit_api:
+    enabled: false
+    max_requests_per_minute: 30
+    cache_ttl_days: 30
+    notes: "未配置 OAuth；仅用搜索可见的公开 Reddit 结果摘要。"
+  meteostat:
+    enabled: false
+    max_requests_per_minute: 5
+    cache_ttl_days: 180
+    notes: "未调用 API；使用 WeatherSpark 和官方/平台空气质量来源。"
+  openaq:
+    enabled: false
+    max_requests_per_minute: 10
+    cache_ttl_days: 30
+  iqair:
+    enabled: false
+    notes: "仅人工读取公开页面，不调用 API。"
+  waqi:
+    enabled: false
+    notes: "仅作为后续核验来源。"
+request_budget:
+  per_city:
+    google_places_max: 120
+    overpass_max: 30
+    geocoding_max: 30
+    climate_max: 20
+    air_quality_max: 30
+    reddit_max: 50
+    html_page_fetch_max: 100
+  whole_project:
+    total_network_requests_max: 800

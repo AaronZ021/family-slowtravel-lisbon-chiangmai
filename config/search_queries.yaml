@@ -1,0 +1,45 @@
+lisbon:
+  visa:
+    - "Portugal short stay Schengen visa Chinese passport resident in Canada official"
+    - "Portugal Schengen 90 180 rule official EU"
+  safety:
+    - "Canada travel advice Portugal"
+    - "US State Department Portugal travel advisory"
+    - "UK FCDO Portugal travel advice"
+  climate_air:
+    - "Lisbon WeatherSpark monthly rain temperature"
+    - "Lisbon air quality PM2.5 city council IQAir"
+  healthcare:
+    - "Lisbon pediatric emergency Dona Estefania CUF Hospital da Luz"
+  housing:
+    - "Flatio Lisbon 2 bedroom Campo de Ourique family washing machine"
+    - "Lisbon serviced apartment two bedroom kitchen washing machine family"
+  child_activity:
+    - "Lisbon playground toddler Campo de Ourique Estrela Parque das Nacoes Belem"
+    - "Lisbon indoor playground toddler kids cafe rainy day"
+  community:
+    - "site:reddit.com Lisbon with kids family living toddler stroller"
+    - "Lisbon expat parents playgroup family community"
+chiang_mai:
+  visa:
+    - "Thailand tourist visa Chinese passport Canada official 60 days extension"
+    - "Thailand DTV dependents remote worker official"
+  safety:
+    - "Canada travel advice Thailand Chiang Mai air pollution"
+    - "US State Department Thailand travel advisory"
+    - "UK FCDO Thailand travel advice"
+  climate_air:
+    - "Chiang Mai WeatherSpark monthly rain temperature"
+    - "Chiang Mai burning season PM2.5 March April IQAir 2026"
+  healthcare:
+    - "Bangkok Hospital Chiang Mai pediatric center emergency English"
+    - "Chiangmai Hospital pediatric clinic"
+  housing:
+    - "Chiang Mai monthly 2 bedroom condo Nimman family kitchen washing machine"
+    - "Chiang Mai serviced apartment two bedroom kitchen family"
+  child_activity:
+    - "Chiang Mai indoor playground kids cafe toddler Hang Dong Nimman"
+    - "Chiang Mai playground park kids toddler"
+  community:
+    - "site:reddit.com Chiang Mai with kids family toddler burning season stroller"
+    - "Chiang Mai expat parents Facebook group family kids"

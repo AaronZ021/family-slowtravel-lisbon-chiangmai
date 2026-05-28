@@ -1,0 +1,25 @@
+source_types:
+  official:
+    description: Government, embassy, immigration, public health, official tourism, municipal websites.
+    trust_level: high
+  platform:
+    description: Airbnb, Booking, Flatio, Vrbo, Google Maps, OpenStreetMap, Numbeo, Meteostat, OpenAQ, IQAir, WAQI.
+    trust_level: medium
+  map:
+    description: Google Maps, Apple Maps, OpenStreetMap, Overpass.
+    trust_level: medium
+  review:
+    description: Google Maps reviews, Airbnb reviews, Booking reviews, Flatio reviews, TripAdvisor reviews.
+    trust_level: medium_low
+  community:
+    description: Reddit, Facebook groups, expat forums, parenting forums, worldschooling forums.
+    trust_level: anecdotal
+  blog:
+    description: Family travel blogs, local parenting blogs, worldschooling blogs.
+    trust_level: anecdotal
+  video:
+    description: YouTube videos, family vlogs, neighborhood walking videos.
+    trust_level: visual_anecdotal
+  news:
+    description: Reputable news articles.
+    trust_level: medium

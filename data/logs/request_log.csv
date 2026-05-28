@@ -1,0 +1,10 @@
+timestamp,source,city,area,layer,dimension,query_or_endpoint,status_code,success,rate_limited,retry_count,cache_hit,response_file,notes
+2026-05-27T23:47:30-07:00,nominatim,lisbon,Campo de Ourique,candidate_area,geocoding,"Campo de Ourique, Lisbon, Portugal",200,true,false,0,false,data/cache/google_geocoding/Campo_de_Ourique__Lisbon__Portugal.json,cached
+2026-05-27T23:47:31-07:00,nominatim,lisbon,Estrela,candidate_area,geocoding,"Jardim da Estrela, Lisbon, Portugal",200,true,false,0,false,data/cache/google_geocoding/Jardim_da_Estrela__Lisbon__Portugal.json,cached
+2026-05-27T23:47:32-07:00,nominatim,lisbon,Parque das Nacoes,candidate_area,geocoding,"Parque das Nacoes, Lisbon, Portugal",200,true,false,0,false,data/cache/google_geocoding/Parque_das_Nacoes__Lisbon__Portugal.json,cached
+2026-05-27T23:47:33-07:00,nominatim,lisbon,Belem Restelo,candidate_area,geocoding,"Belem Restelo Lisbon Portugal",200,true,false,0,false,data/cache/google_geocoding/Belem_Restelo_Lisbon_Portugal.json,cached
+2026-05-27T23:47:34-07:00,nominatim,chiang_mai,Nimman,candidate_area,geocoding,"Nimman Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/Nimman_Chiang_Mai_Thailand.json,cached
+2026-05-27T23:47:35-07:00,nominatim,chiang_mai,Old City outer edge,candidate_area,geocoding,"Nong Buak Haad Park Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/Nong_Buak_Haad_Park_Chiang_Mai_Thailand.json,cached
+2026-05-27T23:47:36-07:00,nominatim,chiang_mai,Hang Dong,candidate_area,geocoding,"Hang Dong Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/Hang_Dong_Chiang_Mai_Thailand.json,cached
+2026-05-27T23:47:37-07:00,nominatim,chiang_mai,San Sai,candidate_area,geocoding,"San Sai District Office Chiang Mai Thailand",200,true,false,0,false,data/cache/google_geocoding/San_Sai_District_Office_Chiang_Mai_Thailand.json,first San Sai query ambiguous; replaced with district office
+2026-05-27T23:48:00-07:00,web_search,both,all,multiple,multiple,"curated official/platform/community queries",200,true,false,0,false,data/cache/html_pages/source_snapshots.md,web tool summaries cached as notes not raw html

@@ -1,0 +1,16 @@
+status:
+  Green: "证据显示运行良好，且关键风险可控。"
+  Yellow: "可运行，但存在明显摩擦、成本或季节限制。"
+  Red: "对本家庭的三个月稳定生活可能构成实质问题。"
+  Gray: "证据不足，不能做正向判断。"
+confidence:
+  High: "官方/平台/地图证据加多个支持来源。"
+  Medium: "至少两个来源类型支持。"
+  Low: "证据有限或主要来自轶事。"
+  Unknown: "数据不足。"
+rules:
+  no_single_score: true
+  hard_constraints_require_official_sources: true
+  community_not_definitive: true
+  weak_evidence_defaults_to_gray: true
+  visa_recent_change_requires_next_verification: true

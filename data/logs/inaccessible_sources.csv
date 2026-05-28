@@ -1,0 +1,4 @@
+timestamp,source,city,area,layer,dimension,url_or_query,reason,action_taken,fallback_used
+2026-05-28T00:20:00-07:00,Facebook,both,all,community_feedback,parent_community,"Lisbon/Chiang Mai expat parent Facebook private groups",login_wall_or_private_group,Did not access private posts,Used public group metadata and Reddit/blog/forum sources
+2026-05-28T00:20:00-07:00,Airbnb,both,all,life_operability,housing,"Airbnb monthly stay listing pages",anti_scraping_and_dynamic_results,No scraping performed,Used Flatio Vrbo Booking serviced apartment and local rental pages
+2026-05-28T00:20:00-07:00,Google Maps,both,all,life_operability,places_reviews,"Google Maps at scale",terms_and_rate_limit_concern,No bulk scrape performed,Used public map-like pages venue pages and manual search snippets

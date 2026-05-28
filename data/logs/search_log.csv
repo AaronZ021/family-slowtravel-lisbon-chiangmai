@@ -1,0 +1,10 @@
+timestamp,city,layer,dimension,query,source,results_used,notes
+2026-05-27T23:48:00-07:00,lisbon,hard_constraints,visa,"Portugal short stay Schengen visa Chinese passport resident in Canada official",web_search,2,Used gov.pt and EU visa policy
+2026-05-27T23:48:00-07:00,chiang_mai,hard_constraints,visa,"Thailand tourist visa Chinese passport Canada official 60 days extension",web_search,3,Used Thai eVisa and Vancouver consulate plus TAT volatility
+2026-05-27T23:51:00-07:00,both,hard_constraints,safety,"Canada US UK travel advice Portugal Thailand",web_search,6,Used Canada and US pages; UK Thailand only
+2026-05-27T23:55:00-07:00,both,hard_constraints,climate_air,"WeatherSpark Lisbon Chiang Mai IQAir PM2.5 burning season",web_search,5,Used WeatherSpark and IQAir plus Canada air warning
+2026-05-28T00:00:00-07:00,both,hard_constraints,healthcare,"Lisbon Chiang Mai pediatric urgent care private hospital English",web_search,8,Hospital official pages plus limited community
+2026-05-28T00:05:00-07:00,both,life_operability,housing,"Flatio Booking Vrbo Chiang Mai Lisbon 2 bedroom monthly family kitchen washing machine",web_search,20,Manual sampling only; no scraping
+2026-05-28T00:12:00-07:00,both,life_operability,child_activity,"Lisbon Chiang Mai playground indoor play kids cafe playgroup toddler",web_search,30,Venue/blog/community sampling
+2026-05-28T00:18:00-07:00,both,life_operability,mobility,"Lisbon Chiang Mai public transport stroller car seat Grab Bolt Uber children",web_search,12,Used official transport and platform child-seat pages
+2026-05-28T00:22:00-07:00,both,community_feedback,parent_community,"Reddit expat parents family slow travel Lisbon Chiang Mai",web_search,20,Used public snippets and accessible result metadata

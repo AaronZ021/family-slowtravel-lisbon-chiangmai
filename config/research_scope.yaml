@@ -1,0 +1,57 @@
+cities:
+  lisbon:
+    country: Portugal
+    target_months: [January, February, March, April, October, November]
+    candidate_areas:
+      - name: Campo de Ourique
+        center_query: "Campo de Ourique, Lisbon, Portugal"
+        lat: 38.7153262
+        lon: -9.1679353
+        notes: "住宅、市场、靠近 Estrela；步行半径内生活便利，但地形仍需逐街核验。"
+      - name: Estrela / Lapa
+        center_query: "Jardim da Estrela, Lisbon, Portugal"
+        lat: 38.7147150
+        lon: -9.1592192
+        notes: "以 Jardim da Estrela 为生活锚点；部分街段有坡。"
+      - name: Parque das Nacoes
+        center_query: "Parque das Nações, Lisbon, Portugal"
+        lat: 38.7638712
+        lon: -9.0953729
+        notes: "现代、平坦、河滨、商场和亲子场馆集中；本地生活感可能较弱。"
+      - name: Belem / Restelo
+        center_query: "Belem Restelo Lisbon Portugal"
+        lat: 38.6980808
+        lon: -9.2144079
+        notes: "河滨、文化设施和公园强；日常通勤距离需核验。"
+    radii:
+      walking_daily_life_km: 1
+      short_taxi_activity_km: 5
+      medical_drive_minutes: 30
+  chiang_mai:
+    country: Thailand
+    target_months: [January, February, March, April, October, November]
+    candidate_areas:
+      - name: Nimman / Santitham
+        center_query: "Nimman, Chiang Mai, Thailand"
+        lat: 18.7990098
+        lon: 98.9719744
+        notes: "餐饮、商场、医院距离好；飞机噪音、交通和烟季需核验。"
+      - name: Old City outer edge
+        center_query: "Nong Buak Haad Park, Chiang Mai, Thailand"
+        lat: 18.7822420
+        lon: 98.9794442
+        notes: "以西南角公园为锚点；步行可达旧城服务，但道路安全需核验。"
+      - name: Hang Dong
+        center_query: "Hang Dong, Chiang Mai, Thailand"
+        lat: 18.6856866
+        lon: 98.9192218
+        notes: "亲子咖啡、国际学校和郊区住房强；更依赖车或 Grab。"
+      - name: San Sai
+        center_query: "San Sai District Office, Chiang Mai, Thailand"
+        lat: 18.8491034
+        lon: 99.0451285
+        notes: "郊区住房和儿童咖啡信号存在；城市服务距离和出行摩擦较高。"
+    radii:
+      walking_daily_life_km: 1
+      short_taxi_activity_km: 5
+      medical_drive_minutes: 30
