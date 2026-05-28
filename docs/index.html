@@ -79,6 +79,24 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 .callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
 .callout.warn { background: #fef2f2; border-color: #fecaca; }
 .callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+.source-badge { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 7px; border-radius: 6px; background: #eef2ff; color: #3730a3; text-decoration: none; font-size: 12px; font-weight: 600; margin: 2px 4px 2px 0; white-space: nowrap; }
+.source-badge:hover { outline: 2px solid #818cf8; outline-offset: 1px; text-decoration: none; }
+.badges { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.cell-label { margin: 10px 0 4px; font-size: 12px; font-weight: 700; color: var(--muted); }
+.cell-block p { margin: 0 0 8px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.meta-pill { display: inline-flex; min-height: 24px; align-items: center; padding: 2px 8px; border-radius: 6px; background: var(--code-bg); border: 1px solid var(--border); color: #333; font-size: 12px; font-weight: 600; }
+.evidence-tier { border-left: 4px solid var(--border); padding: 8px 0 2px 10px; margin: 10px 0; }
+.official-tier { border-left-color: #2563eb; }
+.platform-tier { border-left-color: #65a30d; }
+.community-tier { border-left-color: #d97706; }
+.source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 16px; }
+.source-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 13px; }
+.source-card h3 { margin: 6px 0; font-size: 15px; }
+.source-card dl { margin: 0; display: grid; gap: 4px; }
+.source-card dl div { display: grid; grid-template-columns: 72px 1fr; gap: 8px; }
+.source-card dt { color: var(--muted); }
+.source-card dd { margin: 0; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
@@ -87,6 +105,7 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
     <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
     <nav>
       <a href="index.html" class="active">首页</a>
+      <a href="indicator_evidence_stack.html">指标证据栈</a>
       <a href="evidence_side_by_side.html">证据横向对照</a>
       <a href="final_comparison_report.html">最终对比报告</a>
       <a href="red_flags.html">红旗清单</a>
@@ -113,6 +132,13 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 
 <h2>主要报告</h2>
 <div class="card-grid">
+  <div class="card">
+    <a href="indicator_evidence_stack.html">
+      <span class="tag">新版</span>
+      <h3>指标证据栈</h3>
+      <p>每个维度按官方/统计、平台/地图、社区反馈 overlay 拆开，并写出证据实际说明的事实。</p>
+    </a>
+  </div>
   <div class="card">
     <a href="evidence_side_by_side.html">
       <span class="tag">事实对照</span>

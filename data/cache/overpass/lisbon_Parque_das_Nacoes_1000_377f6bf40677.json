@@ -1,0 +1,1048 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:25:46Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1213529453,
+  "lat": 38.7601443,
+  "lon": -9.0958562,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "5A",
+    "addr:postcode": "1990-221",
+    "addr:street": "Largo dos Arautos",
+    "addr:unit": "2.06.05",
+    "amenity": "pharmacy",
+    "contact:email": "encomendas.farmaciaexposul@gmail.com",
+    "contact:phone": "+351 218 967 033",
+    "contact:website": "https://www.farmaciasportuguesas.pt/catalogo/ficha-farmacia?code=11266",
+    "dispensing": "no",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Exposul",
+    "opening_hours": "Mo-Su 09:00-24:00",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1375998893,
+  "lat": 38.7718729,
+  "lon": -9.0957604,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:country": "PT",
+    "addr:housenumber": "65B",
+    "addr:street": "Alameda dos Oceanos",
+    "amenity": "pharmacy",
+    "contact:email": "farmaciavascodagama@sapo.pt",
+    "contact:phone": "+351 213 478 932",
+    "contact:website": "https://www.facebook.com/FarmaciaVascoDaGama",
+    "dispensing": "no",
+    "drive_through": "no",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Vasco da Gama",
+    "phone": "+351218947000",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1852999602,
+  "lat": 38.7675578,
+  "lon": -9.0994158,
+  "tags": {
+    "addr:housenumber": "LT 1.15",
+    "addr:postcode": "1990-233",
+    "addr:street": "Avenida Dom João II",
+    "addr:unit": "Loja G220",
+    "amenity": "pharmacy",
+    "contact:email": "f.gareoriente@grupofarmaspot.pt",
+    "contact:facebook": "farmaciagareoriente",
+    "contact:instagram": "farmacia.gareoriente",
+    "contact:phone": "+351 218 963 270;+351 915 700 903",
+    "contact:website": "http://farmaciagareoriente.pai.pt",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "level": "0",
+    "name": "Farmácia Gare do Oriente",
+    "opening_hours": "Mo-Fr 08:00-21:00; Sa,Su,PH 09:00-20:00",
+    "website": "https://grupofarmaspot.pt/farmacia-gare-do-oriente/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2385872626,
+  "lat": 38.7620648,
+  "lon": -9.0936677,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-05-03",
+    "name": "Coffee&Tea",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3666154183,
+  "lat": 38.7671129,
+  "lon": -9.0923222,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1990-231",
+    "addr:street": "Rossio dos Olivais - Quiosque Nº 4",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "no",
+    "name": "Azul Profundo",
+    "phone": "+351 969 820 924",
+    "smoking": "outside"
+  }
+},
+{
+  "type": "node",
+  "id": 3912623389,
+  "lat": 38.7553510,
+  "lon": -9.0970828,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "1B",
+    "addr:postcode": "1990-196",
+    "addr:street": "Alameda dos Oceanos",
+    "alt_name": "Farmácia dos Oceanos",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "drive_through": "no",
+    "email": "farmaciavilario@hotmail.com",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Vila Rio",
+    "opening_hours": "Mo-Fr 08:00-24:00, Sa-Su 09:00-20:00",
+    "payment:cash": "yes",
+    "payment:multibanco": "yes",
+    "phone": "+351 213 543 938"
+  }
+},
+{
+  "type": "node",
+  "id": 5631421806,
+  "lat": 38.7565870,
+  "lon": -9.0970793,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:country": "PT",
+    "addr:housenumber": "3",
+    "addr:postcode": "1050-134",
+    "addr:street": "Alameda dos Oceanos",
+    "addr:unit": "Loja 3.14.02G",
+    "email": "geral@bioino.pt",
+    "facebook": "facebook.com/bioino.merceariabio/",
+    "name": "BioIno",
+    "opening_hours": "Mo-Fr 09:30-20:30;Sa 09:30-19:00",
+    "organic": "only",
+    "phone": "+351 216 079 246;+351 964 950 699",
+    "shop": "supermarket",
+    "website": "www.bioino.com"
+  }
+},
+{
+  "type": "node",
+  "id": 8000440423,
+  "lat": 38.7700119,
+  "lon": -9.0925428,
+  "tags": {
+    "addr:housenumber": "3",
+    "addr:street": "Rua da Pimenta",
+    "amenity": "cafe",
+    "check_date": "2026-01-03",
+    "check_date:opening_hours": "2022-06-30",
+    "cuisine": "bubble_tea",
+    "internet_access": "yes",
+    "name": "Bubble Time",
+    "opening_hours": "13:00-20:00",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8309887047,
+  "lat": 38.7681026,
+  "lon": -9.0986642,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-08-23",
+    "level": "0",
+    "name": "Café Jeronymo"
+  }
+},
+{
+  "type": "node",
+  "id": 8377572815,
+  "lat": 38.7688473,
+  "lon": -9.0960410,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:floor": "0",
+    "addr:postcode": "1990-207",
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "bar": "no",
+    "brand": "Starbucks",
+    "brand:wikidata": "Q37158",
+    "brand:wikipedia": "pt:Starbucks",
+    "check_date": "2025-11-24",
+    "contact:email": "starbucks@starbucks.pt",
+    "contact:facebook": "StarbucksPortugal",
+    "contact:instagram": "starbucksptg",
+    "contact:tiktok": "starbucksportugal",
+    "contact:twitter": "starbucksPTG",
+    "cuisine": "coffee_shop",
+    "drive_through": "no",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "level": "0",
+    "name": "Starbucks",
+    "official_name": "Starbucks Coffee",
+    "opening_hours": "Mo-Fr 07:00-21:00; Sa,Su 08:00-21:00",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "ref": "56046-289947",
+    "source:contact": "website",
+    "source:opening_hours": "survey",
+    "takeaway": "yes",
+    "toilets": "yes",
+    "website": "https://www.starbucks.pt/",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 8377606017,
+  "lat": 38.7688198,
+  "lon": -9.0965599,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:street": "Rua do Pólo Norte",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Interprev"
+  }
+},
+{
+  "type": "node",
+  "id": 8648522014,
+  "lat": 38.7681507,
+  "lon": -9.0988823,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Ardina Caffé"
+  }
+},
+{
+  "type": "node",
+  "id": 9084136054,
+  "lat": 38.7587811,
+  "lon": -9.0934289,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1990-008",
+    "addr:street": "Passeio Adamastor 2.01.01 A",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;burger;sandwich;ice_cream;cake;juice;salad",
+    "name": "Grupeto Bike Café",
+    "opening_hours": "Tu-Su 08:00-18:00",
+    "outdoor_seating": "yes",
+    "phone": "215941955",
+    "website": "https://www.grupetobikeshopcafe.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 11711389985,
+  "lat": 38.7678981,
+  "lon": -9.1013192,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Buondi",
+    "level": "0",
+    "survey:date": "2024-03-06"
+  }
+},
+{
+  "type": "node",
+  "id": 11874624722,
+  "lat": 38.7577912,
+  "lon": -9.0968653,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "27B",
+    "addr:postcode": "1990-198",
+    "addr:street": "Alameda dos Oceanos",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "A Rosa",
+    "opening_hours": "Mo-Fr 7:00-19:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11874624729,
+  "lat": 38.7585274,
+  "lon": -9.0953436,
+  "tags": {
+    "addr:housenumber": "9A",
+    "addr:street": "Passeio do Adamastor",
+    "name": "Laundry24",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11874624732,
+  "lat": 38.7587973,
+  "lon": -9.0947149,
+  "tags": {
+    "addr:housenumber": "10A",
+    "addr:street": "Passeio do Adamastor",
+    "amenity": "cafe",
+    "check_date": "2024-11-24",
+    "name": "Sense of Coffee",
+    "opening_hours": "09:00-16:00",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11879507698,
+  "lat": 38.7622358,
+  "lon": -9.0958669,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2025-08-18",
+    "cuisine": "coffee_shop",
+    "drive_through": "no",
+    "name": "Ponto",
+    "name:pt": "Café Ponto",
+    "name:sk": "Kaviareň Ponto",
+    "outdoor_seating": "yes",
+    "toilets": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11881990752,
+  "lat": 38.7709067,
+  "lon": -9.0979956,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1990-083",
+    "addr:street": "Avenida Dom João II",
+    "amenity": "cafe",
+    "name": "Portela",
+    "opening_hours": "Mo-Fr 07:00-19:00; Sa,Su 08:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11881991605,
+  "lat": 38.7713616,
+  "lon": -9.1013634,
+  "tags": {
+    "addr:city": "Parque das Nações",
+    "addr:housenumber": "Lote 4",
+    "addr:postcode": "1800-262",
+    "addr:street": "Rua Padre Joaquim Alves Correia",
+    "addr:unit": "Loja F",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;cake;sandwich;dessert;portuguese",
+    "name": "Niquibelo",
+    "opening_hours": "Mo-Su 07:00-18:30",
+    "outdoor_seating": "yes",
+    "phone": "964 206 384"
+  }
+},
+{
+  "type": "node",
+  "id": 11882149044,
+  "lat": 38.7644135,
+  "lon": -9.0974478,
+  "tags": {
+    "addr:housenumber": "4",
+    "addr:street": "Rua do Mar do Norte",
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmácia dos navegantes"
+  }
+},
+{
+  "type": "node",
+  "id": 11882149046,
+  "lat": 38.7646163,
+  "lon": -9.0983759,
+  "tags": {
+    "addr:housenumber": "17 A",
+    "addr:street": "Avenida Dom João II",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "gastroenterology",
+    "name": "Endosul"
+  }
+},
+{
+  "type": "node",
+  "id": 11882320718,
+  "lat": 38.7627756,
+  "lon": -9.0973674,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica do Mediterrâneo"
+  }
+},
+{
+  "type": "node",
+  "id": 11882320725,
+  "lat": 38.7640495,
+  "lon": -9.0968204,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "clinic",
+    "name": "Cellulem Block"
+  }
+},
+{
+  "type": "node",
+  "id": 11882320726,
+  "lat": 38.7640431,
+  "lon": -9.0967391,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "clinic",
+    "healthcare:speciality": "piolhos_e_lêndeas",
+    "name": "Kids & Nits"
+  }
+},
+{
+  "type": "node",
+  "id": 11883812814,
+  "lat": 38.7599186,
+  "lon": -9.0960115,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Tastyfood"
+  }
+},
+{
+  "type": "node",
+  "id": 11883812817,
+  "lat": 38.7602929,
+  "lon": -9.0952029,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Halolife - Centro de Haloterapia"
+  }
+},
+{
+  "type": "node",
+  "id": 11883812818,
+  "lat": 38.7590673,
+  "lon": -9.0959391,
+  "tags": {
+    "name": "Lavandaria Super Clean",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11884970213,
+  "lat": 38.7600025,
+  "lon": -9.0930288,
+  "tags": {
+    "amenity": "clinic",
+    "check_date": "2026-05-16",
+    "healthcare": "clinic",
+    "name": "in mind",
+    "opening_hours": "Mo-Fr 10:00-19:00; Sa-Su off"
+  }
+},
+{
+  "type": "node",
+  "id": 11884970214,
+  "lat": 38.7599406,
+  "lon": -9.0930273,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2026-05-16",
+    "name": "RE-SUGAR",
+    "opening_hours": "Mo-Fr 10:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11884970219,
+  "lat": 38.7592128,
+  "lon": -9.0932295,
+  "tags": {
+    "amenity": "cafe",
+    "name": "DuFran's Brasil"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720585,
+  "lat": 38.7563088,
+  "lon": -9.0952528,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "barbacue",
+    "name": "Grelhados do Bistek"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720597,
+  "lat": 38.7565029,
+  "lon": -9.0954754,
+  "tags": {
+    "laundry_service": "yes",
+    "name": "Rio que passa",
+    "self_service": "no",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720621,
+  "lat": 38.7568244,
+  "lon": -9.0969803,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "15 C",
+    "addr:postcode": "1990-196",
+    "addr:street": "Alameda dos Oceanos",
+    "amenity": "cafe",
+    "cuisine": "portuguese",
+    "name": "Caravela dos Oceanos",
+    "opening_hours": "Mo-Sa 7:30-18:00",
+    "phone": "+351 21 894 2044"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720623,
+  "lat": 38.7565008,
+  "lon": -9.0970063,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "11C",
+    "addr:postcode": "1990-196",
+    "addr:street": "Alameda dos Oceanos",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "saúde_no_trabalho;segurança_no_trabalho;formação_certificada;seviços_de_presenção;serviços_de_saúde_e_bem-estar;outros",
+    "name": "AtlantiCare"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720624,
+  "lat": 38.7564338,
+  "lon": -9.0970131,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "6",
+    "addr:postcode": "1990-196",
+    "addr:street": "Alameda dos Oceanos",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "ophthalmology;plastic_surgery",
+    "name": "Clinicas Leite",
+    "opening_hours": "Mo-Fr 9:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720635,
+  "lat": 38.7556489,
+  "lon": -9.0970607,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Café Bairro",
+    "opening_hours": "Tu-Sa 7:30-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11898720640,
+  "lat": 38.7559886,
+  "lon": -9.0973421,
+  "tags": {
+    "name": "Lavandaria Oceano",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 12169669366,
+  "lat": 38.7664907,
+  "lon": -9.1046034,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2026-05-27",
+    "check_date:opening_hours": "2026-05-27",
+    "name": "Pingo Doce Café",
+    "opening_hours": "08:00-21:00",
+    "payment:cash": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "ref": "873"
+  }
+},
+{
+  "type": "node",
+  "id": 12170226899,
+  "lat": 38.7693634,
+  "lon": -9.0974520,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-09-11",
+    "name": "Manteigaria",
+    "opening_hours": "08:00-21:00",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12177119221,
+  "lat": 38.7632503,
+  "lon": -9.1049729,
+  "tags": {
+    "addr:housenumber": "333H",
+    "addr:street": "Av. Infante Dom Henrique",
+    "amenity": "clinic",
+    "description": "Fertility clinic",
+    "name": "IVI Lisboa",
+    "phone": "+351800 780 340",
+    "website": "https://ivi.pt/clinicas/lisboa"
+  }
+},
+{
+  "type": "node",
+  "id": 12312871298,
+  "lat": 38.7618679,
+  "lon": -9.0967177,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1990-426",
+    "addr:street": "Alameda dos Oceanos",
+    "addr:unit": "106 A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clinica Médis",
+    "opening_hours": "Mo-Sa 9:00-20:00"
+  }
+},
+{
+  "type": "node",
+  "id": 12329600790,
+  "lat": 38.7694446,
+  "lon": -9.0980411,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "One - Dental & Facial Concept"
+  }
+},
+{
+  "type": "node",
+  "id": 12329600792,
+  "lat": 38.7690106,
+  "lon": -9.0980344,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Choupana Caffe"
+  }
+},
+{
+  "type": "node",
+  "id": 12608503800,
+  "lat": 38.7561496,
+  "lon": -9.0998601,
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 13003296794,
+  "lat": 38.7708806,
+  "lon": -9.0979944,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:country": "PT",
+    "addr:housenumber": "39F",
+    "addr:postcode": "1990-083",
+    "addr:street": "Avenida Dom João II",
+    "amenity": "clinic",
+    "description": "Medicina e Segurança do Trabalho",
+    "emergency": "no",
+    "healthcare": "clinic",
+    "healthcare:speciality": "occupational;medicina_trabalho",
+    "name": "EuroSaúde (Parque da Nações)",
+    "phone": "+351 21 847 57 02",
+    "website": "https://www.eurosaude.pt"
+  }
+},
+{
+  "type": "node",
+  "id": 13155960947,
+  "lat": 38.7635520,
+  "lon": -9.0965670,
+  "tags": {
+    "addr:street": "Alameda dos Oceanos",
+    "amenity": "cafe",
+    "brand": "The Coffee",
+    "brand:wikidata": "Q112042753",
+    "cuisine": "coffee_shop",
+    "name": "The Coffee",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13201529050,
+  "lat": 38.7681692,
+  "lon": -9.0992014,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Galp",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "operator": "Galp"
+  }
+},
+{
+  "type": "node",
+  "id": 13201529060,
+  "lat": 38.7678505,
+  "lon": -9.0996117,
+  "tags": {
+    "amenity": "cafe",
+    "level": "-3",
+    "name": "Buondi"
+  }
+},
+{
+  "type": "node",
+  "id": 13201529062,
+  "lat": 38.7683187,
+  "lon": -9.0993345,
+  "tags": {
+    "level": "0",
+    "name": "Mr Lin",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 13201529064,
+  "lat": 38.7674749,
+  "lon": -9.0989441,
+  "tags": {
+    "amenity": "cafe",
+    "indoor_seating": "yes",
+    "level": "0",
+    "name": "Buondi",
+    "opening_hours": "Mo-Fr 06:30-21:00; Sa,Su,PH 07:00-21:00",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13201529068,
+  "lat": 38.7683239,
+  "lon": -9.0994068,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Mon Tea",
+    "opening_hours": "Mo-Su 13:00-20:30"
+  }
+},
+{
+  "type": "node",
+  "id": 13201529070,
+  "lat": 38.7682842,
+  "lon": -9.0994676,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Desejo Pronto",
+    "opening_hours": "Mo-Su 06:00-00:30"
+  }
+},
+{
+  "type": "way",
+  "id": 151686096,
+  "center": {
+    "lat": 38.7555083,
+    "lon": -9.0955897
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Jardim das Musas"
+  }
+},
+{
+  "type": "way",
+  "id": 174668878,
+  "center": {
+    "lat": 38.7694495,
+    "lon": -9.0921242
+  },
+  "tags": {
+    "access": "yes",
+    "area": "yes",
+    "leisure": "playground",
+    "name": "Canto da Música",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 230062407,
+  "center": {
+    "lat": 38.7622454,
+    "lon": -9.0944563
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 239731981,
+  "center": {
+    "lat": 38.7622698,
+    "lon": -9.0949979
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 241324066,
+  "center": {
+    "lat": 38.7580069,
+    "lon": -9.0946943
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 241324139,
+  "center": {
+    "lat": 38.7573005,
+    "lon": -9.0947610
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 709781850,
+  "center": {
+    "lat": 38.7602696,
+    "lon": -9.0981252
+  },
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:street": "Alameda dos Oceanos",
+    "architect": "Gonçalo Ribeiro Telles",
+    "architect:wikidata": "Q368644",
+    "description": "Devendo o seu nome às rotas migratórias das rolas e à sua passagem por este local, esta elevação natural onde existiram tanques de petrolíferas, foi transformada em jardim para a Exposição Mundial de Lisboa de 1998 (Expo 98). O projeto, da autori",
+    "leisure": "park",
+    "name": "Jardim do Cabeço das Rolas",
+    "operator": "Câmara Municipal de Lisboa",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "22198c0b-a10a-4604-b58c-95bf6174058c",
+    "wikidata": "Q10306321",
+    "wikimedia_commons": "Category:Jardim do Cabeço das Rolas",
+    "wikipedia": "pt:Jardim do Cabeço das Rolas"
+  }
+},
+{
+  "type": "way",
+  "id": 868218311,
+  "center": {
+    "lat": 38.7651531,
+    "lon": -9.1006513
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Chillout Garden"
+  }
+},
+{
+  "type": "way",
+  "id": 868218313,
+  "center": {
+    "lat": 38.7638982,
+    "lon": -9.1006477
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Amphitheatre Garden"
+  }
+},
+{
+  "type": "way",
+  "id": 868218314,
+  "center": {
+    "lat": 38.7668763,
+    "lon": -9.1003085
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 868218316,
+  "center": {
+    "lat": 38.7663024,
+    "lon": -9.1006636
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Central Garden"
+  }
+},
+{
+  "type": "way",
+  "id": 868522308,
+  "center": {
+    "lat": 38.7621057,
+    "lon": -9.0929480
+  },
+  "tags": {
+    "addr:street": "Passeio de Neptuno",
+    "description": "Entre o Oceanário de Lisboa e o rio Tejo está este jardim totalmente relvado, onde o terreno, modelado em rigorosas curvas de nível, simula o ritmo do oceano e o fazer e o desfazer das ondas. Para conceber esta obra, a autora Fernanda Fragateiro, insp",
+    "leisure": "park",
+    "name": "Jardim das Ondas",
+    "operator": "Câmara Municipal de Lisboa",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "f9ea0999-853e-47bf-a5b7-84f6da026815",
+    "website": "http://www.portaldasnacoes.pt/item/fernanda-fragateiro-jardim-das-ondas/",
+    "wikidata": "Q10306292",
+    "wikimedia_commons": "Category:Jardim das Ondas",
+    "wikipedia": "pt:Jardim das Ondas"
+  }
+},
+{
+  "type": "way",
+  "id": 1207399630,
+  "center": {
+    "lat": 38.7652721,
+    "lon": -9.1050190
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1207399631,
+  "center": {
+    "lat": 38.7634565,
+    "lon": -9.1046071
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "playground"
+  }
+},
+{
+  "type": "way",
+  "id": 1207399693,
+  "center": {
+    "lat": 38.7614967,
+    "lon": -9.1021814
+  },
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "way",
+  "id": 1387608384,
+  "center": {
+    "lat": 38.7713175,
+    "lon": -9.1008483
+  },
+  "tags": {
+    "access": "yes",
+    "description": "Largo Ramada Curto(antigo Impasse G da Quinta das Laranjeiras)",
+    "leisure": "playground",
+    "name": "Parque Infantil do Largo Ramada Curto, Bairro Quinta das Laranjeiras",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "cb08ae75-36d0-4f3c-99bb-9c61b2015c1f"
+  }
+},
+{
+  "type": "way",
+  "id": 1389874872,
+  "center": {
+    "lat": 38.7614637,
+    "lon": -9.1064673
+  },
+  "tags": {
+    "area": "yes",
+    "leisure": "playground"
+  }
+},
+{
+  "type": "relation",
+  "id": 14648550,
+  "center": {
+    "lat": 38.7719423,
+    "lon": -9.0919830
+  },
+  "tags": {
+    "addr:street": "Rua da Pimenta",
+    "alt_name": "Jardins Garcia d'Orta",
+    "description": "Integrado no Parque das Nações, na frente ribeirinha do estuário do Rio Tejo, aqui encontramos uma flora variada e exótica vinda de outros Continentes, num conjunto de ecossistemas: Goa, África, Macau/Coloane, Açores, Madeira, Cabo Verde e S. Tomé",
+    "leisure": "park",
+    "name": "Jardim Garcia de Orta",
+    "name:en": "Garcia de Orta Gardens",
+    "operator": "Câmara Municipal de Lisboa",
+    "operator:type": "government",
+    "operator:wikidata": "Q30255955",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "a9579118-6828-4cb8-811b-aadaf9d8aac1",
+    "type": "multipolygon",
+    "wikidata": "Q10305687",
+    "wikimedia_commons": "Category:Jardins Garcia de Orta"
+  }
+}
+
+  ]
+}

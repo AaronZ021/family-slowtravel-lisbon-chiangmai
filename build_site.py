@@ -84,12 +84,31 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 .callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
 .callout.warn { background: #fef2f2; border-color: #fecaca; }
 .callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+.source-badge { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 7px; border-radius: 6px; background: #eef2ff; color: #3730a3; text-decoration: none; font-size: 12px; font-weight: 600; margin: 2px 4px 2px 0; white-space: nowrap; }
+.source-badge:hover { outline: 2px solid #818cf8; outline-offset: 1px; text-decoration: none; }
+.badges { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.cell-label { margin: 10px 0 4px; font-size: 12px; font-weight: 700; color: var(--muted); }
+.cell-block p { margin: 0 0 8px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.meta-pill { display: inline-flex; min-height: 24px; align-items: center; padding: 2px 8px; border-radius: 6px; background: var(--code-bg); border: 1px solid var(--border); color: #333; font-size: 12px; font-weight: 600; }
+.evidence-tier { border-left: 4px solid var(--border); padding: 8px 0 2px 10px; margin: 10px 0; }
+.official-tier { border-left-color: #2563eb; }
+.platform-tier { border-left-color: #65a30d; }
+.community-tier { border-left-color: #d97706; }
+.source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 16px; }
+.source-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 13px; }
+.source-card h3 { margin: 6px 0; font-size: 15px; }
+.source-card dl { margin: 0; display: grid; gap: 4px; }
+.source-card dl div { display: grid; grid-template-columns: 72px 1fr; gap: 8px; }
+.source-card dt { color: var(--muted); }
+.source-card dd { margin: 0; overflow-wrap: anywhere; }
 """
 
 
 def navlinks(active=""):
     items = [
         ("index.html", "首页"),
+        ("indicator_evidence_stack.html", "指标证据栈"),
         ("evidence_side_by_side.html", "证据横向对照"),
         ("final_comparison_report.html", "最终对比报告"),
         ("red_flags.html", "红旗清单"),
@@ -179,6 +198,137 @@ def csv_to_html(csv_path, title, active, intro=""):
     return wrap_page(title, colorize_sources("\n".join(body_html)), active)
 
 
+def read_source_map():
+    path = ROOT / "data/sources/sources.csv"
+    if not path.exists():
+        return {}
+    with open(path, newline="", encoding="utf-8") as f:
+        return {row["source_id"]: row for row in csv.DictReader(f)}
+
+
+def expand_source_token(token, sources):
+    if "-" not in token:
+        return [token]
+    import re
+    left, right = token.split("-", 1)
+    m = re.match(r"^(.*?)(\d+)$", left)
+    if not m:
+        return [token]
+    prefix, start_s = m.groups()
+    end_s = right[len(prefix):] if right.startswith(prefix) else right
+    if not end_s.isdigit():
+        return [token]
+    width = max(len(start_s), len(end_s))
+    expanded = [f"{prefix}{i:0{width}d}" for i in range(int(start_s), int(end_s) + 1)]
+    return expanded if all(sid in sources for sid in expanded) else [token]
+
+
+def source_badges(source_ids, sources):
+    out = []
+    for raw in (source_ids or "").replace(",", ";").split(";"):
+        token = raw.strip()
+        if not token:
+            continue
+        for sid in expand_source_token(token, sources):
+            if sid in sources:
+                title = sources[sid].get("title", "")
+                out.append(f'<a class="source-badge" href="#src-{html.escape(sid)}" title="{html.escape(title)}">{html.escape(sid)}</a>')
+            else:
+                out.append(f'<span class="source-badge">{html.escape(sid)}</span>')
+    return '<div class="badges">' + " ".join(out) + "</div>" if out else ""
+
+
+def source_index_cards(source_ids, sources):
+    cards = []
+    for sid in sorted(source_ids):
+        row = sources.get(sid)
+        if not row:
+            continue
+        cards.append(f"""
+<article class="source-card" id="src-{html.escape(sid)}">
+  <a class="source-badge" href="{html.escape(row['url'])}" target="_blank" rel="noopener">{html.escape(sid)}</a>
+  <h3><a href="{html.escape(row['url'])}" target="_blank" rel="noopener">{html.escape(row['title'])}</a></h3>
+  <dl>
+    <div><dt>类型</dt><dd>{html.escape(row['source_type'])}</dd></div>
+    <div><dt>城市</dt><dd>{html.escape(row['city'])}</dd></div>
+    <div><dt>维度</dt><dd>{html.escape(row['dimension'])}</dd></div>
+    <div><dt>访问</dt><dd>{html.escape(row['accessed_date'])}</dd></div>
+    <div><dt>URL</dt><dd><a href="{html.escape(row['url'])}" target="_blank" rel="noopener">{html.escape(row['url'])}</a></dd></div>
+  </dl>
+</article>
+""")
+    return '<div class="source-grid">' + "\n".join(cards) + "</div>"
+
+
+def stack_cell(row, sources, used_ids):
+    def badges(col):
+        for raw in (row.get(col) or "").replace(",", ";").split(";"):
+            token = raw.strip()
+            if token:
+                used_ids.update(expand_source_token(token, sources))
+        return source_badges(row.get(col, ""), sources)
+
+    return f"""
+<div class="cell-block">
+  <div class="cell-label">当前维度评估</div>
+  <p>{html.escape(row['current_dimension_assessment'])}</p>
+  <div class="meta-row">
+    <span class="meta-pill">证据充分性：{html.escape(row['evidence_sufficiency'])}</span>
+    <span class="meta-pill">置信度：{html.escape(row['confidence'])}</span>
+  </div>
+  <div class="evidence-tier official-tier">
+    <div class="cell-label">官方/统计证据</div>
+    <p>{html.escape(row['official_stat_evidence'])}</p>
+    {badges('official_source_ids')}
+  </div>
+  <div class="evidence-tier platform-tier">
+    <div class="cell-label">平台/地图证据</div>
+    <p>{html.escape(row['platform_map_evidence'])}</p>
+    {badges('platform_source_ids')}
+  </div>
+  <div class="evidence-tier community-tier">
+    <div class="cell-label">社区反馈 overlay</div>
+    <p>{html.escape(row['community_overlay'])}</p>
+    {badges('community_source_ids')}
+  </div>
+  <div class="cell-label">缺口</div>
+  <p>{html.escape(row['gaps'])}</p>
+  <div class="cell-label">下一步补数</div>
+  <p>{html.escape(row['next_data_to_collect'])}</p>
+</div>
+"""
+
+
+def indicator_stack_page(csv_path):
+    sources = read_source_map()
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    by_layer = {}
+    for row in rows:
+        by_layer.setdefault(row["layer"], {}).setdefault(row["dimension"], {})[row["city"]] = row
+    used_ids = set()
+    body = [
+        '<h1 class="page-title">指标证据栈</h1>',
+        '<p class="page-sub">每个小格子先写该城市在该维度的事实含义，再列官方/统计、平台/地图、社区反馈三类证据。证据 ID 是支撑，不替代文字判断。</p>',
+        '<div class="callout"><strong>读法</strong>：这里不做城市总评。每行只处理一个维度；每个城市的小格子说明当前证据能支撑什么、哪里不足、下一步补什么。</div>',
+    ]
+    for layer, dims in by_layer.items():
+        body.append(f"<h2>{html.escape(layer)}</h2>")
+        body.append("<table><thead><tr><th>维度</th><th>里斯本</th><th>清迈</th></tr></thead><tbody>")
+        for dimension, cities in dims.items():
+            lis = cities.get("里斯本")
+            cmi = cities.get("清迈")
+            body.append("<tr>")
+            body.append(f"<td><strong>{html.escape(dimension)}</strong></td>")
+            body.append(f"<td>{stack_cell(lis, sources, used_ids) if lis else ''}</td>")
+            body.append(f"<td>{stack_cell(cmi, sources, used_ids) if cmi else ''}</td>")
+            body.append("</tr>")
+        body.append("</tbody></table>")
+    body.append("<h2>本页来源索引</h2>")
+    body.append(source_index_cards(used_ids, sources))
+    return wrap_page("指标证据栈", "\n".join(body), "indicator_evidence_stack.html")
+
+
 def combined_evidence_page(city, files, title, active):
     """Combine all evidence markdown for one city into a single page."""
     body_parts = [f'<h1 class="page-title">{html.escape(title)}</h1>']
@@ -238,6 +388,13 @@ index_body = """
 
 <h2>主要报告</h2>
 <div class="card-grid">
+  <div class="card">
+    <a href="indicator_evidence_stack.html">
+      <span class="tag">新版</span>
+      <h3>指标证据栈</h3>
+      <p>每个维度按官方/统计、平台/地图、社区反馈 overlay 拆开，并写出证据实际说明的事实。</p>
+    </a>
+  </div>
   <div class="card">
     <a href="evidence_side_by_side.html">
       <span class="tag">事实对照</span>
@@ -317,6 +474,10 @@ index_body = """
 """
 
 (SITE / "index.html").write_text(wrap_page("首页", index_body, "index.html"))
+
+(SITE / "indicator_evidence_stack.html").write_text(
+    indicator_stack_page(ROOT / "reports/indicator_evidence_stack.csv")
+)
 
 # Reports
 report_pages = [

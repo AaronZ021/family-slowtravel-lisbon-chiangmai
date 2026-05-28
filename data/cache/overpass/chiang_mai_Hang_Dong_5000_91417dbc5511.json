@@ -1,0 +1,669 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:27:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1058644297,
+  "lat": 18.6543792,
+  "lon": 98.9060042,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1583821997,
+  "lat": 18.6941025,
+  "lon": 98.9257238,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1589074360,
+  "lat": 18.6888722,
+  "lon": 98.9207078,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2230597304,
+  "lat": 18.6890293,
+  "lon": 98.9208101,
+  "tags": {
+    "brand": "Lotus's go fresh",
+    "brand:wikidata": "Q125937967",
+    "name": "Lotus's go fresh",
+    "opening_hours": "24/7",
+    "operator": "Tesco Lotus",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2670834398,
+  "lat": 18.6865334,
+  "lon": 98.8919564,
+  "tags": {
+    "amenity": "clinic",
+    "emergency": "no",
+    "fixme": "name missing",
+    "healthcare": "clinic",
+    "name": "โรงพยาบาลส่งเสริมสุขภาพตำบล",
+    "name:en": "Subdistrict Health Promoting Hospital"
+  }
+},
+{
+  "type": "node",
+  "id": 2670834423,
+  "lat": 18.7093028,
+  "lon": 98.9212674,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2685558607,
+  "lat": 18.6822481,
+  "lon": 98.9186296,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2685562362,
+  "lat": 18.6830741,
+  "lon": 98.9183624,
+  "tags": {
+    "amenity": "hospital",
+    "name": "โรงพยาบาลหางดง",
+    "name:en": "Hang Dong Hospital",
+    "name:th": "โรงพยาบาลหางดง"
+  }
+},
+{
+  "type": "node",
+  "id": 2685576111,
+  "lat": 18.6891234,
+  "lon": 98.9209043,
+  "tags": {
+    "brand": "CP Freshmart",
+    "brand:en": "CP Freshmart",
+    "brand:th": "ซีพี เฟรชมาร์ท",
+    "brand:wikidata": "Q125917787",
+    "name": "CP Freshmart",
+    "name:en": "CP Freshmart",
+    "name:th": "ซีพี เฟรชมาร์ท",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3342099609,
+  "lat": 18.6855843,
+  "lon": 98.8977178,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3379252966,
+  "lat": 18.7016471,
+  "lon": 98.9321642,
+  "tags": {
+    "name": "Rimping Supermarket",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 3476127842,
+  "lat": 18.7017462,
+  "lon": 98.9321805,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Watson"
+  }
+},
+{
+  "type": "node",
+  "id": 3476127843,
+  "lat": 18.7015431,
+  "lon": 98.9322019,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "First Drug"
+  }
+},
+{
+  "type": "node",
+  "id": 4355189621,
+  "lat": 18.7045985,
+  "lon": 98.9620116,
+  "tags": {
+    "opening_hours": "Mo-Su 06:00-20:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4355189622,
+  "lat": 18.7051181,
+  "lon": 98.9607469,
+  "tags": {
+    "opening_hours": "Mo-Su 06:00-20:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4355189623,
+  "lat": 18.7062651,
+  "lon": 98.9600428,
+  "tags": {
+    "opening_hours": "Mo-Su 08:00-20:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4355189624,
+  "lat": 18.7073880,
+  "lon": 98.9604720,
+  "tags": {
+    "opening_hours": "Mo-Su 10:00-16:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4355189628,
+  "lat": 18.7030729,
+  "lon": 98.9617626,
+  "tags": {
+    "opening_hours": "Mo-Su 06:00-20:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4532822019,
+  "lat": 18.7124442,
+  "lon": 98.9387114,
+  "tags": {
+    "amenity": "pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 4532822024,
+  "lat": 18.7075662,
+  "lon": 98.9356989,
+  "tags": {
+    "brand": "7-Eleven",
+    "brand:wikidata": "Q259340",
+    "name": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4571236993,
+  "lat": 18.7031790,
+  "lon": 98.9314667,
+  "tags": {
+    "brand": "Big C",
+    "brand:wikidata": "Q858665",
+    "name": "Big C",
+    "name:th": "bigc",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 5261391026,
+  "lat": 18.7133332,
+  "lon": 98.9542816,
+  "tags": {
+    "leisure": "playground",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5535530813,
+  "lat": 18.6910318,
+  "lon": 98.9644361,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 5536666321,
+  "lat": 18.6770703,
+  "lon": 98.8944741,
+  "tags": {
+    "name": ".",
+    "name:en": "Loi",
+    "name:fr": "Loi",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 6029544424,
+  "lat": 18.6770800,
+  "lon": 98.9554507,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 8256793892,
+  "lat": 18.6976659,
+  "lon": 98.9260614,
+  "tags": {
+    "access": "customers",
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 10604213354,
+  "lat": 18.6914272,
+  "lon": 98.9227010,
+  "tags": {
+    "name": "7-Eleven",
+    "shop": "convenience",
+    "source": "https://www.mapillary.com/app/?pKey=924182918736053"
+  }
+},
+{
+  "type": "node",
+  "id": 10613171264,
+  "lat": 18.6946230,
+  "lon": 98.9292199,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11030137805,
+  "lat": 18.6893419,
+  "lon": 98.9457658,
+  "tags": {
+    "brand": "7-Eleven",
+    "brand:wikidata": "Q259340",
+    "name": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11478718897,
+  "lat": 18.6907702,
+  "lon": 98.9122239,
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 11496938341,
+  "lat": 18.6935689,
+  "lon": 98.9445393,
+  "tags": {
+    "access": "customers",
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 11729252357,
+  "lat": 18.6717309,
+  "lon": 98.8874873,
+  "tags": {
+    "amenity": "pharmacy",
+    "check_date": "2024-03-14",
+    "healthcare": "pharmacy",
+    "opening_hours": "09:00-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11853851067,
+  "lat": 18.7020165,
+  "lon": 98.9441435,
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 11875302765,
+  "lat": 18.6989760,
+  "lon": 98.9527965,
+  "tags": {
+    "addr:housenumber": "77/326",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11875322505,
+  "lat": 18.6990180,
+  "lon": 98.9520307,
+  "tags": {
+    "addr:housenumber": "77/312",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11900076004,
+  "lat": 18.7011399,
+  "lon": 98.9467577,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11911101821,
+  "lat": 18.6699777,
+  "lon": 98.9605344,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11932940847,
+  "lat": 18.6935408,
+  "lon": 98.9442955,
+  "tags": {
+    "access": "customers",
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 12231152033,
+  "lat": 18.6959915,
+  "lon": 98.9301618,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12617324301,
+  "lat": 18.6959154,
+  "lon": 98.9261746,
+  "tags": {
+    "addr:postcode": "50230",
+    "name": "วิไล Express",
+    "phone": "0655544636",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12617345918,
+  "lat": 18.6859442,
+  "lon": 98.9008023,
+  "tags": {
+    "name": "เจ๊กล้วย",
+    "phone": "0910762598",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12617501902,
+  "lat": 18.6904251,
+  "lon": 98.9190949,
+  "tags": {
+    "name": "ยุภาการค้า",
+    "phone": "0946206663",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12617535201,
+  "lat": 18.6908924,
+  "lon": 98.9208730,
+  "tags": {
+    "name": "เจ๊อัมพร ตลาดหางดง",
+    "phone": "0903197434",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "way",
+  "id": 253616123,
+  "center": {
+    "lat": 18.6958674,
+    "lon": 98.9223437
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Muban Park 2"
+  }
+},
+{
+  "type": "way",
+  "id": 577423777,
+  "center": {
+    "lat": 18.6900371,
+    "lon": 98.9666503
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 835649936,
+  "center": {
+    "lat": 18.6982037,
+    "lon": 98.9216894
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Muban Park 1",
+    "operator": "Rung Arun 3"
+  }
+},
+{
+  "type": "way",
+  "id": 835649937,
+  "center": {
+    "lat": 18.6968389,
+    "lon": 98.9194325
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "park",
+    "operator": "Rung Arun 3"
+  }
+},
+{
+  "type": "way",
+  "id": 835649939,
+  "center": {
+    "lat": 18.6955317,
+    "lon": 98.9182844
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "park",
+    "operator": "Rung Arun 3"
+  }
+},
+{
+  "type": "way",
+  "id": 835996273,
+  "center": {
+    "lat": 18.7001560,
+    "lon": 98.9187107
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Muban Park 3",
+    "operator": "Rung Arun 3"
+  }
+},
+{
+  "type": "way",
+  "id": 1138303884,
+  "center": {
+    "lat": 18.6487537,
+    "lon": 98.9103885
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1138568015,
+  "center": {
+    "lat": 18.7005730,
+    "lon": 98.9217113
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1237413813,
+  "center": {
+    "lat": 18.6942606,
+    "lon": 98.9123091
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1237434634,
+  "center": {
+    "lat": 18.6913075,
+    "lon": 98.9121474
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1279223290,
+  "center": {
+    "lat": 18.6982381,
+    "lon": 98.9496972
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1287612161,
+  "center": {
+    "lat": 18.7019370,
+    "lon": 98.9582254
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1292048862,
+  "center": {
+    "lat": 18.7212014,
+    "lon": 98.9136231
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1482535728,
+  "center": {
+    "lat": 18.6808878,
+    "lon": 98.9036026
+  },
+  "tags": {
+    "leisure": "park"
+  }
+}
+
+  ]
+}

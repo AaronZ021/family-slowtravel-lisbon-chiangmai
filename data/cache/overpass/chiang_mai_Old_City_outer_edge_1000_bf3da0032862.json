@@ -1,0 +1,1913 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:27:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1026006144,
+  "lat": 18.7810135,
+  "lon": 98.9884318,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "สยามชัย เภสัช",
+    "name:en": "Sayam Chai Pharmacy",
+    "name:th": "สยามชัย เภสัช",
+    "opening_hours": "Mo-Fr 07:30-21:00; Sa 07:30-22:00; Su 09:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1030391638,
+  "lat": 18.7809171,
+  "lon": 98.9875075,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1030391641,
+  "lat": 18.7815367,
+  "lon": 98.9877001,
+  "tags": {
+    "name": "Lotus's go fresh",
+    "opening_hours": "24/7",
+    "operator": "Tesco Lotus",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1107234875,
+  "lat": 18.7855740,
+  "lon": 98.9876020,
+  "tags": {
+    "amenity": "cafe",
+    "description": "Ancient style wooden house, lovely location.",
+    "name": "Coffee Bull",
+    "opening_hours": "Mo-Sa 09:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1618868154,
+  "lat": 18.7834021,
+  "lon": 98.9852954,
+  "tags": {
+    "amenity": "cafe",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "กูดมอนิ่งเชียงใหม่",
+    "name:en": "Good Morning Chiangmai",
+    "name:th": "กูดมอนิ่งเชียงใหม่"
+  }
+},
+{
+  "type": "node",
+  "id": 1619445283,
+  "lat": 18.7886832,
+  "lon": 98.9828506,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2337768921,
+  "lat": 18.7897903,
+  "lon": 98.9757343,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2404044286,
+  "lat": 18.7884334,
+  "lon": 98.9832565,
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;cake",
+    "diet:vegetarian": "yes",
+    "drink:espresso": "served",
+    "drink:filter_coffee": "served",
+    "facebook": "https://www.facebook.com/akhaamacoffee/",
+    "indoor_seating": "yes",
+    "internet_access": "wlan",
+    "microroasting": "yes",
+    "name": "Akha Ama Phrasingh",
+    "name:ja": "アカアマ・ラ・ファトリア",
+    "name:th": "กาแฟอาข่าอามา (สาขา 2)",
+    "opening_hours": "Mo-Sa 08:00-18:00; Su 08:00-20:00",
+    "outdoor_seating": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "smoking": "outside",
+    "website": "http://www.akhaama.com/",
+    "wheelchair": "no",
+    "wifi": "free"
+  }
+},
+{
+  "type": "node",
+  "id": 2419667430,
+  "lat": 18.7882024,
+  "lon": 98.9853463,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "name": "Rajdamnoen Coffee",
+    "name:ja": "ラチャダムナーンコーヒー",
+    "smoking": "outside",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2466325290,
+  "lat": 18.7898363,
+  "lon": 98.9784463,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2567784386,
+  "lat": 18.7886850,
+  "lon": 98.9826574,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Phuping Pharmacy",
+    "name:en": "Phuping Pharmacy",
+    "name:ja": "プーピン薬局"
+  }
+},
+{
+  "type": "node",
+  "id": 2567785171,
+  "lat": 18.7884387,
+  "lon": 98.9829119,
+  "tags": {
+    "shop": "convenience",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2590185727,
+  "lat": 18.7819025,
+  "lon": 98.9807579,
+  "tags": {
+    "amenity": "cafe",
+    "name": "คำ-ม่อน",
+    "name:en": "Come-On",
+    "name:th": "คำ-ม่อน",
+    "opening_hours": "Mo-Su 08:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 2609696944,
+  "lat": 18.7815478,
+  "lon": 98.9870618,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2609696945,
+  "lat": 18.7815367,
+  "lon": 98.9879254,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "check_date": "2025-12-24",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2638262573,
+  "lat": 18.7899184,
+  "lon": 98.9784388,
+  "tags": {
+    "addr:housenumber": "29/7",
+    "addr:street": "ถนนอารักษ์",
+    "amenity": "pharmacy",
+    "name": "คณายา",
+    "name:en": "Drug Store",
+    "name:th": "คณายา"
+  }
+},
+{
+  "type": "node",
+  "id": 2658260600,
+  "lat": 18.7774265,
+  "lon": 98.9872715,
+  "tags": {
+    "amenity": "cafe",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "De Cassowary",
+    "opening_hours": "Mo-Su 10:00-23:00"
+  }
+},
+{
+  "type": "node",
+  "id": 2661676325,
+  "lat": 18.7888682,
+  "lon": 98.9730892,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "cake",
+    "name": "Gateaux House"
+  }
+},
+{
+  "type": "node",
+  "id": 3197689690,
+  "lat": 18.7894105,
+  "lon": 98.9828254,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "thai",
+    "internet_access": "wlan",
+    "name": "Tree Sis Coffee",
+    "name:en": "Tree Sis Coffee",
+    "name:ja": "トリーシスコーヒー",
+    "name:th": "ทรีซิสคอฟฟี่",
+    "opening_hours": "Mo-Su 08:30-18:00",
+    "smoking": "outside",
+    "takeaway": "yes",
+    "website": "https://www.facebook.com/TreeSisCoffee",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3253197334,
+  "lat": 18.7810074,
+  "lon": 98.9882070,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 3263019824,
+  "lat": 18.7808764,
+  "lon": 98.9751961,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 3367846267,
+  "lat": 18.7743350,
+  "lon": 98.9756371,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "level": "1"
+  }
+},
+{
+  "type": "node",
+  "id": 3384100280,
+  "lat": 18.7856576,
+  "lon": 98.9831606,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-12-08",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Coffee Lovers",
+    "opening_hours": "07:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3384152432,
+  "lat": 18.7817390,
+  "lon": 98.9830914,
+  "tags": {
+    "amenity": "cafe",
+    "facebook": "https://www.facebook.com/superhappyespresso/",
+    "name": "Happy Espresso",
+    "opening_hours": "Mo-Sa 08:30-17:30",
+    "website": "https://happyespresso.net/"
+  }
+},
+{
+  "type": "node",
+  "id": 3385507275,
+  "lat": 18.7906626,
+  "lon": 98.9784691,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Modern Drug"
+  }
+},
+{
+  "type": "node",
+  "id": 3385517692,
+  "lat": 18.7903771,
+  "lon": 98.9784530,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3388701190,
+  "lat": 18.7886965,
+  "lon": 98.9802437,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-01-04",
+    "cuisine": "coffee_shop",
+    "drink:espresso": "served",
+    "drink:filter_coffee": "served",
+    "facebook": "https://www.facebook.com/ThorphanCoffee/",
+    "internet_access": "wlan",
+    "microroasting": "yes",
+    "name": "Thor Phan",
+    "name:ja": "トーファン",
+    "name:th": "ทอฝัน",
+    "opening_hours": "09:30-16:00; Su[-1] off"
+  }
+},
+{
+  "type": "node",
+  "id": 3388703312,
+  "lat": 18.7879954,
+  "lon": 98.9802221,
+  "tags": {
+    "name": "ร้านน้องโบ",
+    "name:en": "Nong Bo",
+    "name:th": "ร้านน้องโบ",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3388707633,
+  "lat": 18.7863509,
+  "lon": 98.9790947,
+  "tags": {
+    "operator": "independent",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3388725145,
+  "lat": 18.7841578,
+  "lon": 98.9828388,
+  "tags": {
+    "check_date": "2023-12-10",
+    "operator": "independent",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3388725586,
+  "lat": 18.7810959,
+  "lon": 98.9825068,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Bike Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 3432607045,
+  "lat": 18.7814036,
+  "lon": 98.9767565,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Urban Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 3440864915,
+  "lat": 18.7821599,
+  "lon": 98.9872802,
+  "tags": {
+    "amenity": "cafe",
+    "internet_access": "wlan",
+    "name": "Clay Studio Café",
+    "opening_hours": "Mo-Su 08:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3845081623,
+  "lat": 18.7795085,
+  "lon": 98.9880287,
+  "tags": {
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 3845081624,
+  "lat": 18.7790906,
+  "lon": 98.9881338,
+  "tags": {
+    "laundry_service": "yes",
+    "self_service": "no",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 3877442977,
+  "lat": 18.7771229,
+  "lon": 98.9766369,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Inthanin Coffee",
+    "opening_hours": "07:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3907871477,
+  "lat": 18.7881064,
+  "lon": 98.9832319,
+  "tags": {
+    "air_conditioning": "yes",
+    "alt_name": "My Secret Cafe in town",
+    "amenity": "cafe",
+    "check_date": "2023-12-19",
+    "cuisine": "coffee_shop;breakfast",
+    "diet:vegetarian": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "My Secret Cafe",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "toilets": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4129821990,
+  "lat": 18.7856565,
+  "lon": 98.9875017,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "name": "Coffee Cop"
+  }
+},
+{
+  "type": "node",
+  "id": 4212373091,
+  "lat": 18.7882260,
+  "lon": 98.9865280,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Kalapela Tea House",
+    "opening_hours": "Mo-Su 10:00-23:00",
+    "phone": "+66816342245",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 4225187389,
+  "lat": 18.7899541,
+  "lon": 98.9815961,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Nine coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 4358693890,
+  "lat": 18.7840503,
+  "lon": 98.9820794,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "จ่ายยา",
+    "name:en": "Pharmacy",
+    "name:th": "จ่ายยา"
+  }
+},
+{
+  "type": "node",
+  "id": 4440847089,
+  "lat": 18.7875454,
+  "lon": 98.9825295,
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:street": "ถนนสามล้าน",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;sandwich;tea;cake",
+    "diet:vegetarian": "yes",
+    "internet_access": "wlan",
+    "name": "Taa Peng Cat",
+    "name:en": "Taa Peng Cat",
+    "opening_hours": "Mo-Su 08:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4514610993,
+  "lat": 18.7909816,
+  "lon": 98.9784737,
+  "tags": {
+    "amenity": "cafe",
+    "drink:espresso": "no",
+    "drink:filter_coffee": "no",
+    "facebook": "https://www.facebook.com/Mixkaffee",
+    "name": "Mix Kaffee",
+    "opening_hours": "Mo-Su 10:00-15:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4558018790,
+  "lat": 18.7810600,
+  "lon": 98.9861874,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "steak_house;beef_bowl;grill;fish_and_chips;barbecue",
+    "name:en": "Steak Mr. Nu",
+    "phone": "0951345797"
+  }
+},
+{
+  "type": "node",
+  "id": 4559256793,
+  "lat": 18.7888940,
+  "lon": 98.9733408,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Pharma Choice",
+    "opening_hours": "Mo-Sa 07:30-21:30"
+  }
+},
+{
+  "type": "node",
+  "id": 4721967593,
+  "lat": 18.7831568,
+  "lon": 98.9781164,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "american;asian",
+    "diet:vegetarian": "yes",
+    "internet_access": "wlan",
+    "name:en": "Le Kaa"
+  }
+},
+{
+  "type": "node",
+  "id": 4730080789,
+  "lat": 18.7896109,
+  "lon": 98.9835572,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Viya",
+    "name:th": "Viya"
+  }
+},
+{
+  "type": "node",
+  "id": 4886910421,
+  "lat": 18.7816444,
+  "lon": 98.9826305,
+  "tags": {
+    "internet_access": "wlan",
+    "laundry_service": "no",
+    "name": "CleanPro",
+    "name:en": "24hr Self Service Laundry",
+    "name:th": "CleanPro",
+    "opening_hours": "24/7",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 4961026130,
+  "lat": 18.7884397,
+  "lon": 98.9825826,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Brown Rice Organic Cafe",
+    "name:en": "Brown Rice Organic Cafe",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5149372901,
+  "lat": 18.7890643,
+  "lon": 98.9784048,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop"
+  }
+},
+{
+  "type": "node",
+  "id": 5203532422,
+  "lat": 18.7868302,
+  "lon": 98.9821684,
+  "tags": {
+    "air_conditioning": "no",
+    "amenity": "cafe",
+    "bar": "no",
+    "check_date": "2023-12-15",
+    "cuisine": "coffee_shop;thai;breakfast",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Bistro Terrace",
+    "outdoor_seating": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5203695537,
+  "lat": 18.7857420,
+  "lon": 98.9871560,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "cake;coffee_shop",
+    "internet_access": "wlan",
+    "name:en": "Miranda's café"
+  }
+},
+{
+  "type": "node",
+  "id": 5585615822,
+  "lat": 18.7856502,
+  "lon": 98.9848285,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-11-23",
+    "internet_access": "wlan",
+    "name": "HP House Cafe",
+    "phone": "0869112882"
+  }
+},
+{
+  "type": "node",
+  "id": 5593553723,
+  "lat": 18.7816382,
+  "lon": 98.9824223,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;cake",
+    "drink:espresso": "served",
+    "drink:filter_coffee": "no",
+    "facebook": "https://www.facebook.com/tentencnx",
+    "internet_access": "wlan",
+    "name": "Tenten",
+    "opening_hours": "Mo-Su 08:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 5608475221,
+  "lat": 18.7833566,
+  "lon": 98.9816566,
+  "tags": {
+    "name:en": "Urban Green",
+    "opening_hours": "Mo-Sa 10:00-17:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 5613364523,
+  "lat": 18.7895311,
+  "lon": 98.9841306,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Brain awake coworking space",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5702387255,
+  "lat": 18.7835953,
+  "lon": 98.9816905,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name:en": "Coffee Station"
+  }
+},
+{
+  "type": "node",
+  "id": 5933370533,
+  "lat": 18.7758005,
+  "lon": 98.9820289,
+  "tags": {
+    "addr:city": "Chiang Mai",
+    "addr:housenumber": "204/1",
+    "addr:postcode": "50100",
+    "addr:street": "ถนนวัวลาย",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "drink:espresso": "served",
+    "drink:filter_coffee": "no",
+    "facebook": "https://www.facebook.com/Artisan-cafe-320893348061927/",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Artisan",
+    "outdoor_seating": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6017634609,
+  "lat": 18.7810591,
+  "lon": 98.9859275,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Pangkhon Coffee",
+    "opening_hours": "Mo-Su 07:00-18:00",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 6018778386,
+  "lat": 18.7864298,
+  "lon": 98.9860652,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Asaksa cafe",
+    "name:en": "Araksa cafe",
+    "name:th": "Araksa cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 6065304152,
+  "lat": 18.7848515,
+  "lon": 98.9846499,
+  "tags": {
+    "charge": "40-50 THB/kg",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 6195852485,
+  "lat": 18.7860462,
+  "lon": 98.9810215,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "S-rong coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 6250975985,
+  "lat": 18.7818029,
+  "lon": 98.9888526,
+  "tags": {
+    "amenity": "pharmacy",
+    "name:en": "Pharmacy",
+    "name:fr": "Pharmacie"
+  }
+},
+{
+  "type": "node",
+  "id": 6352068895,
+  "lat": 18.7797066,
+  "lon": 98.9856728,
+  "tags": {
+    "laundry_service": "no",
+    "name": "Best wash (self service laundry)",
+    "opening_hours": "Mo-Su 00:00-00:00",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 6352076492,
+  "lat": 18.7787465,
+  "lon": 98.9848731,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:wikidata": "Q259340",
+    "name": "7-Eleven",
+    "name:en": "7 eleven",
+    "opening_hours": "Mo-Su 00:00-00:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 6352082118,
+  "lat": 18.7823261,
+  "lon": 98.9817434,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 6352082390,
+  "lat": 18.7820212,
+  "lon": 98.9817098,
+  "tags": {
+    "amenity": "clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 6352082587,
+  "lat": 18.7837446,
+  "lon": 98.9816498,
+  "tags": {
+    "brand": "7-Eleven",
+    "brand:wikidata": "Q259340",
+    "name": "7-Eleven",
+    "opening_hours": "Mo-Su,PH 00:00-00:00",
+    "shop": "convenience",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6354525187,
+  "lat": 18.7877511,
+  "lon": 98.9825664,
+  "tags": {
+    "amenity": "pharmacy",
+    "check_date": "2023-12-10",
+    "name:en": "NAT Pharmacy",
+    "opening_hours": "09:30-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 6354525189,
+  "lat": 18.7864964,
+  "lon": 98.9810510,
+  "tags": {
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 6354525685,
+  "lat": 18.7863391,
+  "lon": 98.9802013,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 6377522006,
+  "lat": 18.7779440,
+  "lon": 98.9840997,
+  "tags": {
+    "addr:city": "Chiang Mai",
+    "addr:housenumber": "93/4",
+    "addr:postcode": "50100",
+    "addr:street": "Wualai",
+    "amenity": "cafe",
+    "contact:instagram": "farango_cnx",
+    "cuisine": "coffee_shop",
+    "name": "Farango Cafe & Restaurant",
+    "opening_hours": "Mo-Fr 08:30-17:00; Sa 08:30-23:00; Su 08:30-14:00",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6441973185,
+  "lat": 18.7775758,
+  "lon": 98.9809370,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "name": "Three The art of Coffee",
+    "opening_hours": "Mo-Su 08:33-16:33",
+    "operator": "Nakhanik"
+  }
+},
+{
+  "type": "node",
+  "id": 6489522887,
+  "lat": 18.7823890,
+  "lon": 98.9840697,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Home station by kokodrip"
+  }
+},
+{
+  "type": "node",
+  "id": 6532892690,
+  "lat": 18.7833552,
+  "lon": 98.9887047,
+  "tags": {
+    "amenity": "clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 6542873678,
+  "lat": 18.7889195,
+  "lon": 98.9736930,
+  "tags": {
+    "amenity": "cafe",
+    "name": "สวัสดีกาแฟสด"
+  }
+},
+{
+  "type": "node",
+  "id": 6560248193,
+  "lat": 18.7814712,
+  "lon": 98.9773004,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "trail cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 6567944597,
+  "lat": 18.7847838,
+  "lon": 98.9813394,
+  "tags": {
+    "addr:street": "Sam Lan 3 Alley, Tambon Phra Sing, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50200, Thailand",
+    "name": "เครื่องซักผ้าหยอดเหรียญ",
+    "name:en": "Coin Laundry",
+    "name:nl": "Wasserette",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 6611831087,
+  "lat": 18.7807560,
+  "lon": 98.9878274,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 6726275385,
+  "lat": 18.7847661,
+  "lon": 98.9883731,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Wako Bake"
+  }
+},
+{
+  "type": "node",
+  "id": 6943938685,
+  "lat": 18.7822738,
+  "lon": 98.9826438,
+  "tags": {
+    "addr:housenumber": "7/2",
+    "addr:street": "ถนนบำรุงบุรี ซอย1",
+    "amenity": "cafe",
+    "cuisine": "thai",
+    "name:en": "2 C’s Sons"
+  }
+},
+{
+  "type": "node",
+  "id": 6992284987,
+  "lat": 18.7743793,
+  "lon": 98.9772474,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Cha ta yom",
+    "phone": "0660252828"
+  }
+},
+{
+  "type": "node",
+  "id": 6992285187,
+  "lat": 18.7746534,
+  "lon": 98.9771890,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name:en": "Choc Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 7001610990,
+  "lat": 18.7824900,
+  "lon": 98.9848214,
+  "tags": {
+    "name": "M&N Coffee & Laundry",
+    "name:de": "Wäscherei und Cafés",
+    "name:en": "Laundry and coffee",
+    "opening_hours": "Fr-Tu 09:30-22:00",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 7023395505,
+  "lat": 18.7876700,
+  "lon": 98.9825929,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-12-10",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name:en": "Cafe De Maross"
+  }
+},
+{
+  "type": "node",
+  "id": 7023398691,
+  "lat": 18.7886868,
+  "lon": 98.9829032,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Boots"
+  }
+},
+{
+  "type": "node",
+  "id": 7023419521,
+  "lat": 18.7815860,
+  "lon": 98.9888522,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Coco Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 7027943486,
+  "lat": 18.7900760,
+  "lon": 98.9823548,
+  "tags": {
+    "air_conditioning": "no",
+    "amenity": "cafe",
+    "check_date": "2023-12-10",
+    "cuisine": "coffee_shop;smoothie",
+    "internet_access": "no",
+    "name": "Hug Smoothie",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:qr_code": "yes",
+    "toilets": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7028357585,
+  "lat": 18.7854993,
+  "lon": 98.9832694,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-11-23",
+    "phone": "+66 81 998 0409",
+    "shop": "beverages"
+  }
+},
+{
+  "type": "node",
+  "id": 7103990187,
+  "lat": 18.7874401,
+  "lon": 98.9827662,
+  "tags": {
+    "name": "Laundry",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 7161802785,
+  "lat": 18.7821241,
+  "lon": 98.9876294,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "thai",
+    "name:en": "Cha Malay - Café @ Garage",
+    "opening_hours": "Mo-Su 07:00-16:00",
+    "phone": "0800679019"
+  }
+},
+{
+  "type": "node",
+  "id": 7178932385,
+  "lat": 18.7882629,
+  "lon": 98.9862302,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Chanya’s",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 7339628385,
+  "lat": 18.7826009,
+  "lon": 98.9817428,
+  "tags": {
+    "addr:street": "ถนนสามล้าน",
+    "internet_access": "wlan",
+    "laundry_service": "no",
+    "name:en": "CleanPro",
+    "opening_hours": "24/7",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 7426498834,
+  "lat": 18.7815367,
+  "lon": 98.9877861,
+  "tags": {
+    "amenity": "pharmacy",
+    "check_date": "2025-12-24",
+    "name": "Lanna Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 7426556028,
+  "lat": 18.7815470,
+  "lon": 98.9872870,
+  "tags": {
+    "amenity": "pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 7856667787,
+  "lat": 18.7781291,
+  "lon": 98.9721823,
+  "tags": {
+    "amenity": "hospital",
+    "name": "โรงพยาบาลกองบิน 41",
+    "name:en": "Kong Bin 41 Hospital"
+  }
+},
+{
+  "type": "node",
+  "id": 9287894417,
+  "lat": 18.7826381,
+  "lon": 98.9847416,
+  "tags": {
+    "addr:housenumber": "42/3",
+    "amenity": "cafe",
+    "contact:instagram": "carrot.cnx",
+    "name:en": "carrot.",
+    "opening_hours": "Mo-Su 08:00-18:00",
+    "phone": "+66 62 256 9415"
+  }
+},
+{
+  "type": "node",
+  "id": 9322682017,
+  "lat": 18.7842842,
+  "lon": 98.9849705,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;tea",
+    "name:en": "Soi 7 Espresso",
+    "opening_hours": "Mo-Su 07:00-14:00"
+  }
+},
+{
+  "type": "node",
+  "id": 9332073318,
+  "lat": 18.7883552,
+  "lon": 98.9853163,
+  "tags": {
+    "name:en": "Sunday night market",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 9388413417,
+  "lat": 18.7807651,
+  "lon": 98.9879853,
+  "tags": {
+    "contact:facebook": "ChaipatPlus",
+    "contact:line": "chaipatplus",
+    "name:en": "Chaipat Plus Premium Pork",
+    "phone": "+66 53 275 401",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 9458502619,
+  "lat": 18.7760425,
+  "lon": 98.9859673,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Weave Artisan Society & Beam & Col Cafe",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 10026130418,
+  "lat": 18.7869274,
+  "lon": 98.9821102,
+  "tags": {
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 10026130419,
+  "lat": 18.7891733,
+  "lon": 98.9826209,
+  "tags": {
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 10301591909,
+  "lat": 18.7829460,
+  "lon": 98.9821290,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-12-17",
+    "cuisine": "thai;dessert;coffee_shop;smoothie",
+    "name:en": "Sweet Home Coffee",
+    "opening_hours": "Mo-Sa 08:30-17:00; Su off",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10301639809,
+  "lat": 18.7817510,
+  "lon": 98.9812188,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "breakfast",
+    "name:en": "Bumrungburi BRB Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 11227905205,
+  "lat": 18.7894923,
+  "lon": 98.9802794,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 11250853020,
+  "lat": 18.7779320,
+  "lon": 98.9871701,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop"
+  }
+},
+{
+  "type": "node",
+  "id": 11254991103,
+  "lat": 18.7762482,
+  "lon": 98.9863408,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "TJ Coffee Roaster"
+  }
+},
+{
+  "type": "node",
+  "id": 11359736106,
+  "lat": 18.7829345,
+  "lon": 98.9818114,
+  "tags": {
+    "amenity": "pharmacy",
+    "check_date": "2025-12-19",
+    "drive_through": "no",
+    "healthcare": "pharmacy",
+    "language:en": "yes",
+    "name:en": "Eve Pharmacy",
+    "name:th": "อีฟ ฟาร์มาซี",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "phone": "+66 87 661 5803",
+    "website": "https://pharmacyeve.business.site"
+  }
+},
+{
+  "type": "node",
+  "id": 11370589286,
+  "lat": 18.7847794,
+  "lon": 98.9831613,
+  "tags": {
+    "capacity": "2",
+    "check_date": "2023-11-29",
+    "internet_access": "no",
+    "payment:cards": "no",
+    "payment:cash": "yes",
+    "payment:credit_cards": "no",
+    "payment:debit_cards": "no",
+    "self_service": "yes",
+    "shop": "laundry",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11383230331,
+  "lat": 18.7853337,
+  "lon": 98.9832634,
+  "tags": {
+    "capacity": "2",
+    "check_date": "2023-11-29",
+    "internet_access": "no",
+    "payment:cards": "no",
+    "payment:cash": "yes",
+    "payment:credit_cards": "no",
+    "payment:debit_cards": "no",
+    "self_service": "yes",
+    "shop": "laundry",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11386909636,
+  "lat": 18.7817607,
+  "lon": 98.9807222,
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "bar": "no",
+    "check_date": "2023-12-11",
+    "cuisine": "sandwich",
+    "description": "They also bake a large variety of breads to order. Order by 10:00 and pick up next day (Fr-Tu)",
+    "diet:vegetarian": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Bowls & Breads",
+    "opening_hours": "Mo-Tu,Th-Su 08:30-15:30",
+    "outdoor_seating": "no",
+    "payment:cards": "no",
+    "payment:cash": "yes",
+    "payment:credit_cards": "no",
+    "payment:debit_cards": "no",
+    "payment:qr_code": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11407178348,
+  "lat": 18.7892511,
+  "lon": 98.9826383,
+  "tags": {
+    "check_date": "2023-12-10",
+    "name": "Laundry Station & Cafe",
+    "opening_hours": "24/7",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11486848893,
+  "lat": 18.7852586,
+  "lon": 98.9820554,
+  "tags": {
+    "amenity": "cafe",
+    "bar": "yes",
+    "check_date": "2024-11-04",
+    "name": "Weekday"
+  }
+},
+{
+  "type": "node",
+  "id": 11715925137,
+  "lat": 18.7881782,
+  "lon": 98.9838482,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-03-11",
+    "name": "Republic Coffee",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11900168469,
+  "lat": 18.7873799,
+  "lon": 98.9783271,
+  "tags": {
+    "amenity": "cafe",
+    "name:en": "Area 41 Coffee&Cafe",
+    "opening_hours": "Mo-Sa 08:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11936206969,
+  "lat": 18.7895919,
+  "lon": 98.9827311,
+  "tags": {
+    "addr:street": "58 Intrawarorot Road Soi 2, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50200",
+    "air_conditioning": "no",
+    "amenity": "cafe",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Zohng Coffee",
+    "opening_hours": "Mo-Su 08:00-17:30",
+    "outdoor_seating": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11965949469,
+  "lat": 18.7788119,
+  "lon": 98.9846932,
+  "tags": {
+    "addr:housenumber": "116/1-2",
+    "addr:postcode": "50100",
+    "addr:street": "Wua Lai Road",
+    "amenity": "clinic",
+    "name:en": "M Square Polyclinic",
+    "opening_hours": "Mo-Fr 09:00-20:00; Su 09:00-18:00; Sa 09:00-12:00",
+    "phone": "0659394475"
+  }
+},
+{
+  "type": "node",
+  "id": 12301174700,
+  "lat": 18.7904660,
+  "lon": 98.9822763,
+  "tags": {
+    "addr:floor": "G",
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "check_date": "2024-10-31",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "level": "0",
+    "name": "Seven Slash Two",
+    "opening_hours": "08:00-17:00",
+    "outdoor_seating": "yes",
+    "payment:cards": "no",
+    "payment:cash": "yes",
+    "payment:credit_cards": "no",
+    "payment:debit_cards": "no",
+    "takeaway": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 12306896388,
+  "lat": 18.7829691,
+  "lon": 98.9816274,
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "changing_table": "no",
+    "check_date": "2025-12-18",
+    "check_date:diet:vegetarian": "2025-12-18",
+    "cuisine": "coffee_shop",
+    "diet:vegetarian": "yes",
+    "indoor_seating": "yes",
+    "name": "Bloomin' Moon",
+    "opening_hours": "07:00-17:00",
+    "outdoor_seating": "yes",
+    "payment:cards": "no",
+    "payment:cash": "yes",
+    "payment:credit_cards": "no",
+    "payment:debit_cards": "no",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 12428726001,
+  "lat": 18.7766313,
+  "lon": 98.9859585,
+  "tags": {
+    "name": "Maru Laundry",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 12779208443,
+  "lat": 18.7903467,
+  "lon": 98.9756809,
+  "tags": {
+    "amenity": "clinic",
+    "name": "ศูนย์บริการเทคนิคการแพทย์คลินิก",
+    "name:en": "AMS Clinical Service Center, CMU",
+    "phone": "053936027"
+  }
+},
+{
+  "type": "node",
+  "id": 13142229920,
+  "lat": 18.7895153,
+  "lon": 98.9802621,
+  "tags": {
+    "addr:district": "Mueang Chiang Mai",
+    "addr:housenumber": "22/10",
+    "addr:postcode": "50200",
+    "addr:province": "Chiang Mai",
+    "addr:street": "Arak 5 Road",
+    "addr:subdistrict": "Si Phum",
+    "amenity": "cafe",
+    "check_date": "2025-11-13",
+    "check_date:currency:XBT": "2025-11-13",
+    "contact:email": "rain.ny7680@gmail.com",
+    "contact:facebook": "https://www.facebook.com/people/Sunflower-Smoothie-Coffee-Chiang-mai/100089563483383/",
+    "contact:instagram": "https://www.instagram.com/sunflowersmoothiesandcoffee/",
+    "currency:XBT": "yes",
+    "name": "Sunflower Smoothie & Coffee",
+    "opening_hours": "Mo-Tu 07:30-16:00; Th-Su 07:30-16:00",
+    "payment:lightning": "yes",
+    "payment:lightning_contactless": "no",
+    "payment:onchain": "no",
+    "phone": "+66 84 609 7680",
+    "survey:date": "2025-11-13",
+    "website": "https://sunflowersmoothies.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 13240139701,
+  "lat": 18.7824096,
+  "lon": 98.9790382,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 13347292501,
+  "lat": 18.7815676,
+  "lon": 98.9861858,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "cake;coffee_shop;tea",
+    "name": "Friend Coffee",
+    "opening_hours": "Mo-Su 07:30-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 13428050264,
+  "lat": 18.7828345,
+  "lon": 98.9822967,
+  "tags": {
+    "laundry_service": "no",
+    "name": "Chanaplace",
+    "opening_hours": "Mo-Su,PH 00:00-00:00",
+    "payment:credit_cards": "no",
+    "payment:debit_cards": "no",
+    "self_service": "yes",
+    "shop": "laundry",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 13459906301,
+  "lat": 18.7889108,
+  "lon": 98.9736254,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Fascino"
+  }
+},
+{
+  "type": "node",
+  "id": 13545071979,
+  "lat": 18.7836734,
+  "lon": 98.9862562,
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "check_date": "2026-02-12",
+    "cuisine": "coffee_shop",
+    "drive_through": "no",
+    "highchair": "yes",
+    "level": "0",
+    "name": "Kalm Coffee",
+    "name:en": "Kalm Coffee",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13808725177,
+  "lat": 18.7859511,
+  "lon": 98.9710523,
+  "tags": {
+    "addr:district": "เมืองเชียงใหม่",
+    "addr:housenumber": "10/3",
+    "addr:postcode": "50200",
+    "addr:province": "เชียงใหม่",
+    "addr:street": "ถนนสิโรรส ซอย 1",
+    "addr:subdistrict": "สุเทพ",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Neno Coffee",
+    "opening_hours": "07:30-16:30",
+    "phone": "0935292559"
+  }
+},
+{
+  "type": "node",
+  "id": 13870668983,
+  "lat": 18.7813055,
+  "lon": 98.9771887,
+  "tags": {
+    "addr:district": "เมืองเชียงใหม่",
+    "addr:housenumber": "2/3",
+    "addr:postcode": "50220",
+    "addr:province": "เชียงใหม่",
+    "addr:street": "ถนนมหิดล",
+    "addr:subdistrict": "ตำบลสุเทพ",
+    "amenity": "cafe",
+    "cuisine": "bubble_tea;tea;dessert;chinese",
+    "indoor_seating": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "ถิงถิง Ting Ting บิงซูน้ำขิง เชียงใหม่",
+    "opening_hours": "Mo-Su 11:00-22:00",
+    "outdoor_seating": "yes",
+    "phone": "+66 93 507 8614",
+    "takeaway": "yes",
+    "toilets": "yes",
+    "website": "https://www.facebook.com/profile.php?id=61588821246887"
+  }
+},
+{
+  "type": "way",
+  "id": 23973788,
+  "center": {
+    "lat": 18.7822886,
+    "lon": 98.9792721
+  },
+  "tags": {
+    "alcohol": "no",
+    "barrier": "fence",
+    "check_date:opening_hours": "2023-02-14",
+    "dog": "no",
+    "leisure": "park",
+    "name": "สวนบวกหาด",
+    "name:en": "Nong Buak Haad Park",
+    "name:fr": "Parc Buak Had",
+    "name:th": "สวนบวกหาด",
+    "opening_hours": "Mo-Su 05:00-21:00",
+    "smoking": "no",
+    "wikidata": "Q16255674"
+  }
+},
+{
+  "type": "way",
+  "id": 130822245,
+  "center": {
+    "lat": 18.7819736,
+    "lon": 98.9781959
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 189618479,
+  "center": {
+    "lat": 18.7918432,
+    "lon": 98.9742757
+  },
+  "tags": {
+    "addr:city": "Chiang Mai",
+    "addr:district": "Mueang Chiang Mai",
+    "addr:housenumber": "110",
+    "addr:postcode": "50200",
+    "addr:province": "Chiang Mai",
+    "addr:street": "Suthep Road",
+    "addr:subdistrict": "Suthep",
+    "alt_name:en": "Suandok Hospital",
+    "alt_name:th": "โรงพยาบาลสวนดอก",
+    "amenity": "hospital",
+    "contact:facebook": "https://www.facebook.com/medcmuth",
+    "contact:instagram": "https://www.instagram.com/medcmuth/",
+    "contact:youtube": "https://www.youtube.com/channel/UCfTy3lgVupz8SJpw4Cc-EQw",
+    "emergency": "yes",
+    "name": "โรงพยาบาลมหาราชนครเชียงใหม่",
+    "name:en": "Maharaj Nakorn Chiang Mai Hospital",
+    "name:th": "โรงพยาบาลมหาราชนครเชียงใหม่",
+    "nickname": "โรงพยาบาลสวนดอก",
+    "phone": "053936150",
+    "website": "http://suandok.med.cmu.ac.th/",
+    "wikidata": "Q13026862",
+    "wikipedia": "th:โรงพยาบาลมหาราชนครเชียงใหม่"
+  }
+},
+{
+  "type": "way",
+  "id": 474105064,
+  "center": {
+    "lat": 18.7893481,
+    "lon": 98.9736430
+  },
+  "tags": {
+    "access": "permissive",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 474105066,
+  "center": {
+    "lat": 18.7893023,
+    "lon": 98.9743712
+  },
+  "tags": {
+    "access": "permissive",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 521424601,
+  "center": {
+    "lat": 18.7734648,
+    "lon": 98.9798035
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 754816144,
+  "center": {
+    "lat": 18.7761670,
+    "lon": 98.9769358
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "สวนสาธารณะป้อมหายยา"
+  }
+},
+{
+  "type": "way",
+  "id": 1212478397,
+  "center": {
+    "lat": 18.7794057,
+    "lon": 98.9791541
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name:en": "Suan Prung Psychiatric Hospital",
+    "name:ja": "スアンプルン精神科病院",
+    "name:th": "โรงพยาบาลสวนปรุง"
+  }
+},
+{
+  "type": "way",
+  "id": 1267912392,
+  "center": {
+    "lat": 18.7803819,
+    "lon": 98.9884650
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "โรงพยาบาล เชียงใหม่เมดิคอลเซ็นเตอร์",
+    "name:en": "CMC Hospital",
+    "name:th": "โรงพยาบาล เชียงใหม่เมดิคอลเซ็นเตอร์"
+  }
+},
+{
+  "type": "relation",
+  "id": 20066992,
+  "center": {
+    "lat": 18.7797363,
+    "lon": 98.9776875
+  },
+  "tags": {
+    "alcohol": "no",
+    "dog": "no",
+    "leisure": "park",
+    "name": "สวนกาญจนาภิเษก",
+    "name:en": "Kanchanpisek Park",
+    "name:th": "สวนกาญจนาภิเษก",
+    "smoking": "no",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

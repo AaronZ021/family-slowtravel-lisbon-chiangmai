@@ -306,20 +306,20 @@
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可判断：空气不是里斯本三个月家庭生活的主红线；但还不能用当前证据量化每月儿童户外风险。</p>
+        <p>可判断：空气质量不是里斯本三个月家庭日常的主红线；现有模型数据支持“偶发坏空气日需要关注，但通常不主导儿童户外节奏”。</p>
         <div class="meta-row">
-          <span class="meta-pill">证据充分性：中</span>
+          <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
         </div>
         <div class="evidence-tier official-tier">
           <div class="cell-label">官方/统计证据</div>
-          <p>官方/准官方证据显示里斯本有市政空气监测体系；未发现类似清迈烟季的官方季节性红旗。</p>
+          <p>官方证据显示里斯本有市政空气监测体系，但本轮尚未从官方站点拉出逐日历史值。</p>
           <div class="badges"><a class="source-badge" href="#src-LIS_AIR_01" title="Lisbon city air monitoring | 官方来源 | 2026-05-27">LIS_AIR_01</a></div>
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>IQAir 提供公开 AQI/PM2.5 页面，可作为平台补充。</p>
-          <div class="badges"><a class="source-badge" href="#src-LIS_AIR_02" title="IQAir Lisbon AQI | 平台来源 | 2026-05-27">LIS_AIR_02</a></div>
+          <p>Open-Meteo 2023-2025 模型数据给出的目标月份 PM2.5 均值约 9.9-15.2 µg/m3；超过 25 µg/m3 的小时占比约 1.2%-14.1%，最高出现在 2 月。这说明目标月份会有坏空气小时，但不是类似清迈烟季的持续性结构问题。IQAir 页面作为实时/平台补充。</p>
+          <div class="badges"><a class="source-badge" href="#src-OPEN_METEO_AIR_01" title="Open-Meteo air quality archive 2023-2025 | 平台来源 | 2026-05-28">OPEN_METEO_AIR_01</a> <a class="source-badge" href="#src-LIS_AIR_02" title="IQAir Lisbon AQI | 平台来源 | 2026-05-27">LIS_AIR_02</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -327,28 +327,28 @@
           <div class="badges"></div>
         </div>
         <div class="cell-label">缺口</div>
-        <p>缺官方历史 PM2.5 月度分布、目标月份坏空气天数。</p>
+        <p>缺官方站点逐日 PM2.5 与 Open-Meteo 模型交叉验证。</p>
         <div class="cell-label">下一步补数</div>
-        <p>从 QualAr/EEA/OpenAQ 拉取里斯本站点 3-5 年 PM2.5 月度数据。</p>
+        <p>从 QualAr/EEA/OpenAQ 拉取里斯本站点 3-5 年 PM2.5 月度数据，计算超 25/35 µg/m3 天数。</p>
       </div>
     </td>
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可判断：空气质量是清迈维度级硬约束，尤其 2-4 月；这不是单一评论，而是官方监测、平台、新闻和社区反馈共同支撑。</p>
+        <p>可判断：空气质量是清迈维度级硬约束，尤其 2-4 月；官方监测入口、模型数据、新闻和社区反馈共同指向同一事实。</p>
         <div class="meta-row">
           <span class="meta-pill">证据充分性：强</span>
           <span class="meta-pill">置信度：高</span>
         </div>
         <div class="evidence-tier official-tier">
           <div class="cell-label">官方/统计证据</div>
-          <p>官方证据强：Air4Thai/PCD 是核心数据源，区域环保办公室也持续发布北部 PM2.5 更新。</p>
+          <p>官方证据强：Air4Thai/PCD 是核心数据源，区域环保办公室也持续发布北部 PM2.5 更新；加拿大官方旅行建议也明确点名清迈干季空气污染与儿童户外限制。</p>
           <div class="badges"><a class="source-badge" href="#src-TH_AIR4THAI_01" title="Air4Thai official air quality portal | 官方来源 | 2026-05-28">TH_AIR4THAI_01</a> <a class="source-badge" href="#src-TH_PCD_NORTH_01" title="Environmental and Pollution Control Office 1 northern PM2.5 updates | 官方来源 | 2026-05-28">TH_PCD_NORTH_01</a> <a class="source-badge" href="#src-CM_AIR_02" title="Canada Thailand air pollution note | 官方来源 | 2026-05-27">CM_AIR_02</a></div>
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>IQAir 和新闻报道提供 2026 烟季事件和实时/历史平台补充。</p>
-          <div class="badges"><a class="source-badge" href="#src-CM_AIR_01" title="IQAir Chiang Mai burning season March 2026 | 平台来源 | 2026-05-27">CM_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_03" title="Nation Thailand Chiang Mai pollution | 新闻报道 | 2026-05-27">CM_AIR_03</a></div>
+          <p>Open-Meteo 2023-2025 模型数据显示，目标月份里清迈 3 月 PM2.5 均值约 37.6 µg/m3，4 月约 31.4 µg/m3；3 月超过 25 µg/m3 的小时约 72.1%，超过 35 µg/m3 的小时约 51.6%。这意味着 3 月不是“偶尔几天不好”，而是大量小时处在不适合幼儿户外活动的水平。IQAir 和新闻报道补充了 2026 烟季事件。</p>
+          <div class="badges"><a class="source-badge" href="#src-OPEN_METEO_AIR_01" title="Open-Meteo air quality archive 2023-2025 | 平台来源 | 2026-05-28">OPEN_METEO_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_01" title="IQAir Chiang Mai burning season March 2026 | 平台来源 | 2026-05-27">CM_AIR_01</a> <a class="source-badge" href="#src-CM_AIR_03" title="Nation Thailand Chiang Mai pollution | 新闻报道 | 2026-05-27">CM_AIR_03</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -356,9 +356,9 @@
           <div class="badges"><a class="source-badge" href="#src-CM_COMM_04" title="Reddit 2026 burning season megathread | 社区轶事 | 2026-05-27">CM_COMM_04</a> <a class="source-badge" href="#src-CM_COMM_08" title="Reddit ThailandTourism burning season Chiang Mai | 社区轶事 | 2026-05-28">CM_COMM_08</a> <a class="source-badge" href="#src-CM_COMM_09" title="Reddit Chiang Mai air quality dealbreaker or doable | 社区轶事 | 2026-05-28">CM_COMM_09</a> <a class="source-badge" href="#src-CM_COMM_10" title="Reddit concerned parent Chiang Mai air pollution | 社区轶事 | 2026-05-28">CM_COMM_10</a></div>
         </div>
         <div class="cell-label">缺口</div>
-        <p>缺目标年份逐日 PM2.5 历史分布、儿童健康阈值、住房净化器效果数据。</p>
+        <p>缺 Air4Thai 官方逐日历史导出、儿童健康阈值、住房净化器实测效果。</p>
         <div class="cell-label">下一步补数</div>
-        <p>从 Air4Thai/PCD 拉取 2019-2026 Chiang Mai 站点逐日 PM2.5；按月份计算超标天数。</p>
+        <p>从 Air4Thai/PCD 拉取 2019-2026 Chiang Mai 站点逐日 PM2.5；按月份计算超 25/35 µg/m3 天数。</p>
       </div>
     </td>
                 </tr>
@@ -368,20 +368,20 @@
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>只能初步判断：气候大体可运行，但冬季雨天/湿冷需要补官方数据。</p>
+        <p>可判断：目标月份温度整体适合日常户外，但冬春秋都有相当数量雨天；住房室内空间和雨天活动需要作为生活系统的一部分。</p>
         <div class="meta-row">
-          <span class="meta-pill">证据充分性：中</span>
+          <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
         </div>
         <div class="evidence-tier official-tier">
           <div class="cell-label">官方/统计证据</div>
-          <p>现有官方气象数据不足；当前主要依赖 WeatherSpark 平台模型。Eurostat 城市统计可作为环境/城市数据入口但不是具体气候数据。</p>
+          <p>现有官方气象数据不足；Eurostat 城市统计可作为城市环境数据入口但不是具体气候数据。</p>
           <div class="badges"><a class="source-badge" href="#src-EUROSTAT_CITY_01" title="Eurostat city statistics information | 官方来源 | 2026-05-28">EUROSTAT_CITY_01</a></div>
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>WeatherSpark 提供目标月份温度和雨日估计。</p>
-          <div class="badges"><a class="source-badge" href="#src-LIS_CLIM_01" title="WeatherSpark Lisbon climate | 平台来源 | 2026-05-27">LIS_CLIM_01</a></div>
+          <p>Open-Meteo 2023-2025 模型数据说明：目标月份日最高温均值约 15.7-23.7°C，温度本身适合幼儿户外；但 1 月、3 月、10 月、11 月按每 30 天折算约 10-13 个雨日，说明里斯本的摩擦主要是雨天和室内 fallback，而不是热或冷。WeatherSpark 作为第二平台参照。</p>
+          <div class="badges"><a class="source-badge" href="#src-OPEN_METEO_CLIMATE_01" title="Open-Meteo historical weather archive 2023-2025 | 平台来源 | 2026-05-28">OPEN_METEO_CLIMATE_01</a> <a class="source-badge" href="#src-LIS_CLIM_01" title="WeatherSpark Lisbon climate | 平台来源 | 2026-05-27">LIS_CLIM_01</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -389,7 +389,7 @@
           <div class="badges"></div>
         </div>
         <div class="cell-label">缺口</div>
-        <p>缺 IPMA 官方月度气候 normals、历史雨日、湿度、极端天气。</p>
+        <p>缺 IPMA 官方 normals、湿度、风、体感和极端天气。</p>
         <div class="cell-label">下一步补数</div>
         <p>补 IPMA 里斯本站点 1991-2020 normals 或近 10 年月度数据。</p>
       </div>
@@ -397,9 +397,9 @@
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可初步判断：3-4 月热季和 10 月雨季尾巴是生活摩擦；但具体强度仍需官方月度 normals。</p>
+        <p>可判断：11-1 月气候更适合作为家庭慢旅行窗口；3-4 月高温与空气污染叠加，10 月雨量对户外节奏有影响。</p>
         <div class="meta-row">
-          <span class="meta-pill">证据充分性：中</span>
+          <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
         </div>
         <div class="evidence-tier official-tier">
@@ -409,18 +409,18 @@
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>WeatherSpark 提供月度温度和雨日估计。</p>
-          <div class="badges"><a class="source-badge" href="#src-CM_CLIM_01" title="WeatherSpark Chiang Mai climate | 平台来源 | 2026-05-27">CM_CLIM_01</a></div>
+          <p>Open-Meteo 2023-2025 模型数据说明：清迈 3 月日最高温均值约 33.5°C，4 月约 36.7°C；10 月按每 30 天折算约 17.4 个雨日、约 194 mm 降雨。也就是说，清迈的季节摩擦不是抽象的“热带天气”，而是 3-4 月热、10 月雨季尾巴、2-4 月空气共同叠加。WeatherSpark 提供第二平台参照。</p>
+          <div class="badges"><a class="source-badge" href="#src-OPEN_METEO_CLIMATE_01" title="Open-Meteo historical weather archive 2023-2025 | 平台来源 | 2026-05-28">OPEN_METEO_CLIMATE_01</a> <a class="source-badge" href="#src-CM_CLIM_01" title="WeatherSpark Chiang Mai climate | 平台来源 | 2026-05-27">CM_CLIM_01</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
-          <p>社区反馈能补充雨季/热季实际生活感，但当前未系统抽样。</p>
+          <p>社区反馈能补充雨季/热季实际生活感，但当前样本仍少。</p>
           <div class="badges"><a class="source-badge" href="#src-CM_COMM_14" title="Reddit Chiang Mai rainy season comments | 社区轶事 | 2026-05-28">CM_COMM_14</a></div>
         </div>
         <div class="cell-label">缺口</div>
-        <p>缺 Chiang Mai 站点月均最高温、雨日、湿度、热指数的官方整理。</p>
+        <p>缺 TMD Chiang Mai 站点 normals、湿度、热指数和近年异常。</p>
         <div class="cell-label">下一步补数</div>
-        <p>从 TMD climate chart/monthly summary 提取 Chiang Mai 目标月份 normals 和近年异常。</p>
+        <p>从 TMD climate chart/monthly summary 提取 Chiang Mai 目标月份 normals，并和 Open-Meteo 对比。</p>
       </div>
     </td>
                 </tr>
@@ -511,9 +511,9 @@
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可判断：部分候选区有儿童日常活动基础，但还不能做地址级可靠判断；需要用官方开放数据和地图半径计算。</p>
+        <p>可判断：Campo de Ourique 与 Estrela/Lapa 的日常儿童活动和日常服务密度更像“可步行生活系统”；Parque das Nacoes 儿童开放空间强但日常 grocery 密度需靠具体房源位置确认；Belem/Restelo 更偏周末/开放空间型。</p>
         <div class="meta-row">
-          <span class="meta-pill">证据充分性：中</span>
+          <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
         </div>
         <div class="evidence-tier official-tier">
@@ -523,8 +523,8 @@
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>已有具体场馆/公园/室内 play 样本，覆盖 Estrela、Campo de Ourique、Parque das Nacoes 等。</p>
-          <div class="badges"><a class="source-badge" href="#src-LIS_CHILD_01" title="SandCastle indoor playground cafe | 平台来源 | 2026-05-27">LIS_CHILD_01</a> <a class="source-badge" href="#src-LIS_CHILD_02" title="Wooki sensory playgroups | 平台来源 | 2026-05-27">LIS_CHILD_02</a> <a class="source-badge" href="#src-LIS_CHILD_04" title="Jardim da Estrela Visit Lisboa | 官方来源 | 2026-05-27">LIS_CHILD_04</a> <a class="source-badge" href="#src-LIS_CHILD_05" title="Lisbon playgrounds Lets Go Baby | 博客/指南 | 2026-05-27">LIS_CHILD_05</a> <a class="source-badge" href="#src-LIS_CHILD_06" title="Teddy and Friends playground | 平台来源 | 2026-05-27">LIS_CHILD_06</a> <a class="source-badge" href="#src-LIS_CHILD_07" title="Oceanario family programs | 官方来源 | 2026-05-27">LIS_CHILD_07</a> <a class="source-badge" href="#src-LIS_CHILD_08" title="Reddit kids play outside Portugal | 社区轶事 | 2026-05-27">LIS_CHILD_08</a> <a class="source-badge" href="#src-LIS_CHILD_09" title="Reddit Lisbon active 2.5 year old | 社区轶事 | 2026-05-27">LIS_CHILD_09</a></div>
+          <p>OSM 1km 数据把区域差异拉开：Campo de Ourique 和 Estrela/Lapa 周边不是只有一个标志性公园，而是步行半径内同时有多个 playground、park、超市、药房和咖啡；Parque das Nacoes 1km 内 park/河滨空间存在，但 grocery 数量明显少于 Campo/Estrela；Belem/Restelo 1km 内开放空间较强但 laundry 和 clinic 较少。具体场馆样本补充了室内 play 和文化 fallback。</p>
+          <div class="badges"><a class="source-badge" href="#src-OSM_POI_01" title="OpenStreetMap Overpass candidate-area POI extract | 地图来源 | 2026-05-28">OSM_POI_01</a> <a class="source-badge" href="#src-LIS_CHILD_01" title="SandCastle indoor playground cafe | 平台来源 | 2026-05-27">LIS_CHILD_01</a> <a class="source-badge" href="#src-LIS_CHILD_02" title="Wooki sensory playgroups | 平台来源 | 2026-05-27">LIS_CHILD_02</a> <a class="source-badge" href="#src-LIS_CHILD_04" title="Jardim da Estrela Visit Lisboa | 官方来源 | 2026-05-27">LIS_CHILD_04</a> <a class="source-badge" href="#src-LIS_CHILD_05" title="Lisbon playgrounds Lets Go Baby | 博客/指南 | 2026-05-27">LIS_CHILD_05</a> <a class="source-badge" href="#src-LIS_CHILD_06" title="Teddy and Friends playground | 平台来源 | 2026-05-27">LIS_CHILD_06</a> <a class="source-badge" href="#src-LIS_CHILD_07" title="Oceanario family programs | 官方来源 | 2026-05-27">LIS_CHILD_07</a> <a class="source-badge" href="#src-LIS_CHILD_08" title="Reddit kids play outside Portugal | 社区轶事 | 2026-05-27">LIS_CHILD_08</a> <a class="source-badge" href="#src-LIS_CHILD_09" title="Reddit Lisbon active 2.5 year old | 社区轶事 | 2026-05-27">LIS_CHILD_09</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -532,17 +532,17 @@
           <div class="badges"><a class="source-badge" href="#src-LIS_COMM_04" title="Reddit Best area with kids Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_04</a> <a class="source-badge" href="#src-LIS_COMM_05" title="Reddit Toddler vs Lisbon | 社区轶事 | 2026-05-27">LIS_COMM_05</a> <a class="source-badge" href="#src-LIS_COMM_07" title="Reddit Lisbon active 2.5 year old playground comments | 社区轶事 | 2026-05-28">LIS_COMM_07</a> <a class="source-badge" href="#src-LIS_COMM_08" title="Reddit kids play outside Portugal playground comments | 社区轶事 | 2026-05-28">LIS_COMM_08</a></div>
         </div>
         <div class="cell-label">缺口</div>
-        <p>缺每区 1km 内 playground/park/indoor fallback 计数、厕所/遮阴/围栏、实际路线。</p>
+        <p>OSM 不等于完整设施清单；缺厕所、遮阴、围栏、设施维护、推车坡度和室内 fallback 距离。</p>
         <div class="cell-label">下一步补数</div>
-        <p>从 Lisboa Aberta/OSM/Google 手工核对每个候选区 1km 和 5km POI。</p>
+        <p>对每个候选区选 3 个房源点，核对 1km 步行路线、厕所/遮阴/围栏和雨天活动。</p>
       </div>
     </td>
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可判断：儿童活动生态存在，Hang Dong 和 Old City 各有强项；但没有官方 POI 数据和烟季约束下的可重复性验证。</p>
+        <p>可判断：清迈儿童活动不是“城市步行公园系统”，而更像“室内/亲子咖啡 + 少数公园锚点 + 车程活动”的系统；Old City 近公园，Nimman 近服务，Hang Dong 近亲子场所但更车依赖。</p>
         <div class="meta-row">
-          <span class="meta-pill">证据充分性：中</span>
+          <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
         </div>
         <div class="evidence-tier official-tier">
@@ -552,8 +552,8 @@
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>Nong Buak Haad 公园有平台证据；Hang Dong 多个亲子咖啡和 play 场所提供区域生活证据。</p>
-          <div class="badges"><a class="source-badge" href="#src-CM_PARK_NONG_01" title="Nong Buak Haad Public Park CMHY | 平台来源 | 2026-05-28">CM_PARK_NONG_01</a> <a class="source-badge" href="#src-CM_PARK_NONG_02" title="Nong Buak Haad Public Park Chiang Mai Master | 平台来源 | 2026-05-28">CM_PARK_NONG_02</a> <a class="source-badge" href="#src-CM_CHILD_01" title="Nics Restaurant Playground | 平台来源 | 2026-05-27">CM_CHILD_01</a> <a class="source-badge" href="#src-CM_CHILD_02" title="YuuBaan Studio activities | 平台来源 | 2026-05-27">CM_CHILD_02</a> <a class="source-badge" href="#src-CM_CHILD_03" title="Din Cafe Hang Dong family guide | 博客/指南 | 2026-05-27">CM_CHILD_03</a> <a class="source-badge" href="#src-CM_CHILD_04" title="Lenmaii Playground Cafe | 评价来源 | 2026-05-27">CM_CHILD_04</a> <a class="source-badge" href="#src-CM_CHILD_06" title="Triplets Eat and Play | 平台来源 | 2026-05-27">CM_CHILD_06</a> <a class="source-badge" href="#src-CM_CHILD_07" title="CNXlocal kid friendly cafes parks playgrounds | 博客/指南 | 2026-05-27">CM_CHILD_07</a></div>
+          <p>OSM 1km 数据显示 Nimman/Santitham 生活服务和咖啡非常密，但没有映射到 playground；Old City outer edge 1km 内至少有 Nong Buak Haad 这类公园锚点，同时 grocery、药房和洗衣较多；Hang Dong 1km 内服务和儿童点稀疏，说明它的亲子优势主要不是步行半径，而是 5km/开车半径内的亲子咖啡、学校和郊区空间；San Sai 1km 生活服务最弱。</p>
+          <div class="badges"><a class="source-badge" href="#src-OSM_POI_01" title="OpenStreetMap Overpass candidate-area POI extract | 地图来源 | 2026-05-28">OSM_POI_01</a> <a class="source-badge" href="#src-CM_PARK_NONG_01" title="Nong Buak Haad Public Park CMHY | 平台来源 | 2026-05-28">CM_PARK_NONG_01</a> <a class="source-badge" href="#src-CM_PARK_NONG_02" title="Nong Buak Haad Public Park Chiang Mai Master | 平台来源 | 2026-05-28">CM_PARK_NONG_02</a> <a class="source-badge" href="#src-CM_CHILD_01" title="Nics Restaurant Playground | 平台来源 | 2026-05-27">CM_CHILD_01</a> <a class="source-badge" href="#src-CM_CHILD_02" title="YuuBaan Studio activities | 平台来源 | 2026-05-27">CM_CHILD_02</a> <a class="source-badge" href="#src-CM_CHILD_03" title="Din Cafe Hang Dong family guide | 博客/指南 | 2026-05-27">CM_CHILD_03</a> <a class="source-badge" href="#src-CM_CHILD_04" title="Lenmaii Playground Cafe | 评价来源 | 2026-05-27">CM_CHILD_04</a> <a class="source-badge" href="#src-CM_CHILD_06" title="Triplets Eat and Play | 平台来源 | 2026-05-27">CM_CHILD_06</a> <a class="source-badge" href="#src-CM_CHILD_07" title="CNXlocal kid friendly cafes parks playgrounds | 博客/指南 | 2026-05-27">CM_CHILD_07</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -561,9 +561,9 @@
           <div class="badges"><a class="source-badge" href="#src-CM_CHILD_12" title="Reddit single mom expat Chiang Mai | 社区轶事 | 2026-05-27">CM_CHILD_12</a> <a class="source-badge" href="#src-CM_COMM_12" title="Reddit favorite park Nong Buak Haad | 社区轶事 | 2026-05-28">CM_COMM_12</a> <a class="source-badge" href="#src-CM_COMM_13" title="Reddit public park garden hangout Chiang Mai | 社区轶事 | 2026-05-28">CM_COMM_13</a> <a class="source-badge" href="#src-CM_COMM_04" title="Reddit 2026 burning season megathread | 社区轶事 | 2026-05-27">CM_COMM_04</a></div>
         </div>
         <div class="cell-label">缺口</div>
-        <p>缺每区室内/户外 POI 计数、空气净化、营业时间、交通半径。</p>
+        <p>OSM 对泰国 POI 完整度不稳定；缺场馆空气净化、营业时间、实际 Grab 车程和儿童座椅。</p>
         <div class="cell-label">下一步补数</div>
-        <p>以 Nimman、Old City、Hang Dong、San Sai 为中心手工建 1km/5km POI 表。</p>
+        <p>对 Nimman、Old City、Hang Dong、San Sai 各建 5 个室内 fallback 和 5 个户外点的实测距离表。</p>
       </div>
     </td>
                 </tr>
@@ -573,7 +573,7 @@
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可判断：无车生活基础较强，但儿童座椅和 stroller 路线是维度内风险，需要地址级验证。</p>
+        <p>可判断：里斯本无车生活的基础成立，但不是所有候选区同等低摩擦；Campo/Estrela 更像步行日常，Parque/Belem 需要房源级路线核验。儿童座椅和坡路仍是实际风险。</p>
         <div class="meta-row">
           <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
@@ -585,8 +585,8 @@
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>Bolt/Uber 儿童座椅政策和当前样本可补实际出行限制。</p>
-          <div class="badges"><a class="source-badge" href="#src-LIS_MOB_03" title="Bolt travelling with children | 平台来源 | 2026-05-27">LIS_MOB_03</a> <a class="source-badge" href="#src-LIS_MOB_04" title="Uber car seats | 平台来源 | 2026-05-27">LIS_MOB_04</a></div>
+          <p>OSM 1km 数据说明 Campo de Ourique、Estrela/Lapa 周边 grocery、pharmacy、laundry、cafe 都足够密，许多日常任务可在步行半径解决；Parque das Nacoes 和 Belem/Restelo 的日常服务密度更依赖具体房源点。Bolt/Uber 儿童座椅政策提示打车不能默认有儿童座椅。</p>
+          <div class="badges"><a class="source-badge" href="#src-OSM_POI_01" title="OpenStreetMap Overpass candidate-area POI extract | 地图来源 | 2026-05-28">OSM_POI_01</a> <a class="source-badge" href="#src-LIS_MOB_03" title="Bolt travelling with children | 平台来源 | 2026-05-27">LIS_MOB_03</a> <a class="source-badge" href="#src-LIS_MOB_04" title="Uber car seats | 平台来源 | 2026-05-27">LIS_MOB_04</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -602,9 +602,9 @@
                   <td>
       <div class="cell-block">
         <div class="cell-label">当前维度评估</div>
-        <p>可判断：无车生活存在明显不确定性，Hang Dong/San Sai 更依赖车；但仍需量化路线和儿童座椅。</p>
+        <p>可判断：清迈不是统一的“可无车城市”；Nimman/Old City 可能局部可步行，Hang Dong/San Sai 则更像车程生活。儿童座椅和高峰车程仍是核心缺口。</p>
         <div class="meta-row">
-          <span class="meta-pill">证据充分性：中</span>
+          <span class="meta-pill">证据充分性：中-强</span>
           <span class="meta-pill">置信度：中</span>
         </div>
         <div class="evidence-tier official-tier">
@@ -614,8 +614,8 @@
         </div>
         <div class="evidence-tier platform-tier">
           <div class="cell-label">平台/地图证据</div>
-          <p>Moovit/RTC/songthaew/Grab 等平台和指南说明出行体系更依赖非轨道交通。</p>
-          <div class="badges"><a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_02" title="How to use songthaew with family | 博客/指南 | 2026-05-27">CM_MOB_02</a></div>
+          <p>OSM 1km 数据显示 Nimman 和 Old City edge 周边日常服务密度较高，可以减少部分车程；Hang Dong 和 San Sai 1km 生活服务稀疏，说明若住在这些郊区区域，儿童活动、医疗和购物更可能依赖 Grab/私车。Moovit/RTC/songthaew/Grab 指向非轨道交通体系。</p>
+          <div class="badges"><a class="source-badge" href="#src-OSM_POI_01" title="OpenStreetMap Overpass candidate-area POI extract | 地图来源 | 2026-05-28">OSM_POI_01</a> <a class="source-badge" href="#src-CM_MOB_01" title="Chiang Mai public transport songthaew | 博客/指南 | 2026-05-27">CM_MOB_01</a> <a class="source-badge" href="#src-CM_MOB_02" title="How to use songthaew with family | 博客/指南 | 2026-05-27">CM_MOB_02</a></div>
         </div>
         <div class="evidence-tier community-tier">
           <div class="cell-label">社区反馈 overlay</div>
@@ -3040,6 +3040,66 @@
                 <div><dt>URL</dt><dd><a href="https://www.reddit.com/r/chiangmai/comments/1t6bnjy/i_think_the_rainy_season_just_officially_started/" target="_blank" rel="noopener">https://www.reddit.com/r/chiangmai/comments/1t6bnjy/i_think_the_rainy_season_just_officially_started/</a></dd></div>
                 <div><dt>机构/作者</dt><dd>Reddit</dd></div>
                 <div><dt>发布日期</dt><dd>2026</dd></div>
+                <div><dt>访问日期</dt><dd>2026-05-28</dd></div>
+              </dl>
+            </article>
+            
+
+            <article class="source-card" id="src-OSM_POI_01">
+              <div class="source-card-head">
+                <a class="source-badge" href="https://overpass-api.de/" target="_blank" rel="noopener">OSM_POI_01</a>
+                <span>地图来源</span>
+                <span>置信度：中</span>
+              </div>
+              <h3><a href="https://overpass-api.de/" target="_blank" rel="noopener">OpenStreetMap Overpass candidate-area POI extract</a></h3>
+              <dl>
+                <div><dt>城市</dt><dd>两城</dd></div>
+                <div><dt>区域</dt><dd>candidate_areas</dd></div>
+                <div><dt>层级</dt><dd>生活可运行性层</dd></div>
+                <div><dt>维度</dt><dd>poi_counts</dd></div>
+                <div><dt>URL</dt><dd><a href="https://overpass-api.de/" target="_blank" rel="noopener">https://overpass-api.de/</a></dd></div>
+                <div><dt>机构/作者</dt><dd>OpenStreetMap contributors / Overpass API</dd></div>
+                <div><dt>发布日期</dt><dd>2026-05-28</dd></div>
+                <div><dt>访问日期</dt><dd>2026-05-28</dd></div>
+              </dl>
+            </article>
+            
+
+            <article class="source-card" id="src-OPEN_METEO_CLIMATE_01">
+              <div class="source-card-head">
+                <a class="source-badge" href="https://archive-api.open-meteo.com/v1/archive" target="_blank" rel="noopener">OPEN_METEO_CLIMATE_01</a>
+                <span>平台来源</span>
+                <span>置信度：中</span>
+              </div>
+              <h3><a href="https://archive-api.open-meteo.com/v1/archive" target="_blank" rel="noopener">Open-Meteo historical weather archive 2023-2025</a></h3>
+              <dl>
+                <div><dt>城市</dt><dd>两城</dd></div>
+                <div><dt>区域</dt><dd>全城</dd></div>
+                <div><dt>层级</dt><dd>硬约束层</dd></div>
+                <div><dt>维度</dt><dd>气候</dd></div>
+                <div><dt>URL</dt><dd><a href="https://archive-api.open-meteo.com/v1/archive" target="_blank" rel="noopener">https://archive-api.open-meteo.com/v1/archive</a></dd></div>
+                <div><dt>机构/作者</dt><dd>Open-Meteo</dd></div>
+                <div><dt>发布日期</dt><dd>2026-05-28</dd></div>
+                <div><dt>访问日期</dt><dd>2026-05-28</dd></div>
+              </dl>
+            </article>
+            
+
+            <article class="source-card" id="src-OPEN_METEO_AIR_01">
+              <div class="source-card-head">
+                <a class="source-badge" href="https://air-quality-api.open-meteo.com/v1/air-quality" target="_blank" rel="noopener">OPEN_METEO_AIR_01</a>
+                <span>平台来源</span>
+                <span>置信度：中</span>
+              </div>
+              <h3><a href="https://air-quality-api.open-meteo.com/v1/air-quality" target="_blank" rel="noopener">Open-Meteo air quality archive 2023-2025</a></h3>
+              <dl>
+                <div><dt>城市</dt><dd>两城</dd></div>
+                <div><dt>区域</dt><dd>全城</dd></div>
+                <div><dt>层级</dt><dd>硬约束层</dd></div>
+                <div><dt>维度</dt><dd>空气质量</dd></div>
+                <div><dt>URL</dt><dd><a href="https://air-quality-api.open-meteo.com/v1/air-quality" target="_blank" rel="noopener">https://air-quality-api.open-meteo.com/v1/air-quality</a></dd></div>
+                <div><dt>机构/作者</dt><dd>Open-Meteo</dd></div>
+                <div><dt>发布日期</dt><dd>2026-05-28</dd></div>
                 <div><dt>访问日期</dt><dd>2026-05-28</dd></div>
               </dl>
             </article>

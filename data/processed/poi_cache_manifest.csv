@@ -1,0 +1,17 @@
+city,area,radius_m,cache_file,overpass_endpoint
+lisbon,Campo de Ourique,1000,data/cache/overpass/lisbon_Campo_de_Ourique_1000_941aa898dcf6.json,https://overpass-api.de/api/interpreter
+lisbon,Campo de Ourique,5000,data/cache/overpass/lisbon_Campo_de_Ourique_5000_46e6f3f9e6a8.json,https://overpass-api.de/api/interpreter
+lisbon,Estrela / Lapa,1000,data/cache/overpass/lisbon_Estrela___Lapa_1000_5a71d6dbcbd2.json,https://overpass-api.de/api/interpreter
+lisbon,Estrela / Lapa,5000,data/cache/overpass/lisbon_Estrela___Lapa_5000_12d45df26cda.json,https://overpass-api.de/api/interpreter
+lisbon,Parque das Nacoes,1000,data/cache/overpass/lisbon_Parque_das_Nacoes_1000_377f6bf40677.json,https://overpass-api.de/api/interpreter
+lisbon,Parque das Nacoes,5000,data/cache/overpass/lisbon_Parque_das_Nacoes_5000_f5053141be27.json,https://overpass-api.de/api/interpreter
+lisbon,Belem / Restelo,1000,data/cache/overpass/lisbon_Belem___Restelo_1000_99cd5ed91679.json,https://overpass-api.de/api/interpreter
+lisbon,Belem / Restelo,5000,data/cache/overpass/lisbon_Belem___Restelo_5000_8f063c3fc392.json,https://overpass-api.de/api/interpreter
+chiang_mai,Nimman / Santitham,1000,data/cache/overpass/chiang_mai_Nimman___Santitham_1000_dbdca06490ad.json,https://overpass-api.de/api/interpreter
+chiang_mai,Nimman / Santitham,5000,data/cache/overpass/chiang_mai_Nimman___Santitham_5000_700ce1fefaed.json,https://overpass-api.de/api/interpreter
+chiang_mai,Old City outer edge,1000,data/cache/overpass/chiang_mai_Old_City_outer_edge_1000_bf3da0032862.json,https://overpass-api.de/api/interpreter
+chiang_mai,Old City outer edge,5000,data/cache/overpass/chiang_mai_Old_City_outer_edge_5000_7573ad7eaf9e.json,https://overpass-api.de/api/interpreter
+chiang_mai,Hang Dong,1000,data/cache/overpass/chiang_mai_Hang_Dong_1000_197a9411bc03.json,https://overpass-api.de/api/interpreter
+chiang_mai,Hang Dong,5000,data/cache/overpass/chiang_mai_Hang_Dong_5000_91417dbc5511.json,https://overpass-api.de/api/interpreter
+chiang_mai,San Sai,1000,data/cache/overpass/chiang_mai_San_Sai_1000_9784997cb908.json,https://overpass-api.de/api/interpreter
+chiang_mai,San Sai,5000,data/cache/overpass/chiang_mai_San_Sai_5000_eaae5845d46d.json,https://overpass-api.de/api/interpreter

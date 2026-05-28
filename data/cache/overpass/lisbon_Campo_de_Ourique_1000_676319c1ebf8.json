@@ -1,0 +1,2158 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:23:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 580811930,
+  "lat": 38.7151727,
+  "lon": -9.1695707,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Sanbruno"
+  }
+},
+{
+  "type": "node",
+  "id": 1212628304,
+  "lat": 38.7117651,
+  "lon": -9.1645261,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "133",
+    "addr:place": "Lapa",
+    "addr:postcode": "1350-290",
+    "addr:street": "Rua de Santana à Lapa",
+    "amenity": "pharmacy",
+    "contact:email": "farmacia.alb@sapo.pt",
+    "contact:phone": "+ 351 213 963 562",
+    "dispensing": "no",
+    "fixme": "Number may be 156 instead of 133.",
+    "name": "Farmácia Alb"
+  }
+},
+{
+  "type": "node",
+  "id": 1212671092,
+  "lat": 38.7201084,
+  "lon": -9.1611871,
+  "tags": {
+    "addr:housenumber": "136",
+    "addr:postcode": "1250-257 Santa Isabel",
+    "addr:street": "Rua Silva Carvalho",
+    "amenity": "pharmacy",
+    "contact:email": "farmacia-almeida@sapo.pt",
+    "contact:phone": "+351 213 881 726",
+    "dispensing": "no",
+    "name": "Farmácia Almeida",
+    "opening_hours": "Mo-Sa,PH 08:30-20:30; Su off"
+  }
+},
+{
+  "type": "node",
+  "id": 1212694264,
+  "lat": 38.7095153,
+  "lon": -9.1656351,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:country": "PT",
+    "addr:housenumber": "66-B",
+    "addr:place": "Lapa",
+    "addr:postcode": "1350-180",
+    "addr:street": "Avenida Infante Santo",
+    "amenity": "pharmacy",
+    "contact:email": "farmaciaandraderibeiro@gmail.com",
+    "contact:phone": "+351 213 966 971",
+    "dispensing": "no",
+    "drive_through": "no",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Andrade Ribeiro",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1212694280,
+  "lat": 38.7126684,
+  "lon": -9.1573525,
+  "tags": {
+    "addr:housenumber": "139",
+    "addr:postcode": "1200-662",
+    "addr:street": "Calçada da Estrela",
+    "amenity": "pharmacy",
+    "contact:email": "farmacia.aurelio.rego@grupo-holon.pt",
+    "contact:phone": "+351 213 961 758",
+    "contact:website": "http://www.grupo-holon.pt/",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Aurélio Rego"
+  }
+},
+{
+  "type": "node",
+  "id": 1213123621,
+  "lat": 38.7110559,
+  "lon": -9.1590109,
+  "tags": {
+    "addr:housenumber": "10-14",
+    "addr:postcode": "1200-731",
+    "addr:street": "Rua dos Navegantes",
+    "amenity": "pharmacy",
+    "dispensing": "no",
+    "name": "Farmácia Central da Lapa",
+    "name:de": "Apotheke Central da Lapa"
+  }
+},
+{
+  "type": "node",
+  "id": 1213123662,
+  "lat": 38.7180911,
+  "lon": -9.1647404,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "28-A",
+    "addr:postcode": "1350-272 Santo Condestável",
+    "addr:street": "Rua 4 de Infantaria",
+    "amenity": "pharmacy",
+    "check_date": "2023-09-09",
+    "contact:email": "farmacia.c.fonseca@clix.pt",
+    "contact:phone": "+351 213 888 857",
+    "contact:website": "https://www.facebook.com/farmacia.castrofonseca",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Castro Fonseca"
+  }
+},
+{
+  "type": "node",
+  "id": 1213563553,
+  "lat": 38.7132285,
+  "lon": -9.1587354,
+  "tags": {
+    "addr:city": "Estrela",
+    "addr:housenumber": "130",
+    "addr:postcode": "1200-666",
+    "addr:street": "Calçada da Estrela",
+    "amenity": "pharmacy",
+    "contact:phone": "+351 213 960 339",
+    "dispensing": "no",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Gama"
+  }
+},
+{
+  "type": "node",
+  "id": 1237566234,
+  "lat": 38.7166488,
+  "lon": -9.1638289,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "42 a 48",
+    "addr:postcode": "1350-133",
+    "addr:street": "Rua Ferreira Borges",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Linaida",
+    "opening_hours": "Mo-Su 08:30-20:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1237566241,
+  "lat": 38.7184073,
+  "lon": -9.1679120,
+  "tags": {
+    "addr:housenumber": "98-B",
+    "addr:postcode": "1350-171",
+    "addr:street": "Rua de Infantaria 16",
+    "amenity": "pharmacy",
+    "contact:email": "farmacialobel@gmail.com",
+    "contact:phone": "+351 213 888 807",
+    "contact:website": "http://maisfarmacia.org/",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Lobel",
+    "name:de": "Apotheke Lobel",
+    "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-13:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1239143805,
+  "lat": 38.7127400,
+  "lon": -9.1580060,
+  "tags": {
+    "addr:housenumber": "167",
+    "addr:postcode": "1200-662",
+    "addr:street": "Calçada da Estrela",
+    "amenity": "pharmacy",
+    "contact:email": "geral@farmaciamartins.com",
+    "contact:phone": "+351 213 960 823",
+    "contact:website": "http://www.farmaciamartins.com/",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Martins",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1239143811,
+  "lat": 38.7133855,
+  "lon": -9.1635077,
+  "tags": {
+    "addr:housenumber": "96",
+    "addr:postcode": "1350-294 Lapa",
+    "addr:street": "Rua de Santo António à Estrela",
+    "amenity": "pharmacy",
+    "contact:email": "marques.freire.lsb@farmalink.pt",
+    "contact:phone": "+351 213 965 196",
+    "dispensing": "no",
+    "name": "Farmácia Marques Freire"
+  }
+},
+{
+  "type": "node",
+  "id": 1240465059,
+  "lat": 38.7171780,
+  "lon": -9.1665312,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "59-B",
+    "addr:postcode": "1350-139 Santo Condestável",
+    "addr:street": "Rua Francisco Metrass",
+    "amenity": "pharmacy",
+    "contact:email": "farma.porfirio@gmail.com",
+    "contact:phone": "+351 213 963 349",
+    "contact:website": "https://pt-pt.facebook.com/Farm%C3%A1cia-Porf%C3%ADrio-151876844877029/",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmácia Porfírio",
+    "opening_hours": "Mo-Fr 09:00-20:00 Sat 09:00-19:00 Sun 10:00-19:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1240465073,
+  "lat": 38.7093128,
+  "lon": -9.1616177,
+  "tags": {
+    "addr:housenumber": "105;107",
+    "addr:postcode": "1200-701",
+    "addr:street": "Rua da Lapa",
+    "amenity": "pharmacy",
+    "contact:phone": "+351 213 964 414",
+    "dispensing": "no",
+    "name": "Farmácia Paiva da Costa",
+    "official_name": "Farmácia Paiva da Costa, Lda."
+  }
+},
+{
+  "type": "node",
+  "id": 1240465074,
+  "lat": 38.7153143,
+  "lon": -9.1643947,
+  "tags": {
+    "addr:housenumber": "145-F",
+    "addr:postcode": "1350-300 Santo Condestável",
+    "addr:street": "Rua Saraiva Carvalho",
+    "amenity": "pharmacy",
+    "contact:email": "farmaciauniao.campodeourique@afarmaciaonline.pt",
+    "contact:phone": "+351 213 902 278",
+    "contact:website": "http://www.afarmaciaonline.pt",
+    "dispensing": "yes",
+    "name": "Farmácia União",
+    "opening_hours": "Mo-Sa 08:30-21:00; PH,Su 10:00-20:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1240465086,
+  "lat": 38.7210277,
+  "lon": -9.1646606,
+  "tags": {
+    "addr:housenumber": "131",
+    "addr:postcode": "1350-052 Santo Condestável",
+    "addr:street": "Rua de Campo de Ourique",
+    "amenity": "pharmacy",
+    "contact:phone": "+351 213 844 313",
+    "dispensing": "no",
+    "name": "Farmácia Pinheiro"
+  }
+},
+{
+  "type": "node",
+  "id": 1240465094,
+  "lat": 38.7104644,
+  "lon": -9.1596993,
+  "tags": {
+    "addr:housenumber": "52;54",
+    "addr:postcode": "1200-702",
+    "addr:street": "Rua da Lapa",
+    "amenity": "pharmacy",
+    "contact:email": "farmacia.lapa@grupo-holon.pt",
+    "contact:phone": "+351 213 962 246",
+    "contact:website": "http://www.grupo-holon.pt/",
+    "dispensing": "yes",
+    "name": "Farmácia da Lapa",
+    "name:de": "Apotheke da Lapa",
+    "old_name": "Farmácia Rodrigues & Aires Lda.",
+    "opening_hours": "Mo-Fr 08:30-20:00; Sa 09:00-20:00"
+  }
+},
+{
+  "type": "node",
+  "id": 1240465109,
+  "lat": 38.7163830,
+  "lon": -9.1616990,
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:postcode": "1250-246",
+    "addr:street": "Santo Condestável",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "name": "Farmácia Urbano de Freitas"
+  }
+},
+{
+  "type": "node",
+  "id": 1284045605,
+  "lat": 38.7107786,
+  "lon": -9.1591131,
+  "tags": {
+    "addr:housenumber": "20",
+    "addr:street": "Rua da Lapa",
+    "amenity": "cafe",
+    "name": "Boutique Doce"
+  }
+},
+{
+  "type": "node",
+  "id": 1284045614,
+  "lat": 38.7093093,
+  "lon": -9.1594886,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1284045623,
+  "lat": 38.7088656,
+  "lon": -9.1601967,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Café Capoeira"
+  }
+},
+{
+  "type": "node",
+  "id": 1411570163,
+  "lat": 38.7176346,
+  "lon": -9.1568181,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "38",
+    "addr:postcode": "1250-212",
+    "addr:street": "Travessa de Santa Quitéria",
+    "branch": "Santa Quitéria",
+    "brand": "Continente Bom Dia",
+    "brand:wikidata": "Q123570507",
+    "brand:wikipedia": "pt:Continente Bom Dia",
+    "contact:facebook": "continenteoficial",
+    "contact:instagram": "continente",
+    "contact:phone": "+351 213 839 750",
+    "contact:youtube": "https://www.youtube.com/user/continentept",
+    "name": "Continente Bom Dia",
+    "opening_hours": "Mo-Su 08:30-21:00",
+    "ref": "c41d7d7b-6f40-5c37-bcd5-2b847e19e6eb",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://feed.continente.pt/lojas/continente-bom-dia-santa-quiteria",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1970854460,
+  "lat": 38.7133451,
+  "lon": -9.1600859,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Carris Tickets (bus, Tram)"
+  }
+},
+{
+  "type": "node",
+  "id": 2357964139,
+  "lat": 38.7156718,
+  "lon": -9.1641234,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "1A",
+    "addr:postcode": "1350-126",
+    "addr:street": "Rua Ferreira Borges",
+    "amenity": "cafe",
+    "name": "A Tentadora",
+    "phone": "+351213966059",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2536621701,
+  "lat": 38.7194138,
+  "lon": -9.1649828,
+  "tags": {
+    "amenity": "cafe",
+    "name": "O Cantinho das Patuscadas"
+  }
+},
+{
+  "type": "node",
+  "id": 2536621723,
+  "lat": 38.7205993,
+  "lon": -9.1642064,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 2536621735,
+  "lat": 38.7191652,
+  "lon": -9.1655221,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Lomar",
+    "opening_hours": "Mo-Fr 07:30-19:30; Sa 07:30-15:00"
+  }
+},
+{
+  "type": "node",
+  "id": 2536621737,
+  "lat": 38.7174810,
+  "lon": -9.1694364,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Botica do Café"
+  }
+},
+{
+  "type": "node",
+  "id": 2536621740,
+  "lat": 38.7191428,
+  "lon": -9.1660303,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Com Tradições",
+    "opening_hours": "Mo-Fr 07:00-24:00; Sa,Su 08:00-24:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3258016406,
+  "lat": 38.7171099,
+  "lon": -9.1575270,
+  "tags": {
+    "addr:street": "Avenida Pedro Álvares Cabral",
+    "amenity": "cafe",
+    "brand": "A Padaria Portuguesa",
+    "brand:wikidata": "Q113951278",
+    "check_date": "2024-05-02",
+    "cuisine": "regional",
+    "name": "A Padaria Portuguesa",
+    "shop": "bakery",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3684805852,
+  "lat": 38.7171582,
+  "lon": -9.1573312,
+  "tags": {
+    "check_date": "2024-05-04",
+    "name": "Flavers",
+    "old_name": "Global Food Store",
+    "shop": "convenience",
+    "website": "https://www.flavers.pt/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4380084488,
+  "lat": 38.7182866,
+  "lon": -9.1642838,
+  "tags": {
+    "addr:housenumber": "49 A",
+    "addr:street": "Rua de Infantaria 16",
+    "name": "Lavamais",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "phone": "+351 968 923 834",
+    "self_service": "yes",
+    "shop": "laundry",
+    "website": "www.lavamais.pt"
+  }
+},
+{
+  "type": "node",
+  "id": 4426774297,
+  "lat": 38.7143495,
+  "lon": -9.1696519,
+  "tags": {
+    "amenity": "cafe",
+    "diet:vegetarian": "yes",
+    "name": "Quiosque 28",
+    "opening_hours": "PH,Mo-Su 11:00-21:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4462567793,
+  "lat": 38.7190166,
+  "lon": -9.1649744,
+  "tags": {
+    "name": "Frutaria",
+    "name:pt": "Frutaria",
+    "opening_hours": "Mo-Sa 08:00-22:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 4462567991,
+  "lat": 38.7210015,
+  "lon": -9.1648028,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Bolinho de Campo de Ourique"
+  }
+},
+{
+  "type": "node",
+  "id": 4693994909,
+  "lat": 38.7167410,
+  "lon": -9.1578322,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2024-05-02",
+    "cuisine": "ice_cream",
+    "name": "Artisani",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4705351541,
+  "lat": 38.7111032,
+  "lon": -9.1585709,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Comida Pronta"
+  }
+},
+{
+  "type": "node",
+  "id": 4783624125,
+  "lat": 38.7161700,
+  "lon": -9.1693046,
+  "tags": {
+    "addr:housenumber": "119",
+    "addr:street": "Rua Coelho da Rocha",
+    "amenity": "pharmacy",
+    "contact:email": "farmaciacondestavel@gmail.com",
+    "contact:phone": "+351 213 966 206",
+    "contact:website": "https://www.facebook.com/farmaciacondestavel",
+    "dispensing": "yes",
+    "name": "Farmácia Condestável",
+    "official_name": "Farmácia Condestável, Lda."
+  }
+},
+{
+  "type": "node",
+  "id": 4784930125,
+  "lat": 38.7172948,
+  "lon": -9.1665708,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "67",
+    "addr:postcode": "1350-139",
+    "addr:street": "Rua Francisco Metrass",
+    "amenity": "cafe",
+    "name": "Pastelaria Aloma",
+    "name:en": "Pastelaria Aloma",
+    "name:pt": "Pastelaria Aloma"
+  }
+},
+{
+  "type": "node",
+  "id": 4837525221,
+  "lat": 38.7104113,
+  "lon": -9.1615666,
+  "tags": {
+    "addr:housenumber": "56",
+    "addr:postcode": "1200-798",
+    "addr:street": "Rua de Santana à Lapa",
+    "branch": "Lapa",
+    "brand": "Pingo Doce",
+    "brand:wikidata": "Q1575057",
+    "brand:wikipedia": "pt:Pingo Doce",
+    "contact:facebook": "pingodoce",
+    "contact:instagram": "pingodoce",
+    "contact:linkedin": "https://www.linkedin.com/company/pingo-doce",
+    "contact:phone": "+351 938 875 401",
+    "contact:tiktok": "pingodoce",
+    "contact:youtube": "pingodocept",
+    "name": "Pingo Doce",
+    "opening_hours": "PH,Mo-Su 08:00-21:00",
+    "ref": "401",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "website": "https://www.pingodoce.pt/lojas/lapa/"
+  }
+},
+{
+  "type": "node",
+  "id": 5152152365,
+  "lat": 38.7098625,
+  "lon": -9.1657449,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "68A",
+    "addr:postcode": "1350-180",
+    "addr:street": "Avenida Infante Santo",
+    "brand": "Speed Queen",
+    "brand:wikidata": "Q7575499",
+    "check_date": "2024-06-27",
+    "internet_access": "wlan",
+    "name": "Speed Queen",
+    "name:de": "Waschsalon",
+    "opening_hours": "Mo-Su 08:00-23:00",
+    "self_service": "yes",
+    "shop": "laundry",
+    "website": "https://speedqueeninvestor.com/pt/"
+  }
+},
+{
+  "type": "node",
+  "id": 5256910076,
+  "lat": 38.7139565,
+  "lon": -9.1644834,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:country": "PT",
+    "addr:housenumber": "60",
+    "addr:postcode": "1350-230",
+    "addr:street": "Rua do Patrocínio",
+    "amenity": "clinic",
+    "email": "usf.stcondest@arslvt.min-saude.pt",
+    "healthcare": "centre",
+    "name": "Unidade de Saúde Familiar Santo Condestável",
+    "note": "Agrupamento de Centros de Saúde Lisboa Ocidental e Oeiras",
+    "phone": "+351 213 913 220",
+    "short_name": "USF Santo Condestável"
+  }
+},
+{
+  "type": "node",
+  "id": 5412541022,
+  "lat": 38.7166704,
+  "lon": -9.1615037,
+  "tags": {
+    "addr:housenumber": "120A",
+    "addr:postcode": "1250-245",
+    "addr:street": "Rua Saraiva de Carvalho",
+    "amenity": "cafe",
+    "cuisine": "brazilian;portuguese",
+    "name": "O Ponto mais doce da cidade",
+    "name:en": "The sweetest point in town",
+    "opening_hours": "Mo-Sa 12:00-19:00"
+  }
+},
+{
+  "type": "node",
+  "id": 5446364970,
+  "lat": 38.7164157,
+  "lon": -9.1744119,
+  "tags": {
+    "access": "yes",
+    "description": "Avenida de Ceuta",
+    "leisure": "playground",
+    "name": "Parque Infantil da Avenida de Ceuta",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "319ae96a-ebe4-430f-8228-72bc7348398e"
+  }
+},
+{
+  "type": "node",
+  "id": 5446365016,
+  "lat": 38.7150973,
+  "lon": -9.1578577,
+  "tags": {
+    "access": "yes",
+    "description": "Jardim Guerra Junqueiro(Jardim da Estrela)",
+    "leisure": "playground",
+    "name": "Parque Juvenil do Jardim Guerra Junqueiro",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "fc760a2c-7834-41c1-a655-e329482de8ca"
+  }
+},
+{
+  "type": "node",
+  "id": 5630843133,
+  "lat": 38.7187280,
+  "lon": -9.1646892,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "34",
+    "addr:postcode": "1350-273",
+    "addr:street": "Rua do 4 de Infantaria",
+    "branch": "Campo de Ourique",
+    "brand": "Celeiro",
+    "brand:wikidata": "Q114102189",
+    "contact:facebook": "celeiro.pt",
+    "contact:instagram": "celeiro_viverdecorpoealma",
+    "contact:phone": "+351 213 971 648",
+    "name": "Celeiro",
+    "opening_hours": "Mo-Fr 09:30-20:00;Sa 09:00-19:00;Su 10:00-19:00",
+    "organic": "only",
+    "ref": "822",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "website": "https://www.celeiro.pt/lojas/celeiro-campo-de-ourique"
+  }
+},
+{
+  "type": "node",
+  "id": 6206335524,
+  "lat": 38.7179723,
+  "lon": -9.1662318,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "36",
+    "addr:postcode": "1350-144",
+    "addr:street": "R. Francisco Metrass",
+    "branch": "Francisco Metrass",
+    "brand": "Pingo Doce",
+    "brand:wikidata": "Q1575057",
+    "brand:wikipedia": "pt:Pingo Doce",
+    "contact:facebook": "pingodoce",
+    "contact:instagram": "pingodoce",
+    "contact:linkedin": "https://www.linkedin.com/company/pingo-doce",
+    "contact:phone": "+351 938 875 442",
+    "contact:tiktok": "pingodoce",
+    "contact:youtube": "pingodocept",
+    "name": "Pingo Doce",
+    "opening_hours": "Mo-Su 08:00-21:00; easter 08:00-14:00",
+    "ref": "442",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.pingodoce.pt/lojas/francisco-metrass/"
+  }
+},
+{
+  "type": "node",
+  "id": 6206337793,
+  "lat": 38.7176493,
+  "lon": -9.1666312,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "32",
+    "addr:postcode": "1350-140",
+    "addr:street": "Rua Francisco Metrass",
+    "branch": "Francisco Metrass - Lisboa",
+    "brand": "My Auchan",
+    "brand:wikidata": "Q115800307",
+    "brand:wikipedia": "pt:Auchan",
+    "contact:email": "apoiocliente@auchan.pt",
+    "contact:facebook": "AuchanPortugal",
+    "contact:instagram": "auchan_pt",
+    "contact:phone": "+351 210 403 270",
+    "contact:tiktok": "auchan_pt",
+    "contact:youtube": "https://www.youtube.com/channel/UC6FSI7tYO9ISV11U2PHBBYQ",
+    "name": "My Auchan",
+    "old_name": "Minipreço",
+    "ref": "E81",
+    "shop": "convenience",
+    "source:contact": "website",
+    "website": "https://www.auchan.pt/pt/loja?StoreID=E81"
+  }
+},
+{
+  "type": "node",
+  "id": 6206342999,
+  "lat": 38.7153486,
+  "lon": -9.1690384,
+  "tags": {
+    "addr:housenumber": "24C",
+    "addr:street": "R. Padre Francisco",
+    "amenity": "cafe",
+    "description": "Hookah Bar and Kebab",
+    "name": "Lisbon Café - Shisha Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 6715404485,
+  "lat": 38.7121938,
+  "lon": -9.1656969,
+  "tags": {
+    "addr:street": "Travessa das Almas",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Melbourne",
+    "opening_hours": "Mo-Sa 08:00-18:00; Su 10:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 7001723786,
+  "lat": 38.7128130,
+  "lon": -9.1581939,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "international",
+    "name:en": "OHLINDA",
+    "opening_hours": "Mo-Su 10:00-19:00"
+  }
+},
+{
+  "type": "node",
+  "id": 7775887042,
+  "lat": 38.7091247,
+  "lon": -9.1756270,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 7778148503,
+  "lat": 38.7085721,
+  "lon": -9.1751307,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 8687846376,
+  "lat": 38.7175818,
+  "lon": -9.1662737,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "75, 69",
+    "addr:postcode": "1350-139",
+    "addr:street": "Rua Francisco Metrass",
+    "amenity": "cafe",
+    "name": "Café Metrass",
+    "opening_hours": "Mo-Fr 07:30-20:00; Sa 08:00-15:00",
+    "phone": "213855664"
+  }
+},
+{
+  "type": "node",
+  "id": 8687846377,
+  "lat": 38.7175374,
+  "lon": -9.1660807,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "28A",
+    "addr:postcode": "1350-322",
+    "addr:street": "Rua Almeida e Sousa",
+    "name": "Maçã de Adão",
+    "opening_hours": "Mo-Fr 09:00-19:00",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 8687846385,
+  "lat": 38.7165637,
+  "lon": -9.1666027,
+  "tags": {
+    "amenity": "cafe",
+    "name": "B.ME"
+  }
+},
+{
+  "type": "node",
+  "id": 8687870030,
+  "lat": 38.7184557,
+  "lon": -9.1654720,
+  "tags": {
+    "addr:housenumber": "62",
+    "addr:postcode": "1350-169",
+    "addr:street": "Rua de Infantaria 16",
+    "amenity": "cafe",
+    "check_date": "2023-09-09",
+    "indoor_seating": "yes",
+    "name": "O Meu Café",
+    "opening_hours": "Tu-Su 07:00-20:00",
+    "outdoor_seating": "yes",
+    "phone": "213887432"
+  }
+},
+{
+  "type": "node",
+  "id": 8687870049,
+  "lat": 38.7163871,
+  "lon": -9.1648377,
+  "tags": {
+    "laundry_service": "no",
+    "name": "Lava Mais",
+    "self_service": "yes",
+    "shop": "laundry",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8747696602,
+  "lat": 38.7237985,
+  "lon": -9.1658163,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Petisqueira Rio Lima"
+  }
+},
+{
+  "type": "node",
+  "id": 9167630817,
+  "lat": 38.7189894,
+  "lon": -9.1577762,
+  "tags": {
+    "addr:housenumber": "2A",
+    "addr:postcode": "1250-033",
+    "addr:street": "Rua da Arrábida",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Café O Luís",
+    "name:en": "Café O Luis",
+    "name:pt": "Café O Luis"
+  }
+},
+{
+  "type": "node",
+  "id": 9405516566,
+  "lat": 38.7144033,
+  "lon": -9.1566726,
+  "tags": {
+    "name": "Mercado da Estrela",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 9720186220,
+  "lat": 38.7238408,
+  "lon": -9.1661615,
+  "tags": {
+    "amenity": "cafe",
+    "indoor_seating": "yes",
+    "outdoor_seating": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 9730047176,
+  "lat": 38.7204444,
+  "lon": -9.1596363,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "23B",
+    "addr:street": "Rua Custódio Vieira",
+    "amenity": "cafe",
+    "name": "Café-Bar D.João V",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9826883117,
+  "lat": 38.7101812,
+  "lon": -9.1615885,
+  "tags": {
+    "addr:housenumber": "33",
+    "addr:street": "Rua de Sant'Ana à Lapa",
+    "amenity": "cafe",
+    "name:en": "Cafe Dede’s"
+  }
+},
+{
+  "type": "node",
+  "id": 9826883217,
+  "lat": 38.7144774,
+  "lon": -9.1572615,
+  "tags": {
+    "addr:housenumber": "72",
+    "addr:street": "Rua de Santo Amaro",
+    "amenity": "cafe",
+    "name:en": "Cafe Dede’s"
+  }
+},
+{
+  "type": "node",
+  "id": 10576551858,
+  "lat": 38.7162025,
+  "lon": -9.1656034,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "11C",
+    "addr:postcode": "1350-321",
+    "addr:street": "Rua Tomás da Anunciação",
+    "alt_name": "ALDI Campo de Ourique",
+    "branch": "Campo de Ourique",
+    "brand": "Aldi",
+    "brand:wikidata": "Q41171373",
+    "brand:wikipedia": "pt:Aldi",
+    "contact:email": "portugal@aldi.pt",
+    "contact:facebook": "AldiSupermercados.pt",
+    "contact:instagram": "aldi.portugal",
+    "contact:linkedin": "https://linkedin.com/company/aldi-portugal",
+    "contact:youtube": "https://www.youtube.com/@aldi.portugal",
+    "name": "Aldi",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "ref": "PT001099",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.aldi.pt/tools/lojas-e-horarios-de-funcionamento.html/l/campo-de-ourique/rua-tomas-da-anunciacao-11/3591884",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11341635913,
+  "lat": 38.7184619,
+  "lon": -9.1642311,
+  "tags": {
+    "addr:city": "Campo de Ourique - Lisboa",
+    "addr:housenumber": "125",
+    "addr:postcode": "1350-129",
+    "addr:street": "Rua Ferreira Borges",
+    "branch": "Ferreira Borges",
+    "brand": "My Auchan",
+    "brand:wikidata": "Q115800307",
+    "brand:wikipedia": "pt:Auchan",
+    "contact:email": "apoiocliente@auchan.pt",
+    "contact:facebook": "AuchanPortugal",
+    "contact:instagram": "auchan_pt",
+    "contact:phone": "+351 210 403 270",
+    "contact:tiktok": "auchan_pt",
+    "contact:youtube": "https://www.youtube.com/channel/UC6FSI7tYO9ISV11U2PHBBYQ",
+    "name": "My Auchan",
+    "opening_hours": "Mo-Su 08:30-21:00;Dec 24 08:30-17:00;Dec 31 08:30-18:00;easter, Dec 25, Jan 01 off",
+    "operator": "Auchan",
+    "operator:wikidata": "Q758603",
+    "operator:wikipedia": "pt:Auchan",
+    "ref": "436",
+    "shop": "convenience",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.auchan.pt/pt/loja?StoreID=436"
+  }
+},
+{
+  "type": "node",
+  "id": 11841607369,
+  "lat": 38.7079917,
+  "lon": -9.1670932,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "58D",
+    "addr:postcode": "1350-174",
+    "addr:street": "Avenida Infante Santo",
+    "addr:unit": "1",
+    "name": "KoPo Mart",
+    "note": "Adequado para LGBTQ+",
+    "opening_hours": "Mo-Fr 10:30-13:00, 14:00-19:00; Sa-Su 10:30-13:00, 14:00-17:00",
+    "phone": "+351 218 056 871",
+    "shop": "convenience",
+    "website": "https://www.kopomart.com"
+  }
+},
+{
+  "type": "node",
+  "id": 11844637737,
+  "lat": 38.7095015,
+  "lon": -9.1661777,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "66",
+    "addr:postcode": "1350-177",
+    "addr:street": "Av. Infante Santo",
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "FARMÁCIA ESTRELA"
+  }
+},
+{
+  "type": "node",
+  "id": 11872714072,
+  "lat": 38.7087429,
+  "lon": -9.1656616,
+  "tags": {
+    "amenity": "cafe",
+    "name": "19"
+  }
+},
+{
+  "type": "node",
+  "id": 11879789141,
+  "lat": 38.7201506,
+  "lon": -9.1670604,
+  "tags": {
+    "name": "Lavandaria Self-Service EB",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11879988565,
+  "lat": 38.7205133,
+  "lon": -9.1656360,
+  "tags": {
+    "name": "Engomadoria do Bairro",
+    "phone": "+351 928 120 742",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11880046922,
+  "lat": 38.7198887,
+  "lon": -9.1649856,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Pikikos - Cut, Care, Coffee",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11883973939,
+  "lat": 38.7196946,
+  "lon": -9.1657964,
+  "tags": {
+    "name": "Sistema de Limpeza - AquaCare - Lanvandaria Especializada",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11884205998,
+  "lat": 38.7192947,
+  "lon": -9.1694329,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "86",
+    "addr:postcode": "1350-105",
+    "addr:street": "Rua Correia Teles",
+    "amenity": "cafe",
+    "name": "Café Nina",
+    "phone": "213852667"
+  }
+},
+{
+  "type": "node",
+  "id": 11884653923,
+  "lat": 38.7065881,
+  "lon": -9.1674811,
+  "tags": {
+    "addr:street": "Avenida Infante Santo",
+    "name": "Supermarket",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11885050142,
+  "lat": 38.7174841,
+  "lon": -9.1598107,
+  "tags": {
+    "addr:housenumber": "34A",
+    "addr:street": "Rua Saraiva de Carvalho",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11885050143,
+  "lat": 38.7174289,
+  "lon": -9.1599399,
+  "tags": {
+    "addr:housenumber": "36A",
+    "addr:street": "Rua Saraiva de Carvalho",
+    "amenity": "cafe",
+    "name": "Vilavô",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 11885050144,
+  "lat": 38.7173852,
+  "lon": -9.1600674,
+  "tags": {
+    "addr:housenumber": "38A",
+    "addr:street": "Rua Saraiva de Carvalho",
+    "amenity": "cafe",
+    "contact:instagram": "doubletroublelx",
+    "cuisine": "breakfast;cake;coffee_shop;sandwich",
+    "internet_access": "wlan",
+    "level": "0",
+    "name": "Double Trouble Café",
+    "opening_hours": "Mo, Th-Fr 08:30-16:30; Sa-Su 10:00-15:00",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 11891000845,
+  "lat": 38.7182275,
+  "lon": -9.1657843,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "63B",
+    "addr:postcode": "1350-323",
+    "addr:street": "Rua Tomás da Anunciação",
+    "amenity": "cafe",
+    "cuisine": "bubble_tea",
+    "name": "Yoyo Tea",
+    "opening_hours": "Mo-Su 12:00-20:00",
+    "outdoor_seating": "yes",
+    "phone": "927 731 747"
+  }
+},
+{
+  "type": "node",
+  "id": 11891000847,
+  "lat": 38.7181285,
+  "lon": -9.1657460,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "59",
+    "addr:postcode": "1350-169",
+    "addr:street": "Rua Tomás da Anunciação",
+    "name": "Loja Chinesa da Zhon",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11891529693,
+  "lat": 38.7181387,
+  "lon": -9.1670990,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "37A",
+    "addr:postcode": "1350-311",
+    "addr:street": "Rua Tenente Ferreira Durão",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "CICO - Clínica Internacional de Campo de Ourique",
+    "opening_hours": "Mo-Fr 10:00-20:00 Sat 10:00-13:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11891532228,
+  "lat": 38.7175089,
+  "lon": -9.1670930,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "42A",
+    "addr:postcode": "1350-013",
+    "addr:street": "Rua Almeida e Sousa",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11893555971,
+  "lat": 38.7201842,
+  "lon": -9.1584242,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "15 C",
+    "addr:street": "Rua Dom João V",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "acupuncture",
+    "name": "SP Clinic Lisboa- corpo e mente"
+  }
+},
+{
+  "type": "node",
+  "id": 11894524875,
+  "lat": 38.7139215,
+  "lon": -9.1576786,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 11895955901,
+  "lat": 38.7185577,
+  "lon": -9.1690024,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "28",
+    "addr:postcode": "1350-032",
+    "addr:street": "Rua Carlos da Maia",
+    "name": "Engomadoria Campo de Ourique",
+    "phone": "211397572",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11895955902,
+  "lat": 38.7184174,
+  "lon": -9.1694625,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "42",
+    "addr:postcode": "1350-149",
+    "addr:street": "Rua Sampaio Bruno",
+    "name": "Lavandaria Bolha De Espuma",
+    "phone": "935276944",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 11896004137,
+  "lat": 38.7172400,
+  "lon": -9.1665317,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "61",
+    "addr:postcode": "1350-007",
+    "addr:street": "Rua Francisco Metrass",
+    "amenity": "cafe",
+    "brand": "The Coffee",
+    "brand:wikidata": "Q112042753",
+    "cuisine": "coffee_shop",
+    "name": "The Coffee",
+    "phone": "+5541992797895",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11930479512,
+  "lat": 38.7118650,
+  "lon": -9.1645825,
+  "tags": {
+    "name": "Mini mercado",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11930553726,
+  "lat": 38.7113861,
+  "lon": -9.1636853,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1200-800",
+    "branch": "Santana Lapa - Lisboa",
+    "brand": "My Auchan",
+    "brand:wikidata": "Q115800307",
+    "brand:wikipedia": "pt:Auchan",
+    "contact:email": "apoiocliente@auchan.pt",
+    "contact:facebook": "AuchanPortugal",
+    "contact:instagram": "auchan_pt",
+    "contact:phone": "+351 210 403 270",
+    "contact:tiktok": "auchan_pt",
+    "contact:youtube": "https://www.youtube.com/channel/UC6FSI7tYO9ISV11U2PHBBYQ",
+    "name": "My Auchan",
+    "old_name": "Minipreço",
+    "operator": "Auchan",
+    "ref": "E60",
+    "shop": "convenience",
+    "source:contact": "website",
+    "website": "https://www.auchan.pt/pt/loja?StoreID=E60"
+  }
+},
+{
+  "type": "node",
+  "id": 11930572313,
+  "lat": 38.7111384,
+  "lon": -9.1665175,
+  "tags": {
+    "name": "Mini mercado",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 11992216675,
+  "lat": 38.7173105,
+  "lon": -9.1665487,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Aloma"
+  }
+},
+{
+  "type": "node",
+  "id": 12302117887,
+  "lat": 38.7155275,
+  "lon": -9.1653262,
+  "tags": {
+    "name": "Lavandaria d'Ourique",
+    "self_service": "yes",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 12304698511,
+  "lat": 38.7160555,
+  "lon": -9.1638125,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "14C/ 16",
+    "addr:postcode": "1350-140",
+    "addr:street": "Rua Ferreira Borges",
+    "branch": "Ferreira Borges",
+    "brand": "Pingo Doce",
+    "brand:wikidata": "Q1575057",
+    "brand:wikipedia": "pt:Pingo Doce",
+    "contact:facebook": "pingodoce",
+    "contact:instagram": "pingodoce",
+    "contact:linkedin": "https://www.linkedin.com/company/pingo-doce",
+    "contact:phone": "+351 938 875 828",
+    "contact:tiktok": "pingodoce",
+    "contact:youtube": "pingodocept",
+    "name": "Pingo Doce",
+    "opening_hours": "Mo-Su 08:00-21:00; easter 08:00-14:00",
+    "ref": "828",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.pingodoce.pt/lojas/ferreira-borges/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12306830536,
+  "lat": 38.7158523,
+  "lon": -9.1640898,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "17B",
+    "addr:postcode": "1350-133",
+    "addr:street": "Rua Ferreira Borges",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;fabrico_próprio",
+    "name": "Jeronymo",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12306830537,
+  "lat": 38.7159257,
+  "lon": -9.1640870,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "17C",
+    "addr:postcode": "1350-133",
+    "addr:street": "Rua Ferreira Borges",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "miMed",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12306830545,
+  "lat": 38.7177434,
+  "lon": -9.1641492,
+  "tags": {
+    "addr:city": "Campo de Ourique",
+    "addr:housenumber": "101 e 103",
+    "addr:postcode": "1350-128",
+    "addr:street": "Rua Ferreira Borges",
+    "amenity": "cafe",
+    "cuisine": "brunch;breakfast",
+    "description": "café/ restaurante",
+    "name": "Amélia Lisboa"
+  }
+},
+{
+  "type": "node",
+  "id": 12312495742,
+  "lat": 38.7103724,
+  "lon": -9.1595960,
+  "tags": {
+    "addr:housenumber": "52",
+    "addr:street": "Rua da Lapa",
+    "name": "Mercado de Lapa",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12312495748,
+  "lat": 38.7108622,
+  "lon": -9.1589323,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "2",
+    "addr:postcode": "1200-702",
+    "addr:street": "Rua da Lapa",
+    "branch": "Lapa - Lisboa",
+    "brand": "My Auchan",
+    "brand:wikidata": "Q115800307",
+    "brand:wikipedia": "pt:Auchan",
+    "contact:email": "apoiocliente@auchan.pt",
+    "contact:facebook": "AuchanPortugal",
+    "contact:instagram": "auchan_pt",
+    "contact:phone": "+351 210 403 270",
+    "contact:tiktok": "auchan_pt",
+    "contact:youtube": "https://www.youtube.com/channel/UC6FSI7tYO9ISV11U2PHBBYQ",
+    "name": "My Auchan",
+    "old_name": "Minipreço",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "ref": "B58",
+    "shop": "convenience",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.auchan.pt/pt/loja?StoreID=B58"
+  }
+},
+{
+  "type": "node",
+  "id": 12320492258,
+  "lat": 38.7100306,
+  "lon": -9.1655523,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Esperanto Café & Bistro"
+  }
+},
+{
+  "type": "node",
+  "id": 12320492259,
+  "lat": 38.7100614,
+  "lon": -9.1655140,
+  "tags": {
+    "name": "Minimercado e Frutaria",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12320492263,
+  "lat": 38.7115760,
+  "lon": -9.1637530,
+  "tags": {
+    "contact:phone": "+351 213 965 638",
+    "name": "A sua loja de conveniência",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12320521089,
+  "lat": 38.7166773,
+  "lon": -9.1665009,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Café de Ourique"
+  }
+},
+{
+  "type": "node",
+  "id": 12320521092,
+  "lat": 38.7157866,
+  "lon": -9.1661845,
+  "tags": {
+    "amenity": "cafe",
+    "name": "La Boulangerie Campo de Ourique"
+  }
+},
+{
+  "type": "node",
+  "id": 12323344046,
+  "lat": 38.7132808,
+  "lon": -9.1592865,
+  "tags": {
+    "addr:housenumber": "3",
+    "addr:street": "Rua de João de Deus",
+    "amenity": "cafe",
+    "name": "Espressolab"
+  }
+},
+{
+  "type": "node",
+  "id": 12323344047,
+  "lat": 38.7132067,
+  "lon": -9.1593677,
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:street": "Rua de João de Deus",
+    "amenity": "cafe",
+    "name": "Flor da Estrela"
+  }
+},
+{
+  "type": "node",
+  "id": 12323344051,
+  "lat": 38.7128675,
+  "lon": -9.1598095,
+  "tags": {
+    "addr:housenumber": "13",
+    "addr:street": "Rua de João de Deus",
+    "amenity": "cafe",
+    "name": "cafetaria Cintilante"
+  }
+},
+{
+  "type": "node",
+  "id": 12323344055,
+  "lat": 38.7125975,
+  "lon": -9.1600695,
+  "tags": {
+    "addr:housenumber": "97",
+    "addr:street": "Rua de João de Deus",
+    "name": "Mini Mercado- Frutaria+ Mercearia",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12329523399,
+  "lat": 38.7131511,
+  "lon": -9.1589056,
+  "tags": {
+    "addr:city": "Estrela",
+    "addr:housenumber": "227",
+    "addr:postcode": "1200-663",
+    "addr:street": "Calçada da Estrela",
+    "amenity": "cafe",
+    "name": "Minha Anita"
+  }
+},
+{
+  "type": "node",
+  "id": 12337449812,
+  "lat": 38.7099399,
+  "lon": -9.1587065,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop"
+  }
+},
+{
+  "type": "node",
+  "id": 12555767441,
+  "lat": 38.7144865,
+  "lon": -9.1687276,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:postcode": "1350-304",
+    "addr:street": "Rua Saraiva de Carvalho",
+    "branch": "Saraiva Carvalho",
+    "brand": "Continente Bom Dia",
+    "brand:wikidata": "Q123570507",
+    "brand:wikipedia": "pt:Continente Bom Dia",
+    "contact:facebook": "continenteoficial",
+    "contact:instagram": "continente",
+    "contact:phone": "+351 210 161 616",
+    "contact:youtube": "https://www.youtube.com/user/continentept",
+    "name": "Continente Bom Dia",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "ref": "9073ebba-312e-5b9b-b480-7eff4a776c51",
+    "shop": "supermarket",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://feed.continente.pt/lojas/continente-bom-dia-saraiva-carvalho"
+  }
+},
+{
+  "type": "node",
+  "id": 12645575086,
+  "lat": 38.7101361,
+  "lon": -9.1624642,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2026-05-22",
+    "name": "Monka Café",
+    "website": "https://pt.restaurantguru.com/Monka-Cafe-Lisbon"
+  }
+},
+{
+  "type": "node",
+  "id": 12693075950,
+  "lat": 38.7147527,
+  "lon": -9.1627438,
+  "tags": {
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 12693087804,
+  "lat": 38.7148132,
+  "lon": -9.1628597,
+  "tags": {
+    "amenity": "cafe",
+    "description": "café culturel",
+    "name": "Kreatori"
+  }
+},
+{
+  "type": "node",
+  "id": 12694133731,
+  "lat": 38.7104249,
+  "lon": -9.1595240,
+  "tags": {
+    "amenity": "cafe",
+    "description": "café dégustation 4 mètre carre",
+    "name": "Nerv"
+  }
+},
+{
+  "type": "node",
+  "id": 12694271488,
+  "lat": 38.7155630,
+  "lon": -9.1643575,
+  "tags": {
+    "addr:city": "Lisboa",
+    "addr:housenumber": "254",
+    "addr:postcode": "1350-302",
+    "addr:street": "Rua Saraiva de Carvalho",
+    "branch": "Saraiva de Carvalho - Lisboa",
+    "brand": "My Auchan",
+    "brand:wikidata": "Q115800307",
+    "brand:wikipedia": "pt:Auchan",
+    "contact:email": "apoiocliente@auchan.pt",
+    "contact:facebook": "AuchanPortugal",
+    "contact:instagram": "auchan_pt",
+    "contact:phone": "+351 210 403 270",
+    "contact:tiktok": "auchan_pt",
+    "contact:youtube": "https://www.youtube.com/channel/UC6FSI7tYO9ISV11U2PHBBYQ",
+    "name": "My Auchan",
+    "old_name": "Minipreço",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "ref": "A43",
+    "shop": "convenience",
+    "source:contact": "website",
+    "source:opening_hours": "website",
+    "website": "https://www.auchan.pt/pt/loja?StoreID=A43"
+  }
+},
+{
+  "type": "node",
+  "id": 12694283357,
+  "lat": 38.7137406,
+  "lon": -9.1667775,
+  "tags": {
+    "amenity": "cafe",
+    "name": "O Esteves"
+  }
+},
+{
+  "type": "node",
+  "id": 12694286493,
+  "lat": 38.7118452,
+  "lon": -9.1641999,
+  "tags": {
+    "name": "Lavandaria self",
+    "shop": "laundry"
+  }
+},
+{
+  "type": "node",
+  "id": 12852960116,
+  "lat": 38.7164541,
+  "lon": -9.1633135,
+  "tags": {
+    "name": "Maria Granel",
+    "opening_hours": "Mo-Sa 10:00-19:30",
+    "organic": "only",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 13183771302,
+  "lat": 38.7116188,
+  "lon": -9.1606437,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Aera"
+  }
+},
+{
+  "type": "node",
+  "id": 13252369045,
+  "lat": 38.7164618,
+  "lon": -9.1622868,
+  "tags": {
+    "addr:housenumber": "17",
+    "addr:street": "Rua Coelho da Rocha",
+    "check_date": "2025-10-23",
+    "name": "Lavandaria & Comp Self Service",
+    "opening_hours": "07:00-23:00",
+    "shop": "laundry",
+    "website": "https://lavandariaecomp.com"
+  }
+},
+{
+  "type": "node",
+  "id": 13257616437,
+  "lat": 38.7163810,
+  "lon": -9.1673691,
+  "tags": {
+    "addr:housenumber": "99",
+    "addr:street": "Rua Coelho da Rocha",
+    "addr:unit": "C",
+    "amenity": "cafe",
+    "check_date": "2025-10-24",
+    "name": "O Queque de Campo de Ourique"
+  }
+},
+{
+  "type": "way",
+  "id": 23697561,
+  "center": {
+    "lat": 38.7146464,
+    "lon": -9.1591040
+  },
+  "tags": {
+    "addr:street": "Praça da Estrela",
+    "alt_name": "Jardim Guerra Junqueiro",
+    "description": "O Jardim Guerra Junqueiro, conhecido por Jardim da Estrela, foi construído no séc. XIX (1842), por iniciativa do estadista Bernardo da Costa Cabral, Marquês de Tomar. É um jardim naturalista de conceção romântica, inspirado nas linhas do ¿parque",
+    "leisure": "park",
+    "name": "Jardim da Estrela",
+    "official_name": "Jardim Guerra Junqueiro",
+    "operator": "Câmara Municipal de Lisboa",
+    "operator:type": "government",
+    "operator:wikidata": "Q30255955",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "13d2e8c4-a063-4ae4-9c3e-b0f87c555d9f",
+    "wikidata": "Q10306236",
+    "wikimedia_commons": "Category:Jardim da Estrela"
+  }
+},
+{
+  "type": "way",
+  "id": 97690216,
+  "center": {
+    "lat": 38.7136415,
+    "lon": -9.1692589
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 430585111,
+  "center": {
+    "lat": 38.7203593,
+    "lon": -9.1666619
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 476935739,
+  "center": {
+    "lat": 38.7101990,
+    "lon": -9.1745918
+  },
+  "tags": {
+    "access": "yes",
+    "description": "Avenida de Ceuta",
+    "leisure": "playground",
+    "name": "Parque Infantil da Quinta do Cabrinha",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "c8bcb5db-3d94-43d1-86e2-31eef38d9106"
+  }
+},
+{
+  "type": "way",
+  "id": 603270345,
+  "center": {
+    "lat": 38.7223187,
+    "lon": -9.1698273
+  },
+  "tags": {
+    "geological": "outcrop",
+    "leisure": "park",
+    "monument:natural": "geomonument",
+    "name": "Geomonumento da Avenida Duarte Pacheco",
+    "natural": "bare_rock",
+    "opening_hours": "24/7",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 661418666,
+  "center": {
+    "lat": 38.7198855,
+    "lon": -9.1592015
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 681333807,
+  "center": {
+    "lat": 38.7145517,
+    "lon": -9.1694846
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "playground"
+  }
+},
+{
+  "type": "way",
+  "id": 802184789,
+  "center": {
+    "lat": 38.7229945,
+    "lon": -9.1693287
+  },
+  "tags": {
+    "addr:city": "Campolide",
+    "addr:street": "Rua Dom António Luís de Sousa",
+    "description": "O Jardim da Bela Flor é um projeto dos arquitetos Francisco Caldeira Cabral e Elsa Matos Severino, constituído por um espaço essencialmente relvado e arborizado, que integra também um miradouro com vista para o Parque Florestal de Monsanto.",
+    "dog": "yes",
+    "leisure": "park",
+    "name": "Jardim da Bela Flor",
+    "opening_hours": "24/7",
+    "operator": "Câmara Munocipal De Lisboa",
+    "operator:type": "public",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "bec52486-7c6c-4937-9feb-fa334e18b140"
+  }
+},
+{
+  "type": "way",
+  "id": 833988427,
+  "center": {
+    "lat": 38.7132215,
+    "lon": -9.1740920
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 834037505,
+  "center": {
+    "lat": 38.7157195,
+    "lon": -9.1743908
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1003287061,
+  "center": {
+    "lat": 38.7213250,
+    "lon": -9.1614628
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1077902228,
+  "center": {
+    "lat": 38.7125681,
+    "lon": -9.1793870
+  },
+  "tags": {
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1151227124,
+  "center": {
+    "lat": 38.7135457,
+    "lon": -9.1657327
+  },
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "way",
+  "id": 1191439435,
+  "center": {
+    "lat": 38.7176808,
+    "lon": -9.1652730
+  },
+  "tags": {
+    "access": "yes",
+    "barrier": "fence",
+    "description": "Rua Almeida e Sousa",
+    "leisure": "playground",
+    "name": "Parque Infantil do Jardim Teófilo Braga",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "1ae8214b-970a-4533-a823-e6a3739155b3"
+  }
+},
+{
+  "type": "way",
+  "id": 1191439447,
+  "center": {
+    "lat": 38.7179006,
+    "lon": -9.1652225
+  },
+  "tags": {
+    "addr:street": "Rua do Quatro de Infantaria; Rua de Infantaria; Rua Tomás de Anunciação;Rua Almeida e Sousa",
+    "alt_name": "Jardim Téofilo de Braga;Jardim de Campo de Ourique",
+    "description": "Ocupando um quarteirão do bairro de Campo de Ourique, este jardim foi designado originalmente Jardim da Parada por ser aí que se realizavam as paradas do quartel. A sua construção foi iniciada já depois do bairro se encontrar parcialmente urbanizado",
+    "leisure": "park",
+    "name": "Jardim da Parada",
+    "operator": "Câmara Municipal de Lisboa",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "ec0a0a9b-7480-404a-94cd-ce9e0d19a94f",
+    "wikidata": "Q10306170",
+    "wikimedia_commons": "Category:Jardim Teófilo Braga"
+  }
+},
+{
+  "type": "way",
+  "id": 1302161151,
+  "center": {
+    "lat": 38.7147882,
+    "lon": -9.1581861
+  },
+  "tags": {
+    "access": "yes",
+    "description": "Jardim Guerra Junqueiro(Jardim da Estrela)",
+    "leisure": "playground",
+    "name": "Parque Infantil do Jardim Guerra Junqueiro",
+    "source": "dadosabertos.cm-lisboa.pt",
+    "source:pkey": "631f34fc-c7fc-485f-833d-d9ba6aec2e56"
+  }
+},
+{
+  "type": "way",
+  "id": 1370313951,
+  "center": {
+    "lat": 38.7111357,
+    "lon": -9.1649181
+  },
+  "tags": {
+    "architect": "Gonçalo Ribeiro Telles",
+    "architect:wikidata": "Q368644",
+    "leisure": "park",
+    "name": "Jardim Poente",
+    "place": "square"
+  }
+},
+{
+  "type": "relation",
+  "id": 8416305,
+  "center": {
+    "lat": 38.7242615,
+    "lon": -9.1712688
+  },
+  "tags": {
+    "alt_name": "Quinta da Bela Flor",
+    "leisure": "park",
+    "name": "Parque Urbano da Bela Flôr",
+    "type": "multipolygon",
+    "website": "https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/parque-urbano-da-bela-flor"
+  }
+},
+{
+  "type": "relation",
+  "id": 12988843,
+  "center": {
+    "lat": 38.7090649,
+    "lon": -9.1693713
+  },
+  "tags": {
+    "addr:street": "Calçada das Necessidades",
+    "description": "Como o nome indica, trata-se de um espaço verde murado, quase totalmente coberto por uma mata e sujeito a Regime Florestal. Em 1742, D. João V mandou construir uma ermida maior, um convento e um palácio para sua residência, por aquisição de terras",
+    "fee": "no",
+    "leisure": "park",
+    "name": "Tapada das Necessidades",
+    "opening_hours": "Apr-Sep: Mo-Fr 08:00-20:00; Apr-Sep: Sa,Su,PH 10:00-19:00; Oct-Mar: Mo-Fr 08:00-19:00; Oct-Mar: Sa,Su,PH 10:00-18:00",
+    "source": "https://cidadania.lisboa.pt/fileadmin/cidadania_participacao/consulta_publica/Tapada_das_Necessidades/Plano_de_Salvaguarda_da_Tapada_das_Necessidades_-_Anteplano_Maio_2021.pdf",
+    "source:pkey": "eeb1aa3d-03cb-41df-8496-c4a4177a7220",
+    "type": "multipolygon",
+    "website": "https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/tapada-das-necessidades",
+    "wikidata": "Q10378127",
+    "wikipedia": "pt:Tapada das Necessidades"
+  }
+},
+{
+  "type": "relation",
+  "id": 13066208,
+  "center": {
+    "lat": 38.7088854,
+    "lon": -9.1708066
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "playground",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 13998964,
+  "center": {
+    "lat": 38.7065283,
+    "lon": -9.1713646
+  },
+  "tags": {
+    "addr:street": "Largo das Necessidades",
+    "alt_name": "Jardim das Necessidades",
+    "description": "Atualmente conhecido como Jardim Olavo Bilac, em homenagem ao escritor e um dos mais populares poetas brasileiros, é também designado por Jardim do Largo das Necessidades, localizando-se junto ao Palácio do mesmo nome. Este pequeno jardim histórico,",
+    "leisure": "park",
+    "name": "Jardim Olavo Bilac",
+    "operator": "Câmara Municipal de Lisboa",
+    "operator:type": "government",
+    "operator:wikidata": "Q30255955",
+    "type": "multipolygon",
+    "wikidata": "Q10305907",
+    "wikipedia": "pt:Jardim Olavo Bilac"
+  }
+}
+
+  ]
+}

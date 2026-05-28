@@ -1,0 +1,163 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T18:27:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1589074360,
+  "lat": 18.6888722,
+  "lon": 98.9207078,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2230597304,
+  "lat": 18.6890293,
+  "lon": 98.9208101,
+  "tags": {
+    "brand": "Lotus's go fresh",
+    "brand:wikidata": "Q125937967",
+    "name": "Lotus's go fresh",
+    "opening_hours": "24/7",
+    "operator": "Tesco Lotus",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2685558607,
+  "lat": 18.6822481,
+  "lon": 98.9186296,
+  "tags": {
+    "alt_name": "7-11",
+    "brand": "7-Eleven",
+    "brand:website": "http://www.7eleven.co.th/",
+    "brand:wikidata": "Q259340",
+    "brand:wikipedia": "th:เซเว่น อีเลฟเว่น",
+    "name": "7-Eleven",
+    "name:en": "7-Eleven",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 2685562362,
+  "lat": 18.6830741,
+  "lon": 98.9183624,
+  "tags": {
+    "amenity": "hospital",
+    "name": "โรงพยาบาลหางดง",
+    "name:en": "Hang Dong Hospital",
+    "name:th": "โรงพยาบาลหางดง"
+  }
+},
+{
+  "type": "node",
+  "id": 2685576111,
+  "lat": 18.6891234,
+  "lon": 98.9209043,
+  "tags": {
+    "brand": "CP Freshmart",
+    "brand:en": "CP Freshmart",
+    "brand:th": "ซีพี เฟรชมาร์ท",
+    "brand:wikidata": "Q125917787",
+    "name": "CP Freshmart",
+    "name:en": "CP Freshmart",
+    "name:th": "ซีพี เฟรชมาร์ท",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3933516649,
+  "lat": 18.6825052,
+  "lon": 98.9186670,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Chillan Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 5382204921,
+  "lat": 18.6896860,
+  "lon": 98.9211247,
+  "tags": {
+    "addr:street": "Hangdong Market",
+    "amenity": "cafe",
+    "internet_access": "wlan",
+    "name:en": "Yok Coffee n Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 10604213354,
+  "lat": 18.6914272,
+  "lon": 98.9227010,
+  "tags": {
+    "name": "7-Eleven",
+    "shop": "convenience",
+    "source": "https://www.mapillary.com/app/?pKey=924182918736053"
+  }
+},
+{
+  "type": "node",
+  "id": 11478718897,
+  "lat": 18.6907702,
+  "lon": 98.9122239,
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "node",
+  "id": 12617501902,
+  "lat": 18.6904251,
+  "lon": 98.9190949,
+  "tags": {
+    "name": "ยุภาการค้า",
+    "phone": "0946206663",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 12617535201,
+  "lat": 18.6908924,
+  "lon": 98.9208730,
+  "tags": {
+    "name": "เจ๊อัมพร ตลาดหางดง",
+    "phone": "0903197434",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "way",
+  "id": 1237434634,
+  "center": {
+    "lat": 18.6913075,
+    "lon": 98.9121474
+  },
+  "tags": {
+    "leisure": "park"
+  }
+}
+
+  ]
+}
