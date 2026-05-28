@@ -1,4 +1,4 @@
-# Evidence Crosswalk: Lisbon vs Chiang Mai
+# 证据横向对照：里斯本 vs 清迈
 
 这个文件只做横向证据对照，不给红黄绿状态，也不做推荐判断。完整 CSV 版本见 `reports/evidence_crosswalk.csv`。
 

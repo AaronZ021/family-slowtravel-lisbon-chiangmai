@@ -20,6 +20,82 @@ def esc(value):
     return html.escape(value or "", quote=True)
 
 
+SOURCE_TYPE_ZH = {
+    "official": "官方来源",
+    "platform": "平台来源",
+    "map": "地图来源",
+    "review": "评价来源",
+    "community": "社区轶事",
+    "blog": "博客/指南",
+    "video": "视频资料",
+    "news": "新闻报道",
+}
+
+CONFIDENCE_ZH = {
+    "High": "高",
+    "Medium": "中",
+    "Low": "低",
+    "Unknown": "未知",
+}
+
+CITY_ZH = {
+    "lisbon": "里斯本",
+    "chiang_mai": "清迈",
+    "both": "两城",
+}
+
+LAYER_ZH = {
+    "hard_constraints": "硬约束层",
+    "life_operability": "生活可运行性层",
+    "community_feedback": "社区反馈层",
+    "candidate_area": "候选区域",
+    "multiple": "多个层级",
+}
+
+DIMENSION_ZH = {
+    "visa": "签证/合法停留",
+    "remote_work": "远程工作",
+    "safety": "官方安全建议",
+    "safety_air": "安全与空气",
+    "climate": "气候",
+    "air_quality": "空气质量",
+    "healthcare": "医疗",
+    "housing": "住房",
+    "indoor_play": "室内儿童活动",
+    "outdoor_play": "户外儿童活动",
+    "indoor_outdoor_play": "室内/户外儿童活动",
+    "structured_activity": "结构化儿童活动",
+    "culture_indoor": "室内文化活动",
+    "community": "社区",
+    "mobility": "交通/移动性",
+    "car_seat": "儿童座椅",
+    "stroller_car_seat": "婴儿车与儿童座椅",
+    "parent_community": "家长社区",
+    "neighborhood": "社区/区域",
+    "slow_travel": "慢旅行",
+    "expat_family": "外籍家庭",
+    "safety_area": "区域安全",
+    "multiple": "多个维度",
+}
+
+AREA_ZH = {
+    "all": "全城/全部区域",
+    "citywide": "全城",
+    "central": "中心区",
+    "Campo de Ourique": "Campo de Ourique",
+    "Parque das Nacoes": "Parque das Nacoes",
+    "Parque das Nacoes": "Parque das Nacoes",
+    "near Campo de Ourique": "Campo de Ourique 附近",
+    "Old City edge": "古城边缘",
+    "Old City/Nimman": "古城/Nimman",
+    "Nimman/Hang Dong": "Nimman/Hang Dong",
+}
+
+
+def zh_value(mapping, value):
+    return mapping.get(value or "", value or "")
+
+
 def source_tokens(value):
     if not value:
         return []
@@ -75,7 +151,11 @@ def source_badges(value, sources):
         sid = expanded[0]
         src = sources.get(sid)
         if src:
-            title = f"{src.get('title','')} | {src.get('source_type','')} | {src.get('accessed_date','')}"
+            title = (
+                f"{src.get('title','')} | "
+                f"{zh_value(SOURCE_TYPE_ZH, src.get('source_type',''))} | "
+                f"{src.get('accessed_date','')}"
+            )
             badges.append(
                 f'<a class="source-badge" href="#src-{esc(sid)}" '
                 f'title="{esc(title)}">{esc(sid)}</a>'
@@ -94,20 +174,19 @@ def source_details(rows):
             <article class="source-card" id="src-{esc(sid)}">
               <div class="source-card-head">
                 <a class="source-badge" href="{esc(row['url'])}" target="_blank" rel="noopener">{esc(sid)}</a>
-                <span>{esc(row['source_type'])}</span>
-                <span>{esc(row['confidence'])}</span>
+                <span>{esc(zh_value(SOURCE_TYPE_ZH, row['source_type']))}</span>
+                <span>置信度：{esc(zh_value(CONFIDENCE_ZH, row['confidence']))}</span>
               </div>
               <h3><a href="{esc(row['url'])}" target="_blank" rel="noopener">{esc(row['title'])}</a></h3>
               <dl>
-                <div><dt>城市</dt><dd>{esc(row['city'])}</dd></div>
-                <div><dt>区域</dt><dd>{esc(row['area'])}</dd></div>
-                <div><dt>层级</dt><dd>{esc(row['layer'])}</dd></div>
-                <div><dt>维度</dt><dd>{esc(row['dimension'])}</dd></div>
+                <div><dt>城市</dt><dd>{esc(zh_value(CITY_ZH, row['city']))}</dd></div>
+                <div><dt>区域</dt><dd>{esc(zh_value(AREA_ZH, row['area']))}</dd></div>
+                <div><dt>层级</dt><dd>{esc(zh_value(LAYER_ZH, row['layer']))}</dd></div>
+                <div><dt>维度</dt><dd>{esc(zh_value(DIMENSION_ZH, row['dimension']))}</dd></div>
                 <div><dt>URL</dt><dd><a href="{esc(row['url'])}" target="_blank" rel="noopener">{esc(row['url'])}</a></dd></div>
                 <div><dt>机构/作者</dt><dd>{esc(row['author_or_org'])}</dd></div>
                 <div><dt>发布日期</dt><dd>{esc(row['published_date'])}</dd></div>
                 <div><dt>访问日期</dt><dd>{esc(row['accessed_date'])}</dd></div>
-                <div><dt>备注</dt><dd>{esc(row['notes'])}</dd></div>
               </dl>
             </article>
             """
@@ -313,7 +392,7 @@ def build_html(crosswalk, source_rows):
 <body>
   <header>
     <h1>里斯本 vs 清迈：家庭慢旅行证据横向对照</h1>
-    <p>本页只展示证据，不给城市推荐、不使用红黄绿判断。每个证据 ID 对应 <code>data/sources/sources.csv</code> 中的一条来源记录；点击 ID 会打开原始来源链接，页面底部有完整来源索引。</p>
+      <p>本页只展示证据，不给城市推荐、不使用红黄绿判断。每个证据 ID 对应 <code>data/sources/sources.csv</code> 中的一条来源记录；点击 ID 会先跳到本页的来源详情卡片，再从卡片中的标题或 URL 打开原始来源。</p>
   </header>
   <main>
     <section class="note">
@@ -341,7 +420,7 @@ def build_html(crosswalk, source_rows):
     </section>
   </main>
   <footer>
-    Generated from local CSV files. Access dates and source classifications are stored in sources.csv.
+    本页由本地 CSV 文件生成。访问日期和来源分类保存在 sources.csv。
   </footer>
 </body>
 </html>
