@@ -1,0 +1,38 @@
+layer,indicator_id,indicator_name,lisbon_light,lisbon_confidence,lisbon_evidence,lisbon_sources,chiang_mai_light,chiang_mai_confidence,chiang_mai_evidence,chiang_mai_sources
+Layer 2 · 硬约束,2.1,签证 — 90 天停留可行性,Green,high,单次申根 C 短签即可覆盖全部 90 天，无需多次入境，政策稳定。,"S-LIS-001, S-LIS-002, S-LIS-003, S-LIS-004, S-LIS-005",Green,high,当前 60 天免签 + 30 天延期路径已成熟；备份路径（旅游签）兜底。,"S-CMI-001-006（v1 visa baseline）, **S-CMI-111, S-CMI-112**（new）"
+Layer 2 · 硬约束,2.2,签证 — 申请提前期 + 复杂度,Yellow,high,流程标准但材料量大，需提前 8 周启动。带两个幼儿 + 中国出生证明翻译可能再加 1-2 周。,"S-LIS-003, S-LIS-004, **S-LIS-131**",Green,high,提前期 = 0；复杂度远低于葡。,"S-CMI-001-006, **S-CMI-113**"
+Layer 2 · 硬约束,2.3,签证 — 拒签率 / 接受度（中国护照 + 加拿大永居）,Green,medium,中国整体 4.6% 拒签 + 加拿大 PR 加分应低于此数；但缺中国×葡萄牙交叉精确数。,"S-LIS-001, **S-LIS-132**",Green,high,"免签机制下""拒签率""实际趋近 0。",S-CMI-001-006
+Layer 2 · 硬约束,2.4,官方安全建议,Green,high,三国一致最低级 + Numbeo high safety + 风险局部化（特定电车/广场）。,"S-LIS-008, S-LIS-009, **S-LIS-133**",Green,high,"加方""高度谨慎""主要针对曼谷与南部，清迈实际治安指数高于里斯本。","S-CMI-007, S-CMI-008, **S-CMI-114**"
+Layer 2 · 硬约束,2.5,犯罪 — 与家庭+幼儿相关的具体威胁,Green,high,暴力犯罪针对游客极罕见；扒窃可通过装备 + 行为习惯对冲。,"S-LIS-008, **S-LIS-133**",Green,high,Numbeo crime 指标显著优于里斯本；家庭具体威胁可对冲。,"S-CMI-007, S-CMI-008, **S-CMI-114**"
+Layer 2 · 硬约束,2.6,空气质量 — PM2.5 年均,Green,high,低污染基线 + 海风稀释机制 + Numbeo 量化指标。,"S-LIS-013, S-LIS-014, **S-LIS-133, S-LIS-134**",Red,high,2024 IQAir 明确数字 + Numbeo 双重确认 + 社区一致。,"S-CMI-013-016, **S-CMI-115, S-CMI-116**"
+Layer 2 · 硬约束,2.7,空气质量 — PM2.5 月度峰值（目标月份）,Green,high,月度波动小，目标月份全年优。,"S-LIS-013, S-LIS-014",Green,high,燃烧季月度峰值是 main constraint；可通过避开 2-4 月对冲。,"S-CMI-013-016, **S-CMI-115, S-CMI-116, S-CMI-117**"
+Layer 2 · 硬约束,2.8,气候 — 月均温度（高 / 低）,Green,high,温度范围对幼儿友好，无极寒。,"S-LIS-010, S-LIS-011, **S-LIS-135**",Green,high,凉季宜人但仅 ~3 个月；其余月份高温需空调全时段。,"S-CMI-017, **S-CMI-118**"
+Layer 2 · 硬约束,2.9,气候 — 月均降雨 + 雨天数,Green,high,冬季降雨 12-15 雨天/月 + 100+mm 不算极端，但带 2 幼儿出门需对冲（雨衣 + 室内备选）。,"**S-LIS-135**, S-LIS-010",Green,high,雨季雨量大但每天雨时段集中 1-3h，可计划。,**S-CMI-118**
+Layer 2 · 硬约束,2.10,气候 — 极端天数,Green,high,🟩 confidence: **high**（10-5 月）/ 🟧 6-8 月（避免午后外出）,"**S-LIS-135, S-LIS-136**",Green,high,🟩 11-2 月 / 🟥 3-5 月（持续 ≥35°C + 燃烧季）/ 🟧 6-10 月（高湿 + 单日午后暴雨）,**S-CMI-118**
+Layer 2 · 硬约束,2.11,医疗 — 三甲级私立医院密度（JCI 认证）,Green,high,🟩 confidence: **high**,"S-LIS-015-023, **S-LIS-137**",Green,high,🟩 confidence: **high**,"S-CMI-030, S-CMI-034, **S-CMI-119**"
+Layer 2 · 硬约束,2.12,医疗 — 24h 儿科急诊数量 + 距离,Green,high,🟩 confidence: **high**,"S-LIS-015, S-LIS-017, S-LIS-018, S-LIS-019, **S-LIS-138**",Green,high,🟩 confidence: **high**（市区）/ 🟧 郊外候选区（仍可达但 ≥10km）,"S-CMI-030, S-CMI-034, **S-CMI-119, S-CMI-120**"
+Layer 2 · 硬约束,2.13,医疗 — 英语医生密度,Green,high,🟩 confidence: **high**,"S-LIS-022, S-LIS-023, **S-LIS-139, S-LIS-140**",Green,high,🟩 confidence: **high**（私立医院）/ 🟧 国家整体 EF 低分（需带翻译 app 处理药店 / 出租车）,"S-CMI-029, S-CMI-031, **S-CMI-119, S-CMI-121, S-CMI-122**"
+Layer 2 · 硬约束,2.14,医疗 — 自付门诊价格,Green,medium,🟩 confidence: **med-high**（私立明码标价；旅游者公立成本低）,"S-LIS-020, S-LIS-021, **S-LIS-141**",Green,high,🟩 confidence: **high**（价格极低 + 透明）,"S-CMI-031, S-CMI-035, **S-CMI-123**"
+Layer 2 · 硬约束,2.15,医疗 — 健康保险直付 + 报销复杂度,Yellow,medium,国际私立医院直付清单成熟，但加拿大本土险（Manulife/Sun Life）默认 reimbursement 流程；需提前与 Allianz Care 国际版或 IMG / Cigna Global 配置。,"S-LIS-020, S-LIS-023, **S-LIS-141, S-LIS-142**",Yellow,medium,直付网络成熟，加拿大本土险需先付后报。低自付价格降低 cash-flow 风险。,"S-CMI-030, **S-CMI-124**"
+Layer 2 · 硬约束,2.16,传染病基线,Green,high,🟩 confidence: **high**,S-LIS-008,Yellow,high,登革热为最大可量化风险（雨季）；狂犬通过避狗教育可对冲。需带儿童疫苗记录 + 防蚊全套。,"S-CMI-035, S-CMI-036, **S-CMI-125**"
+Layer 2 · 硬约束,2.17,自然灾害基线,Yellow,high,地震 5+ 概率事件存在但建筑现代抗震；非常态高频。,"S-LIS-024, S-LIS-025, **S-LIS-143**",Yellow,medium,地震基线低于里斯本，但 2025 缅甸事件提示存在跨境波及；燃烧季 + 偶发洪水是常态风险。,"S-CMI-038, S-CMI-039, **S-CMI-126**"
+Layer 3a · 经济/物流/网络,3.1,Cost of Living Index,Yellow,high,Yellow — 食杂 / 餐饮中等偏贵，房租是绝对的成本霸主,"S-LIS-086, S-LIS-087, S-LIS-088",Green,high,Green — 数值上几乎所有维度都显著低于里斯本,"S-CMI-059, S-CMI-060, S-CMI-061"
+Layer 3a · 经济/物流/网络,3.2,住房月租中位（2 卧 furnished 中心区）,Red,high,"Red — 房租明显挤压家庭 90 天预算（€5,400-6,900 仅住房）；与本地中位净收入 €1,374 形成强烈反差（房价收入比 18.92，Numbeo 列为 Very High）","S-LIS-086, S-LIS-088, S-LIS-096, S-LIS-103",Green,high,"Green — 90 天 2BR furnished 约 €1,600-2,400 总价；与里斯本相差 3-4 倍","S-CMI-059, S-CMI-061, S-CMI-071"
+Layer 3a · 经济/物流/网络,3.3,餐饮 / 食杂 / 交通月度成本,Yellow,high,"餐饮 / 公用事业 / 宽带显著贵；食杂中等；公共交通价廉。家庭月度（不含房租）参考 €753 单人 × 4 ≈ €2,260（Numbeo 家庭加权约低 25%，~€1,700-2,000）。Yellow · high · 关键源 S-LIS-086, S-LIS-087","S-LIS-086, S-LIS-087",Green,high,"餐饮 / 公用事业 / 宽带 / 肉类大幅便宜；进口/乳制品/苹果略贵于里斯本（小项）。家庭月度（不含房租）参考 ~฿66,398 / 4 人 ≈ €1,750。Green · high · 关键源 S-CMI-059, S-CMI-060","S-CMI-059, S-CMI-060"
+Layer 3a · 经济/物流/网络,3.4,住房关键设施在 listing 中的可见比,Yellow,medium,Yellow — 高端 furnished stock（Blueground/同等）电梯+AC 可见比高（估 >70%），但暖气普遍缺失或不可靠；Alfama/Mouraria 历史楼电梯可见比低（估 <30%）,"S-LIS-080, S-LIS-081, S-LIS-103",Green,medium,Green — 烧林季的核心硬约束（空气净化器）反而成为 listing 标准卖点；condo stock 电梯标配,"S-CMI-046, S-CMI-072 + 新搜索"
+Layer 3a · 经济/物流/网络,3.5,网速 — 平均下载 + 上传,Green,high,Green — 固网中位 >240Mbps 完全满足视频会议、4K 流媒体、家庭多设备,S-LIS-091,Green,high,Green — 实际固网中位高于葡萄牙；价格仅为葡萄牙的一半,"S-CMI-064, S-CMI-065, S-CMI-068"
+Layer 3a · 经济/物流/网络,3.6,移动数据资费,Yellow,high,"Yellow — 价格在欧盟内偏高（≈ 西欧典型），但 30GB 包 €15 起的入门选项对家庭 90 天足够；与本地中位净收入 €1,374 相比仍是小项","S-LIS-092, S-LIS-093",Green,high,Green — 全球前 35 廉价梯队，1GB 均价仅葡萄牙的 23%,"S-CMI-066, S-CMI-067"
+Layer 3a · 经济/物流/网络,3.7,公共交通通勤时间指数,Green,high,Green — 拥堵率不高（26%），公共交通系统完善 + 家庭月票优惠极大；3 岁以下免费乘车,"S-LIS-089, S-LIS-090, S-LIS-095",Yellow,high,Yellow — Numbeo 时间指数最低（26.2min），但 TomTom 拥堵率反高于里斯本（37%）说明城市路网摩托主导；公共交通体系缺乏家庭友好结构（无月票、无安全带），需依赖 Grab + 自带儿童座椅,"S-CMI-062, S-CMI-063, S-CMI-070, S-CMI-036, S-CMI-038"
+Layer 3a · 经济/物流/网络,3.15,杂货 — 主要超市数 + 进口食品供应,Green,high,Green — 主流连锁高密度 + 国际/有机/亚洲三个垂类齐全,"S-LIS-097, S-LIS-098, S-LIS-085",Green,high,Green — 候选三区均有 Rimping + Tops 覆盖；进口食品 SKU 不输欧洲城市,"S-CMI-041, S-CMI-042, S-CMI-072"
+Layer 3a · 经济/物流/网络,3.16,药店密度 + 24h,Green,high,Green — 国家级强制 24h 轮值制度 + 高密度，体系成熟,"S-LIS-099, S-LIS-100",Yellow,medium,Yellow — 总密度高 + 有 24h 选项，但无国家强制轮值；24h 选项集中在 Nimman 商业带，Hang Dong/Mae Rim 候选区缺乏夜间步行可达,"S-CMI-073, S-CMI-074"
+Layer 3a · 经济/物流/网络,3.17,食物多样性 + 儿童友好餐饮,Green,high,Green — 评分密度极高 + 儿童设施明确化 + 文化多样性最广,"S-LIS-101, S-LIS-102",Green,high,Green — Nimman/Hang Dong 候选区均 ≥5 个 4.0+ 儿童友好；游乐区设施反而比里斯本更普遍（kid cafe 概念发达）,"S-CMI-052, S-CMI-075, S-CMI-076"
+Layer 3b · 儿童/出行/社群,3.8,步行可达度 (Walkability),Green,high,Green（候选区）/ Yellow（老城）,,Yellow,high,Yellow（Nimman / Old City）/ Red（郊区）,
+Layer 3b · 儿童/出行/社群,3.9,婴儿车摩擦度,Green,high,Yellow（老）/ Green（新区）,,Yellow,high,Yellow → Red 全城,
+Layer 3b · 儿童/出行/社群,3.10,儿童安全座椅在网约车中的可获得性,Yellow,high,Yellow（Taxi Bambino 救场）,,Yellow,high,Yellow（须自带 + Taxi Bambino）,
+Layer 3b · 儿童/出行/社群,3.11,儿童户外活动（候选区前 N 个高质量）,Green,high,Green,,Green,high,Green (11-2月) / Red (3-4月),
+Layer 3b · 儿童/出行/社群,3.12,室内备选数量（雨/烧林季）,Green,high,Green,,Green,high,Green (count) / Yellow (Google 4.3+ 严格),
+Layer 3b · 儿童/出行/社群,3.13,结构化儿童活动短期接纳,Green,medium,Green,,Green,high,Green,
+Layer 3b · 儿童/出行/社群,3.14,Childcare / Nanny 平台 + 价格 + 信任机制,Green,high,Green,,Green,high,Green (价格) / Yellow (信任机制),
+Layer 3b · 儿童/出行/社群,3.18,英语普及度,Green,high,Green (EF 6th),,Yellow,high,Yellow (EF 119th),
+Layer 3b · 儿童/出行/社群,3.19,expat / worldschooling 社群活跃度,Green,high,Green,,Green,high,Green,
+Layer 3b · 儿童/出行/社群,3.20,本地化 vs 旅游/数字游民泡沫,Yellow,high,Yellow（候选区可避）,,Green,high,Red(Nimman)/Yellow(Old City)/Green(Hang Dong),

@@ -80,3 +80,107 @@ timestamp,city,layer,dimension,query,source_engine,results_count,notes
 2026-05-28T01:40:30Z,chiang_mai,activity,elephant,"Chiang Mai elephant sanctuary family ethical Mae Sa kids",websearch,10,Kanta best for young kids
 2026-05-28T01:41:00Z,chiang_mai,activity,structured,"Chiang Mai cooking class family kids art swimming activities short term",websearch,10,Smile Organic Farm; water parks
 2026-05-28T01:41:30Z,chiang_mai,hard_constraints,visa,"thaiembassy mfa.go.th DTV Chinese citizen apply outside home country",websearch,10,must apply from country of employment
+2026-05-28T15:00:00Z,lisbon,community,verbatim,"site:reddit.com Lisbon expat family leave why moved back winter",google,0,Reddit blocked
+2026-05-28T15:01:00Z,lisbon,community,verbatim,"site:reddit.com Lisbon families staying long term why love",google,0,Reddit blocked
+2026-05-28T15:02:00Z,lisbon,community,verbatim,"site:reddit.com Lisbon worst month visit weather kids January February",google,0,Reddit blocked
+2026-05-28T15:03:00Z,lisbon,community,leaving,"left Lisbon leaving Lisbon expat family year reason",google,6,blog mix
+2026-05-28T15:04:00Z,lisbon,community,policy,"expats leaving Portugal 2026 why reasons disillusioned housing crisis",google,8,housing news
+2026-05-28T15:05:00Z,lisbon,community,winter,"Lisbon winter cold damp mold expat family complaint review",google,7,strong verbatim pool
+2026-05-28T15:06:00Z,lisbon,community,month,"Lisbon best time of year visit kids family month avoid",google,9,month-by-month
+2026-05-28T15:07:00Z,lisbon,community,stay,"why we love Lisbon family kids long term expat blog",google,10,family love
+2026-05-28T15:08:00Z,lisbon,community,regret,"moved away from Lisbon expat regret bureaucracy housing rent",google,7,downsides
+2026-05-28T15:09:00Z,lisbon,community,tourism,"Lisbon overtourism mass tourism resident sentiment family",google,7,backlash
+2026-05-28T15:10:00Z,lisbon,community,minority,"Lisbon winter really not that bad expat positive minority",google,9,minority view
+2026-05-28T15:30:00Z,chiang_mai,community,leaving,"left Chiang Mai burning season smoke family expat why leave",google,5,burning season verbatim
+2026-05-28T15:31:00Z,chiang_mai,community,leaving,"expats leaving Chiang Mai 2026 reasons disappointed regret",google,8,pros cons
+2026-05-28T15:32:00Z,chiang_mai,community,stay,"Chiang Mai why families stay multi year long term love",google,7,family stay
+2026-05-28T15:33:00Z,chiang_mai,community,month,"Chiang Mai best month worst month visit kids family March April",google,9,seasonal
+2026-05-28T15:34:00Z,chiang_mai,community,minority,"Chiang Mai burning season not that bad survived stayed minority",google,7,year variation
+2026-05-28T15:35:00Z,chiang_mai,community,nimman,"Chiang Mai overhyped digital nomad bubble Nimman",google,6,bubble critique
+2026-05-28T12:00:00Z,both,life_op,col_index,"Numbeo compare cities Lisbon Chiang Mai",webfetch,1,direct comparison page indices
+2026-05-28T12:01:00Z,both,life_op,internet,"Speedtest Global Index Portugal Thailand 2025",websearch,10,country-level rank speeds
+2026-05-28T12:02:00Z,both,life_op,community,"EF EPI 2025 Thailand Portugal rank",websearch,10,Portugal #6 612 Thailand #116 402
+2026-05-28T12:03:00Z,both,life_op,traffic,"TomTom Traffic Index 2024 Lisbon Chiang Mai",websearch,10,LIS 26% 95h CMI 37% 72h
+2026-05-28T12:04:00Z,both,life_op,mobile_data,"Cable.co.uk Worldwide Mobile Data 2024 Portugal Thailand",websearch,10,PT 148 1.79 USD TH 34 0.41 USD
+2026-05-28T12:05:00Z,both,life_op,traffic,"TomTom city page lisbon chiang-mai",webfetch,2,landing pages truncated; used search snippets
+2026-05-28T12:06:00Z,both,life_op,traffic,"Numbeo Traffic in Lisbon Chiang-Mai",webfetch,2,Lisbon TI 132.71 Chiang Mai TI 115.86
+2026-05-28T12:07:00Z,lisbon,life_op,col_index,"Numbeo Cost of Living in Lisbon",webfetch,1,salary EUR1374 1BR EUR1410
+2026-05-28T12:08:00Z,chiang_mai,life_op,col_index,"Numbeo Cost of Living in Chiang-Mai",webfetch,1,salary 20391 THB 1BR 16524 THB
+2026-05-28T12:09:00Z,both,life_op,col_index,"Numbeo Cost of Living rankings 2026",webfetch,1,COLI/Rent/Groceries/Restaurant/PPP indices
+2026-05-28T12:10:00Z,both,life_op,quality_of_life,"Numbeo Quality of Life Lisbon Chiang Mai",webfetch,2,QoL Safety Healthcare Pollution Traffic indices
+2026-05-28T12:11:00Z,both,life_op,internet,"Wikipedia internet connection speeds Portugal Thailand",webfetch,1,PT 243.84/137.64 TH 279.65/137.98 Mar 2026
+2026-05-28T12:12:00Z,both,life_op,mobile_data,"BestBroadbandDeals worldwide data pricing",webfetch,1,Portugal rank 148 1.79 Thailand 34 0.41
+2026-05-28T12:13:00Z,lisbon,life_op,mobile_data,"Portugal MEO Vodafone NOS 30GB plan",websearch,10,MEO Enjoy 30GB EUR15 Go Total EUR34.99
+2026-05-28T12:14:00Z,lisbon,life_op,grocery,"Lisbon Continente Pingo Doce El Corte Ingles imported asian",websearch,10,Pingo Doce 486 Continente 500+ Lidl 277 El Corte Ingles Sao Sebastiao
+2026-05-28T12:15:00Z,chiang_mai,life_op,grocery,"Chiang Mai Rimping Tops imported foods Nimman Hang Dong",websearch,10,Rimping Maya Nim City Kad Farang Tops Central Festival
+2026-05-28T12:16:00Z,lisbon,life_op,pharmacy,"Lisbon farmacia 24 horas density",websearch,10,2800+ pharmacies nationwide on-duty rotation
+2026-05-28T12:17:00Z,chiang_mai,life_op,pharmacy,"Chiang Mai Boots Watsons 24h Nimman",websearch,10,Boots Watsons Be WELL 24/7 Medica Hub midnight
+2026-05-28T12:18:00Z,lisbon,life_op,restaurant,"Lisbon family friendly restaurants kid menu Principe Real Avenidas Novas",websearch,10,Atalho Reel Lota d'avila Monte Mar Capricciosa
+2026-05-28T12:19:00Z,chiang_mai,life_op,restaurant,"Chiang Mai family restaurants kid menu Nimman Hang Dong",websearch,10,Ginger Farm Freebird Namtok Jungle De Cafe
+2026-05-28T12:20:00Z,lisbon,life_op,public_transit,"Lisbon Carris Metro Navegante monthly pass 2025",websearch,10,Metropolitano EUR40 Familia EUR80 child EUR30
+2026-05-28T12:21:00Z,lisbon,life_op,housing,"Idealista Lisbon T2 furnished Avenidas Novas Principe Real",websearch,10,furnished T2 70sqm renovated stock available
+2026-05-28T12:22:00Z,chiang_mai,life_op,housing,"DDproperty Chiang Mai 2BR furnished Nimman Hang Dong",websearch,10,56 2BR condos 20-30k THB Nimman 30k Hang Dong few condos
+2026-05-28T12:23:00Z,lisbon,life_op,pharmacy,"Portugal pharmacy density ANF Lisbon",websearch,10,2800+ pharmacies 1.5/1000 PMC
+2026-05-28T12:24:00Z,lisbon,life_op,housing,"Airbnb Lisbon elevator listing percentage Avenidas Novas",websearch,10,Blueground elevator listings; aggregate % not in results
+2026-05-28T12:25:00Z,chiang_mai,life_op,housing,"Airbnb Chiang Mai air purifier burning season AC",websearch,10,HEPA standard post-2025 many listings AC + purifier
+2026-05-28T12:00:00Z,both,hard_constraints,air,"IQAir World Air Quality Report 2024 Chiang Mai annual average PM2.5",google,10,Found 26.4 ug/m3 2024
+2026-05-28T12:01:00Z,lisbon,hard_constraints,air,"IQAir 2024 World Air Quality Report Lisbon Portugal annual PM2.5",google,10,Lisbon not in top polluted; baseline low
+2026-05-28T12:02:00Z,lisbon,hard_constraints,visa,"Schengen visa 2024 statistics Portugal refusal rate Chinese passport applicants",google,10,China 4.6% PT 11.3% overall
+2026-05-28T12:03:00Z,lisbon,hard_constraints,climate,"Lisbon Portugal monthly average temperature high low rainfall mm",google,10,Wikipedia climate table
+2026-05-28T12:04:00Z,chiang_mai,hard_constraints,climate,"Chiang Mai monthly average temperature rainfall rainy days climate table",google,10,climatestotravel table
+2026-05-28T12:05:00Z,chiang_mai,hard_constraints,healthcare,"JCI accredited hospitals Thailand 2025 list Chiang Mai Bangkok",google,10,Bangkok Hospital CM + Chiangmai Ram
+2026-05-28T12:06:00Z,lisbon,hard_constraints,healthcare,"JCI accredited hospital Portugal Lisbon 2025 list",google,10,HL Lisboa + Lusiadas + Jesus
+2026-05-28T12:07:00Z,chiang_mai,hard_constraints,visa,"Royal Thai Embassy Ottawa tourist visa application 90 days TR60",google,10,Backup visa route
+2026-05-28T12:08:00Z,chiang_mai,hard_constraints,visa,"Thailand visa exemption Chinese passport 60 days 2024 2025 extension",google,10,60d exempt + 30d ext review pending
+2026-05-28T12:09:00Z,chiang_mai,hard_constraints,health,"dengue fever Chiang Mai 2024 2025 cases Thailand annual incidence",google,10,51k cases 2025
+2026-05-28T12:10:00Z,lisbon,hard_constraints,seismic,"Lisbon earthquake risk seismic hazard Portugal recent USGS",google,10,2024 M5.4 event
+2026-05-28T12:11:00Z,lisbon,hard_constraints,safety,"Portugal travel advisory 2025 Canada Government Chinese passport visa",google,10,Normal precautions confirmed
+2026-05-28T12:12:00Z,chiang_mai,hard_constraints,air,"Chiang Mai PM2.5 monthly average burning season 2024",google,10,Mar/Apr ~100 ug/m3
+2026-05-28T12:13:00Z,both,hard_constraints,english,"EF EPI English Proficiency Index 2024 Thailand Portugal score rank",google,10,PT 605 #6 TH 415 #106
+2026-05-28T12:14:00Z,lisbon,hard_constraints,healthcare,"Lisbon pediatric emergency 24 hours hospital list",google,10,Dona Estefania + CUF + Luz + Lusiadas
+2026-05-28T12:15:00Z,chiang_mai,hard_constraints,safety,"Chiang Mai travel advisory Canada government 2025 normal precautions",google,10,High caution Thailand-wide
+2026-05-28T12:16:00Z,lisbon,hard_constraints,climate,"Lisbon extreme heat days above 35 Celsius heatwave 2024",google,10,~10 days/yr projection
+2026-05-28T12:17:00Z,chiang_mai,hard_constraints,healthcare,"Bangkok Hospital Chiang Mai beds JCI international patient English",google,10,122 beds 21 clinics
+2026-05-28T12:18:00Z,chiang_mai,hard_constraints,healthcare,"Chiang Mai Ram hospital beds pediatric emergency English international",google,10,JCI 100% English doctors
+2026-05-28T12:19:00Z,both,hard_constraints,cost,"Numbeo cost of living index 2026 Lisbon Chiang Mai comparison",google,10,Direct compare numbers via fetch
+2026-05-28T12:20:00Z,both,hard_constraints,healthcare,"Allianz Manulife insurance direct billing Thailand Portugal",google,10,Allianz Care provider network
+2026-05-28T12:21:00Z,lisbon,hard_constraints,climate,"Lisbon climate annual sunshine wet days frost Wikipedia",google,10,Wikipedia climate of Lisbon
+2026-05-28T12:22:00Z,chiang_mai,hard_constraints,health,"Thailand rabies cases human 2024 statistics WHO dog bite",google,10,5-9 cases/yr 600k bites
+2026-05-28T12:23:00Z,lisbon,hard_constraints,pollution,"Lisbon Numbeo quality of life pollution index 2026",google,10,Pollution 37.55
+2026-05-28T12:24:00Z,chiang_mai,hard_constraints,air,"Chiang Mai PM2.5 monthly average ug/m3 January February March April 2024 historical",google,10,Mar/Apr ~100 monthly avg
+2026-05-28T15:00:00Z,lisbon,life_operability,quality_of_life,"Lisbon Numbeo quality of life sub-indices 2026",google,5,layer3b-v2
+2026-05-28T15:00:30Z,lisbon,life_operability,childcare,"Lisbon Numbeo preschool monthly private cost",google,5,layer3b-v2
+2026-05-28T15:01:00Z,both,life_operability,english,"EF EPI 2024 2025 Portugal Thailand ranking",google,10,layer3b-v2
+2026-05-28T15:02:00Z,lisbon,life_operability,community,"Lisbon expat families Facebook group members 2025",google,10,layer3b-v2
+2026-05-28T15:02:30Z,chiang_mai,life_operability,community,"Chiang Mai worldschooling Facebook group members 2025",google,10,layer3b-v2
+2026-05-28T15:03:00Z,chiang_mai,mobility,ride_hail,"Grab Family Plus car seat Thailand Chiang Mai 2024 2025",google,9,layer3b-v2
+2026-05-28T15:04:00Z,lisbon,mobility,ride_hail,"Uber Car Seat Lisbon availability 2025 family booking",google,10,layer3b-v2
+2026-05-28T15:05:00Z,chiang_mai,life_operability,community,"Chiang Mai digital nomad population estimate 2024 Nimman",google,10,layer3b-v2
+2026-05-28T15:05:30Z,lisbon,life_operability,community,"Lisbon Airbnb short-term rental percentage housing 2024",google,10,layer3b-v2
+2026-05-28T15:06:00Z,lisbon,life_operability,walkability,"Lisbon Walk Score walkable city neighborhood ranking",google,10,layer3b-v2
+2026-05-28T15:06:30Z,chiang_mai,life_operability,walkability,"Chiang Mai walkability index pedestrian Asia city",google,8,layer3b-v2
+2026-05-28T15:07:00Z,lisbon,life_operability,childcare,"Lisbon English speaking nanny babysitter Sitly Babysits",google,10,layer3b-v2
+2026-05-28T15:07:30Z,chiang_mai,life_operability,childcare,"Chiang Mai nanny price monthly Thai baht full time live in 2024",google,10,layer3b-v2
+2026-05-28T15:08:00Z,lisbon,life_operability,childcare,"Portugal preschool free 3 years public kindergarten expat",google,10,layer3b-v2
+2026-05-28T15:08:30Z,chiang_mai,life_operability,community,"Nimman tourist bubble Chiang Mai locals expat overdevelopment",google,10,layer3b-v2
+2026-05-28T15:09:00Z,lisbon,life_operability,healthcare,"Lisbon English speaking doctor Numbeo high quality healthcare",google,10,layer3b-v2
+2026-05-28T15:09:30Z,lisbon,life_operability,community,"Portugal digital nomad visa D8 Lisbon numbers 2024 expat growth",google,10,layer3b-v2
+2026-05-28T15:10:00Z,lisbon,life_operability,community,"Lisbon Parents Meetup group active members events",google,10,layer3b-v2
+2026-05-28T15:10:30Z,chiang_mai,mobility,ride_hail,"Bolt Chiang Mai Thailand ride hail family 2025 availability vs Grab",google,8,layer3b-v2
+2026-05-28T15:11:00Z,lisbon,life_operability,community,"Taxi Bambino Lisbon Portugal child seat price service reviews",google,9,layer3b-v2
+2026-05-28T15:11:30Z,lisbon,life_operability,childcare,"Babysits Lisbon Portugal verified background check trust",google,10,layer3b-v2
+2026-05-28T15:12:00Z,lisbon,child_activity,indoor,"SandCastle Lisbon coworking parents google reviews rating",google,10,layer3b-v2
+2026-05-28T15:12:30Z,lisbon,child_activity,indoor,"Oceanario de Lisboa google reviews rating tripadvisor",google,10,layer3b-v2
+2026-05-28T15:13:00Z,lisbon,child_activity,indoor,"Pavilhao do Conhecimento Lisbon google rating reviews family",google,10,layer3b-v2
+2026-05-28T15:13:30Z,chiang_mai,child_activity,outdoor,"Royal Park Rajapruek Chiang Mai google rating reviews tripadvisor",google,10,layer3b-v2
+2026-05-28T15:14:00Z,chiang_mai,child_activity,indoor,"Block and Play Chiang Mai indoor playground google rating reviews",google,10,layer3b-v2
+2026-05-28T15:14:30Z,chiang_mai,child_activity,indoor,"Chiang Mai indoor playground google review rating Hang Dong Nimman 2024",google,10,layer3b-v2
+2026-05-28T15:15:00Z,chiang_mai,life_operability,community,"r/ChiangMai subreddit subscribers count 2025",google,1,layer3b-v2-no-result
+2026-05-28T15:15:30Z,lisbon,life_operability,community,"Reddit r/Lisbon r/portugal subscribers active users 2025",google,0,layer3b-v2-no-result
+2026-05-28T15:16:00Z,chiang_mai,life_operability,community,"Worldschoolers Facebook group thailand chiang mai members",google,10,layer3b-v2
+2026-05-28T15:16:30Z,chiang_mai,life_operability,community,"Chiang Mai Family Guide Facebook members thousand",google,10,layer3b-v2
+2026-05-28T15:17:00Z,chiang_mai,mobility,stroller,"Chiang Mai stroller difficult sidewalk family blog complaint",google,4,layer3b-v2
+2026-05-28T15:17:30Z,chiang_mai,life_operability,community,"Chiang Mai Airbnb short term rental percentage Nimman saturation 2024",google,10,layer3b-v2
+2026-05-28T15:18:00Z,chiang_mai,child_activity,structured,"Beaver Club Chiang Mai worldschooling enrollment 2025 Hang Dong drop-in",google,9,layer3b-v2
+2026-05-28T15:18:30Z,lisbon,child_activity,outdoor,"Jardim da Estrela Lisbon Google reviews rating playground best",google,10,layer3b-v2
+2026-05-28T15:19:00Z,lisbon,mobility,walkability,"Parque das Nacoes walkable family Lisbon flat new district stroller",google,10,layer3b-v2

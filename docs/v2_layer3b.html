@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer 3b · 儿童 / 出行 / 社群 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+
+/* v2 indicator chips */
+.chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+.chip.green { background: #d1fae5; color: #065f46; }
+.chip.yellow { background: #fef3c7; color: #78350f; }
+.chip.red { background: #fee2e2; color: #991b1b; }
+.chip.gray { background: #e5e7eb; color: #4b5563; }
+.conf { font-size: 11px; color: var(--muted); margin-left: 4px; }
+
+/* v2 matrix table */
+table.v2-matrix { font-size: 13px; }
+table.v2-matrix th { font-size: 12px; }
+table.v2-matrix td.judge { text-align: center; min-width: 110px; }
+table.v2-matrix td.evidence { color: #444; font-size: 12.5px; }
+table.v2-matrix th.layer-cell { background: #ede9d8; }
+
+/* layer-header divider row */
+tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-size: 14px; }
+
+/* distribution bar */
+.dist-bar { display: flex; height: 28px; border-radius: 14px; overflow: hidden; margin: 12px 0; font-size: 12px; font-weight: 600; color: white; }
+.dist-bar .seg { display: flex; align-items: center; justify-content: center; }
+.dist-bar .seg.green { background: #10b981; }
+.dist-bar .seg.yellow { background: #f59e0b; }
+.dist-bar .seg.red { background: #ef4444; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="v2_matrix.html">v2 Indicator 矩阵</a>
+      <a href="v2_layer2.html">Layer 2 硬约束</a>
+      <a href="v2_layer3a.html">Layer 3a 经济/物流</a>
+      <a href="v2_layer3b.html" class="active">Layer 3b 儿童/出行</a>
+      <a href="v2_layer4.html">Layer 4 社区主题</a>
+      <a href="evidence_side_by_side.html">v1 横向对照</a>
+      <a href="evidence_lisbon.html">v1 里斯本证据</a>
+      <a href="evidence_chiang_mai.html">v1 清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 id="layer-3b-per-indicator-v2">Layer 3b · 儿童 / 出行 / 社群 — Per-Indicator v2<a class="headerlink" href="#layer-3b-per-indicator-v2" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>范围：indicators 3.8–3.14 + 3.18–3.20
+目标家庭：2 大人 + 4.5 岁 + 2.5 岁
+输出原则：每个 indicator 必须有官方 / 平台 indices + ≥3 平台或 ≥5 来源社区佐证 + 判断 + 置信度。不输出城市总评。
+新增源：LIS S-LIS-104 → S-LIS-120 (17 条)；CMI S-CMI-077 → S-CMI-090 (14 条)。</p>
+</blockquote>
+<hr />
+<h2 id="indicator-38-walkability">Indicator 3.8 — 步行可达度 (Walkability)<a class="headerlink" href="#indicator-38-walkability" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：90 天慢旅家庭日常生活半径 1 km 内能否完成核心 chores（杂货 / 药店 / 游乐场 / 24h 儿科），步行强度对 2.5 岁幼儿决定每天能否出门。</p>
+<p><strong>期望数据源</strong>：Walk Score / 全球 walkability 排名 / 城市规划报告 / Numbeo Traffic + Pollution / 社区一致评分。</p>
+<p><strong>充分性阈值</strong>：每候选区 1km 内 4 类设施可达数 + 全球 walkability 排名 + ≥3 来源社区一致。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>主要统计数据点</th>
+<th>平台 indices</th>
+<th>社区佐证</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td>9th 全球 most walkable（Compare the Market 90 城排名）；84% 居民步行可达学校 / 医疗（top-10 中最高）<span class="s-lis">[S-LIS-109]</span></td>
+<td>Numbeo Traffic Commute 34.64（低）；Pollution 37.55（低）<span class="s-lis">[S-LIS-104]</span></td>
+<td>多源指出 Parque das Nações / Belém / Cascais 完全平坦；Alfama / Bairro Alto 七山 + calçada 卵石 → 婴儿车坡度负担 <span class="s-lis">[S-LIS-118]</span><span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-049]</span>；CUF Descobertas 儿科在 Parque das Nações 步行可达 [Lisbon search]</td>
+<td><strong>Green</strong>（候选区 Parque das Nações / Belém / Cascais）/ <strong>Yellow</strong>（Alfama / Bairro Alto / Estrela 内部坡）</td>
+<td>high</td>
+<td>S-LIS-109, S-LIS-104, S-LIS-118, S-LIS-044, S-LIS-049</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>无全球 walkability 排名；GoodWalk Thailand 仅评估 Chang Phueak / Tapae / Warorot 为"walkable"；Old City 内 sidewalks "very narrow"，Thapae Gate 路口"very difficult"<span class="s-cmi">[S-CMI-088]</span></td>
+<td>Numbeo Traffic Commute 26.20（很低，因不堵车而非步行友好）；Pollution 77.82（高，3-4 月烧林期主导）<span class="s-cmi">[S-CMI-077]</span></td>
+<td>"sidewalks 不平、有坑、有时窄如 balance beam"<span class="s-cmi">[S-CMI-040]</span>；Nimman sidewalks 较好但区外狭窄 <span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-088]</span>；郊区 Hang Dong / San Sai / Mae Rim 基本无 sidewalk → 必须开车 <span class="s-cmi">[S-CMI-040]</span></td>
+<td><strong>Yellow</strong>（Nimman / Old City core）/ <strong>Red</strong>（Hang Dong / San Sai 等郊区）</td>
+<td>high</td>
+<td>S-CMI-088, S-CMI-077, S-CMI-040</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键对比</strong>：里斯本是排名靠前的全球 walkable 城市，且候选区可选"完全平坦"的 Parque das Nações / Belém / Cascais。清迈整体 walkability 较弱、依赖区域：Nimman / Old City 勉强可走，但 sidewalks 物理质量差，且家庭青睐的 Hang Dong worldschooling hub 需车。</p>
+<hr />
+<h2 id="indicator-39">Indicator 3.9 — 婴儿车摩擦度<a class="headerlink" href="#indicator-39" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：2.5 岁需要随时坐回 stroller、长时间外出依赖推车。摩擦度直接决定日常活动半径。</p>
+<p><strong>期望数据源</strong>：政府无障碍声明 + ≥5 独立社区一致投诉 + 候选区典型街景描述。</p>
+<p><strong>充分性阈值</strong>：≥5 独立社区来源一致 + 候选区差异描述。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>主要数据点</th>
+<th>社区佐证（≥5 来源）</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td>历史中心 calçada 卵石 + 七山 + 老楼无电梯 <span class="s-lis">[S-LIS-044]</span><span class="s-lis">[S-LIS-045]</span><span class="s-lis">[S-LIS-069]</span>；但 Metro &gt;75% 站点无台阶、Carris bus &gt;80% 装低地板斜坡 <span class="s-lis">[S-LIS-067]</span><span class="s-lis">[S-LIS-068]</span></td>
+<td>Travel4Baby：Eduardo VII / Belém Riverside / Gulbenkian / Parque das Nações 标注 "ideal for strollers" / "smooth and easy to navigate"；Monsanto / 老城坡多 <span class="s-lis">[S-LIS-118]</span>；One Tiny Leap 与 Heritage Mom 一致建议轻便折叠 + carrier 混用 <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-075]</span><span class="s-lis">[S-LIS-076]</span></td>
+<td><strong>Yellow（中心老区）/ Green（Parque das Nações / Belém / Cascais）</strong> — 候选区可选则解</td>
+<td>high</td>
+<td>S-LIS-118, S-LIS-044, S-LIS-045, S-LIS-049, S-LIS-067, S-LIS-068, S-LIS-075</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>sidewalks 物理状况差 + 障碍物（树/广告牌/摩托/坑）+ 共享车道 <span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-089]</span></td>
+<td>"taking a stroller into the city is a non-starter"<span class="s-cmi">[S-CMI-040]</span>；TripAdvisor Chiang Mai 论坛家长 reach 一致：建议 baby carrier，stroller 仅 mall + 机场可用 <span class="s-cmi">[S-CMI-089]</span>；CNX Local "baby carrier easier than stroller"<span class="s-cmi">[S-CMI-055]</span>；多个家庭博客一致建议 carrier 优先 <span class="s-cmi">[S-CMI-040]</span><span class="s-cmi">[S-CMI-055]</span><span class="s-cmi">[S-CMI-089]</span></td>
+<td><strong>Yellow → Red</strong> — 全城摩擦高，无候选区可全程豁免</td>
+<td>high</td>
+<td>S-CMI-040, S-CMI-055, S-CMI-089, S-CMI-088</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键对比</strong>：里斯本是"区域差异巨大"——选对候选区（Parque das Nações）可几乎全程 stroller。清迈是"全城摩擦"——必须 carrier-first 策略。</p>
+<hr />
+<h2 id="indicator-310">Indicator 3.10 — 儿童安全座椅在网约车中的可获得性<a class="headerlink" href="#indicator-310" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：从加拿大（强制座椅）来，2.5 岁必须 group 1、4.5 岁可 booster。在当地 Uber/Grab/Bolt 是否能稳定叫到带座椅的车，决定家庭日常通勤的安全 / 心理负担。</p>
+<p><strong>期望数据源</strong>：app 内功能 + 当地法律 + ≥3 社区报告。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>App 内功能</th>
+<th>法律</th>
+<th>社区报告</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td><strong>Uber 无保证座椅选项</strong>；可备注但不保证 <span class="s-lis">[S-LIS-114]</span><span class="s-lis">[S-LIS-070]</span>；预约 <strong>Taxi Bambino</strong> 提供 infant / forward-facing / booster 三档认证座椅，€15-20 起 <span class="s-lis">[S-LIS-114]</span><span class="s-lis">[S-LIS-070]</span></td>
+<td>私车强制 &lt; 12 岁或 135cm；taxi + ride-share 法律<strong>豁免</strong> <span class="s-lis">[S-LIS-070]</span><span class="s-lis">[S-LIS-071]</span></td>
+<td>TripAdvisor Lisbon 论坛多 thread "Uber not having enough car seats"；Mama in Transit / Let's Go Baby 一致推荐 Taxi Bambino <span class="s-lis">[S-LIS-114]</span></td>
+<td><strong>Yellow</strong> — 法律松、Uber 不可靠，但 Taxi Bambino 完整解</td>
+<td>high</td>
+<td>S-LIS-114, S-LIS-070, S-LIS-071</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td><strong>Grab / Bolt 均不默认提供座椅</strong><span class="s-cmi">[S-CMI-083]</span><span class="s-cmi">[S-CMI-036]</span>；Bolt 比 Grab 便宜 10-25% 但同样无座椅 <span class="s-cmi">[S-CMI-083]</span>；<strong>Taxi Bambino 清迈分支</strong>提供认证安装 <span class="s-cmi">[S-CMI-036]</span>；Indrive 可指定车型 <span class="s-cmi">[S-CMI-038]</span></td>
+<td>2022 法规 &lt; 6 岁需 car seat 但<strong>执法几乎为零</strong> <span class="s-cmi">[S-CMI-036]</span></td>
+<td>"Very few taxis or Grab drivers have child seats"<span class="s-cmi">[S-CMI-036]</span>；asiafamilytravel / Swandoo / CNXlocal 多源一致：必须自带 <span class="s-cmi">[S-CMI-036]</span><span class="s-cmi">[S-CMI-083]</span></td>
+<td><strong>Yellow</strong> — 须自带 2 个便携座椅 + Taxi Bambino 做机场 / 长途</td>
+<td>high</td>
+<td>S-CMI-083, S-CMI-036, S-CMI-038</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键对比</strong>：两城都对 ride-hail 法律豁免、都依赖 Taxi Bambino。差别：里斯本的 Uber 至少<strong>有备注 + 应答</strong>机制，清迈完全空白且法律执法为零。家庭都需自带，但里斯本心理负担略低。</p>
+<hr />
+<h2 id="indicator-311-n">Indicator 3.11 — 儿童户外活动（候选区前 N 个高质量）<a class="headerlink" href="#indicator-311-n" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：日常去得起 + 反复去的高质量公园 / 游乐场是慢旅家庭的生活锚。</p>
+<p><strong>充分性阈值</strong>：每候选区 ≥3 个 4.4+ 评分 + ≥100 评论 + 距离 ≤2km。</p>
+<p><strong>里斯本（按候选区）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>候选区</th>
+<th>Top 户外锚点</th>
+<th>Google/TripAdvisor 信号</th>
+<th>评论数</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Estrela / Lapa</td>
+<td>Jardim da Estrela</td>
+<td>Minube 5/5；TripAdvisor #(top 20 in Lisbon)；评论近 1000+；Yelp 4★+</td>
+<td>1000+</td>
+<td>S-LIS-049, S-LIS-051</td>
+</tr>
+<tr>
+<td>Parque das Nações</td>
+<td>Parque Tejo + Jardins Garcia de Orta + Oceanário 河边</td>
+<td>"smooth and easy to navigate""splash pads"<span class="s-lis">[S-LIS-118]</span></td>
+<td>多源一致</td>
+<td>S-LIS-028, S-LIS-029, S-LIS-118</td>
+</tr>
+<tr>
+<td>Belém / Restelo</td>
+<td>Jardim da Praça do Império + Jardim Botânico Tropical + Monsanto edge</td>
+<td>多家庭博客一致推荐</td>
+<td>≥3 来源</td>
+<td>S-LIS-032</td>
+</tr>
+<tr>
+<td>Cascais</td>
+<td>Praia da Ribeira + Parque Marechal Carmona + 海滨步道</td>
+<td>Cascais 海滨"完全婴儿车友好"<span class="s-lis">[S-LIS-035]</span></td>
+<td>≥3 来源</td>
+<td>S-LIS-035</td>
+</tr>
+</tbody>
+</table>
+<p><strong>清迈（按候选区）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>候选区</th>
+<th>Top 户外锚点</th>
+<th>Google/TripAdvisor 信号</th>
+<th>评论数</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hang Dong</td>
+<td>Royal Park Rajapruek</td>
+<td>TripAdvisor 918+ 评论，rank 24/358，200 THB 含 tram；评价混合（"astonishingly good" vs "artificial"）<span class="s-cmi">[S-CMI-085]</span></td>
+<td>918+</td>
+<td>S-CMI-085, S-CMI-056</td>
+</tr>
+<tr>
+<td>Mae Rim</td>
+<td>Queen Sirikit Botanic Garden + Huay Tung Tao Lake</td>
+<td>多源推荐；外国人 50 THB；canopy walk + temperate house <span class="s-cmi">[S-CMI-028]</span><span class="s-cmi">[S-CMI-029]</span><span class="s-cmi">[S-CMI-030]</span></td>
+<td>多源</td>
+<td>S-CMI-028, S-CMI-030</td>
+</tr>
+<tr>
+<td>Nimman / Old City</td>
+<td>Huai Kaeo Arboretum + CMU Ang Kaew + Nong Buak Hard Public Park</td>
+<td>本地家庭休闲点，评论中等 <span class="s-cmi">[S-CMI-023]</span></td>
+<td>中等</td>
+<td>S-CMI-023</td>
+</tr>
+<tr>
+<td>Doi Inthanon (远程)</td>
+<td>Royal Pagodas Loop + waterfalls</td>
+<td>"stroller-friendly"铺装小径 <span class="s-cmi">[S-CMI-031]</span></td>
+<td>多源</td>
+<td>S-CMI-031</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判断</strong>：
+- 里斯本：<strong>Green</strong>（confidence high）— 每候选区 ≥3 个高质量户外锚点，全年可用。
+- 清迈：<strong>Green</strong>（11-2 月，confidence high）/ <strong>Red</strong>（3-4 月烧林期 PM2.5 &gt; 150 须避免户外 <span class="s-cmi">[S-CMI-008]</span>）/ <strong>Yellow</strong>（5-10 月雨季）。</p>
+<hr />
+<h2 id="indicator-312">Indicator 3.12 — 室内备选数量（雨/烧林季）<a class="headerlink" href="#indicator-312" title="Permanent link">¶</a></h2>
+<p><strong>充分性阈值</strong>：城市 ≥8 个 4.3+ 评分 + 每候选区可达 ≥2 个。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>城市层</th>
+<th>候选区可达性</th>
+<th>平台信号</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td>≥9 候选：Oceanário（TripAdvisor rank 4/1024，40,979 评论）<span class="s-lis">[S-LIS-117]</span>；Pavilhão do Conhecimento（Google 4.71，rank 19 in Lisbon）<span class="s-lis">[S-LIS-116]</span>；SandCastle（Google 4.8 / 125+ 评论）<span class="s-lis">[S-LIS-115]</span>；CCB / MAAT；LUCA；多个 Shopping kids zone（Colombo / Vasco da Gama / Amoreiras）；KidZania；多个工作坊 <span class="s-lis">[S-LIS-083]</span></td>
+<td>Parque das Nações：Oceanário + Pavilhão + Vasco da Gama 一站；Estrela 区附近 SandCastle 步行可达；Cascais 有自己 mall + 海洋馆参访</td>
+<td>≥3 个 Google 4.5+ 高评分锚点</td>
+<td><strong>Green</strong></td>
+<td>high</td>
+<td>S-LIS-117, S-LIS-116, S-LIS-115, S-LIS-083</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>≥11 air-purified 室内 venues 列于 CNXlocal<span class="s-cmi">[S-CMI-086]</span>：Kid's Kingdom (Tha Sala), Reyn.ne' (Hang Dong), Little Soul Kids Planet (Hang Dong), Wooden Ville (Nong Hoi), Block &amp; Play (Tha Sala), Blockland (Hang Dong), Hannah Hahn (Pa Daet), Bella Goose (Hang Dong), LOL Kids Castle (San Sai), YuuBaan (Hang Dong), Yardoo (Wat Ket)；外加 Bouncetopia + Fun Planet (mall)<span class="s-cmi">[S-CMI-026]</span><span class="s-cmi">[S-CMI-027]</span></td>
+<td>Hang Dong 区单独有 5+ 个；Tha Sala / Old City 周边有 3+ 个；San Sai 1 个</td>
+<td>Block &amp; Play "rated below average by Google" → 不计入 4.3+；多数无公开 Google 评分数；CNXlocal 列表是显式 air-purified</td>
+<td><strong>Green</strong>（按数量 / air-filter 标准）/ <strong>Yellow</strong>（按 Google 4.3+ 标准严格执行可能仅 ≥6 个达标）</td>
+<td>medium-high</td>
+<td>S-CMI-086, S-CMI-026, S-CMI-027</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键差异</strong>：里斯本室内备选普遍高 Google 评分；清迈室内备选多但<strong>显式 Google 评分高的少</strong>——CNXlocal 用"air-purified"作为筛选维度（烧林季更相关），这是清迈独特的质量代理指标。</p>
+<hr />
+<h2 id="indicator-313">Indicator 3.13 — 结构化儿童活动短期接纳<a class="headerlink" href="#indicator-313" title="Permanent link">¶</a></h2>
+<p><strong>充分性阈值</strong>：≥3 机构明示接受短期参与 + 实际报名渠道。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>短期接纳机构</th>
+<th>报名渠道</th>
+<th>价格</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td>Little Lisbon Tile / Graffiti 工作坊；Cooking Lisbon Pastel de Nata；Sunbonoo Family scavenger hunt；LUCA 剧院按节目接受；SandCastle 按小时入场 (4.8★ + 125+ 评论)<span class="s-lis">[S-LIS-115]</span><span class="s-lis">[S-LIS-083]</span>；公立 preschool 自 2023 年起 3-5 岁免费（但需 NISS + 注册）<span class="s-lis">[S-LIS-112]</span></td>
+<td>各机构网站 + Withlocals + Marypop</td>
+<td>drop-in € 单次价 + SandCastle 时收费</td>
+<td>S-LIS-083, S-LIS-115, S-LIS-112</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td><strong>Beaver Club X Chiang Mai (Hang Dong)</strong><span class="s-cmi">[S-CMI-087]</span>：drop-in 180 THB 成人 / 100 THB 儿童；2026 暑期 camp 7/6-8/28；明确 "An English-speaking setting"；on-site family 住宿 1,200 THB/晚起 <span class="s-cmi">[S-CMI-032]</span>；Smile Organic Farm Cooking School、Four Seasons Children's Cooking、Elephant Parade Land、Zabb E Lee / Baan Thai（单次）<span class="s-cmi">[S-CMI-050]</span></td>
+<td>Beaver Club FB 直订；CNXlocal 列表；Klook</td>
+<td>drop-in 100-1500 THB；月 12.6-18.6k THB；6.5k THB 注册非退</td>
+<td>S-CMI-087, S-CMI-032, S-CMI-050</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判断</strong>：
+- 里斯本：<strong>Green</strong>（confidence medium）— 多个 drop-in 工作坊 + 公立免费 preschool 法律权利，但短期登记实操有 NISS 注册门槛。
+- 清迈：<strong>Green</strong>（confidence high）— Beaver Club 是亚洲 worldschooling hub，明确接受 1 周 / 1 月，且全英文，180 THB/天极低门槛。</p>
+<hr />
+<h2 id="indicator-314-childcare-nanny">Indicator 3.14 — Childcare / Nanny 平台 + 价格 + 信任机制<a class="headerlink" href="#indicator-314-childcare-nanny" title="Permanent link">¶</a></h2>
+<p><strong>充分性阈值</strong>：Numbeo monthly preschool 价格 + ≥2 平台覆盖 + 信任机制可识别。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>Numbeo Preschool 月费（私立 fullday）</th>
+<th>平台</th>
+<th>信任机制</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td><strong>€536.84/月</strong>（range €450-700）<span class="s-lis">[S-LIS-105]</span>；公立 3-5 岁 <strong>免费</strong> since 2023 <span class="s-lis">[S-LIS-112]</span>；Babysitter 平均 <strong>€8.71-15/小时</strong> <span class="s-lis">[S-LIS-113]</span></td>
+<td>Babysits（<strong>2,638 active Lisbon babysitters</strong>）<span class="s-lis">[S-LIS-113]</span>；Marypop（"1st 欧洲双语 platform"）；Nanny Portugal / Babysisters / Nannies of Lisbon；Sitly（覆盖）；Mybabysitter</td>
+<td>Babysits：ID verification 强制 + Portugal "Registo Criminal" 可选 + 自动反欺诈消息扫描 + references/reviews <span class="s-lis">[S-LIS-113]</span></td>
+<td>S-LIS-105, S-LIS-112, S-LIS-113</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td><strong>฿26,302/月</strong>（≈ $730 USD，range 19,333-37,390）<span class="s-cmi">[S-CMI-078]</span>；hourly 150-300 THB；live-in fulltime 10-15k THB/月；live-out 12-20k THB/月；daycare 5-20k THB/月 <span class="s-cmi">[S-CMI-080]</span></td>
+<td>Kiidu app；Thai Kids Home；Ayasan Service（Chiang Mai 专版）；Bliss Mae Baan Network 培训 + 安置；FB 群：Chiang Mai Expat Moms / Chiang Mai Nanny Housekeeper &amp; Babysitters / Thailand Expat Nanny Finder <span class="s-cmi">[S-CMI-080]</span></td>
+<td>中介 pre-screened + 推荐人 reference + Thai ID 拍照 + trial period（口碑驱动 / 弱 background check）<span class="s-cmi">[S-CMI-080]</span></td>
+<td>S-CMI-078, S-CMI-080</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判断</strong>：
+- 里斯本：<strong>Green</strong>（confidence high）— 公立 3-5 岁免费是显著优势；私立 preschool €536/月在西欧属中低；Babysits 提供 ID + criminal record check 是西方家庭熟悉的信任机制；2,638 个活跃 sitter 是充足供应。
+- 清迈：<strong>Green</strong>（confidence high）— 名义 preschool 月费 ~$730 USD 偏高（Numbeo 数据点小，可能是 international school 包括）；但 nanny 价格极低（live-in $300 USD/月）；信任机制偏"agency + 口碑"而非数字化 background check，从加拿大家庭视角是"价格 Green / 信任 Yellow"。</p>
+<p><strong>用户决策维度</strong>：里斯本"低价 + 高信任体系"；清迈"极低价 + 弱信任体系 + 高劳力可负担"——决定家庭愿意把幼儿托付的"门槛感"截然不同。</p>
+<hr />
+<h2 id="indicator-318">Indicator 3.18 — 英语普及度<a class="headerlink" href="#indicator-318" title="Permanent link">¶</a></h2>
+<p><strong>充分性阈值</strong>：EF EPI 国家分 + 城市层级实践描述。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>EF EPI 2025 国家分</th>
+<th>全球排名</th>
+<th>城市层实践</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td><strong>612 / Very High Proficiency</strong><span class="s-lis">[S-LIS-106]</span></td>
+<td><strong>6th / 123</strong> 国家</td>
+<td>私立医疗"virtually all doctors speak English"[Search]；CUF Descobertas 儿科 "perfect English"；Alegria Medical Centre 内部多语；公共交通 + 服务业普遍英语</td>
+<td><strong>Green</strong></td>
+<td>high</td>
+<td>S-LIS-106, S-LIS-120</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td><strong>402 / Very Low Proficiency</strong><span class="s-cmi">[S-CMI-079]</span></td>
+<td><strong>119th / 123</strong> 国家（接近垫底）</td>
+<td>Nimman / 数字游民 hub 英语足够；Old City 旅游业可用；郊区 Hang Dong / Mae Rim 限本地 Thai；医院 Bangkok Hospital Chiang Mai / Chiangmai Ram 有英语；nanny English ability 是溢价因素 <span class="s-cmi">[S-CMI-080]</span></td>
+<td><strong>Yellow</strong> — Nimman / 旅游业 / 私立医疗可用；日常生活外周需翻译 / Thai</td>
+<td>high</td>
+<td>S-CMI-079, S-CMI-080</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键对比</strong>：差距悬殊—Portugal 6th 全球 vs Thailand 119th。对仅有中文 + 英文能力的家庭，里斯本几乎全程英文可解、清迈在"非数字游民泡沫内"会撞墙。</p>
+<hr />
+<h2 id="indicator-319-expat-worldschooling">Indicator 3.19 — expat / worldschooling 社群活跃度<a class="headerlink" href="#indicator-319-expat-worldschooling" title="Permanent link">¶</a></h2>
+<p><strong>充分性阈值</strong>：≥3 群组 indices + 一致表述。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>群组指标</th>
+<th>一致表述</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td><strong>Lisbon Parents &amp; Kids</strong> Meetup：<strong>489 members + 80 past events + 每周六固定</strong> <span class="s-lis">[S-LIS-108]</span>；Lisbon for Parents FB 自 2017 + Moms for Moms 子社区 <span class="s-lis">[S-LIS-107]</span>；多个 expat FB 群（Lisbon Digital Nomads &amp; Expats、Expats in Lisbon "20,000+ members"[Search]）；Lisbon Cascais Expats &amp; Friends (Meetup, 2018-)；Expat families in Portugal FB；International Friends Lisbon FB；Ladies of Lisbon Meetup</td>
+<td>"best city for digital nomads"（Instant Offices ranking）；7% 葡萄牙人口为 expat；美国人 expats 2017→2024 从 2,888 涨到 21,000 <span class="s-lis">[S-LIS-111]</span></td>
+<td><strong>Green</strong></td>
+<td>high</td>
+<td>S-LIS-108, S-LIS-107, S-LIS-111</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td><strong>Beaver Club Hang Dong</strong> 实体 hub + 家庭日常碰头 <span class="s-cmi">[S-CMI-032]</span><span class="s-cmi">[S-CMI-087]</span>；Worldschool Pop-Up Hub Chiang Mai 2025-11 <span class="s-cmi">[S-CMI-090]</span>；FB 群：Chiang Mai Family Guide、CHIANG MAI EXPATS、Worldschoolers in Thailand (Bliss)、Chiang Mai Expat Moms、Chiang Mai Nanny... Babysitters、Little Owls Playgroup（CNXlocal 列 9 个 [S-CMI-091 ref CNX article]）；"Chiang Mai is one of the most popular places in Asia for worldschooling"<span class="s-cmi">[S-CMI-033]</span></td>
+<td>学术研究称 "digital nomad capital"；worldschooling community 公认密集</td>
+<td><strong>Green</strong></td>
+<td>high</td>
+<td>S-CMI-087, S-CMI-090, S-CMI-032, S-CMI-033</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键差异</strong>：里斯本社群以"长居 expat 家庭 + 数字游民"为主，体制化 / 双语支持完善；清迈以"worldschooling + 数字游民"为主，实体 hub（Beaver Club）密度更高，但流动性更高（很多家庭烧林季离开）。Reddit 因域被屏蔽未能取得 r/Lisbon / r/ChiangMai subscriber 数（见 inaccessible_sources.csv），用 FB + Meetup + 学术 + 行业报告交叉验证替代。</p>
+<hr />
+<h2 id="indicator-320-vs">Indicator 3.20 — 本地化 vs 旅游/数字游民泡沫<a class="headerlink" href="#indicator-320-vs" title="Permanent link">¶</a></h2>
+<p><strong>充分性阈值</strong>：≥3 数据来源 + 候选区描述。</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>旅游/数字游民信号</th>
+<th>本地化信号</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td><strong>Airbnb 密度欧洲第一</strong>：46.7 listings / 1000 居民 + 近 24,000 短租房 <span class="s-lis">[S-LIS-110]</span>；历史中心房价 +30% 直接归因短租 <span class="s-lis">[S-LIS-110]</span>；D8 数字游民签证 2024 已发 2,600+；美籍 expat 增长 7x（2017→2024）<span class="s-lis">[S-LIS-111]</span>；2024 推翻短租 moratorium → 短租可占 housing 10% <span class="s-lis">[S-LIS-110]</span></td>
+<td>Parque das Nações + Alvalade + Restelo 等家庭区<strong>仍以葡语家庭为主</strong>；公立 preschool 网络是本地基础设施；Carris 公交 / Metro 是城市常态</td>
+<td><strong>Yellow</strong> — 中心老区显著泡沫（房价、Tram 28 拥挤、Airbnb 主导）；候选家庭区（Parque das Nações / Cascais / Restelo）<strong>仍较本地化</strong></td>
+<td>high</td>
+<td>S-LIS-110, S-LIS-111</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td><strong>Nimman 显式 expat 泡沫</strong>："unapologetic bubble""theoretically spend weeks without speaking Thai"<span class="s-cmi">[S-CMI-081]</span>；Airbnb 6,919 active listings + Nimman premium condos 8-12% yield <span class="s-cmi">[S-CMI-082]</span>；学术称 "digital nomad capital"；DTV 数字游民签证 2024 上线（180 天/入境 × 5 年多次）；多家庭烧林季离开 1-3 个月 <span class="s-cmi">[S-CMI-046]</span></td>
+<td>Hang Dong / San Sai 等郊区本地化高（基本无 sidewalk + Thai-only）；Old City 内 mixed；Beaver Club Hang Dong 是 worldschooling hub 但在 Thai 村落环境内</td>
+<td><strong>Red</strong>（Nimman）/ <strong>Yellow</strong>（Old City）/ <strong>Green</strong>（Hang Dong worldschooling 边缘 — 本地 Thai 环境 + worldschooling 邻居）</td>
+<td>high</td>
+<td>S-CMI-081, S-CMI-082, S-CMI-046</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键对比</strong>：两城<strong>都</strong>有显著的旅游/数字游民泡沫，但<strong>位置不同</strong>——里斯本泡沫集中在中心老区，候选家庭区相对清净；清迈泡沫集中在 Nimman（家庭也最易选的英语友好区），决定了"住 Nimman = 接受泡沫"或"住 Hang Dong = 接受 30 min 车 + 弱 walkability"的权衡。</p>
+<hr />
+<h2 id="per-indicator">总结表（per-indicator 判断）<a class="headerlink" href="#per-indicator" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>里斯本</th>
+<th>置信度</th>
+<th>清迈</th>
+<th>置信度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.8 Walkability</td>
+<td>Green（候选区）/ Yellow（老城）</td>
+<td>high</td>
+<td>Yellow（Nimman / Old City）/ Red（郊区）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.9 Stroller friction</td>
+<td>Yellow（老）/ Green（新区）</td>
+<td>high</td>
+<td>Yellow → Red 全城</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.10 Car seat in ride-hail</td>
+<td>Yellow（Taxi Bambino 救场）</td>
+<td>high</td>
+<td>Yellow（须自带 + Taxi Bambino）</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.11 Outdoor (top N)</td>
+<td>Green</td>
+<td>high</td>
+<td>Green (11-2月) / Red (3-4月)</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.12 Indoor backup</td>
+<td>Green</td>
+<td>high</td>
+<td>Green (count) / Yellow (Google 4.3+ 严格)</td>
+<td>medium-high</td>
+</tr>
+<tr>
+<td>3.13 Structured short-term</td>
+<td>Green</td>
+<td>medium</td>
+<td>Green</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.14 Childcare/Nanny</td>
+<td>Green</td>
+<td>high</td>
+<td>Green (价格) / Yellow (信任机制)</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.18 English</td>
+<td>Green (EF 6th)</td>
+<td>high</td>
+<td>Yellow (EF 119th)</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.19 Expat/worldschooling community</td>
+<td>Green</td>
+<td>high</td>
+<td>Green</td>
+<td>high</td>
+</tr>
+<tr>
+<td>3.20 Tourism/nomad bubble</td>
+<td>Yellow（候选区可避）</td>
+<td>high</td>
+<td>Red(Nimman)/Yellow(Old City)/Green(Hang Dong)</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fallback">不可访问源 / fallback 记录<a class="headerlink" href="#fallback" title="Permanent link">¶</a></h2>
+<ul>
+<li><code>r/ChiangMai</code> / <code>r/lisboa</code> 等 Reddit about 页 → WebFetch 被阻塞 → 用 Search 摘要 + FB / Meetup / 学术报告 / 行业报告交叉替代（见 inaccessible_sources.csv）。</li>
+<li><code>chiangmaifamilyguide.com/best-indoor-playgrounds-in-chiang-mai/</code> → 404 → 用 CNXlocal air-purified 列表 + bkkkids + tongleplay 替代。</li>
+</ul>
+<h2 id="_1">新增源汇总<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>里斯本</strong>：S-LIS-104 ~ S-LIS-120（17 条）</li>
+<li><strong>清迈</strong>：S-CMI-077 ~ S-CMI-090（14 条）</li>
+</ul>
+<h2 id="_2">网络预算使用<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>WebSearch：里斯本 ~14 / 40；清迈 ~13 / 40（均在预算内，远未触顶）</li>
+<li>WebFetch：里斯本 ~6 / 30；清迈 ~5 / 30（均充裕）</li>
+</ul>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

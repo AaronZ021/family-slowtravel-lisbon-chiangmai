@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer 3a · 经济 / 物流 / 网络 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+
+/* v2 indicator chips */
+.chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+.chip.green { background: #d1fae5; color: #065f46; }
+.chip.yellow { background: #fef3c7; color: #78350f; }
+.chip.red { background: #fee2e2; color: #991b1b; }
+.chip.gray { background: #e5e7eb; color: #4b5563; }
+.conf { font-size: 11px; color: var(--muted); margin-left: 4px; }
+
+/* v2 matrix table */
+table.v2-matrix { font-size: 13px; }
+table.v2-matrix th { font-size: 12px; }
+table.v2-matrix td.judge { text-align: center; min-width: 110px; }
+table.v2-matrix td.evidence { color: #444; font-size: 12.5px; }
+table.v2-matrix th.layer-cell { background: #ede9d8; }
+
+/* layer-header divider row */
+tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-size: 14px; }
+
+/* distribution bar */
+.dist-bar { display: flex; height: 28px; border-radius: 14px; overflow: hidden; margin: 12px 0; font-size: 12px; font-weight: 600; color: white; }
+.dist-bar .seg { display: flex; align-items: center; justify-content: center; }
+.dist-bar .seg.green { background: #10b981; }
+.dist-bar .seg.yellow { background: #f59e0b; }
+.dist-bar .seg.red { background: #ef4444; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="v2_matrix.html">v2 Indicator 矩阵</a>
+      <a href="v2_layer2.html">Layer 2 硬约束</a>
+      <a href="v2_layer3a.html" class="active">Layer 3a 经济/物流</a>
+      <a href="v2_layer3b.html">Layer 3b 儿童/出行</a>
+      <a href="v2_layer4.html">Layer 4 社区主题</a>
+      <a href="evidence_side_by_side.html">v1 横向对照</a>
+      <a href="evidence_lisbon.html">v1 里斯本证据</a>
+      <a href="evidence_chiang_mai.html">v1 清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 id="layer-3a-indicators">Layer 3a · 经济 / 物流 / 网络 Indicators<a class="headerlink" href="#layer-3a-indicators" title="Permanent link">¶</a></h1>
+<p><strong>范围</strong>：3.1 物价 COL · 3.2 住房月租 · 3.3 餐饮/食杂/交通月度成本 · 3.4 住房关键设施可见比 · 3.5 网速 · 3.6 移动数据 · 3.7 公共交通 · 3.15 杂货 · 3.16 药店 · 3.17 餐饮多样性</p>
+<p><strong>对比对象</strong>：里斯本（葡萄牙）vs 清迈（泰国） — 2 成人 + 4.5 岁 + 2.5 岁，慢旅 90 天
+<strong>判断尺度</strong>：Green = 强支持长居 / Yellow = 可行有摩擦 / Red = 显著风险或不足 / Gray = 数据不足
+<strong>置信度</strong>：high = 多平台 indices + 社区交叉 / med = 单平台 + 部分社区 / low = 单源孤证</p>
+<hr />
+<h2 id="indicator-31-cost-of-living-index">Indicator 3.1 — Cost of Living Index<a class="headerlink" href="#indicator-31-cost-of-living-index" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：整体物价水平直接决定 90 天预算是否可承受。家庭旅居成本主要由住房 + 食物 + 交通 + 服务构成。</p>
+<p><strong>期望数据源</strong>：Numbeo Cost of Living Index、Expatistan、Mercer
+<strong>充分性阈值</strong>：至少 2 个聚合 index</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>平台 indices（Numbeo 2026）</th>
+<th>关键单价点</th>
+<th>社区佐证</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>COLI <strong>54.2</strong> / Rent <strong>38.6</strong> / COLI+Rent <strong>47.2</strong> / Groceries <strong>50.1</strong> / Restaurant <strong>53.1</strong> / PPP <strong>60.9</strong></td>
+<td>单人月支出（不含房租）<strong>~€753.5 / C$1,212.8</strong>；廉价餐 €15；中端两人餐 €56.5</td>
+<td>Numbeo 自评 "Lisbon 比 Toronto 便宜 16.8%（不含房租）"；ECI 数据：rent 比 Toronto 仅低 3.4% — 房租贵是核心问题</td>
+<td><strong>Yellow</strong> — 食杂 / 餐饮中等偏贵，房租是绝对的成本霸主</td>
+<td>high</td>
+<td>S-LIS-086, S-LIS-087, S-LIS-088</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>COLI <strong>34.8</strong> / Rent <strong>10.6</strong> / COLI+Rent <strong>24.0</strong> / Groceries <strong>43.3</strong> / Restaurant <strong>21.2</strong> / PPP <strong>55.5</strong></td>
+<td>单人月支出（不含房租）<strong>~฿18,113 / C$769</strong>；廉价餐 ฿65；中端两人餐 ฿600</td>
+<td>Numbeo 自评 "Chiang Mai 比 Toronto 便宜 50.7%"；对比 Lisbon："比里斯本 COLI 低 40.7%（不含房租）/ 51.7%（含房租）/ 71.3%（房租）"</td>
+<td><strong>Green</strong> — 数值上几乎所有维度都显著低于里斯本</td>
+<td>high</td>
+<td>S-CMI-059, S-CMI-060, S-CMI-061</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-32-2-furnished">Indicator 3.2 — 住房月租中位（2 卧 furnished 中心区）<a class="headerlink" href="#indicator-32-2-furnished" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：4 人家庭至少需 2 卧；furnished + 中心区是慢旅家庭的事实标准。这是 90 天总预算最大的单一变量。</p>
+<p><strong>期望数据源</strong>：Numbeo Apartment Rent + Idealista（PT）+ DDproperty / Hipflat（TH）+ Airbnb 月租
+<strong>充分性阈值</strong>：≥2 数据源给出 2BR furnished 价格区间</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>Numbeo 2026 价位</th>
+<th>平台 listing 实测</th>
+<th>社区佐证</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>1BR 中心 <strong>€1,411</strong> / 外围 €1,071；3BR 中心 <strong>€2,539</strong> / 外围 €1,712；推算 <strong>2BR furnished 中心 ≈ €1,800-2,300</strong></td>
+<td>Idealista 显示 Avenidas Novas / Príncipe Real 有 furnished T2（70m²）多个 listing；Blueground furnished 高端 stock 集中在 Avenidas Novas</td>
+<td>v1 已多次记录 "rent skyrocketed post-2022 digital nomad influx"；当地新建少 + 历史楼存量</td>
+<td><strong>Red</strong> — 房租明显挤压家庭 90 天预算（€5,400-6,900 仅住房）；与本地中位净收入 €1,374 形成强烈反差（房价收入比 18.92，Numbeo 列为 Very High）</td>
+<td>high</td>
+<td>S-LIS-086, S-LIS-088, S-LIS-096, S-LIS-103</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>1BR 中心 ฿16,524 / 外围 ฿9,373；3BR 中心 <strong>฿29,942 (~€790)</strong> / 外围 ฿17,308；2BR furnished 中心 <strong>฿20,000-30,000 (~€530-790)</strong></td>
+<td>DDproperty 显示 56 个 2BR condo listing；Nimman Soi 6 实测 ฿30,000 furnished 2BR；Hang Dong 主要是 stand-alone house（很少 condo）</td>
+<td>v1 S-CMI-006/007 一致：长租 12-22k THB 2BR；Maya/Nim City 周边 furnished 充足</td>
+<td><strong>Green</strong> — 90 天 2BR furnished 约 €1,600-2,400 总价；与里斯本相差 3-4 倍</td>
+<td>high</td>
+<td>S-CMI-059, S-CMI-061, S-CMI-071</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-33">Indicator 3.3 — 餐饮 / 食杂 / 交通月度成本<a class="headerlink" href="#indicator-33" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：仅次于住房的第二大日常支出，决定家庭日常生活舒适度。</p>
+<p><strong>期望数据源</strong>：Numbeo 全分类 indices + 单价对照
+<strong>充分性阈值</strong>：Numbeo 全分类数值</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>里斯本</th>
+<th>清迈</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restaurant Price Index (Numbeo)</td>
+<td><strong>53.1</strong></td>
+<td><strong>21.2</strong></td>
+<td>清迈餐厅价 ≈ 里斯本的 40%</td>
+</tr>
+<tr>
+<td>Groceries Index (Numbeo)</td>
+<td><strong>50.1</strong></td>
+<td><strong>43.3</strong></td>
+<td>食杂差距远小于餐饮（清迈进口食品贵）</td>
+</tr>
+<tr>
+<td>廉价餐</td>
+<td>€15.00</td>
+<td>€1.71</td>
+<td>~9 倍差</td>
+</tr>
+<tr>
+<td>中端两人餐</td>
+<td>€56.50</td>
+<td>€15.83</td>
+<td>~3.5 倍差</td>
+</tr>
+<tr>
+<td>牛奶 1L</td>
+<td>€1.04</td>
+<td>€1.65</td>
+<td>清迈反而更贵</td>
+</tr>
+<tr>
+<td>鸡肉 1kg</td>
+<td>€6.63</td>
+<td>€2.55</td>
+<td>里斯本贵 2.6 倍</td>
+</tr>
+<tr>
+<td>苹果 1kg</td>
+<td>€1.96</td>
+<td>€2.24</td>
+<td>清迈贵 14%（进口）</td>
+</tr>
+<tr>
+<td>月度交通月票</td>
+<td><strong>€40.00</strong></td>
+<td><strong>€47.48</strong></td>
+<td>接近，但清迈无统一月票，此数为 Numbeo 估算</td>
+</tr>
+<tr>
+<td>出租车 1km</td>
+<td>€0.96</td>
+<td>€0.79</td>
+<td>清迈低 18%</td>
+</tr>
+<tr>
+<td>基本水电 85m²</td>
+<td><strong>€147.20</strong></td>
+<td><strong>€56.21</strong></td>
+<td>里斯本贵 2.6 倍（冬季供暖差距更大）</td>
+</tr>
+<tr>
+<td>60Mbps 家庭宽带</td>
+<td>€30.48</td>
+<td>€15.89</td>
+<td>里斯本贵 92%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>里斯本判断</strong>：餐饮 / 公用事业 / 宽带显著贵；食杂中等；公共交通价廉。家庭月度（不含房租）参考 <strong>€753 单人 × 4 ≈ €2,260（Numbeo 家庭加权约低 25%，~€1,700-2,000）</strong>。<strong>Yellow</strong> · high · 关键源 S-LIS-086, S-LIS-087
+<strong>清迈判断</strong>：餐饮 / 公用事业 / 宽带 / 肉类大幅便宜；进口/乳制品/苹果略贵于里斯本（小项）。家庭月度（不含房租）参考 <strong>~฿66,398 / 4 人 ≈ €1,750</strong>。<strong>Green</strong> · high · 关键源 S-CMI-059, S-CMI-060</p>
+<hr />
+<h2 id="indicator-34-listing">Indicator 3.4 — 住房关键设施在 listing 中的可见比<a class="headerlink" href="#indicator-34-listing" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：电梯（4 人 + 两娃带行李）/ 暖气（里斯本冬季）/ 空气净化器（清迈烧林季）— 缺失会显著降低体感舒适度。</p>
+<p><strong>期望数据源</strong>：Airbnb/Booking/Idealista/DDproperty listing 摘要抽样估算
+<strong>充分性阈值</strong>：从 ≥20 listing 估算</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>抽样观察</th>
+<th>平台/社区一致信号</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>Blueground 高端 stock（Avenidas Novas/Príncipe Real）明确标"elevator + AC + heating"；老城 Alfama/Bairro Alto 历史楼 4-5 层无电梯<strong>普遍</strong>；中央暖气罕见，多为可移动电暖器</td>
+<td>v1 S-LIS-081（Portugalist）专题论"如何在没有中央供暖的葡萄牙房子保暖"；S-LIS-080 Tripadvisor 评论投诉电梯故障；多个家庭博客建议<strong>专门筛选带电梯的 listing</strong></td>
+<td><strong>Yellow</strong> — 高端 furnished stock（Blueground/同等）电梯+AC 可见比高（估 &gt;70%），但<strong>暖气</strong>普遍缺失或不可靠；Alfama/Mouraria 历史楼电梯可见比低（估 &lt;30%）</td>
+<td>med</td>
+<td>S-LIS-080, S-LIS-081, S-LIS-103</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>Airbnb Chiang Mai 多 listing 直接标"AC + air purifier + HEPA"；2025 后 HEPA 已成卖点；condo 形态本身电梯标配（Nimman/Maya/Nim City 区）</td>
+<td>"Hotels and accommodations now have HEPA air purifiers as a selling point post-2025" — 多数烧林季博客一致；S-CMI-072 Rimping 与 Maya/Nim City 同区，condo 周边普遍 7+ 层带电梯</td>
+<td><strong>Green</strong> — 烧林季的核心硬约束（空气净化器）反而成为 listing 标准卖点；condo stock 电梯标配</td>
+<td>med</td>
+<td>S-CMI-046, S-CMI-072 + 新搜索</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注</strong>：未做严格 20 个 listing 的逐条统计（超出本 indicator 网络预算），结论基于平台搜索结果摘要 + 社区一致信号。如需精确比例，建议后续手动抽样 30 个 listing。</p>
+</blockquote>
+<hr />
+<h2 id="indicator-35">Indicator 3.5 — 网速 — 平均下载 + 上传<a class="headerlink" href="#indicator-35" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：远程工作家庭的基础设施约束（视频会议 / 上传剪辑）。</p>
+<p><strong>期望数据源</strong>：Speedtest Global Index（Ookla）城市层 + Wikipedia 聚合
+<strong>充分性阈值</strong>：城市层中位 Mbps</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>国家级中位（Speedtest, Mar 2026）</th>
+<th>城市级</th>
+<th>社区佐证</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>固网 <strong>243.84 Mbps</strong> / 移动 <strong>137.64 Mbps</strong></td>
+<td>里斯本作为葡萄牙最大都市，城市级 ≥ 国家级；Numbeo 60Mbps 月费 €30.48（说明 60Mbps 是基础档，1Gbps fiber 普及）</td>
+<td>v1 多个数字游民博客确认 fiber 普及 + 速度稳定</td>
+<td><strong>Green</strong> — 固网中位 &gt;240Mbps 完全满足视频会议、4K 流媒体、家庭多设备</td>
+<td>high</td>
+<td>S-LIS-091</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>固网 <strong>279.65 Mbps</strong> / 移动 <strong>137.98 Mbps</strong>；Nation Thailand 2025 报道泰国全球第 13</td>
+<td>城市级：3BB / AIS / True fiber 在 Nimman/Hang Dong/Mae Rim 全覆盖；3BB Giga Fiber 1Gbps/100Mbps <strong>฿590/月 (~€15.5)</strong></td>
+<td>v1 S-CMI 多源记录 expat 一致认为 CM fiber 稳定快；Iglu 等 co-working 报告 1Gbps 标配</td>
+<td><strong>Green</strong> — 实际固网中位高于葡萄牙；价格仅为葡萄牙的一半</td>
+<td>high</td>
+<td>S-CMI-064, S-CMI-065, S-CMI-068</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-36">Indicator 3.6 — 移动数据资费<a class="headerlink" href="#indicator-36" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：出门带娃必备移动网络；进口 eSIM / 本地 SIM 价差大。</p>
+<p><strong>期望数据源</strong>：Cable.co.uk Worldwide Mobile Data Pricing + 各运营商官方
+<strong>充分性阈值</strong>：5GB/30GB 月套餐价</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>Cable.co.uk 排名 + 1GB 均价（2023 edition）</th>
+<th>主流运营商套餐</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td><strong>#148 / 237，$1.79/GB</strong></td>
+<td>MEO Enjoy 30GB <strong>€15</strong>（15 天）；Vodafone Go Total <strong>€34.99/30 天</strong>；NOS/MEO/Vodafone 5G 全覆盖</td>
+<td><strong>Yellow</strong> — 价格在欧盟内偏高（≈ 西欧典型），但 30GB 包 €15 起的入门选项对家庭 90 天足够；与本地中位净收入 €1,374 相比仍是小项</td>
+<td>high</td>
+<td>S-LIS-092, S-LIS-093</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td><strong>#34 / 237，$0.41/GB</strong></td>
+<td>dtac GO 30GB ฿899（~€24）/月；AIS 15-30GB ฿49-1599；tourist eSIM 30GB ฿599/15 天</td>
+<td><strong>Green</strong> — 全球前 35 廉价梯队，1GB 均价仅葡萄牙的 23%</td>
+<td>high</td>
+<td>S-CMI-066, S-CMI-067</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-37">Indicator 3.7 — 公共交通通勤时间指数<a class="headerlink" href="#indicator-37" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：带娃家庭高度依赖公共交通 / 拼车，长通勤会显著消耗精力。</p>
+<p><strong>期望数据源</strong>：Numbeo Traffic Index、TomTom Traffic Index、Moovit
+<strong>充分性阈值</strong>：通勤时间分钟 + 拥堵指数</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>Numbeo (2026)</th>
+<th>TomTom (2024)</th>
+<th>公共交通系统</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>Traffic Index <strong>132.71</strong> / Time Index <strong>34.64 min</strong> / 单程 14.41km / 拥堵 138.82</td>
+<td>拥堵 <strong>26%</strong> / 10km 平均 23m47s / <strong>每年 95h 损失</strong></td>
+<td>Metro 4 线 + Carris bus/tram + CP train；<strong>Navegante Metropolitano €40/月</strong>，子女 €30，家庭票 €80/月 (3+ 人户口)</td>
+<td><strong>Green</strong> — 拥堵率不高（26%），公共交通系统完善 + 家庭月票优惠极大；3 岁以下免费乘车</td>
+<td>high</td>
+<td>S-LIS-089, S-LIS-090, S-LIS-095</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>Traffic Index <strong>115.86</strong> / Time Index <strong>26.20 min</strong> / 单程 13.92km / 拥堵 105.03</td>
+<td>拥堵 <strong>37%</strong> / 10km 平均 23m31s / <strong>每年 72h 损失</strong> / 全球排名 116</td>
+<td><strong>无统一地铁 / 公交月票</strong>；songthaew (red truck) ฿20-100/趟 + Grab + Bolt + 自驾摩托；songthaew 无安全座椅 / 安全带</td>
+<td><strong>Yellow</strong> — Numbeo 时间指数最低（26.2min），但 TomTom 拥堵率反高于里斯本（37%）说明城市路网摩托主导；公共交通体系<strong>缺乏家庭友好结构</strong>（无月票、无安全带），需依赖 Grab + 自带儿童座椅</td>
+<td>high</td>
+<td>S-CMI-062, S-CMI-063, S-CMI-070, S-CMI-036, S-CMI-038</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-315">Indicator 3.15 — 杂货 — 主要超市数 + 进口食品供应<a class="headerlink" href="#indicator-315" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：4.5 岁 + 2.5 岁 picky eater + 进口食材（婴儿食品、欧式乳制品、亚洲调料）需求高。</p>
+<p><strong>期望数据源</strong>：超市官方店面地图 + 评论
+<strong>充分性阈值</strong>：每候选区 ≥2 大型超市 + 进口食品类别覆盖</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>全国 / 城市连锁</th>
+<th>进口食品 hub</th>
+<th>候选区可达性</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>Continente <strong>500+ 店</strong>（葡萄牙最大） / Pingo Doce <strong>486</strong> / Lidl <strong>277</strong> / Auchan / Mercadona；<strong>El Corte Inglés São Sebastião</strong> = 完整 World Food 区 + 国际品牌；Celeiro / Go Natural = 全城有机连锁；Martim Moniz = 亚洲超市群</td>
+<td><strong>EC Inglés (Av. António Augusto de Aguiar)</strong> = 1 个；Asian 集群 Martim Moniz；Continente Colombo 库存最深</td>
+<td>Avenidas Novas / Príncipe Real 步行 / 短交通可达 EC Inglés + 多个 Pingo Doce；Continente 在 Colombo / Vasco da Gama mall 大店</td>
+<td><strong>Green</strong> — 主流连锁高密度 + 国际/有机/亚洲三个垂类齐全</td>
+<td>high</td>
+<td>S-LIS-097, S-LIS-098, S-LIS-085</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td><strong>Rimping</strong>（5+ 店，含 Maya/Nim City/Kad Farang）= 旗舰进口连锁；<strong>Tops</strong> (Central Festival/Kad Suan Kaew)；Big C / Lotus / Makro = 大型；7-Eleven / Family Mart 密度极高</td>
+<td>Rimping 进口覆盖 <strong>瑞士/德/新/西/意/韩/美/日/英/法 10 国</strong>；Maya Branch 商业区核心</td>
+<td><strong>Nimman</strong>：Rimping Maya（步行）+ Tops Central Festival（10 min）；<strong>Hang Dong</strong>：Rimping Kad Farang（核心目标客户为外籍家庭）；<strong>Mae Rim</strong>：Rimping 集团总部所在区</td>
+<td><strong>Green</strong> — 候选三区均有 Rimping + Tops 覆盖；进口食品 SKU 不输欧洲城市</td>
+<td>high</td>
+<td>S-CMI-041, S-CMI-042, S-CMI-072</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-316-24h">Indicator 3.16 — 药店密度 + 24h<a class="headerlink" href="#indicator-316-24h" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：幼儿急性病（发烧 / 腹泻 / 过敏）经常需要非营业时间购药。</p>
+<p><strong>期望数据源</strong>：政府药店登记 + Google Maps + 24h 网络
+<strong>充分性阈值</strong>：每候选区 1 公里内药店数 + 24h 选项</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>总量 + 密度</th>
+<th>24h 系统</th>
+<th>候选区可达性</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>葡萄牙 <strong>2,800+ 家药店</strong>全国，<strong>1.5 药剂师/1000 人</strong>（2021）；里斯本市区密度高，大致每 300-500m 一家</td>
+<td><strong>Farmácias de Serviço</strong> 国家级强制轮值系统：每晚每区固定指定 1-2 家 24h 服务，门口贴出最近 24h 药店；含 Farmácia do Marquês 等知名点</td>
+<td>Avenidas Novas / Príncipe Real / Marquês de Pombal 区域内 1km 走路圈 <strong>≥5 家</strong> Farmácia 是常态；夜间需到当晚 de serviço 指定店</td>
+<td><strong>Green</strong> — 国家级强制 24h 轮值制度 + 高密度，体系成熟</td>
+<td>high</td>
+<td>S-LIS-099, S-LIS-100</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>Boots（含 Nimman / Central Festival G floor / MAYA B1 / Chang Klan / Thapae Gate 多店）+ Watsons（Maya / Central Chiangmai 2 等）+ Save Drug + 本地独立药店密集</td>
+<td><strong>Be WELL 24/7 Late Night Pharmacy</strong> = 明确 24h；Medica Hub (Nimman) 营业至午夜；Boots Nimman 周末关至 22:30；<strong>国家级 24h 强制轮值不存在</strong></td>
+<td>Nimman 商业核心步行 1km <strong>多 Boots + Watsons + 24/7 Be WELL</strong>；Hang Dong / Mae Rim 候选区 24h 较少，依赖 driving 10-15min 回市区</td>
+<td><strong>Yellow</strong> — 总密度高 + 有 24h 选项，但<strong>无国家强制轮值</strong>；24h 选项集中在 Nimman 商业带，Hang Dong/Mae Rim 候选区缺乏夜间步行可达</td>
+<td>med</td>
+<td>S-CMI-073, S-CMI-074</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="indicator-317">Indicator 3.17 — 食物多样性 + 儿童友好餐饮<a class="headerlink" href="#indicator-317" title="Permanent link">¶</a></h2>
+<p><strong>定义/重要性</strong>：90 天家庭旅居 ≈ 270 餐外食占比可观，儿童友好 + 多样性影响家庭幸福感。</p>
+<p><strong>期望数据源</strong>：TripAdvisor / Yelp 4.0+ 评分密度 + 家庭博客 / wanderlog
+<strong>充分性阈值</strong>：每候选区 ≥5 个 family-friendly 4.0+ 餐厅</p>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>平台密度 + 头部 picks</th>
+<th>儿童设施 (kid menu / high chair / play area)</th>
+<th>文化多样性</th>
+<th>判断</th>
+<th>置信度</th>
+<th>关键源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>里斯本</strong></td>
+<td>TripAdvisor "Best Family Restaurants Lisbon" 列表 hundreds；Wanderlog top-50 + Taste of Lisboa / Eating Europe / TheUrbanKids 多博客交叉</td>
+<td>Capricciosa（kids menu + high chair + 尿布台）/ Monte Mar（Kids menu + 周末娱乐）/ Lota d'Ávila（专属儿童区）/ Atalho Reel（草坪外摆）/ Café Comoba（儿童椅）</td>
+<td>葡萄牙 + 巴西 + 非洲（莫桑/安哥拉）+ 意大利 + 印度 + 中国 + 日本 + 越南；<strong>Time Out Market</strong> 是 30+ 风味试错圣地</td>
+<td><strong>Green</strong> — 评分密度极高 + 儿童设施明确化 + 文化多样性最广</td>
+<td>high</td>
+<td>S-LIS-101, S-LIS-102</td>
+</tr>
+<tr>
+<td><strong>清迈</strong></td>
+<td>TripAdvisor "10 Best Family Restaurants CM" + Wanderlog top-50 + Chiang Mai Kids / BKK Kids "15 Top Kids Cafes"；分区列表覆盖 Nimman / Hang Dong</td>
+<td>Namtok Hang Dong（kid menu + 大型 trampoline 游乐 2-12 岁）/ Ginger Farm Kitchen（耐心带娃，菜单儿童友好）/ Freebird Cafe（kids corner + 玩具）/ Jungle De Cafe Hang Dong（亲子餐厅）/ More Space（小型游乐区）</td>
+<td>北泰 + 全泰 + 中 + 日 + 韩 + 西餐 + 印度 + 素食 + 有机；外籍家庭长居 driving 出菜系多样性；<strong>Nimman 是国际餐厅密度最高带</strong></td>
+<td><strong>Green</strong> — Nimman/Hang Dong 候选区均 ≥5 个 4.0+ 儿童友好；游乐区设施反而<strong>比里斯本更普遍</strong>（kid cafe 概念发达）</td>
+<td>high</td>
+<td>S-CMI-052, S-CMI-075, S-CMI-076</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_1">数据健康度小结<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>LIS 置信度</th>
+<th>CMI 置信度</th>
+<th>量化 indices 覆盖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1 COL</td>
+<td>high</td>
+<td>high</td>
+<td>Numbeo 全 6 项 + 对比页 ✅</td>
+</tr>
+<tr>
+<td>3.2 住房月租</td>
+<td>high</td>
+<td>high</td>
+<td>Numbeo 4 档 + 平台 listing ✅</td>
+</tr>
+<tr>
+<td>3.3 餐饮/食杂/交通</td>
+<td>high</td>
+<td>high</td>
+<td>Numbeo 各分类 ✅</td>
+</tr>
+<tr>
+<td>3.4 设施可见比</td>
+<td>med</td>
+<td>med</td>
+<td>抽样观察 + 平台描述（未严格 20-listing 计数）</td>
+</tr>
+<tr>
+<td>3.5 网速</td>
+<td>high</td>
+<td>high</td>
+<td>Speedtest 国家级（city-proxy 合理）+ Numbeo 月费 ✅</td>
+</tr>
+<tr>
+<td>3.6 移动数据</td>
+<td>high</td>
+<td>high</td>
+<td>Cable.co.uk 国家级 + 运营商套餐 ✅</td>
+</tr>
+<tr>
+<td>3.7 公共交通</td>
+<td>high</td>
+<td>high</td>
+<td>Numbeo Traffic + TomTom + 官方票价 ✅</td>
+</tr>
+<tr>
+<td>3.15 杂货</td>
+<td>high</td>
+<td>high</td>
+<td>连锁全国数 + 区域可达 ✅</td>
+</tr>
+<tr>
+<td>3.16 药店</td>
+<td>high</td>
+<td>med</td>
+<td>LIS 有国家级 24h 系统；CMI 缺国家级轮值</td>
+</tr>
+<tr>
+<td>3.17 餐饮多样性</td>
+<td>high</td>
+<td>high</td>
+<td>TripAdvisor + 多博客 + 设施细节 ✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>触线</strong>：WebSearch ≈ 12 次（远低于 40 上限），WebFetch ≈ 14 次（低于 30 上限）；速率正常。<strong>不可访问源</strong>：Speedtest 城市页 + TomTom 城市页（fallback 使用 Wikipedia/Ookla 国家级 + Numbeo Traffic + 搜索摘要，已记入 <code>inaccessible_sources.csv</code>）。</p>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

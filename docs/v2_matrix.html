@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>v2 Indicator 矩阵 · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+
+/* v2 indicator chips */
+.chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+.chip.green { background: #d1fae5; color: #065f46; }
+.chip.yellow { background: #fef3c7; color: #78350f; }
+.chip.red { background: #fee2e2; color: #991b1b; }
+.chip.gray { background: #e5e7eb; color: #4b5563; }
+.conf { font-size: 11px; color: var(--muted); margin-left: 4px; }
+
+/* v2 matrix table */
+table.v2-matrix { font-size: 13px; }
+table.v2-matrix th { font-size: 12px; }
+table.v2-matrix td.judge { text-align: center; min-width: 110px; }
+table.v2-matrix td.evidence { color: #444; font-size: 12.5px; }
+table.v2-matrix th.layer-cell { background: #ede9d8; }
+
+/* layer-header divider row */
+tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-size: 14px; }
+
+/* distribution bar */
+.dist-bar { display: flex; height: 28px; border-radius: 14px; overflow: hidden; margin: 12px 0; font-size: 12px; font-weight: 600; color: white; }
+.dist-bar .seg { display: flex; align-items: center; justify-content: center; }
+.dist-bar .seg.green { background: #10b981; }
+.dist-bar .seg.yellow { background: #f59e0b; }
+.dist-bar .seg.red { background: #ef4444; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="v2_matrix.html" class="active">v2 Indicator 矩阵</a>
+      <a href="v2_layer2.html">Layer 2 硬约束</a>
+      <a href="v2_layer3a.html">Layer 3a 经济/物流</a>
+      <a href="v2_layer3b.html">Layer 3b 儿童/出行</a>
+      <a href="v2_layer4.html">Layer 4 社区主题</a>
+      <a href="evidence_side_by_side.html">v1 横向对照</a>
+      <a href="evidence_lisbon.html">v1 里斯本证据</a>
+      <a href="evidence_chiang_mai.html">v1 清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 class="page-title">v2 Indicator 矩阵</h1>
+<p class="page-sub">37 个 indicators × 2 城；每行一个 indicator。判断与置信度基于官方/平台指数 + 社区佐证。判断只到 indicator 级，不输出城市总评。</p>
+<h3>里斯本（37 indicators）</h3><div class="dist-bar"><div class="seg green" style="width:72.97297297297297%">Green 27</div><div class="seg yellow" style="width:24.324324324324326%">Yellow 9</div><div class="seg red" style="width:2.7027027027027026%">Red 1</div></div>
+<h3>清迈（37 indicators）</h3><div class="dist-bar"><div class="seg green" style="width:72.97297297297297%">Green 27</div><div class="seg yellow" style="width:24.324324324324326%">Yellow 9</div><div class="seg red" style="width:2.7027027027027026%">Red 1</div></div>
+<table class="v2-matrix"><thead><tr>
+<th>ID</th><th>Indicator</th><th>里斯本</th><th>里斯本 依据</th><th>清迈</th><th>清迈 依据</th>
+</tr></thead><tbody>
+<tr class="layer-header"><td colspan="6">Layer 2 · 硬约束</td></tr>
+<tr>
+<td><strong>2.1</strong></td>
+<td>签证 — 90 天停留可行性</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">单次申根 C 短签即可覆盖全部 90 天，无需多次入境，政策稳定。<br><small>S-LIS-001, S-LIS-002, S-LIS-003, S-LIS-004, S-LIS-005</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">当前 60 天免签 + 30 天延期路径已成熟；备份路径（旅游签）兜底。<br><small>S-CMI-001-006（v1 visa baseline）, **S-CMI-111, S-CMI-112**（new）</small></td>
+</tr>
+<tr>
+<td><strong>2.2</strong></td>
+<td>签证 — 申请提前期 + 复杂度</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">流程标准但材料量大，需提前 8 周启动。带两个幼儿 + 中国出生证明翻译可能再加 1-2 周。<br><small>S-LIS-003, S-LIS-004, **S-LIS-131**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">提前期 = 0；复杂度远低于葡。<br><small>S-CMI-001-006, **S-CMI-113**</small></td>
+</tr>
+<tr>
+<td><strong>2.3</strong></td>
+<td>签证 — 拒签率 / 接受度（中国护照 + 加拿大永居）</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">medium</span></td>
+<td class="evidence">中国整体 4.6% 拒签 + 加拿大 PR 加分应低于此数；但缺中国×葡萄牙交叉精确数。<br><small>S-LIS-001, **S-LIS-132**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">免签机制下&quot;拒签率&quot;实际趋近 0。<br><small>S-CMI-001-006</small></td>
+</tr>
+<tr>
+<td><strong>2.4</strong></td>
+<td>官方安全建议</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">三国一致最低级 + Numbeo high safety + 风险局部化（特定电车/广场）。<br><small>S-LIS-008, S-LIS-009, **S-LIS-133**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">加方&quot;高度谨慎&quot;主要针对曼谷与南部，清迈实际治安指数高于里斯本。<br><small>S-CMI-007, S-CMI-008, **S-CMI-114**</small></td>
+</tr>
+<tr>
+<td><strong>2.5</strong></td>
+<td>犯罪 — 与家庭+幼儿相关的具体威胁</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">暴力犯罪针对游客极罕见；扒窃可通过装备 + 行为习惯对冲。<br><small>S-LIS-008, **S-LIS-133**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Numbeo crime 指标显著优于里斯本；家庭具体威胁可对冲。<br><small>S-CMI-007, S-CMI-008, **S-CMI-114**</small></td>
+</tr>
+<tr>
+<td><strong>2.6</strong></td>
+<td>空气质量 — PM2.5 年均</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">低污染基线 + 海风稀释机制 + Numbeo 量化指标。<br><small>S-LIS-013, S-LIS-014, **S-LIS-133, S-LIS-134**</small></td>
+<td class="judge"><span class="chip red">Red</span><span class="conf">high</span></td>
+<td class="evidence">2024 IQAir 明确数字 + Numbeo 双重确认 + 社区一致。<br><small>S-CMI-013-016, **S-CMI-115, S-CMI-116**</small></td>
+</tr>
+<tr>
+<td><strong>2.7</strong></td>
+<td>空气质量 — PM2.5 月度峰值（目标月份）</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">月度波动小，目标月份全年优。<br><small>S-LIS-013, S-LIS-014</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">燃烧季月度峰值是 main constraint；可通过避开 2-4 月对冲。<br><small>S-CMI-013-016, **S-CMI-115, S-CMI-116, S-CMI-117**</small></td>
+</tr>
+<tr>
+<td><strong>2.8</strong></td>
+<td>气候 — 月均温度（高 / 低）</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">温度范围对幼儿友好，无极寒。<br><small>S-LIS-010, S-LIS-011, **S-LIS-135**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">凉季宜人但仅 ~3 个月；其余月份高温需空调全时段。<br><small>S-CMI-017, **S-CMI-118**</small></td>
+</tr>
+<tr>
+<td><strong>2.9</strong></td>
+<td>气候 — 月均降雨 + 雨天数</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">冬季降雨 12-15 雨天/月 + 100+mm 不算极端，但带 2 幼儿出门需对冲（雨衣 + 室内备选）。<br><small>**S-LIS-135**, S-LIS-010</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">雨季雨量大但每天雨时段集中 1-3h，可计划。<br><small>**S-CMI-118**</small></td>
+</tr>
+<tr>
+<td><strong>2.10</strong></td>
+<td>气候 — 极端天数</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**（10-5 月）/ 🟧 6-8 月（避免午后外出）<br><small>**S-LIS-135, S-LIS-136**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 11-2 月 / 🟥 3-5 月（持续 ≥35°C + 燃烧季）/ 🟧 6-10 月（高湿 + 单日午后暴雨）<br><small>**S-CMI-118**</small></td>
+</tr>
+<tr>
+<td><strong>2.11</strong></td>
+<td>医疗 — 三甲级私立医院密度（JCI 认证）</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**<br><small>S-LIS-015-023, **S-LIS-137**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**<br><small>S-CMI-030, S-CMI-034, **S-CMI-119**</small></td>
+</tr>
+<tr>
+<td><strong>2.12</strong></td>
+<td>医疗 — 24h 儿科急诊数量 + 距离</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**<br><small>S-LIS-015, S-LIS-017, S-LIS-018, S-LIS-019, **S-LIS-138**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**（市区）/ 🟧 郊外候选区（仍可达但 ≥10km）<br><small>S-CMI-030, S-CMI-034, **S-CMI-119, S-CMI-120**</small></td>
+</tr>
+<tr>
+<td><strong>2.13</strong></td>
+<td>医疗 — 英语医生密度</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**<br><small>S-LIS-022, S-LIS-023, **S-LIS-139, S-LIS-140**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**（私立医院）/ 🟧 国家整体 EF 低分（需带翻译 app 处理药店 / 出租车）<br><small>S-CMI-029, S-CMI-031, **S-CMI-119, S-CMI-121, S-CMI-122**</small></td>
+</tr>
+<tr>
+<td><strong>2.14</strong></td>
+<td>医疗 — 自付门诊价格</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">medium</span></td>
+<td class="evidence">🟩 confidence: **med-high**（私立明码标价；旅游者公立成本低）<br><small>S-LIS-020, S-LIS-021, **S-LIS-141**</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**（价格极低 + 透明）<br><small>S-CMI-031, S-CMI-035, **S-CMI-123**</small></td>
+</tr>
+<tr>
+<td><strong>2.15</strong></td>
+<td>医疗 — 健康保险直付 + 报销复杂度</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">medium</span></td>
+<td class="evidence">国际私立医院直付清单成熟，但加拿大本土险（Manulife/Sun Life）默认 reimbursement 流程；需提前与 Allianz Care 国际版或 IMG / Cigna Global 配置。<br><small>S-LIS-020, S-LIS-023, **S-LIS-141, S-LIS-142**</small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">medium</span></td>
+<td class="evidence">直付网络成熟，加拿大本土险需先付后报。低自付价格降低 cash-flow 风险。<br><small>S-CMI-030, **S-CMI-124**</small></td>
+</tr>
+<tr>
+<td><strong>2.16</strong></td>
+<td>传染病基线</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">🟩 confidence: **high**<br><small>S-LIS-008</small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">登革热为最大可量化风险（雨季）；狂犬通过避狗教育可对冲。需带儿童疫苗记录 + 防蚊全套。<br><small>S-CMI-035, S-CMI-036, **S-CMI-125**</small></td>
+</tr>
+<tr>
+<td><strong>2.17</strong></td>
+<td>自然灾害基线</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">地震 5+ 概率事件存在但建筑现代抗震；非常态高频。<br><small>S-LIS-024, S-LIS-025, **S-LIS-143**</small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">medium</span></td>
+<td class="evidence">地震基线低于里斯本，但 2025 缅甸事件提示存在跨境波及；燃烧季 + 偶发洪水是常态风险。<br><small>S-CMI-038, S-CMI-039, **S-CMI-126**</small></td>
+</tr>
+<tr class="layer-header"><td colspan="6">Layer 3a · 经济/物流/网络</td></tr>
+<tr>
+<td><strong>3.1</strong></td>
+<td>Cost of Living Index</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow — 食杂 / 餐饮中等偏贵，房租是绝对的成本霸主<br><small>S-LIS-086, S-LIS-087, S-LIS-088</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 数值上几乎所有维度都显著低于里斯本<br><small>S-CMI-059, S-CMI-060, S-CMI-061</small></td>
+</tr>
+<tr>
+<td><strong>3.2</strong></td>
+<td>住房月租中位（2 卧 furnished 中心区）</td>
+<td class="judge"><span class="chip red">Red</span><span class="conf">high</span></td>
+<td class="evidence">Red — 房租明显挤压家庭 90 天预算（€5,400-6,900 仅住房）；与本地中位净收入 €1,374 形成强烈反差（房价收入比 18.92，Numbeo 列为 Very High）<br><small>S-LIS-086, S-LIS-088, S-LIS-096, S-LIS-103</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 90 天 2BR furnished 约 €1,600-2,400 总价；与里斯本相差 3-4 倍<br><small>S-CMI-059, S-CMI-061, S-CMI-071</small></td>
+</tr>
+<tr>
+<td><strong>3.3</strong></td>
+<td>餐饮 / 食杂 / 交通月度成本</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">餐饮 / 公用事业 / 宽带显著贵；食杂中等；公共交通价廉。家庭月度（不含房租）参考 €753 单人 × 4 ≈ €2,260（Numbeo 家庭加权约低 25%，~€1,700-2,000）。Yellow · high · 关键源 S-LIS-086, S-LIS-087<br><small>S-LIS-086, S-LIS-087</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">餐饮 / 公用事业 / 宽带 / 肉类大幅便宜；进口/乳制品/苹果略贵于里斯本（小项）。家庭月度（不含房租）参考 ~฿66,398 / 4 人 ≈ €1,750。Green · high · 关键源 S-CMI-059, S-CMI-060<br><small>S-CMI-059, S-CMI-060</small></td>
+</tr>
+<tr>
+<td><strong>3.4</strong></td>
+<td>住房关键设施在 listing 中的可见比</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">medium</span></td>
+<td class="evidence">Yellow — 高端 furnished stock（Blueground/同等）电梯+AC 可见比高（估 &gt;70%），但暖气普遍缺失或不可靠；Alfama/Mouraria 历史楼电梯可见比低（估 &lt;30%）<br><small>S-LIS-080, S-LIS-081, S-LIS-103</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">medium</span></td>
+<td class="evidence">Green — 烧林季的核心硬约束（空气净化器）反而成为 listing 标准卖点；condo stock 电梯标配<br><small>S-CMI-046, S-CMI-072 + 新搜索</small></td>
+</tr>
+<tr>
+<td><strong>3.5</strong></td>
+<td>网速 — 平均下载 + 上传</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 固网中位 &gt;240Mbps 完全满足视频会议、4K 流媒体、家庭多设备<br><small>S-LIS-091</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 实际固网中位高于葡萄牙；价格仅为葡萄牙的一半<br><small>S-CMI-064, S-CMI-065, S-CMI-068</small></td>
+</tr>
+<tr>
+<td><strong>3.6</strong></td>
+<td>移动数据资费</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow — 价格在欧盟内偏高（≈ 西欧典型），但 30GB 包 €15 起的入门选项对家庭 90 天足够；与本地中位净收入 €1,374 相比仍是小项<br><small>S-LIS-092, S-LIS-093</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 全球前 35 廉价梯队，1GB 均价仅葡萄牙的 23%<br><small>S-CMI-066, S-CMI-067</small></td>
+</tr>
+<tr>
+<td><strong>3.7</strong></td>
+<td>公共交通通勤时间指数</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 拥堵率不高（26%），公共交通系统完善 + 家庭月票优惠极大；3 岁以下免费乘车<br><small>S-LIS-089, S-LIS-090, S-LIS-095</small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow — Numbeo 时间指数最低（26.2min），但 TomTom 拥堵率反高于里斯本（37%）说明城市路网摩托主导；公共交通体系缺乏家庭友好结构（无月票、无安全带），需依赖 Grab + 自带儿童座椅<br><small>S-CMI-062, S-CMI-063, S-CMI-070, S-CMI-036, S-CMI-038</small></td>
+</tr>
+<tr>
+<td><strong>3.15</strong></td>
+<td>杂货 — 主要超市数 + 进口食品供应</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 主流连锁高密度 + 国际/有机/亚洲三个垂类齐全<br><small>S-LIS-097, S-LIS-098, S-LIS-085</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 候选三区均有 Rimping + Tops 覆盖；进口食品 SKU 不输欧洲城市<br><small>S-CMI-041, S-CMI-042, S-CMI-072</small></td>
+</tr>
+<tr>
+<td><strong>3.16</strong></td>
+<td>药店密度 + 24h</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 国家级强制 24h 轮值制度 + 高密度，体系成熟<br><small>S-LIS-099, S-LIS-100</small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">medium</span></td>
+<td class="evidence">Yellow — 总密度高 + 有 24h 选项，但无国家强制轮值；24h 选项集中在 Nimman 商业带，Hang Dong/Mae Rim 候选区缺乏夜间步行可达<br><small>S-CMI-073, S-CMI-074</small></td>
+</tr>
+<tr>
+<td><strong>3.17</strong></td>
+<td>食物多样性 + 儿童友好餐饮</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — 评分密度极高 + 儿童设施明确化 + 文化多样性最广<br><small>S-LIS-101, S-LIS-102</small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green — Nimman/Hang Dong 候选区均 ≥5 个 4.0+ 儿童友好；游乐区设施反而比里斯本更普遍（kid cafe 概念发达）<br><small>S-CMI-052, S-CMI-075, S-CMI-076</small></td>
+</tr>
+<tr class="layer-header"><td colspan="6">Layer 3b · 儿童/出行/社群</td></tr>
+<tr>
+<td><strong>3.8</strong></td>
+<td>步行可达度 (Walkability)</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green（候选区）/ Yellow（老城）<br><small></small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow（Nimman / Old City）/ Red（郊区）<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.9</strong></td>
+<td>婴儿车摩擦度</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Yellow（老）/ Green（新区）<br><small></small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow → Red 全城<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.10</strong></td>
+<td>儿童安全座椅在网约车中的可获得性</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow（Taxi Bambino 救场）<br><small></small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow（须自带 + Taxi Bambino）<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.11</strong></td>
+<td>儿童户外活动（候选区前 N 个高质量）</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green<br><small></small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green (11-2月) / Red (3-4月)<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.12</strong></td>
+<td>室内备选数量（雨/烧林季）</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green<br><small></small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green (count) / Yellow (Google 4.3+ 严格)<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.13</strong></td>
+<td>结构化儿童活动短期接纳</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">medium</span></td>
+<td class="evidence">Green<br><small></small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.14</strong></td>
+<td>Childcare / Nanny 平台 + 价格 + 信任机制</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green<br><small></small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green (价格) / Yellow (信任机制)<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.18</strong></td>
+<td>英语普及度</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green (EF 6th)<br><small></small></td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow (EF 119th)<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.19</strong></td>
+<td>expat / worldschooling 社群活跃度</td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green<br><small></small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Green<br><small></small></td>
+</tr>
+<tr>
+<td><strong>3.20</strong></td>
+<td>本地化 vs 旅游/数字游民泡沫</td>
+<td class="judge"><span class="chip yellow">Yellow</span><span class="conf">high</span></td>
+<td class="evidence">Yellow（候选区可避）<br><small></small></td>
+<td class="judge"><span class="chip green">Green</span><span class="conf">high</span></td>
+<td class="evidence">Red(Nimman)/Yellow(Old City)/Green(Hang Dong)<br><small></small></td>
+</tr>
+</tbody></table>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

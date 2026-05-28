@@ -34,3 +34,70 @@ timestamp,source,city,area,layer,dimension,query_or_endpoint,status_code,success
 2026-05-28T01:47:30Z,webfetch,chiang_mai,,housing,airbnb,https://www.airbnb.com/rooms/928488105547968049,403,false,false,0,false,,blocked
 2026-05-28T01:48:00Z,webfetch,chiang_mai,,housing,flatio,https://www.flatio.com/i/apartments-for-rent-chiang-mai,200,partial,false,0,false,,landing page no listings
 2026-05-28T01:48:30Z,webfetch,chiang_mai,,activity,indoor,https://chiangmaifamilyguide.com/best-indoor-playgrounds-in-chiang-mai/,404,false,false,0,false,,404
+2026-05-28T15:15:00Z,webfetch,lisbon,,community,verbatim,https://raquelmsouza.substack.com/p/living-in-lisbon-an-honest-review,200,true,false,0,false,,verbatim extract
+2026-05-28T15:16:00Z,webfetch,lisbon,,community,verbatim,https://www.portugalist.com/portugal-downsides/,200,true,false,0,false,,verbatim extract
+2026-05-28T15:17:00Z,webfetch,lisbon,,community,stay,https://internationalliving.com/new-beginnings-and-a-slower-family-life-in-lisbon/,200,true,false,0,false,,family stay quotes
+2026-05-28T15:18:00Z,webfetch,lisbon,,community,stay,https://7wayfinders.com/six-month-update-on-moving-to-portugal-how-is-everyone-doing/,200,true,false,0,false,,5 kids 6 month
+2026-05-28T15:19:00Z,webfetch,lisbon,,community,winter,https://thecookandthewriter.com/2024/01/08/the-cold-and-damp/,200,true,false,0,false,,winter verbatim
+2026-05-28T15:45:00Z,webfetch,chiang_mai,,community,leaving,https://www.chiangmaicitylife.com/clg/living/going-back-the-part-nobody-warns-you-about/,200,true,false,0,false,,going home quotes
+2026-05-28T15:46:00Z,webfetch,chiang_mai,,community,pros_cons,https://catisoutoftheoffice.com/pros-and-cons-of-living-in-chiang-mai/,200,true,false,0,false,,pros cons verbatim
+2026-05-28T15:47:00Z,webfetch,chiang_mai,,community,burning,https://iglu.net/survivor-guide-chiang-mai-smoky-season/,403,false,false,0,false,,403 blocked
+2026-05-28T15:48:00Z,webfetch,chiang_mai,,community,stay,https://worldlytribe.com/family-friendly-guide-to-living-in-chiang-mai-thailand-for-digital-nomads/,200,true,false,0,false,,family love quotes
+2026-05-28T15:49:00Z,webfetch,chiang_mai,,community,bubble,https://topologica.co/articles/chiang-mai-digital-nomad-reality-check-2025/,200,true,false,0,false,,bubble verbatim
+2026-05-28T12:00:00Z,webfetch,both,,life_op,col_index,https://www.numbeo.com/cost-of-living/compare_cities.jsp,200,true,false,0,false,,full table
+2026-05-28T12:01:00Z,webfetch,lisbon,,life_op,internet,https://www.speedtest.net/global-index/portugal,blocked,false,false,0,false,,blocked
+2026-05-28T12:01:30Z,webfetch,chiang_mai,,life_op,internet,https://www.speedtest.net/global-index/thailand,blocked,false,false,0,false,,blocked
+2026-05-28T12:02:00Z,webfetch,both,,life_op,community,https://www.ef.com/wwen/epi/,200,partial,false,0,false,,Portugal data only TH from search
+2026-05-28T12:03:00Z,webfetch,lisbon,,life_op,traffic,https://www.tomtom.com/traffic-index/lisbon-traffic/,200,partial,false,0,false,,truncated nav only
+2026-05-28T12:03:30Z,webfetch,chiang_mai,,life_op,traffic,https://www.tomtom.com/traffic-index/city/chiang-mai,200,partial,false,0,false,,truncated nav only
+2026-05-28T12:04:00Z,webfetch,lisbon,,life_op,traffic,https://www.numbeo.com/traffic/in/Lisbon,200,true,false,0,false,,TI 132.71
+2026-05-28T12:04:30Z,webfetch,chiang_mai,,life_op,traffic,https://www.numbeo.com/traffic/in/Chiang-Mai,200,true,false,0,false,,TI 115.86
+2026-05-28T12:05:00Z,webfetch,lisbon,,life_op,col_index,https://www.numbeo.com/cost-of-living/in/Lisbon,200,partial,false,0,false,,prices yes indices no
+2026-05-28T12:05:30Z,webfetch,chiang_mai,,life_op,col_index,https://www.numbeo.com/cost-of-living/in/Chiang-Mai,200,partial,false,0,false,,prices yes indices no
+2026-05-28T12:06:00Z,webfetch,both,,life_op,col_index,https://www.numbeo.com/cost-of-living/rankings.jsp?title=2026,200,true,false,0,false,,full indices
+2026-05-28T12:06:30Z,webfetch,both,,life_op,quality_of_life,https://www.numbeo.com/quality-of-life/in/Lisbon,200,true,false,0,false,,QoL full
+2026-05-28T12:07:00Z,webfetch,both,,life_op,quality_of_life,https://www.numbeo.com/quality-of-life/in/Chiang-Mai,200,true,false,0,false,,QoL full
+2026-05-28T12:07:30Z,webfetch,both,,life_op,internet,https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds,200,true,false,0,false,,Speedtest mar2026 country data
+2026-05-28T12:08:00Z,webfetch,both,,life_op,mobile_data,https://www.cable.co.uk/mobiles/worldwide-data-pricing/,301,redirect,false,0,false,,redirected to bestbroadbanddeals
+2026-05-28T12:08:30Z,webfetch,both,,life_op,mobile_data,https://bestbroadbanddeals.co.uk/mobiles/worldwide-data-pricing/,200,true,false,0,false,,PT 148 1.79 TH 34 0.41
+2026-05-28T12:00:00Z,webfetch,lisbon,,hard_constraints,safety,https://www.numbeo.com/crime/in/Lisbon,200,true,false,0,false,,Numbeo Lisbon crime index
+2026-05-28T12:00:30Z,webfetch,chiang_mai,,hard_constraints,safety,https://www.numbeo.com/crime/in/Chiang-Mai,200,true,false,0,false,,Numbeo CM crime index
+2026-05-28T12:01:00Z,webfetch,lisbon,,hard_constraints,healthcare,https://www.numbeo.com/health-care/in/Lisbon,200,true,false,0,false,,Numbeo Lisbon healthcare
+2026-05-28T12:01:30Z,webfetch,chiang_mai,,hard_constraints,healthcare,https://www.numbeo.com/health-care/in/Chiang-Mai,200,true,false,0,false,,Numbeo CM healthcare
+2026-05-28T12:02:00Z,webfetch,both,,hard_constraints,air,https://www.iqair.com/world-most-polluted-cities,200,partial,false,0,false,,IQAir most polluted page lacked target cities
+2026-05-28T12:02:30Z,webfetch,lisbon,,hard_constraints,air,https://www.iqair.com/portugal/lisbon,200,partial,false,0,false,,Lisbon live page no annual avg
+2026-05-28T12:03:00Z,webfetch,chiang_mai,,hard_constraints,air,https://www.iqair.com/thailand/chiang-mai,200,partial,false,0,false,,CM live page no historical
+2026-05-28T12:03:30Z,webfetch,lisbon,,hard_constraints,visa,https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/short-stay-visas-issued-schengen-states_en,404,false,false,0,false,,EC URL 404
+2026-05-28T12:04:00Z,webfetch,both,,hard_constraints,air,https://www.iqair.com/newsroom/waqr-2024-pr,200,partial,false,0,false,,Press release lacked LIS/CM specifics
+2026-05-28T12:04:30Z,webfetch,both,,hard_constraints,healthcare,https://www.jointcommissioninternational.org/about-jci/jci-accredited-organizations/,301,false,false,0,false,,Redirect to jointcommission.org
+2026-05-28T12:05:00Z,webfetch,lisbon,,hard_constraints,climate,https://en.climate-data.org/europe/portugal/lisbon/lisbon-1/,403,false,false,0,false,,climate-data.org blocked
+2026-05-28T12:05:30Z,webfetch,chiang_mai,,hard_constraints,climate,https://en.climate-data.org/asia/thailand/chiang-mai-province/chiang-mai-2962/,403,false,false,0,false,,climate-data.org blocked
+2026-05-28T12:06:00Z,webfetch,both,,hard_constraints,healthcare,https://www.jointcommission.org/en/about-jci/jci-accredited-organizations/,403,false,false,0,false,,JCI org page blocked
+2026-05-28T12:06:30Z,webfetch,lisbon,,hard_constraints,climate,https://weatherspark.com/y/32175/Average-Weather-in-Lisbon-Portugal-Year-Round,200,partial,false,0,false,,WeatherSpark returned wrong city
+2026-05-28T12:07:00Z,webfetch,chiang_mai,,hard_constraints,climate,https://weatherspark.com/y/113417/Average-Weather-in-Chiang-Mai-Thailand-Year-Round,200,partial,false,0,false,,WeatherSpark returned wrong city
+2026-05-28T12:07:30Z,webfetch,both,,hard_constraints,cost,https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Portugal&city1=Lisbon&country2=Thailand&city2=Chiang+Mai,200,true,false,0,false,,Direct Numbeo compare
+2026-05-28T12:08:00Z,webfetch,lisbon,,hard_constraints,visa,https://hellosafe.com/schengen-visa/rejection,200,true,false,0,false,,Hellosafe Schengen rejection 2024
+2026-05-28T12:08:30Z,webfetch,lisbon,,hard_constraints,pollution,https://www.numbeo.com/pollution/in/Lisbon,200,true,false,0,false,,Numbeo Lisbon pollution
+2026-05-28T12:09:00Z,webfetch,chiang_mai,,hard_constraints,pollution,https://www.numbeo.com/pollution/in/Chiang-Mai,200,true,false,0,false,,Numbeo CM pollution
+2026-05-28T12:09:30Z,webfetch,both,,hard_constraints,visa,https://schengenvisainfo.com/statistics/,403,false,false,0,false,,Schengenvisainfo blocked
+2026-05-28T12:10:00Z,webfetch,lisbon,,hard_constraints,climate,https://en.wikipedia.org/wiki/Climate_of_Lisbon,200,true,false,0,false,,Wikipedia Lisbon climate table
+2026-05-28T12:10:30Z,webfetch,chiang_mai,,hard_constraints,air,https://www.explorechiangmaitravel.com/blog/9317/understanding-pm25-in-chiang-mai-best-and-worst-times-to-visit,404,false,false,0,false,,Page 404
+2026-05-28T12:11:00Z,webfetch,chiang_mai,,hard_constraints,climate,https://www.climatestotravel.com/climate/thailand/chiang-mai,200,true,false,0,false,,Climates to Travel CM table
+2026-05-28T15:00:00Z,webfetch,lisbon,,life_operability,quality_of_life,https://www.numbeo.com/quality-of-life/in/Lisbon,200,true,false,0,false,,Numbeo QoL Lisbon
+2026-05-28T15:00:30Z,webfetch,chiang_mai,,life_operability,quality_of_life,https://www.numbeo.com/quality-of-life/in/Chiang-Mai,200,true,false,0,false,,Numbeo QoL Chiang Mai
+2026-05-28T15:01:00Z,webfetch,lisbon,,life_operability,childcare,https://www.numbeo.com/cost-of-living/in/Lisbon,200,true,false,0,false,,Numbeo COL Lisbon preschool
+2026-05-28T15:01:30Z,webfetch,chiang_mai,,life_operability,childcare,https://www.numbeo.com/cost-of-living/in/Chiang-Mai,200,true,false,0,false,,Numbeo COL Chiang Mai preschool
+2026-05-28T15:02:00Z,webfetch,lisbon,,life_operability,safety,https://www.numbeo.com/crime/in/Lisbon,200,true,false,0,false,,Numbeo Crime Lisbon walking
+2026-05-28T15:02:30Z,webfetch,chiang_mai,,life_operability,safety,https://www.numbeo.com/crime/in/Chiang-Mai,200,true,false,0,false,,Numbeo Crime Chiang Mai walking
+2026-05-28T15:03:00Z,webfetch,both,,life_operability,english,https://en.wikipedia.org/wiki/EF_English_Proficiency_Index,200,true,false,0,false,,EF EPI Wikipedia
+2026-05-28T15:04:00Z,webfetch,chiang_mai,,life_operability,childcare,https://cnxlocal.com/nanny-chiang-mai-babysitter-childcare-daycare/,200,true,false,0,false,,CNXlocal nanny prices
+2026-05-28T15:04:30Z,webfetch,chiang_mai,,life_operability,community,https://cnxlocal.com/facebook-groups-for-families-moving-to-chiang-mai/,200,true,false,0,false,,CNXlocal FB groups list
+2026-05-28T15:05:00Z,webfetch,lisbon,,life_operability,community,https://www.meetup.com/lisbonparents/,200,true,false,0,false,,Lisbon Parents Meetup
+2026-05-28T15:05:30Z,webfetch,lisbon,,life_operability,walkability,https://www.theportugalnews.com/news/2025-09-20/lisbon-among-worlds-most-walkable-cities/886236,200,true,false,0,false,,Portugal News walkability
+2026-05-28T15:06:00Z,webfetch,chiang_mai,,mobility,ride_hail,https://thetravellingwee.com/2025/09/22/bolt-grab-taxi-thailand-2025-family-travel-guide/,200,true,false,0,false,,Bolt vs Grab family
+2026-05-28T15:06:30Z,webfetch,chiang_mai,,child_activity,indoor,https://cnxlocal.com/chiang-mai-air-purified-playgrounds-cafes/,200,true,false,0,false,,CNXlocal air-purified 11 venues
+2026-05-28T15:07:00Z,webfetch,chiang_mai,,child_activity,indoor,https://chiangmaifamilyguide.com/best-indoor-playgrounds-in-chiang-mai/,404,false,false,0,false,,404-skip
+2026-05-28T15:07:30Z,webfetch,chiang_mai,,child_activity,structured,https://www.chiangmaikidsclub.com/,200,true,false,0,false,,Beaver Club pricing
+2026-05-28T15:08:00Z,webfetch,lisbon,,mobility,stroller,https://www.travel4baby.com/lisbon/guides-tips/navigating-lisbon-with-a-stroller-best-parks-and-walks,200,true,false,0,false,,Lisbon stroller terrain
+2026-05-28T15:08:30Z,webfetch,both,,life_operability,community,https://www.reddit.com/r/ChiangMai/about,blocked,false,false,0,false,,reddit-blocked
+2026-05-28T15:09:00Z,webfetch,lisbon,,life_operability,community,https://www.reddit.com/r/lisboa/about,blocked,false,false,0,false,,reddit-blocked

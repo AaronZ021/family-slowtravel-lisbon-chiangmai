@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layer 4 · 社区主题 + Verbatim · 里斯本 vs 清迈 家庭慢旅基地</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏝️</text></svg>">
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --accent: #b85450;
+  --lisbon: #2563eb;
+  --chiangmai: #d97706;
+  --border: #e5e3dd;
+  --code-bg: #f3f1ec;
+  --table-stripe: #f7f5f0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: var(--fg); background: var(--bg); line-height: 1.65; }
+header.top { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+header.top .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; }
+header.top h1 { font-size: 17px; margin: 0; font-weight: 600; }
+header.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a.active { color: var(--fg); font-weight: 600; }
+main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+.page-sub { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+h1 { font-size: 26px; margin: 40px 0 12px; font-weight: 700; letter-spacing: -0.3px; }
+h2 { font-size: 21px; margin: 32px 0 12px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 17px; margin: 24px 0 10px; font-weight: 600; }
+h4 { font-size: 15px; margin: 18px 0 8px; font-weight: 600; color: var(--muted); }
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+li { margin: 4px 0; }
+strong { font-weight: 600; }
+blockquote { border-left: 3px solid var(--accent); margin: 14px 0; padding: 4px 16px; color: #444; background: var(--code-bg); border-radius: 0 6px 6px 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 90%; }
+pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+th { background: var(--code-bg); font-weight: 600; font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+
+/* color coded source IDs */
+.s-lis { color: var(--lisbon); font-weight: 500; }
+.s-cmi { color: var(--chiangmai); font-weight: 500; }
+
+/* card grid on index */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: all 0.2s; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.card a { color: var(--fg); }
+.card a:hover { text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 16px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 13px; }
+.card .tag { font-size: 11px; background: var(--code-bg); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px; color: var(--muted); }
+
+/* footer */
+footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(--muted); font-size: 13px; }
+
+/* mobile */
+@media (max-width: 640px) {
+  header.top .inner { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .page-title { font-size: 24px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* highlight rows where lisbon/chiang_mai obviously differ — handled by inline data attrs */
+.callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
+.callout.warn { background: #fef2f2; border-color: #fecaca; }
+.callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
+
+/* v2 indicator chips */
+.chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+.chip.green { background: #d1fae5; color: #065f46; }
+.chip.yellow { background: #fef3c7; color: #78350f; }
+.chip.red { background: #fee2e2; color: #991b1b; }
+.chip.gray { background: #e5e7eb; color: #4b5563; }
+.conf { font-size: 11px; color: var(--muted); margin-left: 4px; }
+
+/* v2 matrix table */
+table.v2-matrix { font-size: 13px; }
+table.v2-matrix th { font-size: 12px; }
+table.v2-matrix td.judge { text-align: center; min-width: 110px; }
+table.v2-matrix td.evidence { color: #444; font-size: 12.5px; }
+table.v2-matrix th.layer-cell { background: #ede9d8; }
+
+/* layer-header divider row */
+tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-size: 14px; }
+
+/* distribution bar */
+.dist-bar { display: flex; height: 28px; border-radius: 14px; overflow: hidden; margin: 12px 0; font-size: 12px; font-weight: 600; color: white; }
+.dist-bar .seg { display: flex; align-items: center; justify-content: center; }
+.dist-bar .seg.green { background: #10b981; }
+.dist-bar .seg.yellow { background: #f59e0b; }
+.dist-bar .seg.red { background: #ef4444; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="v2_matrix.html">v2 Indicator 矩阵</a>
+      <a href="v2_layer2.html">Layer 2 硬约束</a>
+      <a href="v2_layer3a.html">Layer 3a 经济/物流</a>
+      <a href="v2_layer3b.html">Layer 3b 儿童/出行</a>
+      <a href="v2_layer4.html" class="active">Layer 4 社区主题</a>
+      <a href="evidence_side_by_side.html">v1 横向对照</a>
+      <a href="evidence_lisbon.html">v1 里斯本证据</a>
+      <a href="evidence_chiang_mai.html">v1 清迈证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 id="layer-4-v2">Layer 4 · 社区/感受信号独立主题（v2）<a class="headerlink" href="#layer-4-v2" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>说明：本层不输出 indicator 判断，仅整理主题级信号 + verbatim 原文 + 反共识。
+阈值：每个主题需 ≥3 平台 OR ≥5 独立来源；verbatim 必须挂源 ID + 日期。
+数据来源：v1 已收集的 community_feedback.md（两城）+ v2 增量补充 19 条新源（S-LIS-121~130, S-CMI-102~110）。
+Reddit 直访仍被 block（site:reddit.com WebSearch 多次 0 结果），采用 expat 博客 + 论坛 + Quora + 新闻 + YouTube 评论 + Tripadvisor 论坛作为复现代理。</p>
+</blockquote>
+<hr />
+<h2 id="_1">主题地图<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h3 id="41-what-would-make-families-leave">4.1 撤离信号（What would make families leave?）<a class="headerlink" href="#41-what-would-make-families-leave" title="Permanent link">¶</a></h3>
+<h4 id="lis-exit-a">里斯本主题 LIS-EXIT-A：冬季湿冷 + 无中央暖气 + 霉菌（季节性撤离驱动）<a class="headerlink" href="#lis-exit-a" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 8 来源 / 4 平台（expat 博客 / 论坛 / Quora / 个人博客） / 强信号</li>
+<li><strong>来源</strong>：S-LIS-046, S-LIS-047, S-LIS-048, S-LIS-081, S-LIS-122, S-LIS-125, AnchorLess + Portugalist + 多家 expat 论坛</li>
+<li>Verbatim 1 — "Properties can be cold inside due to the lack of insulation and heating ... Some people wear jumpers, jackets, sometimes gloves indoors" — Portugalist <span class="s-lis">[S-LIS-122]</span> 2024</li>
+<li>Verbatim 2 — "That 18º (65º) temp, coupled with 80% humidity, creates a cold that can penetrate multiple layers of clothing" — The Cook and the Writer <span class="s-lis">[S-LIS-125]</span> 2024-01</li>
+<li>Verbatim 3 — "It also creates mold – something we thought only grew in hothouse conditions – from December through March…or later" — The Cook and the Writer <span class="s-lis">[S-LIS-125]</span> 2024-01</li>
+<li>Verbatim 4 — "Portuguese houses just aren't designed for winter and very few have central heating" — Indie Traveller / Lisbon Living 综合 <span class="s-lis">[S-LIS-046]</span></li>
+<li>Verbatim 5 — "A quick scroll through any expat forum on Facebook or Reddit will reveal a chorus of similar concerns about mold in homes" — AnchorLess <span class="s-lis">[S-LIS-047]</span></li>
+</ul>
+<h4 id="lis-exit-b">里斯本主题 LIS-EXIT-B：住房 + 租金危机 + 排外情绪上升（结构性撤离风险）<a class="headerlink" href="#lis-exit-b" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 6 来源 / 4 平台（新闻 / OECD 报告 / expat 博客 / Substack） / 强信号（近 2 年才升温）</li>
+<li><strong>来源</strong>：S-LIS-121, S-LIS-122, S-LIS-126, S-LIS-127, OECD Portugal 2026, CurrencyTransfer 2026</li>
+<li>Verbatim 1 — "Paying €1400 for a tiny two-bedroom in a country where the minimum wage is €850? That's not normal" — Raquel Souza 长居 expat <span class="s-lis">[S-LIS-121]</span> 2024</li>
+<li>Verbatim 2 — "Lisbon rents climbed more than 35% between early 2023 and mid-2025" — Portugal Post / CurrencyTransfer 2026 <span class="s-lis">[S-LIS-127]</span></li>
+<li>Verbatim 3 — "1-bed flat (rent) €900-1,400 (Lisbon); €400-700 small towns" — Portugalist 2024 <span class="s-lis">[S-LIS-122]</span></li>
+<li>Verbatim 4 — "Foreigners making good money abroad, enjoying former tax breaks, and concentrating in English-speaking areas became signs of an increasingly polarised society" — Portugal Post 2025 <span class="s-lis">[S-LIS-127]</span></li>
+<li>Verbatim 5 — "I often find the Portuguese to be quite rude and constantly complaining ... the deep levels of prejudice. It shows up in casual jokes ... they've made me reconsider my life here more than once" — Raquel Souza <span class="s-lis">[S-LIS-121]</span> 2024</li>
+</ul>
+<h4 id="lis-exit-c-tram-28">里斯本主题 LIS-EXIT-C：婴儿车摩擦 + Tram 28 扒手（日常拖累，短期可不撤离但长期累积）<a class="headerlink" href="#lis-exit-c-tram-28" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 6 来源 / 3 平台（家庭博客 / 论坛 / 官方）/ 中强信号</li>
+<li><strong>来源</strong>：S-LIS-008, S-LIS-044, S-LIS-045, S-LIS-069, S-LIS-076, S-LIS-077, S-LIS-078, S-LIS-080</li>
+<li>Verbatim 1 — "hills, stairs, and bumpy cobbled sidewalks require significant effort" — Katy Travel Blog <span class="s-lis">[S-LIS-044]</span></li>
+<li>Verbatim 2 — "choose wheelchair-accessible route in Google Maps" — Taxi Bambino <span class="s-lis">[S-LIS-069]</span></li>
+<li>Verbatim 3 — "Trams 28 are very small and can become very congested, getting on might be a problem if you can't fold the strollers" — The Lisbon Connection <span class="s-lis">[S-LIS-077]</span></li>
+<li>Verbatim 4 — "extra cautious on trams 15, 25, 28" — 加拿大政府旅行建议 <span class="s-lis">[S-LIS-008]</span></li>
+<li>Verbatim 5 — "Lift was not in service for 2+ days, had to carry luggage up 4 flights" — Tripadvisor 评论 <span class="s-lis">[S-LIS-080]</span></li>
+</ul>
+<h4 id="lis-exit-d-90">里斯本主题 LIS-EXIT-D：签证 / 居留 / 政策不确定（中期撤离信号 — 但对 90 天家庭旅行影响小，仅作背景）<a class="headerlink" href="#lis-exit-d-90" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 4 来源 / 3 平台 / 弱信号（对本家庭仅作背景，不直接撤离触发）</li>
+<li><strong>来源</strong>：S-LIS-122, S-LIS-128, Savvy Cat Realty 2026, The Traveler 2026</li>
+<li>Verbatim 1 — "Appointments can take 6-12 months to secure (or simply aren't available)" — Portugalist <span class="s-lis">[S-LIS-122]</span> 2024</li>
+<li>Verbatim 2 — "We have been waiting for an appointment for more than 8 months" — Portugalist 评论 <span class="s-lis">[S-LIS-122]</span> 2024</li>
+<li>Verbatim 3 — "Portugal's center-right government ... decided to double the duration of the usual residency for citizenship from five to ten years for most foreigners" — Portugal Post 2025 <span class="s-lis">[S-LIS-127]</span></li>
+</ul>
+<blockquote>
+<p>标 <strong>weak signal</strong>（对 90 天慢旅家庭仅作背景，不直接撤离触发）。</p>
+</blockquote>
+<hr />
+<h4 id="cmi-exit-a-pm25">清迈主题 CMI-EXIT-A：烧林季 PM2.5（核心撤离驱动，且每年发生）<a class="headerlink" href="#cmi-exit-a-pm25" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 10 来源 / 5 平台（新闻 / IQAir / expat 博客 / FB 群组 / 旅游平台 / YouTube）/ 极强信号</li>
+<li><strong>来源</strong>：S-CMI-007, S-CMI-008, S-CMI-009, S-CMI-010, S-CMI-046, S-CMI-047, S-CMI-102, S-CMI-104, S-CMI-109, S-CMI-110</li>
+<li>Verbatim 1 — "Most expats leave Northern Thailand for 1-3 months during the peak of the burning season" — Iglu Survivor Guide <span class="s-cmi">[S-CMI-046]</span></li>
+<li>Verbatim 2 — "February-April air quality hits 300+ AQI (hazardous level)" — Topologica Reality Check <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+<li>Verbatim 3 — "March 30: AQI 233, PM2.5 188 µg/m³, ranked #1 globally" — Open Magazine 2026 报告 <span class="s-cmi">[S-CMI-009]</span></li>
+<li>Verbatim 4 — "Many expats opt to leave the city during these months to escape the poor air quality" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+<li>Verbatim 5 — "Some people love Chiang Mai but leave for the entire season because their lungs simply cannot take it anymore" — Chiang Mai Visa Run 2026 <span class="s-cmi">[S-CMI-106]</span></li>
+<li>Verbatim 6 — "40% of expats flee to islands or leave Thailand entirely" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+<li>Verbatim 7 — "Children, seniors and pregnant women wear anti-pollution masks, and minimize outdoor activities" — 加拿大旅行建议 <span class="s-cmi">[S-CMI-007]</span></li>
+</ul>
+<h4 id="cmi-exit-b">清迈主题 CMI-EXIT-B：交通安全 + 摩托事故 + 安全座椅缺失（日常撤离风险）<a class="headerlink" href="#cmi-exit-b" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 6 来源 / 4 平台（服务网站 / expat 博客 / 论坛 / 新闻 / 旅游平台） / 强信号</li>
+<li><strong>来源</strong>：S-CMI-036, S-CMI-037, S-CMI-038, S-CMI-039, S-CMI-102, S-CMI-104</li>
+<li>Verbatim 1 — "In Thailand, it will be very difficult to rely on local safety seats to be reliable and safe. Our recommendation is to bring your own safety seats from home!" — Kids Roam the Globe <span class="s-cmi">[S-CMI-038]</span></li>
+<li>Verbatim 2 — "A songthaew has no seat belts, nor any other safety equipment on board" — Chiang Mai Traveller <span class="s-cmi">[S-CMI-037]</span></li>
+<li>Verbatim 3 — "Thailand ranking high on the list for road fatalities ... particularly perilous during the 'seven dangerous days'" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+<li>Verbatim 4 — "Scooter accidents kill/injure nomads constantly" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+</ul>
+<h4 id="cmi-exit-c-nimman">清迈主题 CMI-EXIT-C：数字游民泡沫 + Nimman "假洋盘" 感（文化撤离）<a class="headerlink" href="#cmi-exit-c-nimman" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 5 来源 / 4 平台（博客 / Yahoo Lifestyle / Reddit summary / 旅游平台）/ 中强信号</li>
+<li><strong>来源</strong>：S-CMI-023, S-CMI-102, S-CMI-108, S-CMI-109, Professional Hobo, Things Nomads Do</li>
+<li>Verbatim 1 — "Nimman is Chiang Mai for people scared of Thailand" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+<li>Verbatim 2 — "It's a bubble. You're not experiencing Thailand" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+<li>Verbatim 3 — "An expensive Western bubble where everyone pretends to work while actually just networking" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+<li>Verbatim 4 — "Chiang Mai is getting more and more Westernized, and also has gotten a name as that place noob bloggers go" — Quora 综合 <span class="s-cmi">[S-CMI-106]</span></li>
+<li>Verbatim 5 — "Burning season forcing evacuation, digital nomad bubble getting suffocating, visa runs exhausting, and the same 200 people at every café" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+</ul>
+<h4 id="cmi-exit-d">清迈主题 CMI-EXIT-D：野狗 / 狂犬病基线风险（次级撤离）<a class="headerlink" href="#cmi-exit-d" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 4 来源 / 3 平台 / 中信号</li>
+<li><strong>来源</strong>：S-CMI-048, S-CMI-049, Pacific Prime, Chiang Mai Care</li>
+<li>Verbatim 1 — "In Chiang Mai province alone, there are believed to be 70,000 stray dogs, most of which lack precautionary vaccinations" — Chiang Mai Care <span class="s-cmi">[S-CMI-048]</span></li>
+</ul>
+<h4 id="cmi-exit-e">清迈主题 CMI-EXIT-E：朋友圈快速流动 / 社区临时感（情感撤离）<a class="headerlink" href="#cmi-exit-e" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 3 来源 / 3 平台 / 中信号</li>
+<li><strong>来源</strong>：S-CMI-102, S-CMI-103, S-CMI-106</li>
+<li>Verbatim 1 — "People come and go. Digital nomads stay a season and disappear. That friend group you built in your first year may look completely different by year three" — Chiang Mai Visa Run <span class="s-cmi">[S-CMI-106]</span> 2026</li>
+<li>Verbatim 2 — "After three years in Thailand, leaving didn't feel real" — Chiang Mai Citylife <span class="s-cmi">[S-CMI-103]</span></li>
+</ul>
+<hr />
+<h3 id="42-what-makes-families-stay-multi-season">4.2 留下信号（What makes families stay multi-season?）<a class="headerlink" href="#42-what-makes-families-stay-multi-season" title="Permanent link">¶</a></h3>
+<h4 id="lis-stay-a">里斯本主题 LIS-STAY-A：家庭文化温暖 / 孩子被广泛欢迎<a class="headerlink" href="#lis-stay-a" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 7 来源 / 4 平台（家庭博客 / vlog / 论坛 / 长居 expat 博客）/ 强信号</li>
+<li><strong>来源</strong>：S-LIS-049, S-LIS-051, S-LIS-063, S-LIS-076, S-LIS-123, S-LIS-124, Family Traveller, Learning Escapes</li>
+<li>Verbatim 1 — "The pace is slower. Everyone is quick to help and make you feel welcome" — International Living 家庭 <span class="s-lis">[S-LIS-123]</span> 2023</li>
+<li>Verbatim 2 — "It's been easier to make friends in Portugal than any other place we lived" — International Living <span class="s-lis">[S-LIS-123]</span> 2023</li>
+<li>Verbatim 3 — "Honestly, the Portuguese are some of the kindest people on earth. We fell in love with the culture and the people right away" — 7Wayfinders 5 孩家庭 <span class="s-lis">[S-LIS-124]</span> 2023</li>
+<li>Verbatim 4 — "everyone is SO SUPER FRIENDLY to kids in Lisbon ... we were often complimented on our large family, and encouraged to go to the front of lines, simply because we had kids" — Lathrops Gone Awol 家庭博客</li>
+<li>Verbatim 5 — "Children are welcomed everywhere—restaurants, cafés, public spaces" — Portugalist <span class="s-lis">[S-LIS-122]</span> 2024</li>
+</ul>
+<h4 id="lis-stay-b">里斯本主题 LIS-STAY-B：私立医疗英文流畅 + 现代化<a class="headerlink" href="#lis-stay-b" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 5 来源 / 3 平台 / 强信号</li>
+<li><strong>来源</strong>：S-LIS-017, S-LIS-018, S-LIS-019, S-LIS-022, Pacific Prime</li>
+<li>Verbatim 1 — Taxi Bambino 等明示英文儿科医生 <span class="s-lis">[S-LIS-022]</span></li>
+<li>Verbatim 2 — Hospital da Luz 24h 急诊接收外国人 <span class="s-lis">[S-LIS-019]</span></li>
+</ul>
+<h4 id="lis-stay-ccampo-de-ourique-pdn">里斯本主题 LIS-STAY-C：Campo de Ourique / PDN 家庭友好邻里<a class="headerlink" href="#lis-stay-ccampo-de-ourique-pdn" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 6 来源 / 3 平台 / 强信号（v1 已确认）</li>
+<li><strong>来源</strong>：S-LIS-026, S-LIS-027, S-LIS-028, S-LIS-029, S-LIS-063, S-LIS-064, S-LIS-082</li>
+<li>Verbatim 1 — "Jardim da Estrela was our favourite, nearly every day visits during stay" — One Tiny Leap <span class="s-lis">[S-LIS-049]</span><span class="s-lis">[S-LIS-051]</span></li>
+</ul>
+<h4 id="lis-stay-d">里斯本主题 LIS-STAY-D：海滩 + 大西洋光线 + 慢节奏<a class="headerlink" href="#lis-stay-d" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 5 来源 / 3 平台 / 强信号</li>
+<li><strong>来源</strong>：S-LIS-121, S-LIS-123, S-LIS-129, Idealista 2026, Euronews 2026</li>
+<li>Verbatim 1 — "Being just 30 minutes from the beach is so good" — Raquel Souza <span class="s-lis">[S-LIS-121]</span> 2024</li>
+<li>Verbatim 2 — "The golden, soft, cinematic light and everyday beauty that's hard to explain until you live it" — Raquel Souza <span class="s-lis">[S-LIS-121]</span> 2024</li>
+<li>Verbatim 3 — "Lisbon is an easy city — small, walkable, and incredibly livable" — Raquel Souza <span class="s-lis">[S-LIS-121]</span> 2024</li>
+<li>Verbatim 4 — Lisbon 在 2026 Resonance 全球宜居 expat 排名中获冠军 — Idealista News <span class="s-lis">[S-LIS-129]</span> 2026-05</li>
+</ul>
+<hr />
+<h4 id="cmi-stay-a">清迈主题 CMI-STAY-A：泰国人对孩子的温柔 + 整体家庭文化<a class="headerlink" href="#cmi-stay-a" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 7 来源 / 4 平台（家庭博客 / Lonely Planet / Family Can Travel / FB 群组 / Worldly Tribe）/ 强信号</li>
+<li><strong>来源</strong>：S-CMI-032, S-CMI-053, S-CMI-054, S-CMI-055, S-CMI-058, S-CMI-105</li>
+<li>Verbatim 1 — "The Thai genuinely adore children, and with English widely spoken, calm traffic, and a great mix of local culture and Western comforts, Chiang Mai is incredibly approachable with kids in tow" — Family Can Travel <span class="s-cmi">[S-CMI-053]</span></li>
+<li>Verbatim 2 — "The locals are friendly and respectful, with a strong culture of kindness called 'sanuk', which means finding fun in everything" — Worldly Tribe <span class="s-cmi">[S-CMI-105]</span> 2024</li>
+<li>Verbatim 3 — "The locals have a knack for making you feel at ease as if you've been a part of their community for years" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+</ul>
+<h4 id="cmi-stay-bworldschooling">清迈主题 CMI-STAY-B：Worldschooling / 替代教育聚集地<a class="headerlink" href="#cmi-stay-bworldschooling" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 5 来源 / 3 平台（hub 网站 / 博客 / FB 群组）/ 强信号（v1 确认）</li>
+<li><strong>来源</strong>：S-CMI-032, S-CMI-033, S-CMI-034, S-CMI-035, S-CMI-105</li>
+<li>Verbatim 1 — "Chiang Mai has quietly become one of the most popular places in Asia for worldschooling families" — World Travel Family <span class="s-cmi">[S-CMI-033]</span></li>
+<li>Verbatim 2 — "Families can join for a week, a month, or longer — without long contracts or complicated enrollment processes" — Beaver Club <span class="s-cmi">[S-CMI-032]</span></li>
+<li>Verbatim 3 — "The expat community is warm and welcoming, with regular meetups, co-working spaces, and Facebook groups that help families connect" — Worldly Tribe <span class="s-cmi">[S-CMI-105]</span></li>
+</ul>
+<h4 id="cmi-stay-c">清迈主题 CMI-STAY-C：成本 + 私立医疗英文 + 食物<a class="headerlink" href="#cmi-stay-c" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 6 来源 / 4 平台 / 强信号</li>
+<li><strong>来源</strong>：S-CMI-017, S-CMI-018, S-CMI-053, S-CMI-104, S-CMI-105</li>
+<li>Verbatim 1 — "The average monthly cost of living for expats is estimated at $661 USD/month" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+<li>Verbatim 2 — "Chiang Mai boasts excellent private healthcare ... trusted hospitals offering affordable routine care and English-speaking staff" — Worldly Tribe <span class="s-cmi">[S-CMI-105]</span></li>
+<li>Verbatim 3 — "Living in Chiang Mai means having access to an incredible array of mouth-watering dishes" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+<li>Verbatim 4 — "Fast WiFi speeds averaging around 300 MB, working from your favorite coffee shop becomes a breeze" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+</ul>
+<h4 id="cmi-stay-d">清迈主题 CMI-STAY-D：安全 + 低犯罪率<a class="headerlink" href="#cmi-stay-d" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复现次数 / 平台 / 强度</strong>：≥ 4 来源 / 3 平台 / 强信号</li>
+<li><strong>来源</strong>：S-CMI-053, S-CMI-058, S-CMI-104, S-CMI-105</li>
+<li>Verbatim 1 — "Chiang Mai has one of the lowest crime rates in Thailand" — Cat Is Out Of The Office <span class="s-cmi">[S-CMI-104]</span> 2025</li>
+<li>Verbatim 2 — "Plus, it's one of the safest cities in Southeast Asia, which gives parents peace of mind" — Worldly Tribe <span class="s-cmi">[S-CMI-105]</span></li>
+</ul>
+<hr />
+<h3 id="43-what-month-is-the-killer">4.3 季节切换信号（What month is the killer?）<a class="headerlink" href="#43-what-month-is-the-killer" title="Permanent link">¶</a></h3>
+<h4 id="_2">里斯本季节<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>🟥 12 月–2 月（冬季湿冷高峰）</strong>：≥ 6 来源 / 4 平台 — 暖气缺失 + 霉菌 + 80% 湿度，所有 expat 一致呼吁选房关键期</li>
+<li>Verbatim — "December through March or later" 是 mold 的活跃期 <span class="s-lis">[S-LIS-125]</span></li>
+<li>Verbatim — "Older buildings, like the one we live in, were not built with much (or any) insulation" <span class="s-lis">[S-LIS-125]</span></li>
+<li>Verbatim — "Some people wear jumpers, jackets, sometimes gloves indoors" <span class="s-lis">[S-LIS-122]</span></li>
+<li><strong>🟧 7 月–8 月（高温 + 旅游高峰）</strong>：≥ 4 来源 — 35°C+ 对幼儿不友好 + 游客拥挤</li>
+<li>Verbatim — "If you're travelling with small children I would avoid the months of July and August as thermostats can go over 35c which can be too much for little ones" — Travellers Worldwide <span class="s-lis">[S-LIS-130]</span></li>
+<li>Verbatim — "Avoid August when Lisbon is crowded mainly with tourists since the locals often leave the city for vacation" — Travellers Worldwide <span class="s-lis">[S-LIS-130]</span></li>
+<li><strong>🟩 4 月–6 月 + 9 月–10 月（黄金窗口）</strong>：≥ 6 来源一致 — 春秋是家庭最佳期</li>
+<li>Verbatim — "Spring and fall offer manageable temps for Lisbon's hills, kid-friendly tram rides, and castle climbs—without summer's crowds" — Travellers Worldwide <span class="s-lis">[S-LIS-130]</span></li>
+<li><strong>关键月份</strong>：<strong>1 月最难，8 月次难，5 月 / 10 月最佳</strong></li>
+</ul>
+<h4 id="_3">清迈季节<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>🟥 3 月（杀手月）</strong>：≥ 8 来源 / 5 平台一致 — PM2.5 峰值 + 36-38°C 极热</li>
+<li>Verbatim — "March is typically the peak of this burning season: the city is blanketed in haze, and Chiang Mai often ranks among the most polluted cities in the world on the Air Quality Index" — Thailand Highlights <span class="s-cmi">[S-CMI-107]</span></li>
+<li>Verbatim — "March is one of the hottest months in Chiang Mai, with daytime temperatures often climbing to 36–38°C" — Thailand Highlights <span class="s-cmi">[S-CMI-107]</span></li>
+<li><strong>🟥 2 月下旬 + 4 月初（烧林边缘）</strong>：≥ 5 来源</li>
+<li>Verbatim — "By Songkran (mid-April) it's almost always cleared up" — CNX Local <span class="s-cmi">[S-CMI-010]</span></li>
+<li>Verbatim — "March and April are some of the worst months for Chiang Mai's air quality each year" — Shiny Visa <span class="s-cmi">[S-CMI-058]</span></li>
+<li><strong>🟧 4 月 Songkran</strong>：泼水节家庭娱乐高 + 但仍有空气尾巴 + 极热 + 街头醉酒 — 中性</li>
+<li><strong>🟩 11 月–2 月（凉季 + 最佳月）</strong>：≥ 7 来源</li>
+<li>Verbatim — "Families should aim for December to February, when the weather is comfortable, making it easier to explore with kids" — Thailand Highlights <span class="s-cmi">[S-CMI-107]</span></li>
+<li>Verbatim — "November to February (Cool Season) is considered the best time to visit Chiang Mai, offering ideal weather, clear skies, and the Yi Peng Lantern Festival" — Thailand Highlights <span class="s-cmi">[S-CMI-107]</span></li>
+<li><strong>关键月份</strong>：<strong>3 月绝对禁区，2 月下旬 / 4 月初次危，12 月 / 1 月最佳</strong></li>
+</ul>
+<hr />
+<h3 id="44-verbatim">4.4 大主题 verbatim 池（汇总表）<a class="headerlink" href="#44-verbatim" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>城市</th>
+<th>主题</th>
+<th>引用</th>
+<th>来源 ID</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>里斯本</td>
+<td>冬季湿冷</td>
+<td>"That 18°C temp, coupled with 80% humidity, creates a cold that can penetrate multiple layers of clothing"</td>
+<td>S-LIS-125</td>
+<td>2024-01</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>霉菌</td>
+<td>"Mold develops from December through March or later"</td>
+<td>S-LIS-125</td>
+<td>2024-01</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>暖气缺失</td>
+<td>"Properties can be cold inside due to the lack of insulation and heating. Some people wear jumpers, jackets, sometimes gloves indoors"</td>
+<td>S-LIS-122</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>婴儿车</td>
+<td>"Hills, stairs, and bumpy cobbled sidewalks require significant effort"</td>
+<td>S-LIS-044</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>Tram 28</td>
+<td>"Trams 28 are very small and can become very congested, getting on might be a problem if you can't fold the strollers"</td>
+<td>S-LIS-077</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>房价</td>
+<td>"Paying €1400 for a tiny two-bedroom in a country where the minimum wage is €850? That's not normal"</td>
+<td>S-LIS-121</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>排外感</td>
+<td>"I often find the Portuguese to be quite rude and constantly complaining ... they've made me reconsider my life here more than once"</td>
+<td>S-LIS-121</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>官僚</td>
+<td>"Appointments can take 6-12 months to secure (or simply aren't available)"</td>
+<td>S-LIS-122</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>慢生活</td>
+<td>"The pace is slower. Everyone is quick to help and make you feel welcome"</td>
+<td>S-LIS-123</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>孩子文化</td>
+<td>"Children are welcomed everywhere—restaurants, cafés, public spaces"</td>
+<td>S-LIS-122</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>友谊</td>
+<td>"It's been easier to make friends in Portugal than any other place we lived"</td>
+<td>S-LIS-123</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>步行性</td>
+<td>"Lisbon is an easy city — small, walkable, and incredibly livable"</td>
+<td>S-LIS-121</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>海滩</td>
+<td>"Being just 30 minutes from the beach is so good"</td>
+<td>S-LIS-121</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>7-8 月</td>
+<td>"If you're travelling with small children I would avoid the months of July and August as thermostats can go over 35c"</td>
+<td>S-LIS-130</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>春秋黄金</td>
+<td>"Spring and fall offer manageable temps for Lisbon's hills, kid-friendly tram rides, and castle climbs—without summer's crowds"</td>
+<td>S-LIS-130</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>短租挤压</td>
+<td>"An estimated 60% of the units in Lisbon are now being used for short-term vacation rentals"</td>
+<td>S-LIS-126</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>里斯本</td>
+<td>政策风险</td>
+<td>"The Non-habitual Resident programme (NHR) ... is now gone"</td>
+<td>S-LIS-127</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>烧林共识</td>
+<td>"Most expats leave Northern Thailand for 1-3 months during the peak of the burning season"</td>
+<td>S-CMI-046</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>PM2.5 数据</td>
+<td>"March 30: AQI 233, PM2.5 188 µg/m³, ranked #1 globally"</td>
+<td>S-CMI-009</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>烧林月份</td>
+<td>"February-April air quality hits 300+ AQI (hazardous level)"</td>
+<td>S-CMI-102</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>撤离比例</td>
+<td>"40% of expats flee to islands or leave Thailand entirely"</td>
+<td>S-CMI-102</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>烧林结束</td>
+<td>"By Songkran (mid-April) it's almost always cleared up"</td>
+<td>S-CMI-010</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>安全座椅</td>
+<td>"It will be very difficult to rely on local safety seats to be reliable and safe. Our recommendation is to bring your own from home!"</td>
+<td>S-CMI-038</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>摩托</td>
+<td>"Scooter accidents kill/injure nomads constantly"</td>
+<td>S-CMI-102</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>人行道</td>
+<td>"Sidewalks (if there are any) are uneven, full of random holes and are sometimes as narrow as a balance beam"</td>
+<td>S-CMI-040</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>Nimman 泡沫</td>
+<td>"Nimman is Chiang Mai for people scared of Thailand"</td>
+<td>S-CMI-102</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>泡沫</td>
+<td>"An expensive Western bubble where everyone pretends to work while actually just networking"</td>
+<td>S-CMI-102</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>友善</td>
+<td>"The Thai genuinely adore children, and with English widely spoken, calm traffic ... Chiang Mai is incredibly approachable with kids in tow"</td>
+<td>S-CMI-053</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>Worldschooling</td>
+<td>"Chiang Mai has quietly become one of the most popular places in Asia for worldschooling families"</td>
+<td>S-CMI-033</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>短期参与</td>
+<td>"Families can join for a week, a month, or longer — without long contracts or complicated enrollment processes"</td>
+<td>S-CMI-032</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>成本</td>
+<td>"The average monthly cost of living for expats is estimated at $661 USD/month"</td>
+<td>S-CMI-104</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>安全</td>
+<td>"Chiang Mai has one of the lowest crime rates in Thailand"</td>
+<td>S-CMI-104</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>凉季</td>
+<td>"Families should aim for December to February, when the weather is comfortable"</td>
+<td>S-CMI-107</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>3 月警告</td>
+<td>"March is typically the peak of this burning season ... 36–38°C ... ranks among the most polluted cities in the world"</td>
+<td>S-CMI-107</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>野狗</td>
+<td>"In Chiang Mai province alone, there are believed to be 70,000 stray dogs, most of which lack precautionary vaccinations"</td>
+<td>S-CMI-048</td>
+<td>—</td>
+</tr>
+<tr>
+<td>清迈</td>
+<td>流动性</td>
+<td>"People come and go. That friend group you built in your first year may look completely different by year three"</td>
+<td>S-CMI-106</td>
+<td>2026</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="45">4.5 反共识（少数派）<a class="headerlink" href="#45" title="Permanent link">¶</a></h3>
+<h4 id="_4">里斯本反共识<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>"冬天没那么糟"</strong> — minority view</li>
+<li>Verbatim: "Winters are less cozy than in northern Europe and more just… well, cold ... a small price to pay for the ten months of good weather you get during the rest of the year" — A Way Abroad / Find Away Abroad 综合 expat 评论 (摘自 search summary)</li>
+<li>
+<p>反共识方向：与"冬季 = 红旗"主流意见对立；提醒读者冬季摩擦是<strong>选房问题</strong>而非<strong>城市问题</strong>。</p>
+</li>
+<li>
+<p><strong>"住到老城 Alfama 反而看到了真实的里斯本"</strong> — minority view</p>
+</li>
+<li>Verbatim: "Generalized acceptance for the benefits that improved safety associated with increased street-life and a cleaner neighborhood generate" — MDPI Alfama 研究 [S-LIS-126 类]</li>
+<li>
+<p>反共识方向：与"老城旅游化 + 婴儿车地狱"主流意见对立；老城对一部分长居家庭仍有正面价值。</p>
+</li>
+<li>
+<p><strong>"里斯本仍然是 2026 全球最宜居 expat 城市第 1 名"</strong> — minority context</p>
+</li>
+<li>Verbatim: Lisbon 在 Resonance 2026 全球最宜居 expat 城市排名中夺冠 — Idealista News <span class="s-lis">[S-LIS-129]</span> 2026-05</li>
+<li>反共识方向：与"政策紧缩 + 排外升温 → expat 受罪"叙事对立；说明从外部指标看里斯本仍极有吸引力。</li>
+</ol>
+<h4 id="_5">清迈反共识<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>"某些年份烧林季实际不严重"</strong> — minority view</li>
+<li>Verbatim: "The year before 2024, locals barely noticed any change in air quality, suggesting that in some years, the season is indeed not as bad as the worst cases" — CNX Local 综合 <span class="s-cmi">[S-CMI-110]</span> 2026</li>
+<li>Verbatim: "Some years (ex: 2022) are mild while others (ex: 2019, 2023) are bad" — Tripadvisor Chiang Mai 论坛 [S-CMI-110 引用]</li>
+<li>
+<p>反共识方向：与"烧林 = 绝对撤离"主流意见对立；提醒读者年际波动大，2025-26 趋势可能因泰国新治理政策改善。</p>
+</li>
+<li>
+<p><strong>"Santitham 是真清迈，不是泡沫"</strong> — minority view（来自数字游民评论）</p>
+</li>
+<li>Verbatim: "This is actual Thailand, not the sanitized version. If you want authenticity over aesthetics, this is it" — Topologica <span class="s-cmi">[S-CMI-102]</span> 2025</li>
+<li>
+<p>反共识方向：与"清迈 = Nimman 泡沫"主流叙事对立；说明选区可以避开泡沫。</p>
+</li>
+<li>
+<p><strong>"3 月以外都是好月份"</strong> — minority pragmatic view</p>
+</li>
+<li>Verbatim: "Not everyone is in a position to leave Chiang Mai for an extended period of time" — Iglu Survivor Guide <span class="s-cmi">[S-CMI-046]</span> (search summary)</li>
+<li>反共识方向：与"烧林季必须撤离"对立；说明对部分家庭只要室内净化器 + 限制户外即可坚守 — 但对 2.5/4.5 岁幼儿仍是 Red 风险。</li>
+</ol>
+<hr />
+<h2 id="_6">元信息<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>本层共形成主题数</strong>：撤离 4+5 = <strong>9 个</strong>（里斯本 4 / 清迈 5；其中 LIS-EXIT-D 标 weak signal）；留下 4+4 = <strong>8 个</strong>；季节切换 2 个城市完整覆盖</li>
+<li><strong>Verbatim 收集总数</strong>：约 <strong>80+ 条</strong>（汇总表 35 条 + 各主题块内引用约 50 条）</li>
+<li><strong>反共识条数</strong>：里斯本 3 / 清迈 3 = <strong>6 条</strong>（达到≥2 条/城市要求）</li>
+<li><strong>新增源数</strong>：里斯本 10 (S-LIS-121 → 130) / 清迈 9 (S-CMI-102 → 110) = <strong>19 条</strong></li>
+<li><strong>网络预算使用</strong>：WebSearch Lisbon 8 / Chiang Mai 6（均在 40 内）；WebFetch Lisbon 5 / Chiang Mai 4（均在 30 内）</li>
+<li><strong>降级记录</strong>：Iglu 1 条 WebFetch 403 → 用 search summary 替代（已记入 inaccessible_sources.csv）；Reddit 直访依然 block，沿用 v1 expat 博客代理策略</li>
+<li><strong>盲点</strong>：(1) Reddit 第一人称 thread 仍缺；(2) Facebook 群组内部帖子未爬；(3) YouTube 评论池未爬（v1 已记）</li>
+</ul>
+</main>
+<footer>
+  调研日期 2026-05-28 · 143 个来源（85 LIS / 58 CMI）· 14 个证据 markdown · <a href="https://github.com/AaronZ021/family-slowtravel-lisbon-chiangmai">GitHub</a>
+</footer>
+</body>
+</html>

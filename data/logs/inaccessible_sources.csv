@@ -5,3 +5,18 @@ timestamp,city,source_type,url_or_platform,reason,fallback_used
 2026-05-28T00:30:00Z,lisbon,community,reddit.com (site: search),no_indexed_results_returned,fallback_meetup_facebook_blogs
 2026-05-28T00:30:01Z,lisbon,platform,https://www.flatio.com/i/apartments-for-rent-lisbon-parque-das-nacoes,no_listings_currently_available,fallback_idealista_blueground_summaries
 2026-05-28T00:30:02Z,lisbon,platform,airbnb_booking_search_pages,policy_no_scraping_of_search_pages,fallback_blogs_tripadvisor_reviews
+2026-05-28T12:01:00Z,lisbon,index,https://www.speedtest.net/global-index/portugal,blocked-domain,wikipedia-ookla-aggregator
+2026-05-28T12:01:30Z,chiang_mai,index,https://www.speedtest.net/global-index/thailand,blocked-domain,wikipedia-ookla-aggregator
+2026-05-28T12:03:00Z,lisbon,index,https://www.tomtom.com/traffic-index/lisbon-traffic/,truncated-content,websearch-snippet+numbeo-traffic
+2026-05-28T12:03:30Z,chiang_mai,index,https://www.tomtom.com/traffic-index/city/chiang-mai,truncated-content,websearch-snippet+numbeo-traffic
+2026-05-28T15:47:00Z,chiang_mai,community,burning,https://iglu.net/survivor-guide-chiang-mai-smoky-season/,403,WebFetch HTTP 403; use search summary as proxy
+2026-05-28T15:30:00Z,both,reddit,https://www.reddit.com/r/ChiangMai/about,blocked_by_fetch,used_search_summaries_no_subscriber_count_obtained
+2026-05-28T15:30:30Z,lisbon,reddit,https://www.reddit.com/r/lisboa/about,blocked_by_fetch,used_search_summaries_no_subscriber_count_obtained
+2026-05-28T15:31:00Z,chiang_mai,blog,https://chiangmaifamilyguide.com/best-indoor-playgrounds-in-chiang-mai/,404_not_found,used_alternate_cnxlocal_air_purified_list
+2026-05-28T12:05:00Z,lisbon,climate-data.org,https://en.climate-data.org/europe/portugal/lisbon/lisbon-1/,403_forbidden,used_wikipedia_table
+2026-05-28T12:05:30Z,chiang_mai,climate-data.org,https://en.climate-data.org/asia/thailand/chiang-mai-province/chiang-mai-2962/,403_forbidden,used_climatestotravel
+2026-05-28T12:06:00Z,both,jointcommission.org,https://www.jointcommission.org/en/about-jci/jci-accredited-organizations/,403_forbidden,used_konkai_health_aggregator
+2026-05-28T12:06:30Z,lisbon,weatherspark.com,https://weatherspark.com/y/32175/Average-Weather-in-Lisbon-Portugal-Year-Round,wrong_city_returned,used_wikipedia
+2026-05-28T12:07:00Z,chiang_mai,weatherspark.com,https://weatherspark.com/y/113417/Average-Weather-in-Chiang-Mai-Thailand-Year-Round,wrong_city_returned,used_climatestotravel
+2026-05-28T12:09:30Z,both,schengenvisainfo.com,https://schengenvisainfo.com/statistics/,403_forbidden,used_hellosafe_aggregator
+2026-05-28T12:10:30Z,chiang_mai,explorechiangmaitravel.com,https://www.explorechiangmaitravel.com/blog/9317/understanding-pm25-in-chiang-mai-best-and-worst-times-to-visit,404_not_found,used_search_summaries_NASA_IQAir
