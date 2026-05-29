@@ -79,31 +79,24 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 .callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
 .callout.warn { background: #fef2f2; border-color: #fecaca; }
 .callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
-
-/* v2 indicator chips */
-.chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-.chip.green { background: #d1fae5; color: #065f46; }
-.chip.yellow { background: #fef3c7; color: #78350f; }
-.chip.red { background: #fee2e2; color: #991b1b; }
-.chip.gray { background: #e5e7eb; color: #4b5563; }
-.conf { font-size: 11px; color: var(--muted); margin-left: 4px; }
-
-/* v2 matrix table */
-table.v2-matrix { font-size: 13px; }
-table.v2-matrix th { font-size: 12px; }
-table.v2-matrix td.judge { text-align: center; min-width: 110px; }
-table.v2-matrix td.evidence { color: #444; font-size: 12.5px; }
-table.v2-matrix th.layer-cell { background: #ede9d8; }
-
-/* layer-header divider row */
-tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-size: 14px; }
-
-/* distribution bar */
-.dist-bar { display: flex; height: 28px; border-radius: 14px; overflow: hidden; margin: 12px 0; font-size: 12px; font-weight: 600; color: white; }
-.dist-bar .seg { display: flex; align-items: center; justify-content: center; }
-.dist-bar .seg.green { background: #10b981; }
-.dist-bar .seg.yellow { background: #f59e0b; }
-.dist-bar .seg.red { background: #ef4444; }
+.source-badge { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 7px; border-radius: 6px; background: #eef2ff; color: #3730a3; text-decoration: none; font-size: 12px; font-weight: 600; margin: 2px 4px 2px 0; white-space: nowrap; }
+.source-badge:hover { outline: 2px solid #818cf8; outline-offset: 1px; text-decoration: none; }
+.badges { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.cell-label { margin: 10px 0 4px; font-size: 12px; font-weight: 700; color: var(--muted); }
+.cell-block p { margin: 0 0 8px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.meta-pill { display: inline-flex; min-height: 24px; align-items: center; padding: 2px 8px; border-radius: 6px; background: var(--code-bg); border: 1px solid var(--border); color: #333; font-size: 12px; font-weight: 600; }
+.evidence-tier { border-left: 4px solid var(--border); padding: 8px 0 2px 10px; margin: 10px 0; }
+.official-tier { border-left-color: #2563eb; }
+.platform-tier { border-left-color: #65a30d; }
+.community-tier { border-left-color: #d97706; }
+.source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 16px; }
+.source-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 13px; }
+.source-card h3 { margin: 6px 0; font-size: 15px; }
+.source-card dl { margin: 0; display: grid; gap: 4px; }
+.source-card dl div { display: grid; grid-template-columns: 72px 1fr; gap: 8px; }
+.source-card dt { color: var(--muted); }
+.source-card dd { margin: 0; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
@@ -112,14 +105,14 @@ tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-
     <h1>🏝️ 里斯本 vs 清迈 · 家庭慢旅基地</h1>
     <nav>
       <a href="index.html">首页</a>
-      <a href="v2_matrix.html">v2 Indicator 矩阵</a>
-      <a href="v2_layer2.html">Layer 2 硬约束</a>
-      <a href="v2_layer3a.html">Layer 3a 经济/物流</a>
-      <a href="v2_layer3b.html">Layer 3b 儿童/出行</a>
-      <a href="v2_layer4.html">Layer 4 社区主题</a>
-      <a href="evidence_side_by_side.html">v1 横向对照</a>
-      <a href="evidence_lisbon.html">v1 里斯本证据</a>
-      <a href="evidence_chiang_mai.html">v1 清迈证据</a>
+      <a href="indicator_evidence_stack.html">指标证据栈</a>
+      <a href="evidence_side_by_side.html">证据横向对照</a>
+      <a href="final_comparison_report.html">最终对比报告</a>
+      <a href="red_flags.html">红旗清单</a>
+      <a href="unknowns_and_next_verifications.html">未知与下一步</a>
+      <a href="comparison_matrix.html">对比矩阵</a>
+      <a href="evidence_lisbon.html">里斯本证据</a>
+      <a href="evidence_chiang_mai.html">清迈证据</a>
     </nav>
   </div>
 </header>

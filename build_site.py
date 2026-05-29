@@ -84,45 +84,38 @@ footer { max-width: 1200px; margin: 40px auto 24px; padding: 0 24px; color: var(
 .callout { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px 18px; border-radius: 8px; margin: 16px 0; }
 .callout.warn { background: #fef2f2; border-color: #fecaca; }
 .callout.ok { background: #f0fdf4; border-color: #bbf7d0; }
-
-/* v2 indicator chips */
-.chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-.chip.green { background: #d1fae5; color: #065f46; }
-.chip.yellow { background: #fef3c7; color: #78350f; }
-.chip.red { background: #fee2e2; color: #991b1b; }
-.chip.gray { background: #e5e7eb; color: #4b5563; }
-.conf { font-size: 11px; color: var(--muted); margin-left: 4px; }
-
-/* v2 matrix table */
-table.v2-matrix { font-size: 13px; }
-table.v2-matrix th { font-size: 12px; }
-table.v2-matrix td.judge { text-align: center; min-width: 110px; }
-table.v2-matrix td.evidence { color: #444; font-size: 12.5px; }
-table.v2-matrix th.layer-cell { background: #ede9d8; }
-
-/* layer-header divider row */
-tr.layer-header td { background: #ede9d8; font-weight: 700; padding: 14px; font-size: 14px; }
-
-/* distribution bar */
-.dist-bar { display: flex; height: 28px; border-radius: 14px; overflow: hidden; margin: 12px 0; font-size: 12px; font-weight: 600; color: white; }
-.dist-bar .seg { display: flex; align-items: center; justify-content: center; }
-.dist-bar .seg.green { background: #10b981; }
-.dist-bar .seg.yellow { background: #f59e0b; }
-.dist-bar .seg.red { background: #ef4444; }
+.source-badge { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 7px; border-radius: 6px; background: #eef2ff; color: #3730a3; text-decoration: none; font-size: 12px; font-weight: 600; margin: 2px 4px 2px 0; white-space: nowrap; }
+.source-badge:hover { outline: 2px solid #818cf8; outline-offset: 1px; text-decoration: none; }
+.badges { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.cell-label { margin: 10px 0 4px; font-size: 12px; font-weight: 700; color: var(--muted); }
+.cell-block p { margin: 0 0 8px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.meta-pill { display: inline-flex; min-height: 24px; align-items: center; padding: 2px 8px; border-radius: 6px; background: var(--code-bg); border: 1px solid var(--border); color: #333; font-size: 12px; font-weight: 600; }
+.evidence-tier { border-left: 4px solid var(--border); padding: 8px 0 2px 10px; margin: 10px 0; }
+.official-tier { border-left-color: #2563eb; }
+.platform-tier { border-left-color: #65a30d; }
+.community-tier { border-left-color: #d97706; }
+.source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 16px; }
+.source-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 13px; }
+.source-card h3 { margin: 6px 0; font-size: 15px; }
+.source-card dl { margin: 0; display: grid; gap: 4px; }
+.source-card dl div { display: grid; grid-template-columns: 72px 1fr; gap: 8px; }
+.source-card dt { color: var(--muted); }
+.source-card dd { margin: 0; overflow-wrap: anywhere; }
 """
 
 
 def navlinks(active=""):
     items = [
         ("index.html", "首页"),
-        ("v2_matrix.html", "v2 Indicator 矩阵"),
-        ("v2_layer2.html", "Layer 2 硬约束"),
-        ("v2_layer3a.html", "Layer 3a 经济/物流"),
-        ("v2_layer3b.html", "Layer 3b 儿童/出行"),
-        ("v2_layer4.html", "Layer 4 社区主题"),
-        ("evidence_side_by_side.html", "v1 横向对照"),
-        ("evidence_lisbon.html", "v1 里斯本证据"),
-        ("evidence_chiang_mai.html", "v1 清迈证据"),
+        ("indicator_evidence_stack.html", "指标证据栈"),
+        ("evidence_side_by_side.html", "证据横向对照"),
+        ("final_comparison_report.html", "最终对比报告"),
+        ("red_flags.html", "红旗清单"),
+        ("unknowns_and_next_verifications.html", "未知与下一步"),
+        ("comparison_matrix.html", "对比矩阵"),
+        ("evidence_lisbon.html", "里斯本证据"),
+        ("evidence_chiang_mai.html", "清迈证据"),
     ]
     out = []
     for href, label in items:
@@ -205,6 +198,137 @@ def csv_to_html(csv_path, title, active, intro=""):
     return wrap_page(title, colorize_sources("\n".join(body_html)), active)
 
 
+def read_source_map():
+    path = ROOT / "data/sources/sources.csv"
+    if not path.exists():
+        return {}
+    with open(path, newline="", encoding="utf-8") as f:
+        return {row["source_id"]: row for row in csv.DictReader(f)}
+
+
+def expand_source_token(token, sources):
+    if "-" not in token:
+        return [token]
+    import re
+    left, right = token.split("-", 1)
+    m = re.match(r"^(.*?)(\d+)$", left)
+    if not m:
+        return [token]
+    prefix, start_s = m.groups()
+    end_s = right[len(prefix):] if right.startswith(prefix) else right
+    if not end_s.isdigit():
+        return [token]
+    width = max(len(start_s), len(end_s))
+    expanded = [f"{prefix}{i:0{width}d}" for i in range(int(start_s), int(end_s) + 1)]
+    return expanded if all(sid in sources for sid in expanded) else [token]
+
+
+def source_badges(source_ids, sources):
+    out = []
+    for raw in (source_ids or "").replace(",", ";").split(";"):
+        token = raw.strip()
+        if not token:
+            continue
+        for sid in expand_source_token(token, sources):
+            if sid in sources:
+                title = sources[sid].get("title", "")
+                out.append(f'<a class="source-badge" href="#src-{html.escape(sid)}" title="{html.escape(title)}">{html.escape(sid)}</a>')
+            else:
+                out.append(f'<span class="source-badge">{html.escape(sid)}</span>')
+    return '<div class="badges">' + " ".join(out) + "</div>" if out else ""
+
+
+def source_index_cards(source_ids, sources):
+    cards = []
+    for sid in sorted(source_ids):
+        row = sources.get(sid)
+        if not row:
+            continue
+        cards.append(f"""
+<article class="source-card" id="src-{html.escape(sid)}">
+  <a class="source-badge" href="{html.escape(row['url'])}" target="_blank" rel="noopener">{html.escape(sid)}</a>
+  <h3><a href="{html.escape(row['url'])}" target="_blank" rel="noopener">{html.escape(row['title'])}</a></h3>
+  <dl>
+    <div><dt>类型</dt><dd>{html.escape(row['source_type'])}</dd></div>
+    <div><dt>城市</dt><dd>{html.escape(row['city'])}</dd></div>
+    <div><dt>维度</dt><dd>{html.escape(row['dimension'])}</dd></div>
+    <div><dt>访问</dt><dd>{html.escape(row['accessed_date'])}</dd></div>
+    <div><dt>URL</dt><dd><a href="{html.escape(row['url'])}" target="_blank" rel="noopener">{html.escape(row['url'])}</a></dd></div>
+  </dl>
+</article>
+""")
+    return '<div class="source-grid">' + "\n".join(cards) + "</div>"
+
+
+def stack_cell(row, sources, used_ids):
+    def badges(col):
+        for raw in (row.get(col) or "").replace(",", ";").split(";"):
+            token = raw.strip()
+            if token:
+                used_ids.update(expand_source_token(token, sources))
+        return source_badges(row.get(col, ""), sources)
+
+    return f"""
+<div class="cell-block">
+  <div class="cell-label">当前维度评估</div>
+  <p>{html.escape(row['current_dimension_assessment'])}</p>
+  <div class="meta-row">
+    <span class="meta-pill">证据充分性：{html.escape(row['evidence_sufficiency'])}</span>
+    <span class="meta-pill">置信度：{html.escape(row['confidence'])}</span>
+  </div>
+  <div class="evidence-tier official-tier">
+    <div class="cell-label">官方/统计证据</div>
+    <p>{html.escape(row['official_stat_evidence'])}</p>
+    {badges('official_source_ids')}
+  </div>
+  <div class="evidence-tier platform-tier">
+    <div class="cell-label">平台/地图证据</div>
+    <p>{html.escape(row['platform_map_evidence'])}</p>
+    {badges('platform_source_ids')}
+  </div>
+  <div class="evidence-tier community-tier">
+    <div class="cell-label">社区反馈 overlay</div>
+    <p>{html.escape(row['community_overlay'])}</p>
+    {badges('community_source_ids')}
+  </div>
+  <div class="cell-label">缺口</div>
+  <p>{html.escape(row['gaps'])}</p>
+  <div class="cell-label">下一步补数</div>
+  <p>{html.escape(row['next_data_to_collect'])}</p>
+</div>
+"""
+
+
+def indicator_stack_page(csv_path):
+    sources = read_source_map()
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    by_layer = {}
+    for row in rows:
+        by_layer.setdefault(row["layer"], {}).setdefault(row["dimension"], {})[row["city"]] = row
+    used_ids = set()
+    body = [
+        '<h1 class="page-title">指标证据栈</h1>',
+        '<p class="page-sub">每个小格子先写该城市在该维度的事实含义，再列官方/统计、平台/地图、社区反馈三类证据。证据 ID 是支撑，不替代文字判断。</p>',
+        '<div class="callout"><strong>读法</strong>：这里不做城市总评。每行只处理一个维度；每个城市的小格子说明当前证据能支撑什么、哪里不足、下一步补什么。</div>',
+    ]
+    for layer, dims in by_layer.items():
+        body.append(f"<h2>{html.escape(layer)}</h2>")
+        body.append("<table><thead><tr><th>维度</th><th>里斯本</th><th>清迈</th></tr></thead><tbody>")
+        for dimension, cities in dims.items():
+            lis = cities.get("里斯本")
+            cmi = cities.get("清迈")
+            body.append("<tr>")
+            body.append(f"<td><strong>{html.escape(dimension)}</strong></td>")
+            body.append(f"<td>{stack_cell(lis, sources, used_ids) if lis else ''}</td>")
+            body.append(f"<td>{stack_cell(cmi, sources, used_ids) if cmi else ''}</td>")
+            body.append("</tr>")
+        body.append("</tbody></table>")
+    body.append("<h2>本页来源索引</h2>")
+    body.append(source_index_cards(used_ids, sources))
+    return wrap_page("指标证据栈", "\n".join(body), "indicator_evidence_stack.html")
+
+
 def combined_evidence_page(city, files, title, active):
     """Combine all evidence markdown for one city into a single page."""
     body_parts = [f'<h1 class="page-title">{html.escape(title)}</h1>']
@@ -250,91 +374,92 @@ def combined_evidence_page(city, files, title, active):
 
 # Index
 index_body = """
-<h1 class="page-title">里斯本 vs 清迈：家庭 3 个月慢旅基地 · v2 指标体系</h1>
-<p class="page-sub">为 2 大人 + 4.5 岁 + 2.5 岁家庭评估两座城市作为约 90 天慢旅基地的可行性。本站基于 v2 方法论：<strong>每个 indicator 用官方/统计/平台指数支撑判断</strong>，社区反馈作为佐证。不输出城市级总评，判断只到 indicator 级。</p>
+<h1 class="page-title">里斯本 vs 清迈：家庭 3 个月慢旅基地证据库</h1>
+<p class="page-sub">为 2 大人 + 4.5 岁 + 2.5 岁家庭评估两座城市作为约 90 天慢旅基地的可行性。本站列出所有事实证据，每条挂源 ID，判断由读者自行做出。</p>
 
 <div class="callout">
-<strong>v2 方法论修正</strong>
+<strong>核心方法论</strong>
 <ul>
-<li><strong>按 Layer 2 / 3 / 4 分层</strong>：硬约束 / 生活可运营性 / 纯社区主题</li>
-<li>每个 <strong>indicator</strong> 必须有官方/平台量化指数（Numbeo / IQAir / EF EPI / Speedtest / JCI / TomTom 等 NomadList 风格），不停在"找到 N 个 X"</li>
-<li>社区反馈集成进 indicator 作佐证（≥3 平台 OR ≥5 来源），同时独立成 Layer 4 主题</li>
-<li>不输出"哪座城赢"；每个 indicator 给一个判断（Green/Yellow/Red）+ 置信度</li>
+<li>不按"哪座城赢"评估，按 <strong>生活功能</strong>（住房 / 医疗 / 儿童活动 / 出行 / 物流 / 文化 / 自然 / 社群）逐维度对比</li>
+<li>每条事实必须挂 <code>source_id</code>；轶事需 ≥ 5 条独立评论或 ≥ 3 平台才作复现结论</li>
+<li>区分 fact / interpretation / unknown / next verification</li>
 </ul>
 </div>
 
-<h2>v2 主要交付</h2>
+<h2>主要报告</h2>
 <div class="card-grid">
   <div class="card">
-    <a href="v2_matrix.html">
-      <span class="tag">核心矩阵</span>
-      <h3>v2 Indicator 矩阵</h3>
-      <p>37 个 indicators × 2 城 × 判断 + 置信度 + 关键源，按 Layer 分组。</p>
+    <a href="indicator_evidence_stack.html">
+      <span class="tag">新版</span>
+      <h3>指标证据栈</h3>
+      <p>每个维度按官方/统计、平台/地图、社区反馈 overlay 拆开，并写出证据实际说明的事实。</p>
     </a>
   </div>
   <div class="card">
-    <a href="v2_layer2.html">
-      <span class="tag">Layer 2</span>
-      <h3>硬约束</h3>
-      <p>17 个 indicators：签证 / 安全 / 气候 / 空气 / 医疗 / 传染病 / 灾害</p>
+    <a href="evidence_side_by_side.html">
+      <span class="tag">事实对照</span>
+      <h3>证据横向对照表</h3>
+      <p>18 个维度纯事实左右两栏对照，无判断、无打分。所有事实挂源 ID。</p>
     </a>
   </div>
   <div class="card">
-    <a href="v2_layer3a.html">
-      <span class="tag">Layer 3a</span>
-      <h3>经济 / 物流 / 网络</h3>
-      <p>10 个 indicators：物价 / 房租 / 网速 / 移动数据 / 公交 / 杂货 / 药店 / 餐饮</p>
+    <a href="final_comparison_report.html">
+      <span class="tag">综合报告</span>
+      <h3>最终对比报告</h3>
+      <p>12 节中文综合报告，含按月份匹配建议与互补组合假设。</p>
     </a>
   </div>
   <div class="card">
-    <a href="v2_layer3b.html">
-      <span class="tag">Layer 3b</span>
-      <h3>儿童 / 出行 / 社群</h3>
-      <p>10 个 indicators：walkability / 婴儿车 / car seat / 户外 / 室内 / childcare / 英语 / 社群 / 泡沫</p>
+    <a href="red_flags.html">
+      <span class="tag">风险</span>
+      <h3>红旗清单</h3>
+      <p>12 项红旗 + 严重度 + 缓解方式（含共享 R0 / 里斯本特有 / 清迈特有）。</p>
     </a>
   </div>
   <div class="card">
-    <a href="v2_layer4.html">
-      <span class="tag">Layer 4</span>
-      <h3>社区主题 + Verbatim</h3>
-      <p>撤离信号 / 留下信号 / 季节切换 / 80+ verbatim / 6 条反共识</p>
+    <a href="unknowns_and_next_verifications.html">
+      <span class="tag">待核实</span>
+      <h3>未知与下一步</h3>
+      <p>T-120 / T-90 / T-60 / T-30 / T-7 / 抵达后第 1 周 核实时间表。</p>
+    </a>
+  </div>
+  <div class="card">
+    <a href="comparison_matrix.html">
+      <span class="tag">矩阵</span>
+      <h3>对比矩阵</h3>
+      <p>18 维度红黄绿灰 + 置信度 + 关键源 ID。</p>
     </a>
   </div>
 </div>
 
-<h2>v1 历史交付（保留）</h2>
+<h2>原始证据（按城市）</h2>
 <div class="card-grid">
-  <div class="card">
-    <a href="evidence_side_by_side.html">
-      <span class="tag">v1 事实对照</span>
-      <h3>18 维度横向对照表</h3>
-      <p>v1 纯事实左右两栏对照（已被 v2 取代但保留参考）。</p>
-    </a>
-  </div>
   <div class="card">
     <a href="evidence_lisbon.html">
       <span class="tag" style="color: var(--lisbon)">里斯本</span>
-      <h3>里斯本 v1 全部证据</h3>
-      <p>7 个证据 markdown 文件汇总</p>
+      <h3>里斯本 7 个证据 markdown</h3>
+      <p>硬约束 / 医疗路径 / 住房样本 / 儿童活动 / 出行 / 生活可运营性 / 社区反馈</p>
     </a>
   </div>
   <div class="card">
     <a href="evidence_chiang_mai.html">
       <span class="tag" style="color: var(--chiangmai)">清迈</span>
-      <h3>清迈 v1 全部证据</h3>
-      <p>7 个证据 markdown 文件汇总</p>
+      <h3>清迈 7 个证据 markdown</h3>
+      <p>硬约束 / 医疗路径 / 住房样本 / 儿童活动 / 出行 / 生活可运营性 / 社区反馈</p>
     </a>
   </div>
 </div>
 
-<h2>v2 数据规模</h2>
+<h2>数据规模</h2>
 <table>
 <thead><tr><th>项</th><th>数量</th></tr></thead>
 <tbody>
-<tr><td>v2 indicators</td><td>37 个（Layer 2: 17 + Layer 3a: 10 + Layer 3b: 10）</td></tr>
-<tr><td>v2 新增源</td><td>115 条（LIS +41 / CMI +74）→ 总计 227 条（126 LIS + 101 CMI）</td></tr>
-<tr><td>关键平台指数</td><td>Numbeo / IQAir / EF EPI / Speedtest / TomTom / JCI / Cable.co.uk / Schengen 统计</td></tr>
-<tr><td>Layer 4 verbatim</td><td>80+ 条 + 6 条反共识</td></tr>
+<tr><td>总源数</td><td>143 条（85 LIS + 58 CMI）</td></tr>
+<tr><td>WebSearch 次数</td><td>81 次</td></tr>
+<tr><td>WebFetch 次数</td><td>35 次</td></tr>
+<tr><td>不可访问源（已降级）</td><td>7 类（Reddit / Airbnb / Flatio / Facebook 等）</td></tr>
+<tr><td>Evidence markdown</td><td>14 个（每城 7 个）</td></tr>
+<tr><td>报告 markdown</td><td>4 个 + 1 个 CSV 矩阵</td></tr>
 </tbody>
 </table>
 
@@ -349,6 +474,10 @@ index_body = """
 """
 
 (SITE / "index.html").write_text(wrap_page("首页", index_body, "index.html"))
+
+(SITE / "indicator_evidence_stack.html").write_text(
+    indicator_stack_page(ROOT / "reports/indicator_evidence_stack.csv")
+)
 
 # Reports
 report_pages = [
@@ -386,73 +515,6 @@ lisbon_files = [
 (SITE / "evidence_chiang_mai.html").write_text(
     combined_evidence_page("chiang_mai", lisbon_files, "清迈 · 全部证据", "evidence_chiang_mai.html")
 )
-
-# === v2 pages ===
-
-def chip_html(light, conf=""):
-    if not light:
-        return '<span class="chip gray">—</span>'
-    cls = light.lower()
-    conf_html = f'<span class="conf">{html.escape(conf)}</span>' if conf else ""
-    return f'<span class="chip {cls}">{html.escape(light)}</span>{conf_html}'
-
-
-def v2_matrix_page():
-    """Combined v2 indicator matrix table."""
-    rows = list(csv.DictReader(open(ROOT / "reports/v2_indicator_matrix.csv")))
-    body = ['<h1 class="page-title">v2 Indicator 矩阵</h1>']
-    body.append('<p class="page-sub">37 个 indicators × 2 城；每行一个 indicator。判断与置信度基于官方/平台指数 + 社区佐证。判断只到 indicator 级，不输出城市总评。</p>')
-
-    # Distribution bars
-    from collections import Counter
-    lis_c = Counter(r["lisbon_light"] for r in rows if r["lisbon_light"])
-    cmi_c = Counter(r["chiang_mai_light"] for r in rows if r["chiang_mai_light"])
-    total = len(rows)
-    def bar(c):
-        parts = []
-        for k in ["Green", "Yellow", "Red"]:
-            n = c.get(k, 0)
-            if n:
-                pct = n / total * 100
-                parts.append(f'<div class="seg {k.lower()}" style="width:{pct}%">{k} {n}</div>')
-        return f'<div class="dist-bar">{"".join(parts)}</div>'
-
-    body.append(f'<h3>里斯本（{total} indicators）</h3>{bar(lis_c)}')
-    body.append(f'<h3>清迈（{total} indicators）</h3>{bar(cmi_c)}')
-
-    # Group by layer
-    body.append('<table class="v2-matrix"><thead><tr>')
-    body.append('<th>ID</th><th>Indicator</th><th>里斯本</th><th>里斯本 依据</th><th>清迈</th><th>清迈 依据</th>')
-    body.append('</tr></thead><tbody>')
-
-    current_layer = None
-    for r in rows:
-        if r["layer"] != current_layer:
-            current_layer = r["layer"]
-            body.append(f'<tr class="layer-header"><td colspan="6">{html.escape(current_layer)}</td></tr>')
-        body.append("<tr>")
-        body.append(f'<td><strong>{html.escape(r["indicator_id"])}</strong></td>')
-        body.append(f'<td>{html.escape(r["indicator_name"])}</td>')
-        body.append(f'<td class="judge">{chip_html(r["lisbon_light"], r["lisbon_confidence"])}</td>')
-        body.append(f'<td class="evidence">{colorize_sources(html.escape(r["lisbon_evidence"]))}<br><small>{colorize_sources(html.escape(r["lisbon_sources"]))}</small></td>')
-        body.append(f'<td class="judge">{chip_html(r["chiang_mai_light"], r["chiang_mai_confidence"])}</td>')
-        body.append(f'<td class="evidence">{colorize_sources(html.escape(r["chiang_mai_evidence"]))}<br><small>{colorize_sources(html.escape(r["chiang_mai_sources"]))}</small></td>')
-        body.append("</tr>")
-    body.append("</tbody></table>")
-    return wrap_page("v2 Indicator 矩阵", "\n".join(body), "v2_matrix.html")
-
-
-(SITE / "v2_matrix.html").write_text(v2_matrix_page())
-
-# Individual v2 layer pages (just render the markdown evidence)
-v2_layer_pages = [
-    ("evidence/v2/layer2_hard_constraints.md", "v2_layer2.html", "Layer 2 · 硬约束"),
-    ("evidence/v2/layer3a_economics_utilities.md", "v2_layer3a.html", "Layer 3a · 经济 / 物流 / 网络"),
-    ("evidence/v2/layer3b_children_mobility_community.md", "v2_layer3b.html", "Layer 3b · 儿童 / 出行 / 社群"),
-    ("evidence/v2/layer4_community_themes.md", "v2_layer4.html", "Layer 4 · 社区主题 + Verbatim"),
-]
-for md, out, title in v2_layer_pages:
-    (SITE / out).write_text(md_to_html(ROOT / md, title, out))
 
 # 404 for SPA niceness
 (SITE / "404.html").write_text(
